@@ -1,0 +1,36 @@
+---
+import type { EconItem } from '../../lib/schemas';
+import { generateSparkline } from '../../lib/map-utils';
+
+interface Props {
+  econ: EconItem[];
+}
+
+const { econ } = Astro.props;
+---
+<section class="section fade-in" id="sec-economic">
+  <div class="section-header">
+    <span class="section-num">05</span>
+    <h2 class="section-title">Economic & Market Impact</h2>
+  </div>
+  <div class="econ-grid">
+    {econ.map(e => {
+      const svgPoints = generateSparkline(e.sparkData, 200, 50);
+      const areaPoints = svgPoints + ' L200,50 L0,50 Z';
+      return (
+        <div class="econ-card">
+          <div class="econ-header">
+            <span class="econ-label">{e.label}</span>
+            <span class={`econ-change ${e.direction}`}>{e.direction === 'up' ? '▲' : '▼'} {e.change}</span>
+          </div>
+          <div class="econ-value" style={`color:${e.color}`}>{e.value}</div>
+          <div style="font-size:0.65rem;color:var(--text-muted)">Source: {e.source}</div>
+          <svg class="sparkline" viewBox="0 0 200 50" preserveAspectRatio="none">
+            <polygon class="area" points={areaPoints} fill={e.color} />
+            <polyline points={svgPoints} stroke={e.color} />
+          </svg>
+        </div>
+      );
+    })}
+  </div>
+</section>

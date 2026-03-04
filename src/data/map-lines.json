@@ -1,0 +1,9 @@
+[
+  { "from": [33.5, 34.5], "to": [51.39, 35.69], "cat": "strike", "label": "Ford → Tehran" },
+  { "from": [60.0, 23.0], "to": [56.28, 27.18], "cat": "strike", "label": "Lincoln → Bandar Abbas" },
+  { "from": [51.39, 35.69], "to": [55.27, 25.20], "cat": "retaliation", "label": "Iran → Dubai" },
+  { "from": [51.39, 35.69], "to": [34.78, 32.07], "cat": "retaliation", "label": "Iran → Israel" },
+  { "from": [51.39, 35.69], "to": [51.53, 25.29], "cat": "retaliation", "label": "Iran → Doha" },
+  { "from": [51.39, 35.69], "to": [47.98, 29.38], "cat": "retaliation", "label": "Iran → Kuwait" },
+  { "from": [35.50, 33.89], "to": [35.00, 32.81], "cat": "front", "label": "Hezbollah → Haifa" }
+]

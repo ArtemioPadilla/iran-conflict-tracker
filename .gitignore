@@ -1,0 +1,14 @@
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+setup.sh
+
+# Astro
+node_modules/
+dist/
+.astro/
+
+# Firebase (leftover)
+firebase-debug.log

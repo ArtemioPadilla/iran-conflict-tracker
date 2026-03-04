@@ -1,0 +1,10 @@
+[
+  { "label": "Days of Conflict", "value": "3", "color": "red", "source": "Feb 28 – Mar 2", "contested": false },
+  { "label": "Iran Killed (Red Crescent)", "value": "555", "color": "red", "source": "Iranian Red Crescent", "contested": true, "contestNote": "Hengaw: 1,500+" },
+  { "label": "US Killed", "value": "4", "color": "amber", "source": "CENTCOM", "contested": false },
+  { "label": "Gulf Region Killed", "value": "17+", "color": "amber", "source": "CNN aggregate", "contested": false },
+  { "label": "Lebanon Killed", "value": "52", "color": "amber", "source": "Lebanese MoPH", "contested": false },
+  { "label": "Brent Crude", "value": "$82", "color": "red", "source": "Intraday peak", "contested": false },
+  { "label": "Flights Cancelled", "value": "7,760+", "color": "blue", "source": "FlightAware", "contested": false },
+  { "label": "Countries Affected", "value": "12+", "color": "blue", "source": "Compiled", "contested": false }
+]

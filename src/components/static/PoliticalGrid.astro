@@ -1,0 +1,29 @@
+---
+import type { PolItem } from '../../lib/schemas';
+
+interface Props {
+  political: PolItem[];
+}
+
+const { political } = Astro.props;
+---
+<section class="section fade-in" id="sec-political">
+  <div class="section-header">
+    <span class="section-num">07</span>
+    <h2 class="section-title">Political & Diplomatic</h2>
+  </div>
+  <div class="pol-grid">
+    {political.map(p => (
+      <div class="pol-card">
+        <div class="pol-card-header">
+          <div class={`pol-avatar ${p.avatar}`}>{p.initial}</div>
+          <div>
+            <div class="pol-name">{p.name}</div>
+            <div class="pol-role">{p.role}</div>
+          </div>
+        </div>
+        <div class="pol-quote">{p.quote}</div>
+      </div>
+    ))}
+  </div>
+</section>

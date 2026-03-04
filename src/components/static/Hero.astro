@@ -1,0 +1,14 @@
+---
+import type { Meta } from '../../lib/schemas';
+
+interface Props {
+  meta: Meta;
+}
+
+const { meta } = Astro.props;
+---
+<section class="hero fade-in">
+  <div class="hero-dateline">{meta.dateline}</div>
+  <h1 set:html={meta.heroHeadline} />
+  <p class="hero-subtitle">{meta.heroSubtitle}</p>
+</section>

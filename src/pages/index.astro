@@ -1,0 +1,59 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/static/Header.astro';
+import Hero from '../components/static/Hero.astro';
+import KpiStrip from '../components/static/KpiStrip.astro';
+import CasualtyTable from '../components/static/CasualtyTable.astro';
+import EconGrid from '../components/static/EconGrid.astro';
+import ClaimsMatrix from '../components/static/ClaimsMatrix.astro';
+import PoliticalGrid from '../components/static/PoliticalGrid.astro';
+import SourceLegend from '../components/static/SourceLegend.astro';
+import Footer from '../components/static/Footer.astro';
+
+import TimelineSection from '../components/islands/TimelineSection';
+import IntelMap from '../components/islands/IntelMap';
+import MilitaryTabs from '../components/islands/MilitaryTabs';
+
+import type { KpiItem, TimelineEra, MapPoint, MapLine, StrikeItem, Asset, CasualtyRow, EconItem, Claim, PolItem, Meta } from '../lib/schemas';
+
+import kpisRaw from '../data/kpis.json';
+import timelineRaw from '../data/timeline.json';
+import mapPointsRaw from '../data/map-points.json';
+import mapLinesRaw from '../data/map-lines.json';
+import strikeTargetsRaw from '../data/strike-targets.json';
+import retaliationRaw from '../data/retaliation.json';
+import assetsRaw from '../data/assets.json';
+import casualtiesRaw from '../data/casualties.json';
+import econRaw from '../data/econ.json';
+import claimsRaw from '../data/claims.json';
+import politicalRaw from '../data/political.json';
+import metaRaw from '../data/meta.json';
+
+// Type assertions to narrow JSON imports to match Zod schema types
+const kpis = kpisRaw as unknown as KpiItem[];
+const timeline = timelineRaw as unknown as TimelineEra[];
+const mapPoints = mapPointsRaw as unknown as MapPoint[];
+const mapLines = mapLinesRaw as unknown as MapLine[];
+const strikeTargets = strikeTargetsRaw as unknown as StrikeItem[];
+const retaliationData = retaliationRaw as unknown as StrikeItem[];
+const assetsData = assetsRaw as unknown as Asset[];
+const casualties = casualtiesRaw as unknown as CasualtyRow[];
+const econ = econRaw as unknown as EconItem[];
+const claims = claimsRaw as unknown as Claim[];
+const political = politicalRaw as unknown as PolItem[];
+const meta = metaRaw as unknown as Meta;
+---
+<BaseLayout title="2026 Iran Conflict — Live Intelligence Dashboard">
+  <Header meta={meta} />
+  <Hero meta={meta} />
+  <KpiStrip kpis={kpis} />
+  <TimelineSection client:load timeline={timeline} />
+  <IntelMap client:load points={mapPoints} lines={mapLines} />
+  <MilitaryTabs client:load strikeTargets={strikeTargets} retaliationData={retaliationData} assetsData={assetsData} />
+  <CasualtyTable casualties={casualties} />
+  <EconGrid econ={econ} />
+  <ClaimsMatrix claims={claims} />
+  <PoliticalGrid political={political} />
+  <SourceLegend />
+  <Footer meta={meta} />
+</BaseLayout>

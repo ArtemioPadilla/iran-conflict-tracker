@@ -1,0 +1,32 @@
+---
+import type { Meta } from '../../lib/schemas';
+
+interface Props {
+  meta: Meta;
+}
+
+const { meta } = Astro.props;
+
+const NAV_SECTIONS = [
+  { id: 'sec-timeline', label: 'Timeline' },
+  { id: 'sec-map', label: 'Map' },
+  { id: 'sec-military', label: 'Military' },
+  { id: 'sec-humanitarian', label: 'Humanitarian' },
+  { id: 'sec-economic', label: 'Economic' },
+  { id: 'sec-contested', label: 'Contested' },
+  { id: 'sec-political', label: 'Political' },
+];
+---
+<header class="site-header">
+  <div class="header-inner">
+    <div class="header-left">
+      <span class="live-dot"></span>
+      <span class="header-title"><strong>ACTIVE CONFLICT</strong> &mdash; {meta.operationName}</span>
+    </div>
+    <nav class="header-nav">
+      {NAV_SECTIONS.map(s => (
+        <a class="nav-btn" href={`#${s.id}`}>{s.label}</a>
+      ))}
+    </nav>
+  </div>
+</header>

@@ -1,0 +1,45 @@
+---
+import type { CasualtyRow } from '../../lib/schemas';
+import { tierClass, tierLabel, contestedBadge } from '../../lib/tier-utils';
+
+interface Props {
+  casualties: CasualtyRow[];
+}
+
+const { casualties } = Astro.props;
+
+function isHighKilled(killed: string): boolean {
+  return parseInt(killed) > 50 || killed.includes('–');
+}
+---
+<section class="section fade-in" id="sec-humanitarian">
+  <div class="section-header">
+    <span class="section-num">04</span>
+    <h2 class="section-title">Humanitarian Impact</h2>
+  </div>
+  <div class="cas-table-wrap">
+    <table class="cas-table">
+      <thead>
+        <tr>
+          <th>Category</th><th>Killed</th><th>Injured</th><th>Source</th><th>Tier</th><th>Status</th><th>Note</th>
+        </tr>
+      </thead>
+      <tbody>
+        {casualties.map(c => {
+          const badge = contestedBadge(c.contested);
+          return (
+            <tr>
+              <td style="font-weight:500;color:var(--text-primary)">{c.category}</td>
+              <td><span class={`cas-val ${isHighKilled(c.killed) ? 'high' : ''}`}>{c.killed}</span></td>
+              <td><span class="cas-val">{c.injured}</span></td>
+              <td style="font-size:0.72rem">{c.source}</td>
+              <td><span class={`source-chip ${tierClass(c.tier)}`} style="font-size:0.5rem">{tierLabel(c.tier)}</span></td>
+              <td><span class={`contested-badge ${badge.className}`}>{badge.text}</span></td>
+              <td style="font-size:0.68rem;color:var(--text-muted)">{c.note}</td>
+            </tr>
+          );
+        })}
+      </tbody>
+    </table>
+  </div>
+</section>

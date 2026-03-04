@@ -1,0 +1,13 @@
+---
+import type { Meta } from '../../lib/schemas';
+
+interface Props {
+  meta: Meta;
+}
+
+const { meta } = Astro.props;
+---
+<footer class="site-footer">
+  {meta.footerNote}<br/>
+  This dashboard presents information from multiple perspectives and does not endorse any particular narrative.
+</footer>

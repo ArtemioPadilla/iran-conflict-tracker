@@ -997,6 +997,7 @@ body::before {
 /* ─── INTEL MAP ─── */
 .map-container {
   position: relative;
+  isolation: isolate;
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: 8px;
@@ -1009,8 +1010,10 @@ body::before {
   .map-container { height: 450px; }
 }
 
-/* Leaflet fills the container */
+/* Leaflet fills the container, z-index bounds its internal pane hierarchy */
 .map-container .leaflet-container {
+  position: relative;
+  z-index: 0;
   height: 100% !important;
   width: 100% !important;
 }

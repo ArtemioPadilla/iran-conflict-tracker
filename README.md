@@ -1,8 +1,8 @@
 # 2026 Iran Conflict — Intelligence Dashboard
 
-A comprehensive, source-cited, static intelligence dashboard tracking the 2026 Iran-US/Israel conflict (Operation Epic Fury / Roaring Lion).
+A comprehensive, source-cited intelligence dashboard tracking the 2026 Iran-US/Israel conflict (Operation Epic Fury / Roaring Lion). Built with Astro 5, TypeScript, and React — auto-updated nightly via AI web search.
 
-**[→ Live Dashboard](https://YOUR_USERNAME.github.io/iran-conflict-dashboard/)**
+**[→ Live Dashboard](https://artpad6.github.io/iran-conflict-tracker/)**
 
 ---
 
@@ -19,7 +19,7 @@ This dashboard visualizes the ongoing conflict that began February 28, 2026, whe
 | 03 | **Military Operations** | Tabbed view: strike targets in Iran, Iranian retaliation across Gulf/Israel, US assets deployed. |
 | 04 | **Humanitarian Impact** | Casualty table with contested/verified badges for every figure. |
 | 05 | **Economic Impact** | Market data with sparkline charts: Brent, WTI, gold, S&P 500, VIX, Iranian rial. |
-| 06 | **Contested Claims** | Side-by-side source comparison for the 5 most disputed claims, with resolution assessments. |
+| 06 | **Contested Claims** | Side-by-side source comparison for the most disputed claims, with resolution assessments. |
 | 07 | **Political & Diplomatic** | Key statements from all parties with role/affiliation context. |
 
 ### Source Tier System
@@ -33,168 +33,139 @@ Every data point is classified:
 
 ---
 
+## Tech Stack
+
+- **[Astro 5](https://astro.build)** — static site generator with TypeScript
+- **React** — interactive islands (map, timeline, military tabs)
+- **Zod** — runtime schema validation for data integrity
+- **Anthropic Claude / OpenAI** — nightly AI-powered data updates via web search
+- **GitHub Actions** — CI/CD: auto-deploy + scheduled data refresh
+
+---
+
 ## Project Structure
 
 ```
-iran-conflict-dashboard/
-├── index.html                    # Page structure (HTML only)
-├── css/
-│   └── style.css                 # All styles (~1,150 lines)
-├── data/
-│   └── dashboard-data.js         # ALL dashboard data (edit this to update)
-├── js/
-│   └── app.js                    # Rendering logic (reads from data)
-├── .github/
-│   └── workflows/
-│       └── deploy.yml            # Auto-deploy to GitHub Pages on push
-└── README.md
+iran-conflict-tracker/
+├── src/
+│   ├── pages/index.astro              # Composition root
+│   ├── layouts/BaseLayout.astro       # HTML shell, fonts, scroll animations
+│   ├── components/
+│   │   ├── static/                    # Server-rendered (zero JS shipped)
+│   │   │   ├── Header.astro
+│   │   │   ├── Hero.astro
+│   │   │   ├── KpiStrip.astro
+│   │   │   ├── CasualtyTable.astro
+│   │   │   ├── EconGrid.astro
+│   │   │   ├── ClaimsMatrix.astro
+│   │   │   ├── PoliticalGrid.astro
+│   │   │   ├── SourceLegend.astro
+│   │   │   └── Footer.astro
+│   │   └── islands/                   # Client-hydrated React components
+│   │       ├── TimelineSection.tsx
+│   │       ├── IntelMap.tsx
+│   │       └── MilitaryTabs.tsx
+│   ├── data/                          # JSON data files (AI-updatable)
+│   │   ├── kpis.json
+│   │   ├── timeline.json
+│   │   ├── map-points.json
+│   │   ├── map-lines.json
+│   │   ├── strike-targets.json
+│   │   ├── retaliation.json
+│   │   ├── assets.json
+│   │   ├── casualties.json
+│   │   ├── econ.json
+│   │   ├── claims.json
+│   │   ├── political.json
+│   │   ├── meta.json
+│   │   └── update-log.json
+│   ├── lib/                           # Shared utilities & types
+│   │   ├── schemas.ts                 # Zod schemas (single source of truth)
+│   │   ├── map-utils.ts              # SVG map projection & data
+│   │   ├── tier-utils.ts             # Source tier helpers
+│   │   └── constants.ts              # UI structure constants
+│   └── styles/global.css             # Dark theme stylesheet
+├── scripts/
+│   └── update-data.ts                 # AI nightly update script
+├── .github/workflows/
+│   ├── deploy.yml                     # Build + deploy to GitHub Pages
+│   └── update-data.yml                # Nightly AI data refresh
+├── astro.config.mjs
+├── tsconfig.json
+└── package.json
 ```
 
-### Key Design: Data Separation
+---
 
-**All data lives in `data/dashboard-data.js`**. The rendering logic in `js/app.js` never contains hardcoded facts. To update the dashboard:
+## Getting Started
 
-1. Edit `data/dashboard-data.js`
-2. Push to `main`
-3. GitHub Pages auto-deploys
+```bash
+# Install dependencies
+npm install
 
-### Data Arrays
+# Start dev server
+npm run dev
 
-| Array | Purpose |
-|-------|---------|
-| `NAV_SECTIONS` | Navigation links |
-| `KPI_DATA` | Top-level stat cards |
-| `TIMELINE_DATA` | Historical events grouped by era |
-| `COUNTRY_PATHS` | SVG map country outlines |
-| `MAP_POINTS` | Map markers (strike targets, retaliation, assets, fronts) |
-| `MAP_CATEGORIES` | Map legend categories |
-| `MAP_LINES` | Strike/retaliation arc vectors |
-| `MIL_TABS` | Military operations tab labels |
-| `STRIKE_TARGETS` | US/Israel strike locations |
-| `RETALIATION_DATA` | Iranian retaliation targets |
-| `ASSETS_DATA` | US military assets deployed |
-| `CASUALTY_DATA` | Casualty figures by category |
-| `ECON_DATA` | Economic indicators with sparkline data |
-| `CLAIMS_DATA` | Contested claims with both sides |
-| `POL_DATA` | Political statements |
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
+```
+
+---
+
+## Nightly AI Updates
+
+The dashboard data is automatically refreshed daily at 6 AM UTC via GitHub Actions. The update script uses AI with web search to find new developments and updates all data sections.
+
+### Supported Providers
+
+| Provider | API Key Env Var | Model Env Var | Default Model |
+|----------|----------------|---------------|---------------|
+| **Anthropic** (default) | `ANTHROPIC_API_KEY` | `ANTHROPIC_MODEL` | `claude-sonnet-4-20250514` |
+| **OpenAI** | `OPENAI_API_KEY` | `OPENAI_MODEL` | `gpt-4o` |
+
+Set `AI_PROVIDER` to `anthropic` or `openai` to choose the provider.
+
+### Run locally
+
+```bash
+# Using Anthropic (default)
+ANTHROPIC_API_KEY=sk-ant-... npm run update-data
+
+# Using OpenAI
+AI_PROVIDER=openai OPENAI_API_KEY=sk-... npm run update-data
+
+# Update specific sections only
+UPDATE_SECTIONS=timeline,kpis,casualties npm run update-data
+```
+
+### GitHub Actions setup
+
+1. Go to repo **Settings → Secrets and variables → Actions**
+2. Add `ANTHROPIC_API_KEY` (and/or `OPENAI_API_KEY`)
+3. Optionally add `AI_PROVIDER` if using OpenAI
+
+The workflow commits changes to `src/data/` and pushes to `main`, which triggers the deploy workflow automatically.
 
 ---
 
 ## Deployment
 
-### Option A: GitHub Pages (Recommended)
+### GitHub Pages (Recommended)
 
-1. **Create repo on GitHub**
+1. Go to repo **Settings → Pages**
+2. Set source to **GitHub Actions**
+3. The included workflow auto-deploys on every push to `main`
+4. Site available at: `https://<username>.github.io/iran-conflict-tracker/`
 
-   Go to [github.com/new](https://github.com/new), name it `iran-conflict-dashboard`, make it public.
-
-2. **Push this code**
-
-   ```bash
-   cd iran-conflict-dashboard
-   git init
-   git add .
-   git commit -m "Initial dashboard deployment"
-   git branch -M main
-   git remote add origin https://github.com/YOUR_USERNAME/iran-conflict-dashboard.git
-   git push -u origin main
-   ```
-
-3. **Enable GitHub Pages**
-
-   Go to repo → **Settings** → **Pages** → Source: **GitHub Actions**.
-
-   The included workflow (`.github/workflows/deploy.yml`) will auto-deploy on every push to `main`.
-
-4. **Access at**: `https://YOUR_USERNAME.github.io/iran-conflict-dashboard/`
-
-### Option B: Any Static Host
-
-This is a pure static site (no build step, no dependencies). Drop the files on any web server, S3 bucket, Netlify, Vercel, Cloudflare Pages, etc.
+### Other hosts
 
 ```bash
-# Netlify
-npx netlify-cli deploy --prod --dir=.
-
-# Vercel
-npx vercel --prod
-
-# Python local server
-python3 -m http.server 8000
+npm run build
+# Deploy the dist/ directory to any static host
 ```
-
----
-
-## Updating Data
-
-### Add a new timeline event
-
-In `data/dashboard-data.js`, find the `TIMELINE_DATA` array and add to the appropriate era:
-
-```js
-{ year: 'Mar 3', title: 'New Event', type: 'military',
-  detail: 'Description of what happened...',
-  sources: [{ name: 'CNN', tier: 2, url: 'https://...' }] },
-```
-
-### Add a map point
-
-```js
-// In MAP_POINTS array:
-{ id: 'new_target', lon: 51.4, lat: 35.7, cat: 'strike',
-  label: 'New Target', sub: 'Details about this location', tier: 1 },
-```
-
-### Add a casualty row
-
-```js
-// In CASUALTY_DATA array:
-{ category: 'New Category', killed: '10', injured: '25',
-  source: 'CNN', tier: 2, contested: 'no', note: '' },
-```
-
-### Update a KPI
-
-Just change the `value` field in the relevant `KPI_DATA` entry.
-
----
-
-## Extending
-
-### Add a new era to the timeline
-
-```js
-// Add a new object to TIMELINE_DATA:
-{ era: 'New Era Name',
-  events: [
-    { year: '2030', title: '...', type: 'military', detail: '...', sources: [...] },
-  ]},
-```
-
-### Add a new map category
-
-```js
-// In MAP_CATEGORIES:
-{ id: 'humanitarian', label: 'Humanitarian Sites', color: '#2ecc71', dotColor: '#2ecc71' },
-```
-
-### Add a new section
-
-1. Add HTML section in `index.html`
-2. Add data array in `data/dashboard-data.js`
-3. Add render function in `js/app.js`
-4. Add to `NAV_SECTIONS` array
-5. Call render function in `DOMContentLoaded`
-
----
-
-## Tech Stack
-
-- **Zero dependencies** — pure HTML, CSS, vanilla JS
-- **No build step** — edit and deploy
-- **SVG map** — hand-plotted coordinates, no tile server needed
-- **CSS animations** — scroll-triggered reveals, map pulses, sparklines
-- **Responsive** — works on mobile (map scrolls horizontally)
 
 ---
 

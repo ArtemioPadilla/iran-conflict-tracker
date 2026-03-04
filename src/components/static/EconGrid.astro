@@ -16,7 +16,7 @@ const { econ } = Astro.props;
   <div class="econ-grid">
     {econ.map(e => {
       const svgPoints = generateSparkline(e.sparkData, 200, 50);
-      const areaPoints = svgPoints + ' L200,50 L0,50 Z';
+      const areaPoints = svgPoints + ' 200,50 0,50';
       return (
         <div class="econ-card">
           <div class="econ-header">

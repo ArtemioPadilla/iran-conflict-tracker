@@ -93,7 +93,7 @@ export default function IntelMap({ points, lines }: Props) {
     : null;
 
   return (
-    <section className="section fade-in" id="sec-map">
+    <section className="section" id="sec-map">
       <div className="section-header">
         <span className="section-num">02</span>
         <h2 className="section-title">Theater of Operations</h2>

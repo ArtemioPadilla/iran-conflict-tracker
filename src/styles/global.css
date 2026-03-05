@@ -1349,6 +1349,7 @@ body::before {
   margin: 0;
   padding: 2.5rem 0 2.5rem 1rem;
   position: relative;
+  overflow: hidden;
 }
 
 /* Subtle divider between scroll sections */
@@ -1400,6 +1401,35 @@ body::before {
 /* Casualty table: ensure horizontal scroll works */
 .theater-scroll .cas-table-wrap {
   margin-bottom: 1rem;
+}
+
+/* Strike list: prevent overflow in narrow column */
+.theater-scroll .strike-list {
+  overflow: hidden;
+}
+
+.theater-scroll .strike-item {
+  gap: 0.5rem;
+}
+
+.theater-scroll .strike-name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.theater-scroll .strike-detail {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.theater-scroll .strike-meta {
+  font-size: 0.5rem;
+  min-width: 50px;
+  max-width: 70px;
 }
 
 /* Asset grid: adapt for narrow column */

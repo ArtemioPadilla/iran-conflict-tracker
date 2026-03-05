@@ -1,8 +1,10 @@
 [
-  { "id": "brent_crude", "label": "Brent Crude", "value": "$82/bbl", "change": "+13%", "direction": "up", "sparkData": [72.87, 73.2, 74.1, 75.8, 77.5, 79.33, 82], "color": "#e74c3c", "source": "FactSet/CME" },
-  { "id": "wti_crude", "label": "WTI Crude", "value": "$73/bbl", "change": "+9%", "direction": "up", "sparkData": [67, 67.5, 68.2, 69.8, 70.9, 72, 72.79], "color": "#e67e22", "source": "FactSet/CME" },
-  { "id": "gold_spot", "label": "Gold Spot", "value": "$5,394/oz", "change": "+2.5%", "direction": "up", "sparkData": [5260, 5280, 5310, 5340, 5384, 5419, 5394], "color": "#f1c40f", "source": "Bloomberg" },
-  { "id": "sp500", "label": "S&P 500", "value": "6,860", "change": "-0.5%", "direction": "down", "sparkData": [6920, 6900, 6870, 6840, 6830, 6850, 6860], "color": "#3498db", "source": "CNBC" },
-  { "id": "vix", "label": "VIX", "value": "21.17", "change": "+18%", "direction": "up", "sparkData": [17.8, 18.2, 19.1, 20.5, 21.5, 21.8, 21.17], "color": "#9b59b6", "source": "CBOE" },
-  { "id": "iranian_rial", "label": "Iranian Rial", "value": "1.5M/$1", "change": "Record low", "direction": "up", "sparkData": [800, 900, 1050, 1200, 1350, 1440, 1500], "color": "#e74c3c", "source": "Iran Intl" }
+  { "id": "brent_crude", "label": "Brent Crude", "value": "$148/bbl", "change": "+104%", "direction": "up", "sparkData": [72.87, 79.33, 82, 96, 118, 138, 148], "color": "#e74c3c", "source": "FactSet/CME" },
+  { "id": "wti_crude", "label": "WTI Crude", "value": "$141/bbl", "change": "+106%", "direction": "up", "sparkData": [67, 72.79, 78, 91, 112, 132, 141], "color": "#e67e22", "source": "FactSet/CME" },
+  { "id": "gold_spot", "label": "Gold Spot", "value": "$5,820/oz", "change": "+10.7%", "direction": "up", "sparkData": [5260, 5394, 5480, 5560, 5650, 5740, 5820], "color": "#f1c40f", "source": "Bloomberg" },
+  { "id": "sp500", "label": "S&P 500", "value": "6,180", "change": "-10.7%", "direction": "down", "sparkData": [6920, 6860, 6640, 6420, 6310, 6240, 6180], "color": "#3498db", "source": "CNBC" },
+  { "id": "vix", "label": "VIX", "value": "42.8", "change": "+140%", "direction": "up", "sparkData": [17.8, 21.17, 28, 34, 38, 41, 42.8], "color": "#9b59b6", "source": "CBOE" },
+  { "id": "iranian_rial", "label": "Iranian Rial", "value": "3.2M/$1", "change": "Record low", "direction": "up", "sparkData": [800, 1500, 1800, 2200, 2600, 2900, 3200], "color": "#e74c3c", "source": "Iran Intl" },
+  { "id": "gas_price_us", "label": "US Gas Price", "value": "$6.20/gal", "change": "+82%", "direction": "up", "sparkData": [3.40, 3.55, 3.80, 4.30, 5.10, 5.80, 6.20], "color": "#e74c3c", "source": "AAA" },
+  { "id": "shipping_rates", "label": "Shipping Rates", "value": "+340%", "change": "Hormuz premium", "direction": "up", "sparkData": [100, 120, 180, 240, 310, 380, 440], "color": "#e67e22", "source": "Freightos" }
 ]

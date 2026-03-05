@@ -24,5 +24,10 @@
   { "id": "aldhafra", "lon": 54.55, "lat": 24.25, "cat": "asset", "label": "Al Dhafra AB, UAE", "sub": "US air operations base.", "tier": 1, "date": "2026-02-10" },
   { "id": "buehring", "lon": 47.63, "lat": 29.17, "cat": "asset", "label": "Camp Buehring, Kuwait", "sub": "3rd ESC. 4 US troops killed here by Arash-2 drone.", "tier": 1, "date": "2026-02-19" },
   { "id": "akrotiri", "lon": 32.99, "lat": 34.58, "cat": "asset", "label": "RAF Akrotiri, Cyprus", "sub": "UK base. Suspected drone hit, no casualties.", "tier": 2, "date": "2026-02-15" },
-  { "id": "hormuz", "lon": 56.50, "lat": 26.50, "cat": "front", "label": "Strait of Hormuz", "sub": "De facto shutdown. IRGC says traffic \"not allowed.\" 150+ ships anchored. 15M bbl/day normally transits.", "tier": 2, "date": "2026-02-28" }
+  { "id": "hormuz", "lon": 56.50, "lat": 26.50, "cat": "front", "label": "Strait of Hormuz", "sub": "De facto shutdown. IRGC says traffic \"not allowed.\" 150+ ships anchored. 15M bbl/day normally transits.", "tier": 2, "date": "2026-02-28" },
+  { "id": "parchin", "lon": 51.77, "lat": 35.52, "cat": "strike", "label": "Parchin", "sub": "Suspected weapons research complex. B-2 bunker busters deployed. IAEA denied pre-strike access.", "tier": 1, "date": "2026-03-03" },
+  { "id": "khorramabad", "lon": 48.35, "lat": 33.49, "cat": "strike", "label": "Khorramabad", "sub": "Underground ballistic missile depot. Secondary explosions lasted 4 hours.", "tier": 1, "date": "2026-03-04" },
+  { "id": "chabahar", "lon": 60.64, "lat": 25.29, "cat": "strike", "label": "Chabahar", "sub": "Drone/missile assembly warehouse. India condemns strike near joint port project.", "tier": 2, "date": "2026-03-04" },
+  { "id": "red_sea", "lon": 42.50, "lat": 14.50, "cat": "front", "label": "Red Sea", "sub": "Houthi anti-ship missiles at USS Gravely. All intercepted. Houthis declare Red Sea blockade.", "tier": 2, "date": "2026-03-03" },
+  { "id": "al_asad", "lon": 43.78, "lat": 33.78, "cat": "retaliation", "label": "Al Asad AB, Iraq", "sub": "PMF fires 40+ rockets. 2 US contractors killed, 11 wounded. Base partially evacuated.", "tier": 1, "date": "2026-03-03" }
 ]

@@ -8,5 +8,11 @@
   { "id": "natanz_facility", "name": "Natanz Nuclear Facility", "detail": "Ground-penetrating munitions. Already damaged in June 2025.", "icon": "target", "time": "Feb 28", "tier": 1 },
   { "id": "fordow_facility", "name": "Fordow Underground Facility", "detail": "Access roads and entrance hit. Deep damage uncertain per IAEA.", "icon": "target", "time": "Feb 28", "tier": 1 },
   { "id": "niloofar_square", "name": "Niloofar Square — Tehran", "detail": "20 civilians killed on March 2.", "icon": "casualty", "time": "Mar 2", "tier": 2 },
-  { "id": "interior_ministry", "name": "Interior Ministry — Tehran", "detail": "Coordinated IRGC/Basij operations hub.", "icon": "target", "time": "Mar 1", "tier": 2 }
+  { "id": "interior_ministry", "name": "Interior Ministry — Tehran", "detail": "Coordinated IRGC/Basij operations hub.", "icon": "target", "time": "Mar 1", "tier": 2 },
+  { "id": "irgc_navy_bandar_abbas", "name": "IRGC Navy HQ — Bandar Abbas", "detail": "Port facilities and fast-attack craft destroyed. Hormuz Strait patrol boats sunk.", "icon": "target", "time": "Mar 3", "tier": 1 },
+  { "id": "parchin_complex", "name": "Parchin Military Complex", "detail": "Suspected weapons research site. B-2 bunker busters deployed. IAEA denied access pre-strike.", "icon": "target", "time": "Mar 3", "tier": 1 },
+  { "id": "tabriz_airbase", "name": "Tabriz Air Base", "detail": "IRIAF fighter jets destroyed on tarmac. Runway cratered.", "icon": "target", "time": "Mar 3", "tier": 2 },
+  { "id": "irgc_missile_storage_khorramabad", "name": "Missile Storage — Khorramabad", "detail": "Underground ballistic missile depot. Secondary explosions lasted 4 hours.", "icon": "target", "time": "Mar 4", "tier": 1 },
+  { "id": "chabahar_port", "name": "Chabahar Port Facilities", "detail": "Drone and missile assembly warehouse targeted. India condemns strike near joint project.", "icon": "target", "time": "Mar 4", "tier": 2 },
+  { "id": "isfahan_tech_university", "name": "Isfahan University of Technology", "detail": "Alleged drone R&D lab. 12 civilians killed. Iran calls it war crime.", "icon": "casualty", "time": "Mar 4", "tier": 2 }
 ]

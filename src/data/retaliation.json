@@ -6,5 +6,9 @@
   { "id": "iraq_erbil", "name": "Iraq/Erbil — 70+ missiles and drones", "detail": "Erbil Airport and US Consulate targeted. Fire at air base.", "icon": "retaliation", "time": "Mar 2", "tier": 2 },
   { "id": "bahrain_5th_fleet", "name": "Bahrain — 5th Fleet HQ targeted", "detail": "Shahed drone struck apartment near HQ. Airport hit. 4 injured.", "icon": "retaliation", "time": "Mar 1", "tier": 2 },
   { "id": "lincoln_claim", "name": "USS Abraham Lincoln — IRGC claims hit", "detail": "CENTCOM categorically denies: \"Not hit. Not even close.\" Lincoln continues ops.", "icon": "retaliation", "time": "Mar 1", "tier": 1 },
-  { "id": "lebanon_hezbollah", "name": "Lebanon — Hezbollah enters conflict", "detail": "6 projectiles at Israeli base near Haifa. Israel strikes Beirut; 52 killed, 154 wounded in Lebanon.", "icon": "retaliation", "time": "Mar 2", "tier": 2 }
+  { "id": "lebanon_hezbollah", "name": "Lebanon — Hezbollah enters conflict", "detail": "6 projectiles at Israeli base near Haifa. Israel strikes Beirut; 52 killed, 154 wounded in Lebanon.", "icon": "retaliation", "time": "Mar 2", "tier": 2 },
+  { "id": "houthi_red_sea", "name": "Yemen — Houthi Red Sea escalation", "detail": "Houthis fire 3 anti-ship missiles at US destroyer. USS Gravely intercepts all. Houthis declare blockade of Red Sea.", "icon": "retaliation", "time": "Mar 3", "tier": 2 },
+  { "id": "iraq_militia_ain_asad", "name": "Iraq — Militia rocket barrage at Al Asad", "detail": "Iran-backed PMF fires 40+ rockets at Al Asad Airbase. 2 US contractors killed, 11 wounded. Base partially evacuated.", "icon": "casualty", "time": "Mar 3", "tier": 1 },
+  { "id": "dubai_drone_swarm", "name": "UAE — Second drone wave", "detail": "48 Shahed drones target Dubai International Airport. 31 intercepted. 3 hit terminal. Airport closed 18 hours.", "icon": "retaliation", "time": "Mar 4", "tier": 2 },
+  { "id": "israel_haifa_port", "name": "Israel — Haifa port missile strike", "detail": "Hezbollah fires anti-ship missiles at Haifa port. One cargo vessel hit. 3 dock workers killed.", "icon": "retaliation", "time": "Mar 4", "tier": 2 }
 ]

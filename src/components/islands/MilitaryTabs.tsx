@@ -53,7 +53,7 @@ export default function MilitaryTabs({ strikeTargets, retaliationData, assetsDat
       <div className="section-header">
         <span className="section-num">03</span>
         <h2 className="section-title">Military Operations</h2>
-        <span className="section-count">Feb 28 &ndash; Mar 2</span>
+        <span className="section-count">Feb 28 &ndash; Mar 4</span>
       </div>
       <div className="tab-row" role="tablist" aria-label="Military operations categories">
         {MIL_TABS.map(t => (

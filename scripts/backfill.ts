@@ -41,35 +41,43 @@ function getOpenAIClient(): OpenAI {
 // ─── Utilities ───
 
 function extractJSON(text: string): string {
-  const codeBlock = text.match(/```(?:json)?\s*\n?([\s\S]*?)\n?\s*```/);
-  let json = codeBlock ? codeBlock[1].trim() : text.trim();
+  let json = text.trim();
 
-  if (!codeBlock) {
-    const start = json.search(/[\[{]/);
-    if (start === -1) return json;
-
-    const openChar = json[start];
-    const closeChar = openChar === '[' ? ']' : '}';
-    let depth = 0;
-    let inString = false;
-    let escape = false;
-
-    for (let i = start; i < json.length; i++) {
-      const ch = json[i];
-      if (escape) { escape = false; continue; }
-      if (ch === '\\' && inString) { escape = true; continue; }
-      if (ch === '"') { inString = !inString; continue; }
-      if (inString) continue;
-      if (ch === openChar) depth++;
-      if (ch === closeChar) depth--;
-      if (depth === 0) {
-        json = json.substring(start, i + 1);
-        break;
-      }
-    }
+  // 1. Strip code fences — try regex first, then manual fallback
+  const codeBlock = json.match(/```\w*\s*\n([\s\S]*?)\n\s*```/);
+  if (codeBlock) {
+    json = codeBlock[1].trim();
+  } else if (json.includes('```')) {
+    json = json.replace(/^```\w*\s*\n?/, '').replace(/\n?\s*```\s*$/, '').trim();
   }
 
-  // Remove trailing commas
+  // 2. Extract by matching brackets (string-aware)
+  const start = json.search(/[\[{]/);
+  if (start === -1) return json;
+
+  const openChar = json[start];
+  const closeChar = openChar === '[' ? ']' : '}';
+  let depth = 0;
+  let inString = false;
+  let escape = false;
+  let end = -1;
+
+  for (let i = start; i < json.length; i++) {
+    const ch = json[i];
+    if (escape) { escape = false; continue; }
+    if (ch === '\\' && inString) { escape = true; continue; }
+    if (ch === '"') { inString = !inString; continue; }
+    if (inString) continue;
+    if (ch === openChar) depth++;
+    if (ch === closeChar) depth--;
+    if (depth === 0) { end = i; break; }
+  }
+
+  if (end !== -1) {
+    json = json.substring(start, end + 1);
+  }
+
+  // 3. Remove trailing commas before ] or }
   let result = '';
   let inStr = false;
   let esc = false;

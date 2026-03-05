@@ -52,6 +52,7 @@ export const MapPointSchema = z.object({
   sub: z.string(),
   tier: TierSchema,
   date: z.string(),
+  base: z.boolean().optional(),
   lastUpdated: z.string().optional(),
 });
 

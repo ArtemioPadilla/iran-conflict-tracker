@@ -1,5 +1,6 @@
-import { MapContainer, TileLayer, CircleMarker, Polyline, Tooltip, ZoomControl, Circle } from 'react-leaflet';
+import { MapContainer, TileLayer, CircleMarker, Polyline, Tooltip, ZoomControl, Circle, Marker } from 'react-leaflet';
 import type { LatLngExpression } from 'leaflet';
+import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import type { MapPoint, MapLine } from '../../lib/schemas';
 import { catColor, lineColor } from './map-helpers';
@@ -44,10 +45,11 @@ function markerRadius(cat: string, tier: number): number {
 
 /** Determine if point should show permanent label */
 function showPermanentLabel(pt: MapPoint): boolean {
+  if (pt.base) return true;
   const majorLabels = new Set([
     'tehran', 'natanz', 'isfahan', 'lincoln', 'ford',
     'hormuz', 'beirut', 'israel_r', 'tel_aviv',
-    'dubai', 'red_sea', 'riyadh', 'diego_garcia',
+    'dubai', 'red_sea', 'riyadh',
   ]);
   return majorLabels.has(pt.id);
 }
@@ -67,12 +69,22 @@ function lineDash(cat: string): string {
   return '6,4';
 }
 
+/** Create a DivIcon for military bases */
+function baseIcon(): L.DivIcon {
+  return L.divIcon({
+    className: 'base-marker',
+    html: '<span class="base-marker-inner">⬟</span>',
+    iconSize: [24, 24],
+    iconAnchor: [12, 12],
+  });
+}
+
 export default function LeafletMap({ points, lines, onSelectPoint }: Props) {
   const center: LatLngExpression = [29, 49];
 
-  // Separate front zones for special rendering
+  const basePoints = points.filter(p => p.base);
   const frontPoints = points.filter(p => p.cat === 'front');
-  const otherPoints = points.filter(p => p.cat !== 'front');
+  const regularPoints = points.filter(p => p.cat !== 'front' && !p.base);
 
   return (
     <MapContainer
@@ -131,6 +143,25 @@ export default function LeafletMap({ points, lines, onSelectPoint }: Props) {
         );
       })}
 
+      {/* Military bases — pentagon icon, always visible */}
+      {basePoints.map(pt => (
+        <Marker
+          key={pt.id}
+          position={[pt.lat, pt.lon]}
+          icon={baseIcon()}
+          eventHandlers={{ click: () => onSelectPoint(pt) }}
+        >
+          <Tooltip
+            permanent
+            direction="top"
+            offset={[0, -14]}
+            className="dark-tooltip base-tooltip"
+          >
+            🏛 {pt.label}
+          </Tooltip>
+        </Marker>
+      ))}
+
       {/* Front zone markers */}
       {frontPoints.map(pt => {
         const color = catColor(pt.cat);
@@ -161,7 +192,7 @@ export default function LeafletMap({ points, lines, onSelectPoint }: Props) {
       })}
 
       {/* Regular map points — sorted so tier-1 renders on top */}
-      {[...otherPoints]
+      {[...regularPoints]
         .sort((a, b) => b.tier - a.tier)
         .map(pt => {
           const color = catColor(pt.cat);

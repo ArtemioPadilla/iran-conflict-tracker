@@ -1900,6 +1900,29 @@ body::before {
   box-shadow: 0 0 6px rgba(231, 76, 60, 0.4);
 }
 
+/* ── Military base markers ── */
+.base-marker {
+  background: none !important;
+  border: none !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.base-marker-inner {
+  font-size: 18px;
+  color: #3498db;
+  filter: drop-shadow(0 0 4px rgba(52, 152, 219, 0.6));
+  line-height: 1;
+}
+
+.base-tooltip.leaflet-tooltip {
+  background: rgba(20, 30, 50, 0.95);
+  border-color: rgba(52, 152, 219, 0.4);
+  font-size: 0.55rem;
+  letter-spacing: 0.08em;
+}
+
 /* ── Marker pulse animation ── */
 @keyframes markerPulse {
   0%, 100% { opacity: 0.9; transform: scale(1); }

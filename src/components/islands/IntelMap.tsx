@@ -74,7 +74,7 @@ export default function IntelMap({ points, lines }: Props) {
   const filteredPoints = useMemo(
     () =>
       points.filter(
-        p => activeFilters.has(p.cat) && p.date <= currentDate,
+        p => activeFilters.has(p.cat) && (p.base || p.date <= currentDate),
       ),
     [points, activeFilters, currentDate],
   );

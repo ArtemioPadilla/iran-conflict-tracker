@@ -55,10 +55,14 @@ export default function MilitaryTabs({ strikeTargets, retaliationData, assetsDat
         <h2 className="section-title">Military Operations</h2>
         <span className="section-count">Feb 28 &ndash; Mar 2</span>
       </div>
-      <div className="tab-row">
+      <div className="tab-row" role="tablist" aria-label="Military operations categories">
         {MIL_TABS.map(t => (
           <button
             key={t.id}
+            role="tab"
+            aria-selected={activeTab === t.id}
+            aria-controls={`tabpanel-${t.id}`}
+            id={`tab-${t.id}`}
             className={`tab-btn ${activeTab === t.id ? 'active' : ''}`}
             onClick={() => setActiveTab(t.id)}
           >
@@ -66,7 +70,7 @@ export default function MilitaryTabs({ strikeTargets, retaliationData, assetsDat
           </button>
         ))}
       </div>
-      <div>
+      <div role="tabpanel" id={`tabpanel-${activeTab}`} aria-labelledby={`tab-${activeTab}`}>
         {activeTab === 'strikes' && renderStrikeList(strikeTargets)}
         {activeTab === 'retaliation' && renderStrikeList(retaliationData)}
         {activeTab === 'assets' && (

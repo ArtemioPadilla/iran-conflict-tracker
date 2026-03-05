@@ -18,11 +18,13 @@ const NAV_SECTIONS = [
 ];
 ---
 <header class="site-header">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
   <div class="header-inner">
     <div class="header-left">
       <span class="live-dot"></span>
       <span class="header-title"><strong>ACTIVE CONFLICT</strong> &mdash; {meta.operationName}</span>
     </div>
+    <button class="mobile-menu-btn" aria-label="Toggle navigation menu" aria-expanded="false">&#9776;</button>
     <nav class="header-nav">
       {NAV_SECTIONS.map(s => (
         <a class="nav-btn" href={`#${s.id}`}>{s.label}</a>
@@ -30,3 +32,39 @@ const NAV_SECTIONS = [
     </nav>
   </div>
 </header>
+
+<script>
+  // Mobile menu toggle
+  const menuBtn = document.querySelector('.mobile-menu-btn');
+  const nav = document.querySelector('.header-nav');
+  if (menuBtn && nav) {
+    menuBtn.addEventListener('click', () => {
+      nav.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', nav.classList.contains('open').toString());
+    });
+    // Close on nav link click
+    nav.querySelectorAll('.nav-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        nav.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
+
+  // Active section tracking
+  const sections = document.querySelectorAll('[id^="sec-"]');
+  const navBtns = document.querySelectorAll('.nav-btn');
+  const navObserver = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          navBtns.forEach(btn => {
+            btn.classList.toggle('active', btn.getAttribute('href') === `#${entry.target.id}`);
+          });
+        }
+      });
+    },
+    { rootMargin: '-20% 0px -70% 0px' }
+  );
+  sections.forEach(s => navObserver.observe(s));
+</script>

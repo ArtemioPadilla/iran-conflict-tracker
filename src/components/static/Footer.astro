@@ -8,6 +8,9 @@ interface Props {
 const { meta } = Astro.props;
 ---
 <footer class="site-footer">
-  {meta.footerNote}<br/>
-  This dashboard presents information from multiple perspectives and does not endorse any particular narrative.
+  <div class="footer-inner">
+    <div class="footer-note">{meta.footerNote}</div>
+    <div class="footer-disclaimer">This dashboard presents information from multiple perspectives and does not endorse any particular narrative.</div>
+    <div class="footer-updated">Last updated: {meta.lastUpdated}</div>
+  </div>
 </footer>

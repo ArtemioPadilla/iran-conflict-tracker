@@ -25,7 +25,7 @@ const { econ } = Astro.props;
           </div>
           <div class="econ-value" style={`color:${e.color}`}>{e.value}</div>
           <div style="font-size:0.65rem;color:var(--text-muted)">Source: {e.source}</div>
-          <svg class="sparkline" viewBox="0 0 200 50" preserveAspectRatio="none">
+          <svg class="sparkline" viewBox="0 0 200 50" preserveAspectRatio="none" aria-hidden="true">
             <polygon class="area" points={areaPoints} fill={e.color} />
             <polyline points={svgPoints} stroke={e.color} />
           </svg>

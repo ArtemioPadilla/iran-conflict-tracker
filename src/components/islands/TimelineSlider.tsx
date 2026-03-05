@@ -55,6 +55,8 @@ export default function TimelineSlider({
         min={0}
         max={totalDays}
         value={currentDay}
+        aria-label="Timeline date selector"
+        aria-valuetext={formatDate(currentDate)}
         onChange={e =>
           onDateChange(dayToDate(Number(e.target.value), minDate))
         }

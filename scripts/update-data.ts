@@ -119,7 +119,6 @@ function repairTruncatedJSON(json: string): string {
   const stack: string[] = [];
   let inString = false;
   let escape = false;
-  let lastValidEnd = 0;
 
   for (let i = 0; i < json.length; i++) {
     const ch = json[i];
@@ -250,6 +249,25 @@ function normalizeItems(items: unknown[]): unknown[] {
 
     return obj;
   });
+}
+
+/** Validate array items individually, keeping valid ones and logging rejects */
+function validateItemwise<T>(items: unknown[], schema: z.ZodType<T>, label: string): T[] {
+  const valid: T[] = [];
+  let rejected = 0;
+  for (let i = 0; i < items.length; i++) {
+    const result = schema.safeParse(items[i]);
+    if (result.success) {
+      valid.push(result.data);
+    } else {
+      rejected++;
+      console.warn(`[${label}] Item ${i} rejected:`, JSON.stringify(result.error.format()));
+    }
+  }
+  if (rejected > 0) {
+    console.warn(`[${label}] ${rejected}/${items.length} items failed validation, keeping ${valid.length} valid items`);
+  }
+  return valid;
 }
 
 // ─── Schema-Driven Prompt Generation ───
@@ -504,14 +522,14 @@ ${JSON.stringify(current, null, 2)}
 Update existing points if their details have changed. Add new points for newly reported locations. Remove nothing. Return the complete updated array.`);
 
     const parsed = normalizeItems(JSON.parse(extractJSON(text)));
-    const result = z.array(MapPointSchema.omit({ lastUpdated: true }).extend({ lastUpdated: z.string().optional() })).safeParse(parsed);
-    if (!result.success) {
-      console.error('[map-points] Validation failed:', JSON.stringify(result.error.format(), null, 2));
-      return { status: 'skipped', reason: 'validation_failed' };
+    const PointSchema = MapPointSchema.omit({ lastUpdated: true }).extend({ lastUpdated: z.string().optional() });
+    const validItems = validateItemwise(parsed, PointSchema, 'map-points');
+    if (validItems.length === 0) {
+      return { status: 'skipped', reason: 'all_items_invalid' };
     }
-    const valid = result.data.filter(p => p.lon >= 25 && p.lon <= 65 && p.lat >= 20 && p.lat <= 42);
-    if (valid.length !== result.data.length) {
-      console.warn(`[map-points] Filtered ${result.data.length - valid.length} out-of-bounds points`);
+    const valid = validItems.filter(p => p.lon >= 25 && p.lon <= 65 && p.lat >= 20 && p.lat <= 42);
+    if (valid.length !== validItems.length) {
+      console.warn(`[map-points] Filtered ${validItems.length - valid.length} out-of-bounds points`);
     }
     const { merged } = mergeById(current, valid);
     writeJSON('map-points.json', merged);
@@ -540,12 +558,12 @@ ${JSON.stringify(current, null, 2)}
 Update existing lines if their details have changed. Add new lines for newly reported attack vectors. Remove nothing. Return the complete updated array.`);
 
     const parsed = normalizeItems(JSON.parse(extractJSON(text)));
-    const result = z.array(MapLineSchema.omit({ lastUpdated: true }).extend({ lastUpdated: z.string().optional() })).safeParse(parsed);
-    if (!result.success) {
-      console.error('[map-lines] Validation failed:', JSON.stringify(result.error.format(), null, 2));
-      return { status: 'skipped', reason: 'validation_failed' };
+    const LineSchema = MapLineSchema.omit({ lastUpdated: true }).extend({ lastUpdated: z.string().optional() });
+    const validItems = validateItemwise(parsed, LineSchema, 'map-lines');
+    if (validItems.length === 0) {
+      return { status: 'skipped', reason: 'all_items_invalid' };
     }
-    const { merged } = mergeById(current, result.data);
+    const { merged } = mergeById(current, validItems);
     writeJSON('map-lines.json', merged);
     return { status: 'updated', itemCount: merged.length };
   } catch (err) {
@@ -633,12 +651,12 @@ ${JSON.stringify(current, null, 2)}
 Update existing claims if their resolution status has changed. Add new major contested claims if any. Return complete updated array.`);
 
     const parsed = JSON.parse(extractJSON(text));
-    const result = z.array(ClaimSchema.omit({ lastUpdated: true }).extend({ lastUpdated: z.string().optional() })).safeParse(parsed);
-    if (!result.success) {
-      console.error('[claims] Validation failed:', result.error.format());
-      return { status: 'skipped', reason: 'validation_failed' };
+    const ClaimLoose = ClaimSchema.omit({ lastUpdated: true }).extend({ lastUpdated: z.string().optional() });
+    const validItems = validateItemwise(parsed, ClaimLoose, 'claims');
+    if (validItems.length === 0) {
+      return { status: 'skipped', reason: 'all_items_invalid' };
     }
-    const { merged } = mergeById(current, result.data);
+    const { merged } = mergeById(current, validItems);
     writeJSON('claims.json', merged);
     return { status: 'updated', itemCount: merged.length };
   } catch (err) {
@@ -663,12 +681,12 @@ ${JSON.stringify(current, null, 2)}
 Update existing quotes if newer statements exist. Add new notable statements. Return complete updated array.`);
 
     const parsed = JSON.parse(extractJSON(text));
-    const result = z.array(PolItemSchema.omit({ lastUpdated: true }).extend({ lastUpdated: z.string().optional() })).safeParse(parsed);
-    if (!result.success) {
-      console.error('[political] Validation failed:', result.error.format());
-      return { status: 'skipped', reason: 'validation_failed' };
+    const PolLoose = PolItemSchema.omit({ lastUpdated: true }).extend({ lastUpdated: z.string().optional() });
+    const validItems = validateItemwise(parsed, PolLoose, 'political');
+    if (validItems.length === 0) {
+      return { status: 'skipped', reason: 'all_items_invalid' };
     }
-    const { merged } = mergeById(current, result.data);
+    const { merged } = mergeById(current, validItems);
     writeJSON('political.json', merged);
     return { status: 'updated', itemCount: merged.length };
   } catch (err) {

@@ -132,6 +132,16 @@ body:has(.globe-wrapper) .tooltip {
   margin-left: auto;
 }
 
+/* Sub-label for feed color legends */
+.globe-sublabel {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.5rem;
+  padding: 1px 8px 2px;
+  display: flex;
+  gap: 6px;
+  opacity: 0.8;
+}
+
 /* Camera presets */
 .globe-preset-grid {
   display: grid;

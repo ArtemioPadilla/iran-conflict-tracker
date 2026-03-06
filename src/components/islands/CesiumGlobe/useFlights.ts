@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import {
   Cartesian3,
   Color,
+  NearFarScalar,
   type Viewer as CesiumViewer,
   type Entity,
 } from 'cesium';
@@ -16,6 +17,31 @@ interface FlightState {
   velocity: number | null;
   true_track: number | null;
   on_ground: boolean;
+}
+
+/** Military callsign patterns — US/NATO military aircraft often use these prefixes */
+const MIL_CALLSIGN_PATTERNS = [
+  /^RCH/i,    // USAF AMC (Reach)
+  /^DUKE/i,   // USAF tankers
+  /^ETHYL/i,  // USAF EW
+  /^TOPCAT/i, // US Navy
+  /^NAVY/i,   // US Navy
+  /^EVAC/i,   // Medevac
+  /^RRR/i,    // USAF air refueling
+  /^JAKE/i,   // Marine Corps
+  /^DOOM/i,   // B-2
+  /^DEATH/i,  // Reaper drones
+  /^FORTE/i,  // Global Hawk
+  /^HOMER/i,  // P-8 Poseidon
+  /^LAGR/i,   // C-17 Globemaster
+  /^IAF/i,    // Israeli Air Force
+  /^ISR/i,    // Israeli
+];
+
+function isMilitaryFlight(f: FlightState): boolean {
+  if (!f.callsign) return false;
+  const cs = f.callsign.trim();
+  return MIL_CALLSIGN_PATTERNS.some(p => p.test(cs));
 }
 
 /** Fetch live flight data from OpenSky Network (free tier) */
@@ -61,19 +87,25 @@ export function useFlights(viewer: CesiumViewer | null, enabled: boolean) {
           seenIds.add(f.icao24);
           const alt = (f.baro_altitude || 10000) * 1; // meters
           const pos = Cartesian3.fromDegrees(f.longitude!, f.latitude!, alt);
+          const isMil = isMilitaryFlight(f);
 
           const existing = entitiesRef.current.get(f.icao24);
           if (existing) {
             existing.position = pos as any;
           } else {
+            const color = isMil
+              ? Color.fromCssColorString('#ffdd00').withAlpha(0.9)  // Yellow for military
+              : Color.fromCssColorString('#00aaff').withAlpha(0.5); // Blue for civilian
+
             const entity = viewer.entities.add({
-              name: f.callsign || f.icao24,
+              name: `${f.callsign || f.icao24} (${f.origin_country})${isMil ? ' [MIL]' : ''}`,
               position: pos,
               point: {
-                pixelSize: 4,
-                color: Color.fromCssColorString('#00aaff').withAlpha(0.7),
-                outlineColor: Color.fromCssColorString('#00aaff').withAlpha(0.3),
-                outlineWidth: 1,
+                pixelSize: isMil ? 6 : 3,
+                color,
+                outlineColor: isMil ? Color.fromCssColorString('#ffdd00').withAlpha(0.4) : color.withAlpha(0.2),
+                outlineWidth: isMil ? 2 : 1,
+                scaleByDistance: new NearFarScalar(1e4, 1.5, 5e6, 0.4),
               },
             });
             entitiesRef.current.set(f.icao24, entity);
@@ -99,7 +131,9 @@ export function useFlights(viewer: CesiumViewer | null, enabled: boolean) {
 
     return () => {
       clearInterval(intervalRef.current);
-      entitiesRef.current.forEach((entity) => viewer.entities.remove(entity));
+      entitiesRef.current.forEach((entity) => {
+        try { viewer.entities.remove(entity); } catch { /* already removed */ }
+      });
       entitiesRef.current.clear();
       setCount(0);
     };

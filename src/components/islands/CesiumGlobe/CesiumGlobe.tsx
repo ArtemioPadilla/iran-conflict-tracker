@@ -55,7 +55,7 @@ export default function CesiumGlobe({ points, lines, kpis, meta }: Props) {
   const [visualMode, setVisualMode] = useState<VisualMode>('normal');
 
   // ── Live data layer toggles ──
-  const [layers, setLayers] = useState({ satellites: false, flights: false, quakes: false });
+  const [layers, setLayers] = useState({ satellites: true, flights: true, quakes: false });
 
   // ── Timeline ──
   const dateRange = useMemo(() => {

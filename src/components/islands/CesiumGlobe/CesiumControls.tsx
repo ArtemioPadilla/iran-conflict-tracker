@@ -91,14 +91,21 @@ export default function CesiumControls({
 
       {/* Real-time data layers */}
       <div className="globe-control-group">
-        <div className="globe-control-label">Live Data</div>
+        <div className="globe-control-label">Live Intel Feeds</div>
         <button
           className={`globe-filter${layers.satellites ? ' active' : ''}`}
           onClick={() => onToggleLayer('satellites')}
         >
-          <span className="globe-fdot" style={{ background: '#00ff88' }} />
+          <span className="globe-fdot" style={{ background: '#00ffcc' }} />
           Satellites
         </button>
+        {layers.satellites && (
+          <div className="globe-sublabel">
+            <span style={{ color: '#00ffcc' }}>&#9679; GPS</span>{' '}
+            <span style={{ color: '#ffcc00' }}>&#9679; Military</span>{' '}
+            <span style={{ color: '#ff8844' }}>&#9679; Recon</span>
+          </div>
+        )}
         <button
           className={`globe-filter${layers.flights ? ' active' : ''}`}
           onClick={() => onToggleLayer('flights')}
@@ -106,6 +113,12 @@ export default function CesiumControls({
           <span className="globe-fdot" style={{ background: '#00aaff' }} />
           Flights
         </button>
+        {layers.flights && (
+          <div className="globe-sublabel">
+            <span style={{ color: '#00aaff' }}>&#9679; Civilian</span>{' '}
+            <span style={{ color: '#ffdd00' }}>&#9679; Military</span>
+          </div>
+        )}
         <button
           className={`globe-filter${layers.quakes ? ' active' : ''}`}
           onClick={() => onToggleLayer('quakes')}

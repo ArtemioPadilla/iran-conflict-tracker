@@ -1,0 +1,134 @@
+[
+  {
+    "id": "iranian_missile_drone_attacks_gulf",
+    "year": "2026",
+    "title": "Iran Launches Missile and Drone Attacks on Gulf Countries",
+    "type": "military",
+    "detail": "On March 1, 2026, Iran intensified its military offensive by launching hundreds of missiles and drones targeting Israel and several Gulf countries hosting U.S. military bases, including the United Arab Emirates, Bahrain, Qatar, Kuwait, Jordan, Iraq, and Oman. These attacks resulted in significant casualties and disrupted maritime traffic through the Strait of Hormuz, leading to the suspension of operations by major shipping companies.",
+    "sources": [
+      {
+        "name": "El País",
+        "tier": 2,
+        "url": "https://elpais.com/internacional/2026-03-01/iran-lanza-una-nueva-ola-de-bombardeos-sobre-israel-y-paises-del-golfo-con-bases-de-ee-uu.html",
+        "pole": "western"
+      },
+      {
+        "name": "Al Jazeera",
+        "tier": 2,
+        "url": "https://www.aljazeera.com/news/2026/3/1/us-israel-attacks-on-iran-death-toll-and-injuries-live-tracker",
+        "pole": "middle_eastern"
+      }
+    ],
+    "lastUpdated": "2026-03-06T04:24:50.651Z"
+  },
+  {
+    "id": "us_israel_airstrikes_iran",
+    "year": "2026",
+    "title": "U.S. and Israel Conduct Joint Airstrikes on Iran",
+    "type": "military",
+    "detail": "On February 28, 2026, the United States and Israel launched coordinated airstrikes targeting key Iranian officials and military infrastructure. The operation resulted in the assassination of Supreme Leader Ali Khamenei and other high-ranking officials, marking a significant escalation in the conflict.",
+    "sources": [
+      {
+        "name": "Axios",
+        "tier": 2,
+        "url": "https://www.axios.com/2026/02/28/iran-attack-supreme-leader-ali-khamenei",
+        "pole": "western"
+      },
+      {
+        "name": "Al Jazeera",
+        "tier": 2,
+        "url": "https://www.aljazeera.com/news/2026/3/1/us-israel-attacks-on-iran-death-toll-and-injuries-live-tracker",
+        "pole": "middle_eastern"
+      }
+    ],
+    "lastUpdated": "2026-03-06T04:24:50.651Z"
+  },
+  {
+    "id": "us_consulate_attack_karachi",
+    "year": "2026",
+    "title": "U.S. Consulate in Karachi Attacked Amid Pro-Iran Protests",
+    "type": "military",
+    "detail": "On March 1, 2026, the U.S. Consulate in Karachi, Pakistan, was attacked by armed Shia Muslim protesters following the assassination of Iranian Supreme Leader Ali Khamenei. The protesters set fire to the consulate, broke windows, and clashed with security forces, resulting in at least 22 fatalities and over 120 injuries.",
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "tier": 3,
+        "url": "https://en.wikipedia.org/wiki/2026_attack_on_the_United_States_consulate_in_Karachi",
+        "pole": "international"
+      },
+      {
+        "name": "Al Jazeera",
+        "tier": 2,
+        "url": "https://www.aljazeera.com/news/2026/3/1/us-israel-attacks-on-iran-death-toll-and-injuries-live-tracker",
+        "pole": "middle_eastern"
+      }
+    ],
+    "lastUpdated": "2026-03-06T04:24:50.651Z"
+  },
+  {
+    "id": "hezbollah_strikes_israel",
+    "year": "2026",
+    "title": "Hezbollah Launches Strikes on Israel",
+    "type": "military",
+    "detail": "On March 2, 2026, Hezbollah initiated strikes on Israel in response to the assassination of Iranian Supreme Leader Ali Khamenei. In retaliation, Israel conducted airstrikes targeting Hezbollah positions in Beirut, Lebanon, marking a significant escalation in the regional conflict.",
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "tier": 3,
+        "url": "https://en.wikipedia.org/wiki/2026_Hezbollah%E2%80%93Israel_strikes",
+        "pole": "international"
+      },
+      {
+        "name": "Al Jazeera",
+        "tier": 2,
+        "url": "https://www.aljazeera.com/news/2026/3/1/us-israel-attacks-on-iran-death-toll-and-injuries-live-tracker",
+        "pole": "middle_eastern"
+      }
+    ],
+    "lastUpdated": "2026-03-06T04:24:50.651Z"
+  },
+  {
+    "id": "us_house_rejects_war_powers_resolution",
+    "year": "2026",
+    "title": "U.S. House Rejects War Powers Resolution to Halt Attacks on Iran",
+    "type": "diplomatic",
+    "detail": "On March 5, 2026, the U.S. House of Representatives narrowly rejected a war powers resolution aimed at halting President Trump's military actions against Iran. The vote reflects the ongoing debate within Congress over the scope of executive authority in military engagements.",
+    "sources": [
+      {
+        "name": "The Washington Post",
+        "tier": 2,
+        "url": "https://www.washingtonpost.com/national/2026/03/05/iran-israel-us-latest-march-05-2026/02abe1d4-1854-11f1-aef0-0aac8e8e94db_story.html",
+        "pole": "western"
+      },
+      {
+        "name": "Al Jazeera",
+        "tier": 2,
+        "url": "https://www.aljazeera.com/news/2026/3/1/us-israel-attacks-on-iran-death-toll-and-injuries-live-tracker",
+        "pole": "middle_eastern"
+      }
+    ],
+    "lastUpdated": "2026-03-06T04:24:50.651Z"
+  },
+  {
+    "id": "french_security_high_alert",
+    "year": "2026",
+    "title": "France Places Security Forces on High Alert Following Airstrikes on Iran",
+    "type": "diplomatic",
+    "detail": "On March 2, 2026, French Interior Minister Laurent Nuñez instructed domestic security forces to go on high alert due to concerns over potential repercussions following U.S. and Israeli airstrikes on Iran. The directive emphasized heightened security around diplomatic missions and sites linked to the involved nations.",
+    "sources": [
+      {
+        "name": "Le Monde",
+        "tier": 2,
+        "url": "https://www.lemonde.fr/en/international/article/2026/03/02/french-domestic-security-forces-placed-on-high-alert-following-airstrikes-on-iran_6750991_4.html",
+        "pole": "western"
+      },
+      {
+        "name": "Al Jazeera",
+        "tier": 2,
+        "url": "https://www.aljazeera.com/news/2026/3/1/us-israel-attacks-on-iran-death-toll-and-injuries-live-tracker",
+        "pole": "middle_eastern"
+      }
+    ],
+    "lastUpdated": "2026-03-06T04:24:50.651Z"
+  }
+]

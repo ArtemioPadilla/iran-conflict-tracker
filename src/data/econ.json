@@ -2,8 +2,8 @@
   {
     "id": "brent_crude",
     "label": "Brent Crude",
-    "value": "$81.40/bbl",
-    "change": "+4.7%",
+    "value": "$77.74/bbl",
+    "change": "+6.7%",
     "direction": "up",
     "sparkData": [
       72.87,
@@ -13,17 +13,17 @@
       118,
       138,
       148,
-      81.4
+      77.74
     ],
     "color": "#e74c3c",
-    "source": "Reuters",
-    "lastUpdated": "2026-03-05T06:23:29.664Z"
+    "source": "Straits Financial",
+    "lastUpdated": "2026-03-06T04:24:50.651Z"
   },
   {
     "id": "wti_crude",
     "label": "WTI Crude",
-    "value": "$74.56/bbl",
-    "change": "+4.7%",
+    "value": "$74.90/bbl",
+    "change": "+5.15%",
     "direction": "up",
     "sparkData": [
       67,
@@ -33,18 +33,18 @@
       112,
       132,
       141,
-      74.56
+      74.9
     ],
     "color": "#e67e22",
-    "source": "Reuters",
-    "lastUpdated": "2026-03-05T06:23:29.664Z"
+    "source": "AInvest",
+    "lastUpdated": "2026-03-06T04:24:50.651Z"
   },
   {
     "id": "gold_spot",
     "label": "Gold Spot",
-    "value": "$5,015.10/oz",
-    "change": "+7.68%",
-    "direction": "up",
+    "value": "$5,101.00/oz",
+    "change": "-3.97%",
+    "direction": "down",
     "sparkData": [
       5260,
       5394,
@@ -53,17 +53,17 @@
       5650,
       5740,
       5820,
-      5015.1
+      5101
     ],
     "color": "#f1c40f",
-    "source": "Hellenic Shipping News",
-    "lastUpdated": "2026-03-05T06:23:29.664Z"
+    "source": "AInvest",
+    "lastUpdated": "2026-03-06T04:24:50.651Z"
   },
   {
     "id": "sp500",
     "label": "S&P 500",
-    "value": "6,932",
-    "change": "-0.1%",
+    "value": "6,816.63",
+    "change": "-0.944%",
     "direction": "down",
     "sparkData": [
       6920,
@@ -73,11 +73,11 @@
       6310,
       6240,
       6180,
-      6932
+      6816.63
     ],
     "color": "#3498db",
-    "source": "Hellenic Shipping News",
-    "lastUpdated": "2026-03-05T06:23:29.664Z"
+    "source": "AInvest",
+    "lastUpdated": "2026-03-06T04:24:50.651Z"
   },
   {
     "id": "vix",
@@ -96,7 +96,7 @@
     ],
     "color": "#9b59b6",
     "source": "CBOE",
-    "lastUpdated": "2026-03-05T06:23:29.664Z"
+    "lastUpdated": "2026-03-06T04:24:50.651Z"
   },
   {
     "id": "iranian_rial",
@@ -115,7 +115,7 @@
     ],
     "color": "#e74c3c",
     "source": "Iran Intl",
-    "lastUpdated": "2026-03-05T06:23:29.664Z"
+    "lastUpdated": "2026-03-06T04:24:50.651Z"
   },
   {
     "id": "gas_price_us",
@@ -135,7 +135,7 @@
     ],
     "color": "#e74c3c",
     "source": "Kiplinger",
-    "lastUpdated": "2026-03-05T06:23:29.664Z"
+    "lastUpdated": "2026-03-06T04:24:50.651Z"
   },
   {
     "id": "shipping_rates",
@@ -154,6 +154,6 @@
     ],
     "color": "#e67e22",
     "source": "Freightos",
-    "lastUpdated": "2026-03-05T06:23:29.664Z"
+    "lastUpdated": "2026-03-06T04:24:50.651Z"
   }
 ]

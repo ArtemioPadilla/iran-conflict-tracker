@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-03-05T06:23:29.664Z",
+  "lastRun": "2026-03-06T04:24:50.651Z",
   "provider": "openai",
   "model": "gpt-4o",
   "sections": {
@@ -12,19 +12,19 @@
     },
     "timeline": {
       "status": "updated",
-      "newEvents": 7
+      "newEvents": 6
     },
     "map": {
       "status": "error",
-      "reason": "SyntaxError: Unexpected token '`', \"```json\n[\n\"... is not valid JSON"
+      "reason": "SyntaxError: Unexpected token 'B', \"Based on t\"... is not valid JSON"
     },
     "map-lines": {
       "status": "error",
-      "reason": "SyntaxError: Unexpected token '`', \"```json\n[\n\"... is not valid JSON"
+      "reason": "SyntaxError: Unterminated string in JSON at position 5702 (line 378 column 21)"
     },
     "casualties": {
       "status": "updated",
-      "itemCount": 12
+      "itemCount": 13
     },
     "econ": {
       "status": "updated",
@@ -32,15 +32,15 @@
     },
     "claims": {
       "status": "updated",
-      "itemCount": 10
-    },
-    "political": {
-      "status": "updated",
       "itemCount": 13
     },
-    "military": {
+    "political": {
       "status": "error",
-      "reason": "SyntaxError: Expected property name or '}' in JSON at position 7710 (line 245 column 6)"
+      "reason": "SyntaxError: Unterminated string in JSON at position 8714 (line 224 column 6)"
+    },
+    "military": {
+      "status": "updated",
+      "itemCount": 52
     }
   }
 }

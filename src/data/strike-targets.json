@@ -1,18 +1,180 @@
 [
-  { "id": "khamenei_compound", "name": "Khamenei's Compound — Pasteur District, Tehran", "detail": "30 bombs by Israeli jets at ~08:10 IRST. Khamenei + family killed. 48 leaders eliminated.", "icon": "target", "time": "Feb 28, 08:10", "tier": 1 },
-  { "id": "thar_allah_hq", "name": "Thar-Allah HQ — Tehran", "detail": "IRGC command center for Tehran security. IDF released video of strike.", "icon": "target", "time": "Mar 1", "tier": 1 },
-  { "id": "revolutionary_court", "name": "Revolutionary Court — Shariati St, Tehran", "detail": "Building completely destroyed.", "icon": "target", "time": "Mar 1", "tier": 2 },
-  { "id": "irib_hq", "name": "IRIB Broadcasting HQ — Alvand St, Tehran", "detail": "State TV interrupted. Broadcasts hacked to air Trump and Netanyahu speeches.", "icon": "target", "time": "Feb 28", "tier": 2 },
-  { "id": "armed_forces_gs", "name": "Armed Forces General Staff — Sepah Square", "detail": "Extensive bombing of military command infrastructure.", "icon": "target", "time": "Feb 28", "tier": 1 },
-  { "id": "minab_school", "name": "Shajareh Tayyebeh School — Minab", "detail": "148–180 children killed (contested). School was ~200ft from IRGC Navy base.", "icon": "casualty", "time": "Feb 28, ~10:00", "tier": 2 },
-  { "id": "natanz_facility", "name": "Natanz Nuclear Facility", "detail": "Ground-penetrating munitions. Already damaged in June 2025.", "icon": "target", "time": "Feb 28", "tier": 1 },
-  { "id": "fordow_facility", "name": "Fordow Underground Facility", "detail": "Access roads and entrance hit. Deep damage uncertain per IAEA.", "icon": "target", "time": "Feb 28", "tier": 1 },
-  { "id": "niloofar_square", "name": "Niloofar Square — Tehran", "detail": "20 civilians killed on March 2.", "icon": "casualty", "time": "Mar 2", "tier": 2 },
-  { "id": "interior_ministry", "name": "Interior Ministry — Tehran", "detail": "Coordinated IRGC/Basij operations hub.", "icon": "target", "time": "Mar 1", "tier": 2 },
-  { "id": "irgc_navy_bandar_abbas", "name": "IRGC Navy HQ — Bandar Abbas", "detail": "Port facilities and fast-attack craft destroyed. Hormuz Strait patrol boats sunk.", "icon": "target", "time": "Mar 3", "tier": 1 },
-  { "id": "parchin_complex", "name": "Parchin Military Complex", "detail": "Suspected weapons research site. B-2 bunker busters deployed. IAEA denied access pre-strike.", "icon": "target", "time": "Mar 3", "tier": 1 },
-  { "id": "tabriz_airbase", "name": "Tabriz Air Base", "detail": "IRIAF fighter jets destroyed on tarmac. Runway cratered.", "icon": "target", "time": "Mar 3", "tier": 2 },
-  { "id": "irgc_missile_storage_khorramabad", "name": "Missile Storage — Khorramabad", "detail": "Underground ballistic missile depot. Secondary explosions lasted 4 hours.", "icon": "target", "time": "Mar 4", "tier": 1 },
-  { "id": "chabahar_port", "name": "Chabahar Port Facilities", "detail": "Drone and missile assembly warehouse targeted. India condemns strike near joint project.", "icon": "target", "time": "Mar 4", "tier": 2 },
-  { "id": "isfahan_tech_university", "name": "Isfahan University of Technology", "detail": "Alleged drone R&D lab. 12 civilians killed. Iran calls it war crime.", "icon": "casualty", "time": "Mar 4", "tier": 2 }
+  {
+    "id": "khamenei_compound",
+    "name": "Khamenei's Compound — Pasteur District, Tehran",
+    "detail": "30 bombs by Israeli jets at ~08:10 IRST. Khamenei + family killed. 48 leaders eliminated.",
+    "icon": "target",
+    "time": "Feb 28, 08:10",
+    "tier": 1
+  },
+  {
+    "id": "thar_allah_hq",
+    "name": "Thar-Allah HQ — Tehran",
+    "detail": "IRGC command center for Tehran security. IDF released video of strike.",
+    "icon": "target",
+    "time": "Mar 1",
+    "tier": 1
+  },
+  {
+    "id": "revolutionary_court",
+    "name": "Revolutionary Court — Shariati St, Tehran",
+    "detail": "Building completely destroyed.",
+    "icon": "target",
+    "time": "Mar 1",
+    "tier": 2
+  },
+  {
+    "id": "irib_hq",
+    "name": "IRIB Broadcasting HQ — Alvand St, Tehran",
+    "detail": "State TV interrupted. Broadcasts hacked to air Trump and Netanyahu speeches.",
+    "icon": "target",
+    "time": "Feb 28",
+    "tier": 2
+  },
+  {
+    "id": "armed_forces_gs",
+    "name": "Armed Forces General Staff — Sepah Square",
+    "detail": "Extensive bombing of military command infrastructure.",
+    "icon": "target",
+    "time": "Feb 28",
+    "tier": 1
+  },
+  {
+    "id": "minab_school",
+    "name": "Shajareh Tayyebeh School — Minab",
+    "detail": "148–180 children killed (contested). School was ~200ft from IRGC Navy base.",
+    "icon": "casualty",
+    "time": "Feb 28, ~10:00",
+    "tier": 2
+  },
+  {
+    "id": "natanz_facility",
+    "name": "Natanz Nuclear Facility",
+    "detail": "Ground-penetrating munitions. Already damaged in June 2025.",
+    "icon": "target",
+    "time": "Feb 28",
+    "tier": 1
+  },
+  {
+    "id": "fordow_facility",
+    "name": "Fordow Underground Facility",
+    "detail": "Access roads and entrance hit. Deep damage uncertain per IAEA.",
+    "icon": "target",
+    "time": "Feb 28",
+    "tier": 1
+  },
+  {
+    "id": "niloofar_square",
+    "name": "Niloofar Square — Tehran",
+    "detail": "20 civilians killed on March 2.",
+    "icon": "casualty",
+    "time": "Mar 2",
+    "tier": 2
+  },
+  {
+    "id": "interior_ministry",
+    "name": "Interior Ministry — Tehran",
+    "detail": "Coordinated IRGC/Basij operations hub.",
+    "icon": "target",
+    "time": "Mar 1",
+    "tier": 2
+  },
+  {
+    "id": "irgc_navy_bandar_abbas",
+    "name": "IRGC Navy HQ — Bandar Abbas",
+    "detail": "Port facilities and fast-attack craft destroyed. Hormuz Strait patrol boats sunk.",
+    "icon": "target",
+    "time": "Mar 3",
+    "tier": 1
+  },
+  {
+    "id": "parchin_complex",
+    "name": "Parchin Military Complex",
+    "detail": "Suspected weapons research site. B-2 bunker busters deployed. IAEA denied access pre-strike.",
+    "icon": "target",
+    "time": "Mar 3",
+    "tier": 1,
+    "lastUpdated": "2026-03-06T04:24:50.651Z"
+  },
+  {
+    "id": "tabriz_airbase",
+    "name": "Tabriz Air Base",
+    "detail": "IRIAF fighter jets destroyed on tarmac. Runway cratered.",
+    "icon": "target",
+    "time": "Mar 3",
+    "tier": 2,
+    "lastUpdated": "2026-03-06T04:24:50.651Z"
+  },
+  {
+    "id": "irgc_missile_storage_khorramabad",
+    "name": "Missile Storage — Khorramabad",
+    "detail": "Underground ballistic missile depot. Secondary explosions lasted 4 hours.",
+    "icon": "target",
+    "time": "Mar 4",
+    "tier": 1,
+    "lastUpdated": "2026-03-06T04:24:50.651Z"
+  },
+  {
+    "id": "chabahar_port",
+    "name": "Chabahar Port Facilities",
+    "detail": "Drone and missile assembly warehouse targeted. India condemns strike near joint project.",
+    "icon": "target",
+    "time": "Mar 4",
+    "tier": 2,
+    "lastUpdated": "2026-03-06T04:24:50.651Z"
+  },
+  {
+    "id": "isfahan_tech_university",
+    "name": "Isfahan University of Technology",
+    "detail": "Alleged drone R&D lab. 12 civilians killed. Iran calls it war crime.",
+    "icon": "casualty",
+    "time": "Mar 4",
+    "tier": 2,
+    "lastUpdated": "2026-03-06T04:24:50.651Z"
+  },
+  {
+    "id": "azadi_sports_complex",
+    "name": "Azadi Sports Complex — Tehran",
+    "detail": "12,000-seat indoor arena destroyed by U.S.-Israeli airstrike.",
+    "icon": "target",
+    "time": "Mar 5",
+    "tier": 1,
+    "lastUpdated": "2026-03-06T04:24:50.651Z"
+  },
+  {
+    "id": "sns_council_hq",
+    "name": "Supreme National Security Council HQ — Tehran",
+    "detail": "Building destroyed; several senior officials killed.",
+    "icon": "target",
+    "time": "Mar 3",
+    "tier": 1,
+    "lastUpdated": "2026-03-06T04:24:50.651Z"
+  },
+  {
+    "id": "expediency_discernment_council",
+    "name": "Expediency Discernment Council — Tehran",
+    "detail": "Facility targeted and destroyed.",
+    "icon": "target",
+    "time": "Mar 3",
+    "tier": 1,
+    "lastUpdated": "2026-03-06T04:24:50.651Z"
+  },
+  {
+    "id": "bushehr_airport",
+    "name": "Bushehr Airport",
+    "detail": "Terminal damaged; Iran Air Airbus A319 destroyed.",
+    "icon": "target",
+    "time": "Mar 3",
+    "tier": 2,
+    "lastUpdated": "2026-03-06T04:24:50.651Z"
+  },
+  {
+    "id": "min_zadai_facility",
+    "name": "Min Zadai Underground Facility",
+    "detail": "Suspected nuclear weapons site destroyed.",
+    "icon": "target",
+    "time": "Mar 3",
+    "tier": 1,
+    "lastUpdated": "2026-03-06T04:24:50.651Z"
+  }
 ]

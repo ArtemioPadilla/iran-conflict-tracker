@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-03-06T04:38:18.553Z",
+  "lastRun": "2026-03-06T05:26:50.690Z",
   "provider": "openai",
   "model": "gpt-4o",
   "sections": {
@@ -12,7 +12,7 @@
     },
     "timeline": {
       "status": "updated",
-      "newEvents": 4
+      "newEvents": 5
     },
     "map": {
       "status": "skipped",
@@ -24,23 +24,23 @@
     },
     "casualties": {
       "status": "updated",
-      "itemCount": 14
+      "itemCount": 15
     },
     "econ": {
       "status": "updated",
       "itemCount": 8
     },
     "claims": {
-      "status": "updated",
-      "itemCount": 17
+      "status": "skipped",
+      "reason": "validation_failed"
     },
     "political": {
-      "status": "updated",
-      "itemCount": 29
+      "status": "skipped",
+      "reason": "validation_failed"
     },
     "military": {
       "status": "updated",
-      "itemCount": 56
+      "itemCount": 66
     }
   }
 }

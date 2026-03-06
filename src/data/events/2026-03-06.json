@@ -218,5 +218,85 @@
       }
     ],
     "lastUpdated": "2026-03-06T04:38:18.553Z"
+  },
+  {
+    "id": "israel_us_intensify_strikes_iran_lebanon",
+    "year": "2026",
+    "title": "Israel and U.S. Intensify Strikes on Iran and Lebanon",
+    "type": "military",
+    "detail": "Israeli and U.S. forces have launched intense air and sea strikes targeting Iran and Lebanon. Israel initiated a sweeping airstrike campaign on Tehran and other Iranian cities, damaging Iran's air defenses and missile infrastructure, while also heavily bombing Hezbollah-held areas in Beirut. Concurrently, the U.S. struck an Iranian drone carrier at sea and used B-2 bombers to destroy deeply buried missile launch facilities and other key military sites in Iran.",
+    "sources": [
+      {
+        "name": "Associated Press",
+        "tier": 2,
+        "url": "https://apnews.com/article/6108249f19c4bc162eacd7847976c174",
+        "pole": "western"
+      }
+    ],
+    "lastUpdated": "2026-03-06T05:26:50.690Z"
+  },
+  {
+    "id": "iran_retaliatory_attacks_gulf",
+    "year": "2026",
+    "title": "Iran Launches Retaliatory Attacks Across Gulf Nations",
+    "type": "military",
+    "detail": "In response to joint U.S.-Israeli strikes, Iran has launched missile and drone attacks on U.S. military-hosting nations including Kuwait, Qatar, Saudi Arabia, and Bahrain. These attacks have resulted in at least 13 civilian deaths and six U.S. soldiers killed in Kuwait.",
+    "sources": [
+      {
+        "name": "Associated Press",
+        "tier": 2,
+        "url": "https://apnews.com/article/69d5bc227e468f06e20e5ad069330c7d",
+        "pole": "western"
+      }
+    ],
+    "lastUpdated": "2026-03-06T05:26:50.690Z"
+  },
+  {
+    "id": "iranian_strikes_on_azerbaijan",
+    "year": "2026",
+    "title": "Iranian Strikes on Azerbaijan",
+    "type": "military",
+    "detail": "On 5 March 2026, two one-way attack drones struck the Azerbaijani exclave of Nakhchivan, resulting in damage to the airport and injuries to four civilians. Azerbaijan blamed the attack on Iran and vowed a response, while Iran denied involvement, suggesting it was an Israeli false flag operation.",
+    "sources": [
+      {
+        "name": "The Guardian",
+        "tier": 2,
+        "url": "https://www.theguardian.com/world/2026/mar/05/azerbaijan-accuses-iran-of-terrorist-drone-attack-on-airport-that-injured-four-people",
+        "pole": "western"
+      }
+    ],
+    "lastUpdated": "2026-03-06T05:26:50.690Z"
+  },
+  {
+    "id": "israel_strikes_beirut_suburbs",
+    "year": "2026",
+    "title": "Israel Strikes Beirut's Southern Suburbs After Evacuation Order",
+    "type": "military",
+    "detail": "On Thursday, Israel launched airstrikes on southern suburbs of Beirut following a mass evacuation order issued to residents of the densely populated area. The strikes targeted Hezbollah-held areas amid escalating hostilities between Israel and Hezbollah.",
+    "sources": [
+      {
+        "name": "Associated Press",
+        "tier": 2,
+        "url": "https://apnews.com/article/55b660c3e8cc071078533d8d2a8f93a2",
+        "pole": "western"
+      }
+    ],
+    "lastUpdated": "2026-03-06T05:26:50.690Z"
+  },
+  {
+    "id": "iranian_attacks_on_persian_gulf",
+    "year": "2026",
+    "title": "Iran's Attacks Across the Persian Gulf Create Regional Chaos",
+    "type": "military",
+    "detail": "Since the joint U.S.-Israeli military operation, Iran has unleashed a coordinated and widespread missile and drone assault across the Middle East, targeting Israel, U.S. bases, and energy infrastructure in the Persian Gulf, as well as extending attacks to neighboring countries like Turkey and Azerbaijan.",
+    "sources": [
+      {
+        "name": "Associated Press",
+        "tier": 2,
+        "url": "https://apnews.com/article/36a51df550a4bd766f8c83b8d8c0f701",
+        "pole": "western"
+      }
+    ],
+    "lastUpdated": "2026-03-06T05:26:50.690Z"
   }
 ]

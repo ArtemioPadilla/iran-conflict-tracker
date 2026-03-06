@@ -2,8 +2,8 @@
   {
     "id": "brent_crude",
     "label": "Brent Crude",
-    "value": "$77.74/bbl",
-    "change": "+6.7%",
+    "value": "$84.17/bbl",
+    "change": "+1.43%",
     "direction": "up",
     "sparkData": [
       72.87,
@@ -13,18 +13,18 @@
       118,
       138,
       148,
-      77.74
+      84.17
     ],
     "color": "#e74c3c",
-    "source": "Straits Financial",
-    "lastUpdated": "2026-03-06T04:38:18.553Z"
+    "source": "Baonghean",
+    "lastUpdated": "2026-03-06T05:26:50.690Z"
   },
   {
     "id": "wti_crude",
     "label": "WTI Crude",
-    "value": "$74.90/bbl",
-    "change": "+5.15%",
-    "direction": "up",
+    "value": "$79.52/bbl",
+    "change": "-1.81%",
+    "direction": "down",
     "sparkData": [
       67,
       72.79,
@@ -33,11 +33,11 @@
       112,
       132,
       141,
-      74.9
+      79.52
     ],
     "color": "#e67e22",
-    "source": "AInvest",
-    "lastUpdated": "2026-03-06T04:38:18.553Z"
+    "source": "Baonghean",
+    "lastUpdated": "2026-03-06T05:26:50.690Z"
   },
   {
     "id": "gold_spot",
@@ -57,13 +57,13 @@
     ],
     "color": "#f1c40f",
     "source": "AInvest",
-    "lastUpdated": "2026-03-06T04:38:18.553Z"
+    "lastUpdated": "2026-03-06T05:26:50.690Z"
   },
   {
     "id": "sp500",
     "label": "S&P 500",
-    "value": "6,816.63",
-    "change": "-0.944%",
+    "value": "6,813.10",
+    "change": "-0.53%",
     "direction": "down",
     "sparkData": [
       6920,
@@ -73,11 +73,11 @@
       6310,
       6240,
       6180,
-      6816.63
+      6813.1
     ],
     "color": "#3498db",
-    "source": "AInvest",
-    "lastUpdated": "2026-03-06T04:38:18.553Z"
+    "source": "State Street SPDR S&P 500 ETF Trust (SPY)",
+    "lastUpdated": "2026-03-06T05:26:50.690Z"
   },
   {
     "id": "vix",
@@ -96,7 +96,7 @@
     ],
     "color": "#9b59b6",
     "source": "CBOE",
-    "lastUpdated": "2026-03-06T04:38:18.553Z"
+    "lastUpdated": "2026-03-06T05:26:50.690Z"
   },
   {
     "id": "iranian_rial",
@@ -115,7 +115,7 @@
     ],
     "color": "#e74c3c",
     "source": "Iran Intl",
-    "lastUpdated": "2026-03-06T04:38:18.553Z"
+    "lastUpdated": "2026-03-06T05:26:50.690Z"
   },
   {
     "id": "gas_price_us",
@@ -135,7 +135,7 @@
     ],
     "color": "#e74c3c",
     "source": "Kiplinger",
-    "lastUpdated": "2026-03-06T04:38:18.553Z"
+    "lastUpdated": "2026-03-06T05:26:50.690Z"
   },
   {
     "id": "shipping_rates",
@@ -154,6 +154,6 @@
     ],
     "color": "#e67e22",
     "source": "Freightos",
-    "lastUpdated": "2026-03-06T04:38:18.553Z"
+    "lastUpdated": "2026-03-06T05:26:50.690Z"
   }
 ]

@@ -203,5 +203,50 @@
     "time": "Mar 6",
     "tier": 1,
     "lastUpdated": "2026-03-06T04:38:18.553Z"
+  },
+  {
+    "id": "tehran_air_defense",
+    "name": "Tehran Air Defense Systems",
+    "detail": "Israeli airstrikes targeted and significantly damaged Iran's air defense and missile infrastructure in Tehran.",
+    "icon": "target",
+    "time": "Mar 6",
+    "tier": 1,
+    "lastUpdated": "2026-03-06T05:26:50.690Z"
+  },
+  {
+    "id": "beirut_southern_suburbs",
+    "name": "Beirut's Southern Suburbs",
+    "detail": "Israeli airstrikes hit Hezbollah-held areas in Beirut following a mass evacuation order.",
+    "icon": "target",
+    "time": "Mar 5",
+    "tier": 1,
+    "lastUpdated": "2026-03-06T05:26:50.690Z"
+  },
+  {
+    "id": "iranian_drone_carrier",
+    "name": "Iranian Drone Carrier",
+    "detail": "U.S. forces struck and destroyed an Iranian drone carrier at sea.",
+    "icon": "target",
+    "time": "Mar 6",
+    "tier": 1,
+    "lastUpdated": "2026-03-06T05:26:50.690Z"
+  },
+  {
+    "id": "iranian_missile_facilities",
+    "name": "Iranian Missile Facilities",
+    "detail": "U.S. B-2 bombers destroyed deeply buried missile launch facilities and other key military sites in Iran.",
+    "icon": "target",
+    "time": "Mar 6",
+    "tier": 1,
+    "lastUpdated": "2026-03-06T05:26:50.690Z"
+  },
+  {
+    "id": "iranian_naval_vessels",
+    "name": "Iranian Naval Vessels",
+    "detail": "U.S. Navy submarine sank an Iranian warship in the Indian Ocean off the coast of Sri Lanka.",
+    "icon": "target",
+    "time": "Mar 4",
+    "tier": 1,
+    "lastUpdated": "2026-03-06T05:26:50.690Z"
   }
 ]

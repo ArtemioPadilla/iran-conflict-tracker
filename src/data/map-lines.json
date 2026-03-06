@@ -232,12 +232,12 @@
     ],
     "to": [
       34.78,
-      32.07
+      32.08
     ],
     "cat": "retaliation",
     "label": "Iran → Israel",
     "date": "2026-02-28",
-    "lastUpdated": "2026-03-06T05:57:54.619Z"
+    "lastUpdated": "2026-03-06T06:21:53.605Z"
   },
   {
     "id": "iran_doha",
@@ -266,8 +266,8 @@
     ],
     "cat": "retaliation",
     "label": "Iran → Kuwait",
-    "date": "2026-03-01",
-    "lastUpdated": "2026-03-06T05:57:54.619Z"
+    "date": "2026-02-28",
+    "lastUpdated": "2026-03-06T06:21:53.605Z"
   },
   {
     "id": "iran_abudhabi",
@@ -296,8 +296,8 @@
     ],
     "cat": "retaliation",
     "label": "Iran → Bahrain",
-    "date": "2026-03-01",
-    "lastUpdated": "2026-03-06T05:57:54.619Z"
+    "date": "2026-02-28",
+    "lastUpdated": "2026-03-06T06:21:53.605Z"
   },
   {
     "id": "iran_erbil",
@@ -444,5 +444,335 @@
     "cat": "front",
     "label": "Bab el-Mandeb → Red Sea",
     "date": "2026-03-02"
+  },
+  {
+    "id": "us_israel_tehran",
+    "from": [
+      34.78,
+      32.08
+    ],
+    "to": [
+      51.39,
+      35.69
+    ],
+    "cat": "strike",
+    "label": "US-Israel → Tehran",
+    "date": "2026-02-28",
+    "lastUpdated": "2026-03-06T06:21:53.605Z"
+  },
+  {
+    "id": "us_israel_kermanshah",
+    "from": [
+      34.78,
+      32.08
+    ],
+    "to": [
+      47.06,
+      34.31
+    ],
+    "cat": "strike",
+    "label": "US-Israel → Kermanshah",
+    "date": "2026-02-28",
+    "lastUpdated": "2026-03-06T06:21:53.605Z"
+  },
+  {
+    "id": "us_israel_qom",
+    "from": [
+      34.78,
+      32.08
+    ],
+    "to": [
+      50.88,
+      34.64
+    ],
+    "cat": "strike",
+    "label": "US-Israel → Qom",
+    "date": "2026-02-28",
+    "lastUpdated": "2026-03-06T06:21:53.605Z"
+  },
+  {
+    "id": "us_israel_karaj",
+    "from": [
+      34.78,
+      32.08
+    ],
+    "to": [
+      50.98,
+      35.83
+    ],
+    "cat": "strike",
+    "label": "US-Israel → Karaj",
+    "date": "2026-02-28",
+    "lastUpdated": "2026-03-06T06:21:53.605Z"
+  },
+  {
+    "id": "us_israel_isfahan",
+    "from": [
+      34.78,
+      32.08
+    ],
+    "to": [
+      51.66,
+      32.65
+    ],
+    "cat": "strike",
+    "label": "US-Israel → Isfahan",
+    "date": "2026-02-28",
+    "lastUpdated": "2026-03-06T06:21:53.605Z"
+  },
+  {
+    "id": "iran_qatar",
+    "from": [
+      51.39,
+      35.69
+    ],
+    "to": [
+      51.53,
+      25.29
+    ],
+    "cat": "retaliation",
+    "label": "Iran → Qatar",
+    "date": "2026-02-28",
+    "lastUpdated": "2026-03-06T06:21:53.605Z"
+  },
+  {
+    "id": "iran_uae",
+    "from": [
+      51.39,
+      35.69
+    ],
+    "to": [
+      54.37,
+      24.45
+    ],
+    "cat": "retaliation",
+    "label": "Iran → UAE",
+    "date": "2026-02-28",
+    "lastUpdated": "2026-03-06T06:21:53.605Z"
+  },
+  {
+    "id": "iran_saudi_arabia",
+    "from": [
+      51.39,
+      35.69
+    ],
+    "to": [
+      46.68,
+      24.71
+    ],
+    "cat": "retaliation",
+    "label": "Iran → Saudi Arabia",
+    "date": "2026-02-28",
+    "lastUpdated": "2026-03-06T06:21:53.605Z"
+  },
+  {
+    "id": "iran_jordan",
+    "from": [
+      51.39,
+      35.69
+    ],
+    "to": [
+      35.93,
+      31.95
+    ],
+    "cat": "retaliation",
+    "label": "Iran → Jordan",
+    "date": "2026-02-28",
+    "lastUpdated": "2026-03-06T06:21:53.605Z"
+  },
+  {
+    "id": "iran_oman",
+    "from": [
+      51.39,
+      35.69
+    ],
+    "to": [
+      58.59,
+      23.61
+    ],
+    "cat": "retaliation",
+    "label": "Iran → Oman",
+    "date": "2026-02-28",
+    "lastUpdated": "2026-03-06T06:21:53.605Z"
+  },
+  {
+    "id": "iran_iraq",
+    "from": [
+      51.39,
+      35.69
+    ],
+    "to": [
+      44.36,
+      33.31
+    ],
+    "cat": "retaliation",
+    "label": "Iran → Iraq",
+    "date": "2026-02-28",
+    "lastUpdated": "2026-03-06T06:21:53.605Z"
+  },
+  {
+    "id": "hezbollah_israel",
+    "from": [
+      35.5,
+      33.89
+    ],
+    "to": [
+      34.78,
+      32.08
+    ],
+    "cat": "retaliation",
+    "label": "Hezbollah → Israel",
+    "date": "2026-03-02",
+    "lastUpdated": "2026-03-06T06:21:53.605Z"
+  },
+  {
+    "id": "israel_lebanon",
+    "from": [
+      34.78,
+      32.08
+    ],
+    "to": [
+      35.5,
+      33.89
+    ],
+    "cat": "strike",
+    "label": "Israel → Lebanon",
+    "date": "2026-03-02",
+    "lastUpdated": "2026-03-06T06:21:53.605Z"
+  },
+  {
+    "id": "us_israel_tehran_assembly",
+    "from": [
+      34.78,
+      32.08
+    ],
+    "to": [
+      51.39,
+      35.69
+    ],
+    "cat": "strike",
+    "label": "US-Israel → Tehran Assembly of Experts",
+    "date": "2026-03-03",
+    "lastUpdated": "2026-03-06T06:21:53.605Z"
+  },
+  {
+    "id": "iran_strait_of_hormuz",
+    "from": [
+      51.39,
+      35.69
+    ],
+    "to": [
+      56.25,
+      26.5
+    ],
+    "cat": "asset",
+    "label": "Iran → Strait of Hormuz",
+    "date": "2026-03-01",
+    "lastUpdated": "2026-03-06T06:21:53.605Z"
+  },
+  {
+    "id": "us_israel_tehran_snsc",
+    "from": [
+      34.78,
+      32.08
+    ],
+    "to": [
+      51.39,
+      35.69
+    ],
+    "cat": "strike",
+    "label": "US-Israel → Tehran SNSC",
+    "date": "2026-03-03",
+    "lastUpdated": "2026-03-06T06:21:53.605Z"
+  },
+  {
+    "id": "us_israel_tehran_irib",
+    "from": [
+      34.78,
+      32.08
+    ],
+    "to": [
+      51.39,
+      35.69
+    ],
+    "cat": "strike",
+    "label": "US-Israel → Tehran IRIB",
+    "date": "2026-03-03",
+    "lastUpdated": "2026-03-06T06:21:53.605Z"
+  },
+  {
+    "id": "us_israel_tehran_parliament",
+    "from": [
+      34.78,
+      32.08
+    ],
+    "to": [
+      51.39,
+      35.69
+    ],
+    "cat": "strike",
+    "label": "US-Israel → Tehran Parliament",
+    "date": "2026-03-03",
+    "lastUpdated": "2026-03-06T06:21:53.605Z"
+  },
+  {
+    "id": "iran_us_embassy_riyadh",
+    "from": [
+      51.39,
+      35.69
+    ],
+    "to": [
+      46.68,
+      24.71
+    ],
+    "cat": "retaliation",
+    "label": "Iran → US Embassy Riyadh",
+    "date": "2026-03-02",
+    "lastUpdated": "2026-03-06T06:21:53.605Z"
+  },
+  {
+    "id": "iran_us_embassy_kuwait",
+    "from": [
+      51.39,
+      35.69
+    ],
+    "to": [
+      47.98,
+      29.38
+    ],
+    "cat": "retaliation",
+    "label": "Iran → US Embassy Kuwait",
+    "date": "2026-03-02",
+    "lastUpdated": "2026-03-06T06:21:53.605Z"
+  },
+  {
+    "id": "iran_jebel_ali_port",
+    "from": [
+      51.39,
+      35.69
+    ],
+    "to": [
+      55.02,
+      25.01
+    ],
+    "cat": "retaliation",
+    "label": "Iran → Jebel Ali Port",
+    "date": "2026-03-01",
+    "lastUpdated": "2026-03-06T06:21:53.605Z"
+  },
+  {
+    "id": "iran_strait_of_hormuz_closure",
+    "from": [
+      51.39,
+      35.69
+    ],
+    "to": [
+      56.25,
+      26.5
+    ],
+    "cat": "asset",
+    "label": "Iran → Strait of Hormuz Closure",
+    "date": "2026-03-01",
+    "lastUpdated": "2026-03-06T06:21:53.605Z"
   }
 ]

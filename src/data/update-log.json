@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-03-06T05:57:54.619Z",
+  "lastRun": "2026-03-06T06:21:53.605Z",
   "provider": "openai",
   "model": "gpt-4o",
   "sections": {
@@ -12,7 +12,7 @@
     },
     "timeline": {
       "status": "updated",
-      "newEvents": 4
+      "newEvents": 2
     },
     "map": {
       "status": "updated",
@@ -20,7 +20,7 @@
     },
     "map-lines": {
       "status": "updated",
-      "itemCount": 30
+      "itemCount": 52
     },
     "casualties": {
       "status": "updated",
@@ -39,8 +39,8 @@
       "itemCount": 29
     },
     "military": {
-      "status": "updated",
-      "itemCount": 67
+      "status": "skipped",
+      "reason": "validation_failed"
     }
   }
 }

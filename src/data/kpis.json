@@ -8,7 +8,7 @@
     "contested": false,
     "delta": "+1",
     "trend": "up",
-    "lastUpdated": "2026-03-06T05:57:54.619Z"
+    "lastUpdated": "2026-03-06T06:21:53.605Z"
   },
   {
     "id": "iran_killed",
@@ -20,7 +20,7 @@
     "contestNote": "IRNA: 935; HRANA: 1,168",
     "delta": "+185",
     "trend": "up",
-    "lastUpdated": "2026-03-06T05:57:54.619Z"
+    "lastUpdated": "2026-03-06T06:21:53.605Z"
   },
   {
     "id": "us_killed",
@@ -31,7 +31,7 @@
     "contested": false,
     "delta": "0",
     "trend": "stable",
-    "lastUpdated": "2026-03-06T05:57:54.619Z"
+    "lastUpdated": "2026-03-06T06:21:53.605Z"
   },
   {
     "id": "gulf_killed",
@@ -42,7 +42,7 @@
     "contested": false,
     "delta": "+3",
     "trend": "up",
-    "lastUpdated": "2026-03-06T05:57:54.619Z"
+    "lastUpdated": "2026-03-06T06:21:53.605Z"
   },
   {
     "id": "lebanon_killed",
@@ -53,18 +53,18 @@
     "contested": false,
     "delta": "+7",
     "trend": "up",
-    "lastUpdated": "2026-03-06T05:57:54.619Z"
+    "lastUpdated": "2026-03-06T06:21:53.605Z"
   },
   {
     "id": "brent_crude",
     "label": "Brent Crude",
-    "value": "$81.20",
+    "value": "$84.44",
     "color": "red",
-    "source": "MyCrisisCost",
+    "source": "APA-Economics",
     "contested": false,
-    "delta": "+$13.15",
+    "delta": "+$3.24",
     "trend": "up",
-    "lastUpdated": "2026-03-06T05:57:54.619Z"
+    "lastUpdated": "2026-03-06T06:21:53.605Z"
   },
   {
     "id": "flights_cancelled",
@@ -75,7 +75,7 @@
     "contested": false,
     "delta": "+2,400",
     "trend": "up",
-    "lastUpdated": "2026-03-06T05:57:54.619Z"
+    "lastUpdated": "2026-03-06T06:21:53.605Z"
   },
   {
     "id": "countries_affected",
@@ -85,6 +85,6 @@
     "source": "Compiled",
     "contested": false,
     "trend": "stable",
-    "lastUpdated": "2026-03-06T05:57:54.619Z"
+    "lastUpdated": "2026-03-06T06:21:53.605Z"
   }
 ]

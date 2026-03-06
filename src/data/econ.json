@@ -3,7 +3,7 @@
     "id": "brent_crude",
     "label": "Brent Crude",
     "value": "$84.59/bbl",
-    "change": "+20%",
+    "change": "+6.7%",
     "direction": "up",
     "sparkData": [
       70,
@@ -17,13 +17,13 @@
     ],
     "color": "#e74c3c",
     "source": "AP News",
-    "lastUpdated": "2026-03-06T05:57:54.619Z"
+    "lastUpdated": "2026-03-06T06:21:53.605Z"
   },
   {
     "id": "wti_crude",
     "label": "WTI Crude",
     "value": "$80.07/bbl",
-    "change": "+18%",
+    "change": "+6.3%",
     "direction": "up",
     "sparkData": [
       68,
@@ -37,7 +37,7 @@
     ],
     "color": "#e67e22",
     "source": "AP News",
-    "lastUpdated": "2026-03-06T05:57:54.619Z"
+    "lastUpdated": "2026-03-06T06:21:53.605Z"
   },
   {
     "id": "gold_spot",
@@ -57,7 +57,7 @@
     ],
     "color": "#f1c40f",
     "source": "AInvest",
-    "lastUpdated": "2026-03-06T05:57:54.619Z"
+    "lastUpdated": "2026-03-06T06:21:53.605Z"
   },
   {
     "id": "sp500",
@@ -77,7 +77,7 @@
     ],
     "color": "#3498db",
     "source": "State Street SPDR S&P 500 ETF Trust (SPY)",
-    "lastUpdated": "2026-03-06T05:57:54.619Z"
+    "lastUpdated": "2026-03-06T06:21:53.605Z"
   },
   {
     "id": "vix",
@@ -96,7 +96,7 @@
     ],
     "color": "#9b59b6",
     "source": "CBOE",
-    "lastUpdated": "2026-03-06T05:57:54.619Z"
+    "lastUpdated": "2026-03-06T06:21:53.605Z"
   },
   {
     "id": "iranian_rial",
@@ -115,7 +115,7 @@
     ],
     "color": "#e74c3c",
     "source": "Iran Intl",
-    "lastUpdated": "2026-03-06T05:57:54.619Z"
+    "lastUpdated": "2026-03-06T06:21:53.605Z"
   },
   {
     "id": "gas_price_us",
@@ -135,7 +135,7 @@
     ],
     "color": "#e74c3c",
     "source": "Kiplinger",
-    "lastUpdated": "2026-03-06T05:57:54.619Z"
+    "lastUpdated": "2026-03-06T06:21:53.605Z"
   },
   {
     "id": "shipping_rates",
@@ -154,6 +154,6 @@
     ],
     "color": "#e67e22",
     "source": "Freightos",
-    "lastUpdated": "2026-03-06T05:57:54.619Z"
+    "lastUpdated": "2026-03-06T06:21:53.605Z"
   }
 ]

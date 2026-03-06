@@ -10,5 +10,8 @@ node_modules/
 dist/
 .astro/
 
+# Cesium static assets (copied from node_modules at build time)
+public/cesium/
+
 # Firebase (leftover)
 firebase-debug.log

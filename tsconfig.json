@@ -4,6 +4,7 @@
     "jsx": "react-jsx",
     "jsxImportSource": "react",
     "resolveJsonModule": true,
-    "types": ["node"]
+    "types": ["node"],
+    "skipLibCheck": true
   }
 }

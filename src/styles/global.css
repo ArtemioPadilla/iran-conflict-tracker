@@ -212,6 +212,16 @@ body::before {
   background: var(--bg-card);
 }
 
+.globe-nav-btn {
+  border-color: var(--accent-blue);
+  color: var(--accent-blue);
+}
+
+.globe-nav-btn:hover {
+  background: rgba(52, 152, 219, 0.15);
+  color: var(--text-primary);
+}
+
 /* ── Mobile nav ── */
 .mobile-menu-btn {
   display: none;

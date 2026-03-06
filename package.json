@@ -3,8 +3,10 @@
   "type": "module",
   "version": "1.0.0",
   "scripts": {
-    "dev": "astro dev",
-    "build": "astro check && astro build",
+    "copy-cesium": "node -e \"const{cpSync,existsSync}=require('fs');const s='node_modules/cesium/Build/Cesium/';['Workers','ThirdParty','Assets','Widgets'].forEach(d=>{if(!existsSync('public/cesium/'+d))cpSync(s+d,'public/cesium/'+d,{recursive:true})})\"",
+    "dev": "npm run copy-cesium && astro dev",
+    "check": "astro check",
+    "build": "npm run copy-cesium && astro build",
     "preview": "astro preview",
     "update-data": "tsx scripts/update-data.ts",
     "backfill": "tsx scripts/backfill.ts"
@@ -15,10 +17,13 @@
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
     "astro": "^5.18.0",
+    "cesium": "^1.139.1",
     "leaflet": "^1.9.4",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
-    "react-leaflet": "^5.0.0"
+    "react-leaflet": "^5.0.0",
+    "resium": "^1.19.4",
+    "satellite.js": "^6.0.2"
   },
   "devDependencies": {
     "@anthropic-ai/sdk": "^0.78.0",

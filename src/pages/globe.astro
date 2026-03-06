@@ -1,0 +1,11 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CesiumGlobe from '../components/islands/CesiumGlobe/CesiumGlobe';
+import { mapPoints, mapLines, kpis, meta } from '../lib/data';
+import '../styles/globe.css';
+---
+
+<BaseLayout title="3D Intelligence Globe — Iran Conflict Tracker">
+  <a href="/" class="globe-back-link">&larr; Dashboard</a>
+  <CesiumGlobe client:only="react" points={mapPoints} lines={mapLines} kpis={kpis} meta={meta} />
+</BaseLayout>

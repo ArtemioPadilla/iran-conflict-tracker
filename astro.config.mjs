@@ -6,4 +6,9 @@ export default defineConfig({
   output: 'static',
   site: 'https://artemiopadilla.github.io',
   base: '/iran-conflict-tracker',
+  vite: {
+    define: {
+      CESIUM_BASE_URL: JSON.stringify('/iran-conflict-tracker/cesium/'),
+    },
+  },
 });

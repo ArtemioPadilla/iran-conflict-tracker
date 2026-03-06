@@ -1,0 +1,119 @@
+import { MAP_CATEGORIES } from '../../../lib/map-utils';
+import { type CameraPresetKey } from '../../../lib/cesium-config';
+import type { VisualMode } from './cesium-shaders';
+
+interface Props {
+  activeFilters: Set<string>;
+  onToggleFilter: (cat: string) => void;
+  pointCounts: Record<string, number>;
+  onCameraPreset: (key: CameraPresetKey) => void;
+  visualMode: VisualMode;
+  onVisualMode: (mode: VisualMode) => void;
+  layers: { satellites: boolean; flights: boolean; quakes: boolean };
+  onToggleLayer: (layer: 'satellites' | 'flights' | 'quakes') => void;
+}
+
+const PRESET_LABELS: Record<CameraPresetKey, string> = {
+  theater: 'Full Theater',
+  tehran: 'Tehran',
+  natanz: 'Natanz',
+  hormuz: 'Strait of Hormuz',
+  ford_csg: 'USS Ford CSG',
+  lincoln: 'USS Lincoln CSG',
+  red_sea: 'Red Sea',
+};
+
+const VISUAL_MODES: { id: VisualMode; label: string }[] = [
+  { id: 'normal', label: 'Standard' },
+  { id: 'crt', label: 'CRT' },
+  { id: 'nvg', label: 'Night Vision' },
+  { id: 'thermal', label: 'Thermal' },
+];
+
+export default function CesiumControls({
+  activeFilters,
+  onToggleFilter,
+  pointCounts,
+  onCameraPreset,
+  visualMode,
+  onVisualMode,
+  layers,
+  onToggleLayer,
+}: Props) {
+  return (
+    <div className="globe-controls">
+      {/* Category filters */}
+      <div className="globe-control-group">
+        <div className="globe-control-label">Filters</div>
+        {MAP_CATEGORIES.map(c => (
+          <button
+            key={c.id}
+            className={`globe-filter${activeFilters.has(c.id) ? ' active' : ''}`}
+            onClick={() => onToggleFilter(c.id)}
+            aria-pressed={activeFilters.has(c.id)}
+          >
+            <span className="globe-fdot" style={{ background: c.color }} />
+            {c.label}
+            {activeFilters.has(c.id) && pointCounts[c.id] > 0 && (
+              <span className="globe-filter-count">{pointCounts[c.id]}</span>
+            )}
+          </button>
+        ))}
+      </div>
+
+      {/* Camera presets */}
+      <div className="globe-control-group">
+        <div className="globe-control-label">Camera</div>
+        <div className="globe-preset-grid">
+          {(Object.keys(PRESET_LABELS) as CameraPresetKey[]).map(key => (
+            <button key={key} className="globe-preset-btn" onClick={() => onCameraPreset(key)}>
+              {PRESET_LABELS[key]}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      {/* Visual modes */}
+      <div className="globe-control-group">
+        <div className="globe-control-label">Visual Mode</div>
+        <div className="globe-mode-row">
+          {VISUAL_MODES.map(m => (
+            <button
+              key={m.id}
+              className={`globe-mode-btn${visualMode === m.id ? ' active' : ''}`}
+              onClick={() => onVisualMode(m.id)}
+            >
+              {m.label}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      {/* Real-time data layers */}
+      <div className="globe-control-group">
+        <div className="globe-control-label">Live Data</div>
+        <button
+          className={`globe-filter${layers.satellites ? ' active' : ''}`}
+          onClick={() => onToggleLayer('satellites')}
+        >
+          <span className="globe-fdot" style={{ background: '#00ff88' }} />
+          Satellites
+        </button>
+        <button
+          className={`globe-filter${layers.flights ? ' active' : ''}`}
+          onClick={() => onToggleLayer('flights')}
+        >
+          <span className="globe-fdot" style={{ background: '#00aaff' }} />
+          Flights
+        </button>
+        <button
+          className={`globe-filter${layers.quakes ? ' active' : ''}`}
+          onClick={() => onToggleLayer('quakes')}
+        >
+          <span className="globe-fdot" style={{ background: '#ff6644' }} />
+          Seismic
+        </button>
+      </div>
+    </div>
+  );
+}

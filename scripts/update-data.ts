@@ -206,6 +206,52 @@ function removeTrailingCommas(json: string): string {
   return result;
 }
 
+/** Normalize parsed JSON arrays — coerce dates, fill missing fields */
+function normalizeItems(items: unknown[]): unknown[] {
+  return items.map(item => {
+    if (typeof item !== 'object' || item === null) return item;
+    const obj = item as Record<string, unknown>;
+
+    // Coerce date fields to YYYY-MM-DD strings
+    if ('date' in obj) {
+      const d = obj.date;
+      if (d === null || d === undefined) {
+        obj.date = today;
+      } else if (typeof d === 'number') {
+        obj.date = String(d);
+      } else if (typeof d === 'string') {
+        // Try to normalize common formats: "March 4, 2026", "2026/03/04", ISO timestamps
+        const parsed = new Date(d);
+        if (!isNaN(parsed.getTime())) {
+          obj.date = parsed.toISOString().split('T')[0];
+        }
+        // Already YYYY-MM-DD? Leave it
+      }
+    }
+
+    // Coerce tier to number
+    if ('tier' in obj && typeof obj.tier === 'string') {
+      const n = parseInt(obj.tier, 10);
+      if (!isNaN(n)) obj.tier = n;
+    }
+
+    // Coerce lat/lon to numbers
+    for (const key of ['lat', 'lon']) {
+      if (key in obj && typeof obj[key] === 'string') {
+        const n = parseFloat(obj[key] as string);
+        if (!isNaN(n)) obj[key] = n;
+      }
+    }
+
+    // Ensure base is boolean
+    if ('base' in obj && typeof obj.base !== 'boolean') {
+      obj.base = obj.base === 'true' || obj.base === true;
+    }
+
+    return obj;
+  });
+}
+
 // ─── Schema-Driven Prompt Generation ───
 
 function describeType(type: z.ZodType): string {
@@ -449,6 +495,7 @@ Return an updated map points array as JSON.
 Each object must have exactly these fields:
 ${fields}
 
+IMPORTANT: "date" must be a string in YYYY-MM-DD format (e.g. "2026-03-04"). "tier" must be a number (1, 2, 3, or 4). "lat" and "lon" must be numbers, not strings.
 Coordinate constraints: lon must be 25–65, lat must be 20–42.
 
 Current map points:
@@ -456,10 +503,10 @@ ${JSON.stringify(current, null, 2)}
 
 Update existing points if their details have changed. Add new points for newly reported locations. Remove nothing. Return the complete updated array.`);
 
-    const parsed = JSON.parse(extractJSON(text));
+    const parsed = normalizeItems(JSON.parse(extractJSON(text)));
     const result = z.array(MapPointSchema.omit({ lastUpdated: true }).extend({ lastUpdated: z.string().optional() })).safeParse(parsed);
     if (!result.success) {
-      console.error('[map-points] Validation failed:', result.error.format());
+      console.error('[map-points] Validation failed:', JSON.stringify(result.error.format(), null, 2));
       return { status: 'skipped', reason: 'validation_failed' };
     }
     const valid = result.data.filter(p => p.lon >= 25 && p.lon <= 65 && p.lat >= 20 && p.lat <= 42);
@@ -485,15 +532,17 @@ Return an updated map lines array as JSON.
 Each object must have exactly these fields:
 ${fields}
 
+IMPORTANT: "date" must be a string in YYYY-MM-DD format (e.g. "2026-03-04"). "from" and "to" must be [lon, lat] tuples of numbers.
+
 Current map lines:
 ${JSON.stringify(current, null, 2)}
 
 Update existing lines if their details have changed. Add new lines for newly reported attack vectors. Remove nothing. Return the complete updated array.`);
 
-    const parsed = JSON.parse(extractJSON(text));
+    const parsed = normalizeItems(JSON.parse(extractJSON(text)));
     const result = z.array(MapLineSchema.omit({ lastUpdated: true }).extend({ lastUpdated: z.string().optional() })).safeParse(parsed);
     if (!result.success) {
-      console.error('[map-lines] Validation failed:', result.error.format());
+      console.error('[map-lines] Validation failed:', JSON.stringify(result.error.format(), null, 2));
       return { status: 'skipped', reason: 'validation_failed' };
     }
     const { merged } = mergeById(current, result.data);
@@ -652,7 +701,11 @@ Assets: ${JSON.stringify(assets, null, 2)}
 
 Update with the latest information. Return the complete object with all three arrays.`);
 
-    const parsed = JSON.parse(extractJSON(text));
+    const rawParsed = JSON.parse(extractJSON(text));
+    // Normalize inner arrays if present
+    const parsed = typeof rawParsed === 'object' && rawParsed !== null && !Array.isArray(rawParsed)
+      ? Object.fromEntries(Object.entries(rawParsed).map(([k, v]) => [k, Array.isArray(v) ? normalizeItems(v) : v]))
+      : rawParsed;
     const StrikeLoose = StrikeItemSchema.omit({ lastUpdated: true }).extend({ lastUpdated: z.string().optional() });
     const AssetLoose = AssetSchema.omit({ lastUpdated: true }).extend({ lastUpdated: z.string().optional() });
     const schema = z.object({

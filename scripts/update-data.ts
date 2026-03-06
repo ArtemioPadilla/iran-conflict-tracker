@@ -759,19 +759,20 @@ Update with the latest information. Return the complete object with all three ar
       : rawParsed;
     const StrikeLoose = StrikeItemSchema.omit({ lastUpdated: true }).extend({ lastUpdated: z.string().optional() });
     const AssetLoose = AssetSchema.omit({ lastUpdated: true }).extend({ lastUpdated: z.string().optional() });
-    const schema = z.object({
-      strikes: z.array(StrikeLoose),
-      retaliation: z.array(StrikeLoose),
-      assets: z.array(AssetLoose),
-    });
-    const result = schema.safeParse(parsed);
-    if (!result.success) {
-      console.error('[military] Validation failed:', result.error.format());
-      return { status: 'skipped', reason: 'validation_failed' };
+
+    // Validate each array independently — don't fail everything if one is missing
+    const validStrikes = Array.isArray(parsed?.strikes) ? validateItemwise(parsed.strikes, StrikeLoose, 'military.strikes') : [];
+    const validRetaliation = Array.isArray(parsed?.retaliation) ? validateItemwise(parsed.retaliation, StrikeLoose, 'military.retaliation') : [];
+    const validAssets = Array.isArray(parsed?.assets) ? validateItemwise(parsed.assets, AssetLoose, 'military.assets') : [];
+
+    if (validStrikes.length === 0 && validRetaliation.length === 0 && validAssets.length === 0) {
+      console.error('[military] No valid items in any array');
+      return { status: 'skipped', reason: 'all_items_invalid' };
     }
-    const s = mergeById(strikes, result.data.strikes);
-    const r = mergeById(retaliation, result.data.retaliation);
-    const a = mergeById(assets, result.data.assets);
+
+    const s = validStrikes.length > 0 ? mergeById(strikes, validStrikes) : { merged: strikes };
+    const r = validRetaliation.length > 0 ? mergeById(retaliation, validRetaliation) : { merged: retaliation };
+    const a = validAssets.length > 0 ? mergeById(assets, validAssets) : { merged: assets };
     writeJSON('strike-targets.json', s.merged);
     writeJSON('retaliation.json', r.merged);
     writeJSON('assets.json', a.merged);

@@ -1,5 +1,5 @@
 {
-  "lastRun": "2026-03-06T05:26:50.690Z",
+  "lastRun": "2026-03-06T05:43:43.246Z",
   "provider": "openai",
   "model": "gpt-4o",
   "sections": {
@@ -15,12 +15,12 @@
       "newEvents": 5
     },
     "map": {
-      "status": "skipped",
-      "reason": "validation_failed"
+      "status": "error",
+      "reason": "ReferenceError: lastValidEnd is not defined"
     },
     "map-lines": {
-      "status": "skipped",
-      "reason": "validation_failed"
+      "status": "error",
+      "reason": "ReferenceError: lastValidEnd is not defined"
     },
     "casualties": {
       "status": "updated",
@@ -31,16 +31,16 @@
       "itemCount": 8
     },
     "claims": {
-      "status": "skipped",
-      "reason": "validation_failed"
+      "status": "error",
+      "reason": "ReferenceError: lastValidEnd is not defined"
     },
     "political": {
-      "status": "skipped",
-      "reason": "validation_failed"
+      "status": "error",
+      "reason": "ReferenceError: lastValidEnd is not defined"
     },
     "military": {
-      "status": "updated",
-      "itemCount": 66
+      "status": "error",
+      "reason": "ReferenceError: lastValidEnd is not defined"
     }
   }
 }

@@ -298,5 +298,85 @@
       }
     ],
     "lastUpdated": "2026-03-06T05:26:50.690Z"
+  },
+  {
+    "id": "gulf_nations_frustrated_us_iran_strikes",
+    "year": "2026",
+    "title": "Gulf Nations Express Frustration Over Lack of Notice on Iran Strikes",
+    "type": "diplomatic",
+    "detail": "Several Gulf nations, including Saudi Arabia, Kuwait, and Bahrain, have expressed growing frustration with the United States over a lack of prior warning before the joint U.S.-Israeli strike on Iran. These countries criticized the U.S. for poor communication and insufficient defense support, noting that their interceptor stockpiles are rapidly depleting and that American defenses are primarily focused on Israel and U.S. troops, not on defending Gulf allies.",
+    "sources": [
+      {
+        "name": "Associated Press",
+        "tier": 2,
+        "url": "https://apnews.com/article/69d5bc227e468f06e20e5ad069330c7d",
+        "pole": "western"
+      }
+    ],
+    "lastUpdated": "2026-03-06T05:43:43.246Z"
+  },
+  {
+    "id": "iran_widespread_missile_drone_attacks",
+    "year": "2026",
+    "title": "Iran Launches Widespread Missile and Drone Attacks Across Middle East",
+    "type": "military",
+    "detail": "Following the joint U.S.-Israeli military operation that led to the death of Iran's Supreme Leader Ayatollah Ali Khamenei, Iran has unleashed a coordinated and widespread missile and drone assault across the Middle East. Thousands of projectiles have targeted Israel, U.S. bases, and energy infrastructure in the Persian Gulf, while extending attacks to neighboring countries like Turkey and Azerbaijan. Analysts suggest Iran's strategy is to pressure U.S. allies and civilians by creating chaos and elevating the costs of prolonged conflict, thereby compelling them to push for diplomatic resolutions.",
+    "sources": [
+      {
+        "name": "Associated Press",
+        "tier": 2,
+        "url": "https://apnews.com/article/36a51df550a4bd766f8c83b8d8c0f701",
+        "pole": "western"
+      }
+    ],
+    "lastUpdated": "2026-03-06T05:43:43.246Z"
+  },
+  {
+    "id": "un_security_council_emergency_meeting",
+    "year": "2026",
+    "title": "U.S. and Israel Clash with Iran at Emergency UN Security Council Meeting",
+    "type": "diplomatic",
+    "detail": "At an emergency United Nations Security Council meeting, the United States and Israel faced off against Iran following a series of escalating strikes in the Middle East. U.N. Secretary-General António Guterres condemned both the U.S.-Israeli and Iranian attacks, warning of a potential broader conflict if de-escalation efforts fail. Guterres stated that the airstrikes violated international law and stressed the importance of returning to diplomacy.",
+    "sources": [
+      {
+        "name": "Associated Press",
+        "tier": 2,
+        "url": "https://apnews.com/article/9140bca9241fb99be8cb3cff2c650741",
+        "pole": "western"
+      }
+    ],
+    "lastUpdated": "2026-03-06T05:43:43.246Z"
+  },
+  {
+    "id": "iran_accuses_us_israel_natanz_strike",
+    "year": "2026",
+    "title": "Iran Accuses U.S. and Israel of Striking Natanz Enrichment Facility",
+    "type": "military",
+    "detail": "During a special session of the IAEA Board of Governors in Vienna, Iran’s Ambassador to the International Atomic Energy Agency (IAEA), Reza Najafi, accused the United States and Israel of launching airstrikes on the Natanz uranium enrichment facility. He condemned the attacks as unlawful and called on IAEA member states to denounce them. Najafi asserted that the accusations against Iran developing nuclear weapons are baseless.",
+    "sources": [
+      {
+        "name": "Associated Press",
+        "tier": 2,
+        "url": "https://apnews.com/article/3e08a78093e62dc76beb86ba1fca69ae",
+        "pole": "western"
+      }
+    ],
+    "lastUpdated": "2026-03-06T05:43:43.246Z"
+  },
+  {
+    "id": "us_israel_launch_operation_epic_fury",
+    "year": "2026",
+    "title": "U.S. and Israel Launch Operation Epic Fury Against Iran",
+    "type": "military",
+    "detail": "The United States and Israel launched military strikes against Iran as part of what President Donald Trump labeled a 'massive and ongoing' campaign aimed at overthrowing the Iranian regime. The offensive, called Operation Epic Fury, followed months of failed negotiations over Iran's nuclear program and escalating tensions, including Iran’s violent suppression of widespread protests. Trump, in a message to the Iranian people, urged them to seize the opportunity to overthrow their government, warning of continued bombings.",
+    "sources": [
+      {
+        "name": "Time",
+        "tier": 2,
+        "url": "https://time.com/7346357/iran-strikes-news-us-trump-protests/",
+        "pole": "western"
+      }
+    ],
+    "lastUpdated": "2026-03-06T05:43:43.246Z"
   }
 ]

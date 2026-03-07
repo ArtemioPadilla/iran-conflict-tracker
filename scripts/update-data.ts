@@ -461,6 +461,29 @@ async function callAI(systemPrompt: string, userPrompt: string): Promise<string>
   return callAnthropic(systemPrompt, userPrompt);
 }
 
+/** Call AI with retry — on first failure, retry once with a simplified prompt */
+async function callAIWithRetry(
+  systemPrompt: string,
+  userPrompt: string,
+  label: string,
+  retryPrompt?: string,
+): Promise<string> {
+  try {
+    const text = await callAI(systemPrompt, userPrompt);
+    console.log(`[${label}] Raw response length: ${text.length} chars`);
+    return text;
+  } catch (err) {
+    console.warn(`[${label}] First attempt failed: ${err}`);
+    if (retryPrompt) {
+      console.log(`[${label}] Retrying with simplified prompt...`);
+      const text = await callAI(systemPrompt, retryPrompt);
+      console.log(`[${label}] Retry response length: ${text.length} chars`);
+      return text;
+    }
+    throw err;
+  }
+}
+
 // ─── System Prompt ───
 
 const SYSTEM_PROMPT = `You are an intelligence analyst updating a conflict tracking dashboard.
@@ -496,7 +519,7 @@ async function updateKPIs(): Promise<SectionResult> {
   try {
     const current = readJSON<z.infer<typeof KpiSchema>[]>('kpis.json');
     const fields = describeFields(KpiSchema);
-    const text = await callAI(SYSTEM_PROMPT, `Search for the latest data on the Iran-US/Israel conflict as of ${today}.
+    const text = await callAIWithRetry(SYSTEM_PROMPT, `Search for the latest data on the Iran-US/Israel conflict as of ${today}.
 Return updated KPI metrics as a JSON array.
 
 Each object must have these fields:
@@ -505,7 +528,8 @@ ${fields}
 Current data for reference:
 ${JSON.stringify(current, null, 2)}
 
-Update the values and sources with the latest available data. Preserve existing IDs. Return the complete updated array.`);
+Update the values and sources with the latest available data. Preserve existing IDs. Return the complete updated array.`,
+      'kpis');
 
     const parsed = JSON.parse(extractJSON(text));
     const result = z.array(KpiSchema.omit({ lastUpdated: true }).extend({ lastUpdated: z.string().optional() })).safeParse(parsed);
@@ -542,7 +566,7 @@ async function updateTimeline(): Promise<SectionResult> {
     const lastUpdated = readJSON<{ lastRun: string | null }>('update-log.json').lastRun || '2026-03-02';
     const fields = describeFields(TimelineEventSchema);
 
-    const text = await callAI(SYSTEM_PROMPT, `Search for new significant events in the Iran-US/Israel conflict since ${lastUpdated}.
+    const text = await callAIWithRetry(SYSTEM_PROMPT, `Search for new significant events in the Iran-US/Israel conflict since ${lastUpdated}.
 Search across ALL media poles: Western (Reuters, AP, CNN), Middle Eastern (Al Jazeera, IRNA, Press TV), Eastern (Xinhua, CGTN), and International (UN, HRW, IAEA).
 Return any new timeline entries as a JSON array. Return an empty array [] if nothing significant happened.
 
@@ -559,7 +583,8 @@ Each source object needs: { "name": string, "tier": 1|2|3|4, "url": string (opti
 
 Existing event IDs (do NOT include these again): ${existingTitles}
 
-Return ONLY genuinely new events as a JSON array.`);
+Return ONLY genuinely new events as a JSON array.`,
+      'timeline');
 
     const parsed = JSON.parse(extractJSON(text));
     const result = z.array(TimelineEventSchema.omit({ lastUpdated: true }).extend({ lastUpdated: z.string().optional() })).safeParse(parsed);
@@ -610,58 +635,95 @@ async function updateMapPoints(): Promise<SectionResult> {
     const current = readJSON<z.infer<typeof MapPointSchema>[]>('map-points.json');
     const strikes = readJSON<unknown[]>('strike-targets.json');
     const retaliation = readJSON<unknown[]>('retaliation.json');
-    const fields = describeFields(MapPointSchema);
 
-    // Find dates already covered by map points
-    const existingDates = new Set(current.map(p => p.date));
-    const maxDate = [...existingDates].sort().pop() || '';
+    const existingIds = new Set(current.map(p => p.id));
+    const maxDate = [...current.map(p => p.date)].sort().pop() || '';
 
-    const text = await callAI(SYSTEM_PROMPT, `Search for military locations, strike targets, or asset deployments in the Iran-US/Israel conflict for EACH DATE from ${maxDate} to ${today}.
-Return an updated map points array as JSON.
+    // Show only recent points as context (not the full 100+ array)
+    const recentPoints = current.filter(p => p.date >= maxDate).slice(0, 10);
 
-Each object must have exactly these fields:
-${fields}
+    const example = JSON.stringify({
+      id: 'natanz_strike_mar7',
+      lon: 51.73,
+      lat: 33.51,
+      cat: 'strike',
+      label: 'Natanz Nuclear Facility',
+      sub: 'US/Israeli airstrike on uranium enrichment plant',
+      tier: 1,
+      date: today,
+      base: false,
+    }, null, 2);
 
-IMPORTANT: "date" must be a string in YYYY-MM-DD format (e.g. "${today}"). "tier" must be a number (1, 2, 3, or 4). "lat" and "lon" must be numbers, not strings.
-Coordinate constraints: lon must be 25–65, lat must be 20–42.
+    const text = await callAIWithRetry(SYSTEM_PROMPT, `Search for NEW military locations, strike targets, or asset deployments in the Iran-US/Israel conflict since ${maxDate}.
+Return ONLY NEW points as a JSON array. Return [] if nothing new.
+Do NOT return existing points — I will merge them server-side.
 
-Current map points (latest date is ${maxDate}):
-${JSON.stringify(current, null, 2)}
+EXACT FORMAT — each object must look like this example:
+${example}
 
-CROSS-REFERENCE — these are the latest strike targets and retaliation events. Every location mentioned here MUST have a corresponding map point. If a strike or retaliation location is missing from the map, ADD it with accurate lat/lon coordinates:
+Field rules:
+- "id": lowercase_snake_case, unique (e.g. "tehran_strike_mar7")
+- "lon": number, range 25–65
+- "lat": number, range 20–42
+- "cat": one of "strike", "retaliation", "asset", "front"
+- "label": short name of the location
+- "sub": description of what happened
+- "tier": 1 (official), 2 (major outlet), 3 (institutional), 4 (unverified)
+- "date": YYYY-MM-DD string
+- "base": true only for permanent military bases
 
-Strike targets:
-${JSON.stringify(strikes, null, 2)}
+Recent existing points for reference (do NOT repeat these):
+${JSON.stringify(recentPoints, null, 2)}
 
-Retaliation events:
-${JSON.stringify(retaliation, null, 2)}
+Cross-reference these strike/retaliation events — add map points for any missing locations:
+Strikes: ${JSON.stringify(strikes.slice(-10), null, 2)}
+Retaliation: ${JSON.stringify(retaliation.slice(-10), null, 2)}
 
-RULES:
-1. Keep ALL existing points unchanged (update details only if new info exists)
-2. ADD new points for any strike/retaliation location not yet on the map
-3. For EACH DATE from ${maxDate} to ${today}, search for events and add points with the correct date
-4. ENSURE every date in the range has at least one point if any military activity occurred
-5. Every new point MUST have a date of when the event occurred in YYYY-MM-DD format
-6. Return the complete updated array`);
+Existing IDs (do NOT reuse): ${[...existingIds].slice(-30).join(', ')}
+
+Return ONLY new points as a JSON array.`,
+      'map-points',
+      // Retry prompt — even simpler
+      `Search for new military events in the Iran-US/Israel conflict on ${today}.
+Return new map points as a JSON array. Each point needs: id (string), lon (number 25-65), lat (number 20-42), cat ("strike"|"retaliation"|"asset"|"front"), label (string), sub (string), tier (1|2|3|4), date ("${today}").
+Example: ${example}
+Return [] if nothing new.`,
+    );
 
     const parsed = normalizeItems(JSON.parse(extractJSON(text)));
     const PointSchema = MapPointSchema.omit({ lastUpdated: true }).extend({ lastUpdated: z.string().optional() });
     const validItems = validateItemwise(parsed, PointSchema, 'map-points');
-    if (validItems.length === 0) {
-      return { status: 'skipped', reason: 'all_items_invalid' };
+
+    // Filter duplicates and out-of-bounds
+    const newPoints = validItems
+      .filter(p => !existingIds.has(p.id))
+      .filter(p => {
+        if (p.lon < 25 || p.lon > 65 || p.lat < 20 || p.lat > 42) {
+          console.warn(`[map-points] Out-of-bounds: ${p.id} (${p.lon}, ${p.lat})`);
+          return false;
+        }
+        return true;
+      });
+
+    if (newPoints.length === 0) {
+      console.log('[map-points] No new valid points');
+      return { status: 'updated', itemCount: current.length, newEvents: 0 };
     }
-    const valid = validItems.filter(p => p.lon >= 25 && p.lon <= 65 && p.lat >= 20 && p.lat <= 42);
-    if (valid.length !== validItems.length) {
-      console.warn(`[map-points] Filtered ${validItems.length - valid.length} out-of-bounds points`);
+
+    // Cap new points per run
+    const MAX_NEW = 20;
+    if (newPoints.length > MAX_NEW) {
+      console.warn(`[map-points] ${newPoints.length} new points exceeds cap of ${MAX_NEW}`);
+      newPoints.splice(MAX_NEW);
     }
-    const guard = diffGuard(current.length, valid.length, 'map-points');
-    if (!guard.ok) {
-      console.warn(`[map-points] ${guard.reason}`);
-      return { status: 'skipped', reason: 'diff_guard' };
+
+    for (const p of newPoints) {
+      (p as any).lastUpdated = now;
     }
-    const { merged } = mergeById(current, valid);
+    const merged = [...current, ...newPoints];
     writeJSON('map-points.json', merged);
-    return { status: 'updated', itemCount: merged.length };
+    console.log(`[map-points] Added ${newPoints.length} new points`);
+    return { status: 'updated', itemCount: merged.length, newEvents: newPoints.length };
   } catch (err) {
     console.error('[map-points] Error:', err);
     return { status: 'error', reason: String(err) };
@@ -672,56 +734,92 @@ async function updateMapLines(): Promise<SectionResult> {
   try {
     const current = readJSON<z.infer<typeof MapLineSchema>[]>('map-lines.json');
     const mapPoints = readJSON<z.infer<typeof MapPointSchema>[]>('map-points.json');
-    const fields = describeFields(MapLineSchema);
 
-    // Build a lookup of map point coordinates for GPT to reference
-    const pointCoords = mapPoints.map(p => ({ id: p.id, label: p.label, cat: p.cat, lon: p.lon, lat: p.lat }));
+    const existingIds = new Set(current.map(l => l.id));
     const maxDate = [...current.map(l => l.date)].sort().pop() || '';
 
-    const text = await callAI(SYSTEM_PROMPT, `Search for military strike routes, retaliation vectors, or front lines in the Iran-US/Israel conflict for EACH DATE from ${maxDate} to ${today}.
-Return an updated map lines array as JSON.
+    // Compact coordinate lookup for the AI (recent points only)
+    const recentPoints = mapPoints.filter(p => p.date >= maxDate || p.base);
+    const coordLookup = recentPoints.map(p => `${p.id}: [${p.lon}, ${p.lat}] (${p.label})`).join('\n');
 
-Each object must have exactly these fields:
-${fields}
+    // Show recent lines as examples
+    const recentLines = current.filter(l => l.date >= maxDate).slice(0, 5);
 
-IMPORTANT: "date" must be a string in YYYY-MM-DD format (e.g. "${today}"). "from" and "to" must be [lon, lat] tuples of numbers.
+    const example = JSON.stringify({
+      id: 'ford_tehran_mar7',
+      from: [33.5, 34.5],
+      to: [51.39, 35.69],
+      cat: 'strike',
+      label: 'Ford CSG → Tehran',
+      date: today,
+    }, null, 2);
 
-Current map lines (latest date is ${maxDate}):
-${JSON.stringify(current, null, 2)}
+    const text = await callAIWithRetry(SYSTEM_PROMPT, `Search for NEW military strike routes, retaliation vectors, or front lines in the Iran-US/Israel conflict since ${maxDate}.
+Return ONLY NEW lines as a JSON array. Return [] if nothing new.
+Do NOT return existing lines — I will merge them server-side.
 
-Available map point coordinates (use these for "from" and "to" values):
-${JSON.stringify(pointCoords, null, 2)}
+EXACT FORMAT — each object must look like this example:
+${example}
 
-RULES:
-1. Keep ALL existing lines unchanged
-2. For EACH DATE from ${maxDate} to ${today}, search for strike routes, retaliation vectors, or front movements
-3. ADD new arc lines for any found on each date — ENSURE every date with military activity has at least one line
-4. "from" and "to" are [lon, lat] — use coordinates from the map points above
-5. Each new line needs a date in YYYY-MM-DD format for when the event occurred
-6. Return the complete updated array`);
+Field rules:
+- "id": lowercase_snake_case, unique (e.g. "lincoln_isfahan_mar7")
+- "from": [lon, lat] — origin coordinates as numbers
+- "to": [lon, lat] — target coordinates as numbers
+- "cat": one of "strike", "retaliation", "asset", "front"
+- "label": "Origin → Target" description
+- "date": YYYY-MM-DD string
+
+Available coordinates (use these for "from" and "to"):
+${coordLookup}
+
+Recent existing lines for reference (do NOT repeat):
+${JSON.stringify(recentLines, null, 2)}
+
+Existing IDs (do NOT reuse): ${[...existingIds].slice(-30).join(', ')}
+
+Return ONLY new lines as a JSON array.`,
+      'map-lines',
+      // Retry prompt
+      `Search for new military strikes or retaliations in the Iran-US/Israel conflict on ${today}.
+Return new arc lines as a JSON array. Each needs: id (string), from ([lon,lat]), to ([lon,lat]), cat ("strike"|"retaliation"|"asset"|"front"), label (string), date ("${today}").
+Example: ${example}
+Return [] if nothing new.`,
+    );
 
     const parsed = normalizeItems(JSON.parse(extractJSON(text)));
     const LineSchema = MapLineSchema.omit({ lastUpdated: true }).extend({ lastUpdated: z.string().optional() });
     const validItems = validateItemwise(parsed, LineSchema, 'map-lines');
-    if (validItems.length === 0) {
-      return { status: 'skipped', reason: 'all_items_invalid' };
+
+    // Filter duplicates and out-of-bounds
+    const newLines = validItems
+      .filter(l => !existingIds.has(l.id))
+      .filter(l => {
+        if (!validateLineCoords(l)) {
+          console.warn(`[map-lines] Out-of-bounds: ${l.id} from=[${l.from}] to=[${l.to}]`);
+          return false;
+        }
+        return true;
+      });
+
+    if (newLines.length === 0) {
+      console.log('[map-lines] No new valid lines');
+      return { status: 'updated', itemCount: current.length, newEvents: 0 };
     }
-    // Filter out-of-bounds coordinates
-    const valid = validItems.filter(l => {
-      if (!validateLineCoords(l)) {
-        console.warn(`[map-lines] Out-of-bounds line: ${l.id} from=[${l.from}] to=[${l.to}]`);
-        return false;
-      }
-      return true;
-    });
-    const guard = diffGuard(current.length, valid.length, 'map-lines');
-    if (!guard.ok) {
-      console.warn(`[map-lines] ${guard.reason}`);
-      return { status: 'skipped', reason: 'diff_guard' };
+
+    // Cap new lines per run
+    const MAX_NEW = 15;
+    if (newLines.length > MAX_NEW) {
+      console.warn(`[map-lines] ${newLines.length} new lines exceeds cap of ${MAX_NEW}`);
+      newLines.splice(MAX_NEW);
     }
-    const { merged } = mergeById(current, valid);
+
+    for (const l of newLines) {
+      (l as any).lastUpdated = now;
+    }
+    const merged = [...current, ...newLines];
     writeJSON('map-lines.json', merged);
-    return { status: 'updated', itemCount: merged.length };
+    console.log(`[map-lines] Added ${newLines.length} new lines`);
+    return { status: 'updated', itemCount: merged.length, newEvents: newLines.length };
   } catch (err) {
     console.error('[map-lines] Error:', err);
     return { status: 'error', reason: String(err) };
@@ -732,7 +830,7 @@ async function updateCasualties(): Promise<SectionResult> {
   try {
     const current = readJSON<z.infer<typeof CasualtyRowSchema>[]>('casualties.json');
     const fields = describeFields(CasualtyRowSchema);
-    const text = await callAI(SYSTEM_PROMPT, `Search for the latest casualty figures from the Iran-US/Israel conflict as of ${today}.
+    const text = await callAIWithRetry(SYSTEM_PROMPT, `Search for the latest casualty figures from the Iran-US/Israel conflict as of ${today}.
 Return the updated casualty table as a JSON array.
 
 Each object must have these fields:
@@ -741,7 +839,8 @@ ${fields}
 Current data:
 ${JSON.stringify(current, null, 2)}
 
-Update figures that have changed. Add new rows if needed. Mark contested figures accurately. Return complete updated array.`);
+Update figures that have changed. Add new rows if needed. Mark contested figures accurately. Return complete updated array.`,
+      'casualties');
 
     const parsed = JSON.parse(extractJSON(text));
     const result = z.array(CasualtyRowSchema.omit({ lastUpdated: true }).extend({ lastUpdated: z.string().optional() })).safeParse(parsed);
@@ -767,7 +866,7 @@ async function updateEcon(): Promise<SectionResult> {
   try {
     const current = readJSON<z.infer<typeof EconItemSchema>[]>('econ.json');
     const fields = describeFields(EconItemSchema);
-    const text = await callAI(SYSTEM_PROMPT, `Search for current market prices related to the Iran conflict: crude oil (Brent, WTI), gold, S&P 500, VIX, Iranian rial.
+    const text = await callAIWithRetry(SYSTEM_PROMPT, `Search for current market prices related to the Iran conflict: crude oil (Brent, WTI), gold, S&P 500, VIX, Iranian rial.
 Return updated economic indicators as a JSON array.
 
 Each object must have these fields:
@@ -776,7 +875,7 @@ ${fields}
 Current data:
 ${JSON.stringify(current, null, 2)}
 
-Update with the latest available market data. Return complete updated array.`);
+Update with the latest available market data. Return complete updated array.`, 'econ');
 
     const parsed = JSON.parse(extractJSON(text));
     const result = z.array(EconItemSchema.omit({ lastUpdated: true }).extend({ lastUpdated: z.string().optional() })).safeParse(parsed);
@@ -802,7 +901,7 @@ async function updateClaims(): Promise<SectionResult> {
   try {
     const current = readJSON<z.infer<typeof ClaimSchema>[]>('claims.json');
     const fields = describeFields(ClaimSchema);
-    const text = await callAI(SYSTEM_PROMPT, `Search for the latest contested claims and information disputes in the Iran-US/Israel conflict as of ${today}.
+    const text = await callAIWithRetry(SYSTEM_PROMPT, `Search for the latest contested claims and information disputes in the Iran-US/Israel conflict as of ${today}.
 Search across ALL media poles to find contrasting narratives: Western vs Middle Eastern vs Eastern vs International perspectives.
 Return updated contested claims as a JSON array.
 
@@ -814,7 +913,7 @@ For sideA and sideB, actively present the CONTRASTING viewpoints from different 
 Current claims:
 ${JSON.stringify(current, null, 2)}
 
-Update existing claims if their resolution status has changed. Add new major contested claims if any. Return complete updated array.`);
+Update existing claims if their resolution status has changed. Add new major contested claims if any. Return complete updated array.`, 'claims');
 
     const parsed = JSON.parse(extractJSON(text));
     const ClaimLoose = ClaimSchema.omit({ lastUpdated: true }).extend({ lastUpdated: z.string().optional() });
@@ -840,7 +939,7 @@ async function updatePolitical(): Promise<SectionResult> {
   try {
     const current = readJSON<z.infer<typeof PolItemSchema>[]>('political.json');
     const fields = describeFields(PolItemSchema);
-    const text = await callAI(SYSTEM_PROMPT, `Search for the latest political statements and diplomatic developments in the Iran-US/Israel conflict as of ${today}.
+    const text = await callAIWithRetry(SYSTEM_PROMPT, `Search for the latest political statements and diplomatic developments in the Iran-US/Israel conflict as of ${today}.
 Return updated political statements as a JSON array.
 
 Each object must have these fields:
@@ -849,7 +948,7 @@ ${fields}
 Current data:
 ${JSON.stringify(current, null, 2)}
 
-Update existing quotes if newer statements exist. Add new notable statements. Return complete updated array.`);
+Update existing quotes if newer statements exist. Add new notable statements. Return complete updated array.`, 'political');
 
     const parsed = JSON.parse(extractJSON(text));
     const PolLoose = PolItemSchema.omit({ lastUpdated: true }).extend({ lastUpdated: z.string().optional() });
@@ -879,7 +978,7 @@ async function updateMilitary(): Promise<SectionResult> {
     const strikeFields = describeFields(StrikeItemSchema);
     const assetFields = describeFields(AssetSchema);
 
-    const text = await callAI(SYSTEM_PROMPT, `Search for the latest military operations in the Iran-US/Israel conflict as of ${today}.
+    const text = await callAIWithRetry(SYSTEM_PROMPT, `Search for the latest military operations in the Iran-US/Israel conflict as of ${today}.
 Return a JSON object with three arrays:
 
 {
@@ -893,7 +992,7 @@ Strikes: ${JSON.stringify(strikes, null, 2)}
 Retaliation: ${JSON.stringify(retaliation, null, 2)}
 Assets: ${JSON.stringify(assets, null, 2)}
 
-Update with the latest information. Return the complete object with all three arrays.`);
+Update with the latest information. Return the complete object with all three arrays.`, 'military');
 
     const rawParsed = JSON.parse(extractJSON(text));
     // Normalize inner arrays if present

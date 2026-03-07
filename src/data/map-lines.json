@@ -1434,5 +1434,35 @@
     "label": "Hormuz closed for live-fire drills",
     "date": "2026-02-17",
     "lastUpdated": "2026-03-07T05:29:27.814Z"
+  },
+  {
+    "id": "iran_basra_halliburton",
+    "from": [
+      51.39,
+      35.69
+    ],
+    "to": [
+      47.78,
+      30.5
+    ],
+    "cat": "retaliation",
+    "label": "Iran → Basra (Halliburton facilities)",
+    "date": "2026-03-07",
+    "lastUpdated": "2026-03-07T06:15:56.708Z"
+  },
+  {
+    "id": "us_tehran_mehrabad",
+    "from": [
+      34.78,
+      32.08
+    ],
+    "to": [
+      51.32,
+      35.69
+    ],
+    "cat": "strike",
+    "label": "US → Tehran (Mehrabad Airport)",
+    "date": "2026-03-07",
+    "lastUpdated": "2026-03-07T06:15:56.708Z"
   }
 ]

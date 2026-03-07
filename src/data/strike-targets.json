@@ -248,5 +248,68 @@
     "time": "Mar 4",
     "tier": 1,
     "lastUpdated": "2026-03-06T05:57:54.619Z"
+  },
+  {
+    "id": "tehran_airport_strike",
+    "name": "Tehran's Mehrabad International Airport",
+    "detail": "U.S.-Israeli airstrikes targeted the airport, causing significant damage to infrastructure.",
+    "icon": "target",
+    "time": "Mar 7",
+    "tier": 1,
+    "lastUpdated": "2026-03-07T06:15:56.708Z"
+  },
+  {
+    "id": "basra_oil_facility_strike",
+    "name": "Halliburton Oil Facilities — Basra, Iraq",
+    "detail": "Iranian missile strikes set U.S.-based Halliburton and KBR facilities ablaze.",
+    "icon": "target",
+    "time": "Mar 7",
+    "tier": 1,
+    "lastUpdated": "2026-03-07T06:15:56.708Z"
+  },
+  {
+    "id": "iranian_naval_vessels_strike",
+    "name": "Iranian Naval Vessels",
+    "detail": "U.S. forces sank over 30 Iranian ships, including a drone carrier set ablaze.",
+    "icon": "target",
+    "time": "Mar 6",
+    "tier": 1,
+    "lastUpdated": "2026-03-07T06:15:56.708Z"
+  },
+  {
+    "id": "b2_bombers_missile_launchers",
+    "name": "Iranian Ballistic Missile Launchers",
+    "detail": "U.S. B-2 bombers destroyed deeply buried missile launch facilities, reducing Iranian missile launches by 90%.",
+    "icon": "target",
+    "time": "Mar 6",
+    "tier": 1,
+    "lastUpdated": "2026-03-07T06:15:56.708Z"
+  },
+  {
+    "id": "beirut_hezbollah_command_centers",
+    "name": "Hezbollah Command Centers — Beirut",
+    "detail": "Israeli airstrikes targeted multiple Hezbollah command centers in Beirut.",
+    "icon": "target",
+    "time": "Mar 6",
+    "tier": 1,
+    "lastUpdated": "2026-03-07T06:15:56.708Z"
+  },
+  {
+    "id": "tripoli_strike",
+    "name": "Tripoli — Northern Lebanon",
+    "detail": "Israeli airstrikes hit the city of Tripoli for the first time in the conflict.",
+    "icon": "target",
+    "time": "Mar 6",
+    "tier": 1,
+    "lastUpdated": "2026-03-07T06:15:56.708Z"
+  },
+  {
+    "id": "iranian_air_defense_systems",
+    "name": "Iranian Air Defense Systems",
+    "detail": "Israeli military claimed near-complete air superiority after destroying 80% of Iranian air defense systems.",
+    "icon": "target",
+    "time": "Mar 6",
+    "tier": 1,
+    "lastUpdated": "2026-03-07T06:15:56.708Z"
   }
 ]

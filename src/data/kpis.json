@@ -2,69 +2,69 @@
   {
     "id": "days_of_conflict",
     "label": "Days of Conflict",
-    "value": "7",
+    "value": "8",
     "color": "red",
-    "source": "Feb 28 – Mar 6",
+    "source": "Al Jazeera",
     "contested": false,
     "delta": "+1",
     "trend": "up",
-    "lastUpdated": "2026-03-06T06:21:53.605Z"
+    "lastUpdated": "2026-03-07T06:15:56.708Z"
   },
   {
     "id": "iran_killed",
     "label": "Iran Killed",
-    "value": "1,230+",
+    "value": "1,332",
     "color": "red",
     "source": "Al Jazeera",
     "contested": true,
-    "contestNote": "IRNA: 935; HRANA: 1,168",
-    "delta": "+185",
+    "contestNote": "Human Rights Activists News Agency: 742; Iranian Red Crescent: 1,250",
+    "delta": "+102",
     "trend": "up",
-    "lastUpdated": "2026-03-06T06:21:53.605Z"
+    "lastUpdated": "2026-03-07T06:15:56.708Z"
   },
   {
     "id": "us_killed",
     "label": "US Killed",
     "value": "6",
     "color": "amber",
-    "source": "Pentagon",
+    "source": "Axios",
     "contested": false,
     "delta": "0",
     "trend": "stable",
-    "lastUpdated": "2026-03-06T06:21:53.605Z"
+    "lastUpdated": "2026-03-07T06:15:56.708Z"
   },
   {
     "id": "gulf_killed",
     "label": "Gulf Region Killed",
-    "value": "15+",
+    "value": "18",
     "color": "amber",
-    "source": "Al Jazeera",
+    "source": "Le Monde",
     "contested": false,
     "delta": "+3",
     "trend": "up",
-    "lastUpdated": "2026-03-06T06:21:53.605Z"
+    "lastUpdated": "2026-03-07T06:15:56.708Z"
   },
   {
     "id": "lebanon_killed",
     "label": "Lebanon Killed",
-    "value": "77",
+    "value": "217",
     "color": "amber",
-    "source": "Al Jazeera",
+    "source": "Le Monde",
     "contested": false,
-    "delta": "+7",
+    "delta": "+140",
     "trend": "up",
-    "lastUpdated": "2026-03-06T06:21:53.605Z"
+    "lastUpdated": "2026-03-07T06:15:56.708Z"
   },
   {
     "id": "brent_crude",
     "label": "Brent Crude",
-    "value": "$84.44",
+    "value": "$92.69",
     "color": "red",
-    "source": "APA-Economics",
+    "source": "Vietnam.vn",
     "contested": false,
-    "delta": "+$3.24",
+    "delta": "+$8.25",
     "trend": "up",
-    "lastUpdated": "2026-03-06T06:21:53.605Z"
+    "lastUpdated": "2026-03-07T06:15:56.708Z"
   },
   {
     "id": "flights_cancelled",
@@ -73,9 +73,9 @@
     "color": "blue",
     "source": "FlightAware",
     "contested": false,
-    "delta": "+2,400",
-    "trend": "up",
-    "lastUpdated": "2026-03-06T06:21:53.605Z"
+    "delta": "0",
+    "trend": "stable",
+    "lastUpdated": "2026-03-07T06:15:56.708Z"
   },
   {
     "id": "countries_affected",
@@ -85,6 +85,6 @@
     "source": "Compiled",
     "contested": false,
     "trend": "stable",
-    "lastUpdated": "2026-03-06T06:21:53.605Z"
+    "lastUpdated": "2026-03-07T06:15:56.708Z"
   }
 ]

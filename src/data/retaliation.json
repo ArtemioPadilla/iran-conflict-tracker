@@ -152,11 +152,11 @@
   {
     "id": "iranian_strikes_jordan",
     "name": "Iranian Strikes — Jordan",
-    "detail": "Missiles entered Amman airspace; no casualties reported.",
+    "detail": "Iran launched missiles and drones into Jordanian airspace; several civilians injured by falling shrapnel.",
     "icon": "retaliation",
-    "time": "Mar 1",
+    "time": "Mar 5",
     "tier": 2,
-    "lastUpdated": "2026-03-06T04:38:18.553Z"
+    "lastUpdated": "2026-03-07T06:15:56.708Z"
   },
   {
     "id": "iranian_strikes_oman_tankers",
@@ -238,5 +238,41 @@
     "time": "Mar 2",
     "tier": 1,
     "lastUpdated": "2026-03-06T05:57:54.619Z"
+  },
+  {
+    "id": "iranian_missile_barrage_israel",
+    "name": "Iranian Missile Barrage — Israel",
+    "detail": "Iran launched multiple missiles targeting Israel; interceptions reported.",
+    "icon": "retaliation",
+    "time": "Mar 6",
+    "tier": 1,
+    "lastUpdated": "2026-03-07T06:15:56.708Z"
+  },
+  {
+    "id": "iranian_drone_strikes_gulf_states",
+    "name": "Iranian Drone Strikes — Gulf States",
+    "detail": "Iran intensified drone and missile attacks on Bahrain, causing massive damage to a refinery.",
+    "icon": "retaliation",
+    "time": "Mar 6",
+    "tier": 1,
+    "lastUpdated": "2026-03-07T06:15:56.708Z"
+  },
+  {
+    "id": "hezbollah_missile_attacks_israel",
+    "name": "Hezbollah Missile Attacks — Israel",
+    "detail": "Hezbollah launched multiple missiles from Lebanon into Israel; Israeli airstrikes followed.",
+    "icon": "retaliation",
+    "time": "Mar 6",
+    "tier": 2,
+    "lastUpdated": "2026-03-07T06:15:56.708Z"
+  },
+  {
+    "id": "iranian_uav_attack_azerbaijan",
+    "name": "Iranian UAV Attack — Azerbaijan",
+    "detail": "Three Iranian UAVs targeted the passenger terminal of Nakhchivan International Airport.",
+    "icon": "retaliation",
+    "time": "Mar 5",
+    "tier": 2,
+    "lastUpdated": "2026-03-07T06:15:56.708Z"
   }
 ]

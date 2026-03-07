@@ -98,5 +98,85 @@
       }
     ],
     "lastUpdated": "2026-03-07T00:00:00.000Z"
+  },
+  {
+    "id": "iran_strikes_halliburton_basra",
+    "year": "2026",
+    "title": "Iranian Strikes Hit Halliburton Facilities in Basra",
+    "type": "military",
+    "detail": "On March 7, 2026, Iranian forces launched strikes targeting U.S.-based oil company Halliburton's facilities in Basra, Iraq, causing significant damage.",
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "tier": 2,
+        "url": "https://en.wikipedia.org/wiki/2026_Iran_war",
+        "pole": "international"
+      }
+    ],
+    "lastUpdated": "2026-03-07T06:15:56.708Z"
+  },
+  {
+    "id": "tehran_airport_strike",
+    "year": "2026",
+    "title": "Tehran's Mehrabad International Airport Struck",
+    "type": "military",
+    "detail": "In the early hours of March 7, 2026, Tehran's Mehrabad International Airport was struck, resulting in significant damage to infrastructure.",
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "tier": 2,
+        "url": "https://en.wikipedia.org/wiki/2026_Iran_war",
+        "pole": "international"
+      }
+    ],
+    "lastUpdated": "2026-03-07T06:15:56.708Z"
+  },
+  {
+    "id": "iran_missile_stockpile_depletion",
+    "year": "2026",
+    "title": "Iran's Ballistic Missile Stockpile Depleting",
+    "type": "military",
+    "detail": "Reports indicate that after a week of hostilities, Iran's ballistic missile stockpile may have reduced to approximately 1,000 missiles.",
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "tier": 2,
+        "url": "https://en.wikipedia.org/wiki/2026_Iran_war",
+        "pole": "international"
+      }
+    ],
+    "lastUpdated": "2026-03-07T06:15:56.708Z"
+  },
+  {
+    "id": "earthquake_bandar_abbas",
+    "year": "2026",
+    "title": "Earthquake Strikes Near Bandar Abbas",
+    "type": "humanitarian",
+    "detail": "A 4.1 magnitude earthquake was reported west of Bandar Abbas, Iran, on March 7, 2026.",
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "tier": 2,
+        "url": "https://en.wikipedia.org/wiki/2026_Iran_war",
+        "pole": "international"
+      }
+    ],
+    "lastUpdated": "2026-03-07T06:15:56.708Z"
+  },
+  {
+    "id": "f1_race_decision_delayed",
+    "year": "2026",
+    "title": "Formula 1 Delays Decision on Middle East Races Amid Iran Conflict",
+    "type": "economic",
+    "detail": "Formula One has postponed making a decision on whether to cancel its April races in Bahrain and Saudi Arabia due to the ongoing conflict involving Iran.",
+    "sources": [
+      {
+        "name": "Associated Press",
+        "tier": 2,
+        "url": "https://apnews.com/article/d00f738172bd37aa3972948aa0874944",
+        "pole": "western"
+      }
+    ],
+    "lastUpdated": "2026-03-07T06:15:56.708Z"
   }
 ]

@@ -48,8 +48,6 @@ export function useMissiles(
     staticEntitiesRef.current = [];
     cancelAnimationFrame(rafRef.current);
     rafRef.current = 0;
-    activeCountRef.current = 0;
-
     if (lines.length === 0) return;
 
     // Determine which lines to animate vs show static

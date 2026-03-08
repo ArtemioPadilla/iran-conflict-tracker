@@ -10,8 +10,8 @@ interface Props {
   onCameraPreset: (key: CameraPresetKey) => void;
   visualMode: VisualMode;
   onVisualMode: (mode: VisualMode) => void;
-  layers: { satellites: boolean; flights: boolean; quakes: boolean; weather: boolean; nfz: boolean };
-  onToggleLayer: (layer: 'satellites' | 'flights' | 'quakes' | 'weather' | 'nfz') => void;
+  layers: { satellites: boolean; flights: boolean; quakes: boolean; weather: boolean; nfz: boolean; ships: boolean };
+  onToggleLayer: (layer: 'satellites' | 'flights' | 'quakes' | 'weather' | 'nfz' | 'ships') => void;
   persistLines: boolean;
   onTogglePersist: () => void;
   satGroupCounts?: SatGroupCounts;
@@ -160,6 +160,19 @@ export default function CesiumControls({
           <div className="globe-sublabel">
             <span style={{ color: '#00aaff' }}>&#9679; Civilian</span>{' '}
             <span style={{ color: '#ffdd00' }}>&#9679; Military</span>
+          </div>
+        )}
+        <button
+          className={`globe-filter${layers.ships ? ' active' : ''}`}
+          onClick={() => onToggleLayer('ships')}
+        >
+          <span className="globe-fdot" style={{ background: '#00ddaa' }} />
+          Ships (AIS)
+        </button>
+        {layers.ships && (
+          <div className="globe-sublabel">
+            <span style={{ color: '#00ddaa' }}>&#9679; Underway</span>{' '}
+            <span style={{ color: '#888888' }}>&#9679; Anchored</span>
           </div>
         )}
         <button

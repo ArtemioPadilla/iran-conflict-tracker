@@ -31,6 +31,7 @@ import { useFlights } from './useFlights';
 import { useEarthquakes } from './useEarthquakes';
 import { useWeather } from './useWeather';
 import { useNoFlyZones } from './useNoFlyZones';
+import { useShips } from './useShips';
 
 interface Props {
   points: MapPoint[];
@@ -82,7 +83,7 @@ export default function CesiumGlobe({ points, lines, kpis, meta, events = [] }: 
   const [visualMode, setVisualMode] = useState<VisualMode>('normal');
 
   // ── Live data layer toggles ──
-  const [layers, setLayers] = useState({ satellites: true, flights: true, quakes: false, weather: false, nfz: true });
+  const [layers, setLayers] = useState({ satellites: true, flights: true, quakes: false, weather: false, nfz: true, ships: true });
 
   // ── Events panel ──
   const [eventsOpen, setEventsOpen] = useState(true);
@@ -215,7 +216,7 @@ export default function CesiumGlobe({ points, lines, kpis, meta, events = [] }: 
     });
   };
 
-  const toggleLayer = (layer: 'satellites' | 'flights' | 'quakes' | 'weather' | 'nfz') => {
+  const toggleLayer = (layer: 'satellites' | 'flights' | 'quakes' | 'weather' | 'nfz' | 'ships') => {
     setLayers(prev => ({ ...prev, [layer]: !prev[layer] }));
   };
 
@@ -319,6 +320,7 @@ export default function CesiumGlobe({ points, lines, kpis, meta, events = [] }: 
   const { count: quakeCount } = useEarthquakes(cesiumViewer, layers.quakes, currentDate);
   const { count: weatherCount } = useWeather(cesiumViewer, layers.weather, currentDate);
   const { count: nfzCount } = useNoFlyZones(cesiumViewer, layers.nfz, currentDate);
+  const { count: shipCount } = useShips(cesiumViewer, layers.ships && mode === 'live');
 
   // ── Sync Cesium clock for day/night terminator ──
   useEffect(() => {
@@ -460,6 +462,12 @@ export default function CesiumGlobe({ points, lines, kpis, meta, events = [] }: 
           <>
             <span className="globe-stats-sep">&middot;</span>
             <span style={{ color: '#e74c3c' }}>{nfzCount} NFZ</span>
+          </>
+        )}
+        {mode === 'live' && layers.ships && shipCount > 0 && (
+          <>
+            <span className="globe-stats-sep">&middot;</span>
+            <span style={{ color: '#00ddaa' }}>{shipCount} ships</span>
           </>
         )}
         {mode === 'historical' && (

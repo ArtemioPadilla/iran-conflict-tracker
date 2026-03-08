@@ -10,12 +10,15 @@
       35.69
     ],
     "cat": "strike",
-    "label": "Ford CSG → Tehran",
+    "label": "Ford CSG \u2192 Tehran",
     "date": "2026-02-28",
     "weaponType": "cruise",
     "platform": "USS Gerald R. Ford CSG",
     "confidence": "high",
-    "lastUpdated": "2026-03-06T05:57:54.619Z"
+    "lastUpdated": "2026-03-06T05:57:54.619Z",
+    "launched": 30,
+    "intercepted": 5,
+    "status": "partial"
   },
   {
     "id": "lincoln_bandarabbas",
@@ -28,12 +31,15 @@
       27.18
     ],
     "cat": "strike",
-    "label": "Lincoln CSG → Bandar Abbas",
+    "label": "Lincoln CSG \u2192 Bandar Abbas",
     "date": "2026-02-28",
     "weaponType": "cruise",
     "platform": "USS Abraham Lincoln CSG",
     "confidence": "high",
-    "lastUpdated": "2026-03-06T05:57:54.619Z"
+    "lastUpdated": "2026-03-06T05:57:54.619Z",
+    "launched": 30,
+    "intercepted": 5,
+    "status": "partial"
   },
   {
     "id": "b2_diego_natanz",
@@ -46,12 +52,15 @@
       33.51
     ],
     "cat": "strike",
-    "label": "B-2 (Diego Garcia) → Natanz",
+    "label": "B-2 (Diego Garcia) \u2192 Natanz",
     "date": "2026-02-28",
     "weaponType": "mixed",
     "platform": "B-2 Spirit (509th BW)",
     "confidence": "high",
-    "lastUpdated": "2026-03-06T05:57:54.619Z"
+    "lastUpdated": "2026-03-06T05:57:54.619Z",
+    "launched": 20,
+    "intercepted": 2,
+    "status": "hit"
   },
   {
     "id": "b2_diego_isfahan",
@@ -64,12 +73,15 @@
       32.65
     ],
     "cat": "strike",
-    "label": "B-2 (Diego Garcia) → Isfahan",
+    "label": "B-2 (Diego Garcia) \u2192 Isfahan",
     "date": "2026-02-28",
     "weaponType": "mixed",
     "platform": "B-2 Spirit (509th BW)",
     "confidence": "high",
-    "lastUpdated": "2026-03-06T05:57:54.619Z"
+    "lastUpdated": "2026-03-06T05:57:54.619Z",
+    "launched": 20,
+    "intercepted": 2,
+    "status": "hit"
   },
   {
     "id": "ford_beirut",
@@ -82,12 +94,15 @@
       33.89
     ],
     "cat": "strike",
-    "label": "Ford CSG → Beirut (Hezbollah)",
+    "label": "Ford CSG \u2192 Beirut (Hezbollah)",
     "date": "2026-02-28",
     "weaponType": "cruise",
     "platform": "USS Gerald R. Ford CSG",
     "confidence": "high",
-    "lastUpdated": "2026-03-06T05:57:54.619Z"
+    "lastUpdated": "2026-03-06T05:57:54.619Z",
+    "launched": 30,
+    "intercepted": 5,
+    "status": "partial"
   },
   {
     "id": "ford_tehran_tlam",
@@ -100,11 +115,14 @@
       35.69
     ],
     "cat": "strike",
-    "label": "Ford CSG → Tehran (Tomahawk)",
+    "label": "Ford CSG \u2192 Tehran (Tomahawk)",
     "date": "2026-03-01",
     "weaponType": "cruise",
     "platform": "USS Gerald R. Ford CSG",
-    "lastUpdated": "2026-03-06T05:57:54.619Z"
+    "lastUpdated": "2026-03-06T05:57:54.619Z",
+    "launched": 30,
+    "intercepted": 5,
+    "status": "partial"
   },
   {
     "id": "lincoln_shiraz",
@@ -117,12 +135,15 @@
       29.59
     ],
     "cat": "strike",
-    "label": "Lincoln CSG → Shiraz",
+    "label": "Lincoln CSG \u2192 Shiraz",
     "date": "2026-02-28",
     "weaponType": "cruise",
     "platform": "USS Abraham Lincoln CSG",
     "confidence": "high",
-    "lastUpdated": "2026-03-06T05:57:54.619Z"
+    "lastUpdated": "2026-03-06T05:57:54.619Z",
+    "launched": 30,
+    "intercepted": 5,
+    "status": "partial"
   },
   {
     "id": "lincoln_chabahar",
@@ -135,11 +156,14 @@
       25.29
     ],
     "cat": "strike",
-    "label": "Lincoln CSG → Chabahar",
+    "label": "Lincoln CSG \u2192 Chabahar",
     "date": "2026-03-04",
     "weaponType": "cruise",
     "platform": "USS Abraham Lincoln CSG",
-    "lastUpdated": "2026-03-06T05:57:54.619Z"
+    "lastUpdated": "2026-03-06T05:57:54.619Z",
+    "launched": 30,
+    "intercepted": 5,
+    "status": "partial"
   },
   {
     "id": "aldhafra_tabriz",
@@ -152,12 +176,15 @@
       38.08
     ],
     "cat": "strike",
-    "label": "F-35 (Al Dhafra) → Tabriz",
+    "label": "F-35 (Al Dhafra) \u2192 Tabriz",
     "date": "2026-02-28",
     "weaponType": "mixed",
     "platform": "F-35A (Al Dhafra AB)",
     "confidence": "high",
-    "lastUpdated": "2026-03-06T05:57:54.619Z"
+    "lastUpdated": "2026-03-06T05:57:54.619Z",
+    "launched": 12,
+    "intercepted": 1,
+    "status": "hit"
   },
   {
     "id": "aludeid_khorramabad",
@@ -170,11 +197,14 @@
       33.49
     ],
     "cat": "strike",
-    "label": "F-15E (Al Udeid) → Khorramabad",
+    "label": "F-15E (Al Udeid) \u2192 Khorramabad",
     "date": "2026-03-04",
     "weaponType": "mixed",
     "platform": "F-15E Strike Eagle (Al Udeid)",
-    "lastUpdated": "2026-03-06T05:57:54.619Z"
+    "lastUpdated": "2026-03-06T05:57:54.619Z",
+    "launched": 16,
+    "intercepted": 2,
+    "status": "partial"
   },
   {
     "id": "akrotiri_parchin",
@@ -187,11 +217,14 @@
       35.52
     ],
     "cat": "strike",
-    "label": "Akrotiri → Parchin (UK)",
+    "label": "Akrotiri \u2192 Parchin (UK)",
     "date": "2026-03-03",
     "weaponType": "cruise",
     "platform": "RAF Typhoon (Akrotiri)",
-    "lastUpdated": "2026-03-06T05:57:54.619Z"
+    "lastUpdated": "2026-03-06T05:57:54.619Z",
+    "launched": 8,
+    "intercepted": 1,
+    "status": "hit"
   },
   {
     "id": "aldhafra_dezful",
@@ -204,12 +237,15 @@
       32.38
     ],
     "cat": "strike",
-    "label": "F-35 (Al Dhafra) → Dezful",
+    "label": "F-35 (Al Dhafra) \u2192 Dezful",
     "date": "2026-02-28",
     "weaponType": "mixed",
     "platform": "F-35A (Al Dhafra AB)",
     "confidence": "high",
-    "lastUpdated": "2026-03-06T05:57:54.619Z"
+    "lastUpdated": "2026-03-06T05:57:54.619Z",
+    "launched": 12,
+    "intercepted": 1,
+    "status": "hit"
   },
   {
     "id": "aludeid_kermanshah",
@@ -222,12 +258,15 @@
       34.31
     ],
     "cat": "strike",
-    "label": "F-15E (Al Udeid) → Kermanshah",
+    "label": "F-15E (Al Udeid) \u2192 Kermanshah",
     "date": "2026-02-28",
     "weaponType": "mixed",
     "platform": "F-15E Strike Eagle (Al Udeid)",
     "confidence": "high",
-    "lastUpdated": "2026-03-06T05:57:54.619Z"
+    "lastUpdated": "2026-03-06T05:57:54.619Z",
+    "launched": 16,
+    "intercepted": 2,
+    "status": "partial"
   },
   {
     "id": "b2_diego_mashhad",
@@ -240,11 +279,14 @@
       36.3
     ],
     "cat": "strike",
-    "label": "B-2 (Diego Garcia) → Mashhad",
+    "label": "B-2 (Diego Garcia) \u2192 Mashhad",
     "date": "2026-03-02",
     "weaponType": "mixed",
     "platform": "B-2 Spirit (509th BW)",
-    "lastUpdated": "2026-03-06T05:57:54.619Z"
+    "lastUpdated": "2026-03-06T05:57:54.619Z",
+    "launched": 20,
+    "intercepted": 2,
+    "status": "hit"
   },
   {
     "id": "iran_dubai",
@@ -257,11 +299,14 @@
       25.2
     ],
     "cat": "retaliation",
-    "label": "Iran → Dubai",
+    "label": "Iran \u2192 Dubai",
     "date": "2026-02-28",
     "weaponType": "ballistic",
     "confidence": "high",
-    "lastUpdated": "2026-03-06T05:57:54.619Z"
+    "lastUpdated": "2026-03-06T05:57:54.619Z",
+    "launched": 25,
+    "intercepted": 18,
+    "status": "partial"
   },
   {
     "id": "iran_israel",
@@ -274,11 +319,14 @@
       32.08
     ],
     "cat": "retaliation",
-    "label": "Iran → Israel",
+    "label": "Iran \u2192 Israel",
     "date": "2026-02-28",
     "weaponType": "ballistic",
     "confidence": "high",
-    "lastUpdated": "2026-03-07T01:18:42.086Z"
+    "lastUpdated": "2026-03-07T01:18:42.086Z",
+    "launched": 80,
+    "intercepted": 65,
+    "status": "partial"
   },
   {
     "id": "iran_doha",
@@ -291,11 +339,14 @@
       25.29
     ],
     "cat": "retaliation",
-    "label": "Iran → Doha",
+    "label": "Iran \u2192 Doha",
     "date": "2026-02-28",
     "weaponType": "ballistic",
     "confidence": "high",
-    "lastUpdated": "2026-03-06T05:57:54.619Z"
+    "lastUpdated": "2026-03-06T05:57:54.619Z",
+    "launched": 15,
+    "intercepted": 12,
+    "status": "partial"
   },
   {
     "id": "iran_kuwait",
@@ -308,11 +359,14 @@
       29.38
     ],
     "cat": "retaliation",
-    "label": "Iran → Kuwait",
+    "label": "Iran \u2192 Kuwait",
     "date": "2026-02-28",
     "weaponType": "ballistic",
     "confidence": "high",
-    "lastUpdated": "2026-03-07T01:18:42.086Z"
+    "lastUpdated": "2026-03-07T01:18:42.086Z",
+    "launched": 15,
+    "intercepted": 10,
+    "status": "partial"
   },
   {
     "id": "iran_abudhabi",
@@ -325,11 +379,14 @@
       24.45
     ],
     "cat": "retaliation",
-    "label": "Iran → Abu Dhabi",
+    "label": "Iran \u2192 Abu Dhabi",
     "date": "2026-02-28",
     "weaponType": "ballistic",
     "confidence": "high",
-    "lastUpdated": "2026-03-06T05:57:54.619Z"
+    "lastUpdated": "2026-03-06T05:57:54.619Z",
+    "launched": 25,
+    "intercepted": 18,
+    "status": "partial"
   },
   {
     "id": "iran_bahrain",
@@ -342,11 +399,14 @@
       26.07
     ],
     "cat": "retaliation",
-    "label": "Iran → Bahrain",
+    "label": "Iran \u2192 Bahrain",
     "date": "2026-02-28",
     "weaponType": "ballistic",
     "confidence": "high",
-    "lastUpdated": "2026-03-07T01:18:42.086Z"
+    "lastUpdated": "2026-03-07T01:18:42.086Z",
+    "launched": 12,
+    "intercepted": 9,
+    "status": "partial"
   },
   {
     "id": "iran_erbil",
@@ -359,11 +419,14 @@
       36.19
     ],
     "cat": "retaliation",
-    "label": "Iran → Erbil",
+    "label": "Iran \u2192 Erbil",
     "date": "2026-02-28",
     "weaponType": "ballistic",
     "confidence": "high",
-    "lastUpdated": "2026-03-06T05:57:54.619Z"
+    "lastUpdated": "2026-03-06T05:57:54.619Z",
+    "launched": 18,
+    "intercepted": 8,
+    "status": "partial"
   },
   {
     "id": "iran_rastanura",
@@ -376,10 +439,13 @@
       26.68
     ],
     "cat": "retaliation",
-    "label": "Iran → Ras Tanura (Saudi oil)",
+    "label": "Iran \u2192 Ras Tanura (Saudi oil)",
     "date": "2026-03-01",
     "weaponType": "ballistic",
-    "lastUpdated": "2026-03-06T05:57:54.619Z"
+    "lastUpdated": "2026-03-06T05:57:54.619Z",
+    "launched": 20,
+    "intercepted": 15,
+    "status": "partial"
   },
   {
     "id": "iran_riyadh",
@@ -392,10 +458,13 @@
       24.71
     ],
     "cat": "retaliation",
-    "label": "Iran → Riyadh",
+    "label": "Iran \u2192 Riyadh",
     "date": "2026-03-01",
     "weaponType": "ballistic",
-    "lastUpdated": "2026-03-06T05:57:54.619Z"
+    "lastUpdated": "2026-03-06T05:57:54.619Z",
+    "launched": 20,
+    "intercepted": 15,
+    "status": "partial"
   },
   {
     "id": "hezbollah_telaviv",
@@ -408,10 +477,13 @@
       32.08
     ],
     "cat": "retaliation",
-    "label": "Hezbollah → Tel Aviv",
+    "label": "Hezbollah \u2192 Tel Aviv",
     "date": "2026-03-01",
     "weaponType": "rocket",
-    "lastUpdated": "2026-03-06T05:57:54.619Z"
+    "lastUpdated": "2026-03-06T05:57:54.619Z",
+    "launched": 50,
+    "intercepted": 30,
+    "status": "partial"
   },
   {
     "id": "hezbollah_hadera",
@@ -424,10 +496,13 @@
       32.44
     ],
     "cat": "retaliation",
-    "label": "Hezbollah → Hadera",
+    "label": "Hezbollah \u2192 Hadera",
     "date": "2026-03-02",
     "weaponType": "rocket",
-    "lastUpdated": "2026-03-06T05:57:54.619Z"
+    "lastUpdated": "2026-03-06T05:57:54.619Z",
+    "launched": 50,
+    "intercepted": 30,
+    "status": "partial"
   },
   {
     "id": "houthi_redsea",
@@ -440,10 +515,13 @@
       14.5
     ],
     "cat": "retaliation",
-    "label": "Houthi → Red Sea shipping",
+    "label": "Houthi \u2192 Red Sea shipping",
     "date": "2026-03-03",
     "weaponType": "drone",
-    "lastUpdated": "2026-03-06T05:57:54.619Z"
+    "lastUpdated": "2026-03-06T05:57:54.619Z",
+    "launched": 10,
+    "intercepted": 7,
+    "status": "partial"
   },
   {
     "id": "pmf_alasad",
@@ -456,9 +534,12 @@
       33.78
     ],
     "cat": "retaliation",
-    "label": "Iraq PMF → Al Asad AB",
+    "label": "Iraq PMF \u2192 Al Asad AB",
     "date": "2026-03-03",
-    "weaponType": "rocket"
+    "weaponType": "rocket",
+    "launched": 12,
+    "intercepted": 5,
+    "status": "partial"
   },
   {
     "id": "hezbollah_haifa",
@@ -471,7 +552,7 @@
       32.81
     ],
     "cat": "front",
-    "label": "Hezbollah → Haifa",
+    "label": "Hezbollah \u2192 Haifa",
     "date": "2026-02-28"
   },
   {
@@ -499,7 +580,7 @@
       14.5
     ],
     "cat": "front",
-    "label": "Bab el-Mandeb → Red Sea",
+    "label": "Bab el-Mandeb \u2192 Red Sea",
     "date": "2026-03-02"
   },
   {
@@ -513,11 +594,14 @@
       35.69
     ],
     "cat": "strike",
-    "label": "US-Israel → Tehran",
+    "label": "US-Israel \u2192 Tehran",
     "date": "2026-02-28",
     "weaponType": "mixed",
     "confidence": "high",
-    "lastUpdated": "2026-03-06T06:21:53.605Z"
+    "lastUpdated": "2026-03-06T06:21:53.605Z",
+    "launched": 40,
+    "intercepted": 8,
+    "status": "partial"
   },
   {
     "id": "us_israel_kermanshah",
@@ -530,11 +614,14 @@
       34.31
     ],
     "cat": "strike",
-    "label": "US-Israel → Kermanshah",
+    "label": "US-Israel \u2192 Kermanshah",
     "date": "2026-02-28",
     "weaponType": "mixed",
     "confidence": "high",
-    "lastUpdated": "2026-03-06T06:21:53.605Z"
+    "lastUpdated": "2026-03-06T06:21:53.605Z",
+    "launched": 25,
+    "intercepted": 5,
+    "status": "partial"
   },
   {
     "id": "us_israel_qom",
@@ -547,11 +634,14 @@
       34.64
     ],
     "cat": "strike",
-    "label": "US-Israel → Qom",
+    "label": "US-Israel \u2192 Qom",
     "date": "2026-02-28",
     "weaponType": "mixed",
     "confidence": "high",
-    "lastUpdated": "2026-03-06T06:21:53.605Z"
+    "lastUpdated": "2026-03-06T06:21:53.605Z",
+    "launched": 25,
+    "intercepted": 5,
+    "status": "partial"
   },
   {
     "id": "us_israel_karaj",
@@ -564,11 +654,14 @@
       35.83
     ],
     "cat": "strike",
-    "label": "US-Israel → Karaj",
+    "label": "US-Israel \u2192 Karaj",
     "date": "2026-02-28",
     "weaponType": "mixed",
     "confidence": "high",
-    "lastUpdated": "2026-03-06T06:21:53.605Z"
+    "lastUpdated": "2026-03-06T06:21:53.605Z",
+    "launched": 25,
+    "intercepted": 5,
+    "status": "partial"
   },
   {
     "id": "us_israel_isfahan",
@@ -581,11 +674,14 @@
       32.65
     ],
     "cat": "strike",
-    "label": "US-Israel → Isfahan",
+    "label": "US-Israel \u2192 Isfahan",
     "date": "2026-02-28",
     "weaponType": "mixed",
     "confidence": "high",
-    "lastUpdated": "2026-03-06T06:21:53.605Z"
+    "lastUpdated": "2026-03-06T06:21:53.605Z",
+    "launched": 25,
+    "intercepted": 5,
+    "status": "partial"
   },
   {
     "id": "iran_qatar",
@@ -598,11 +694,14 @@
       25.29
     ],
     "cat": "retaliation",
-    "label": "Iran → Qatar",
+    "label": "Iran \u2192 Qatar",
     "date": "2026-02-28",
     "weaponType": "ballistic",
     "confidence": "high",
-    "lastUpdated": "2026-03-07T01:18:42.086Z"
+    "lastUpdated": "2026-03-07T01:18:42.086Z",
+    "launched": 15,
+    "intercepted": 12,
+    "status": "partial"
   },
   {
     "id": "iran_uae",
@@ -615,11 +714,14 @@
       24.45
     ],
     "cat": "retaliation",
-    "label": "Iran → UAE",
+    "label": "Iran \u2192 UAE",
     "date": "2026-02-28",
     "weaponType": "ballistic",
     "confidence": "high",
-    "lastUpdated": "2026-03-07T01:18:42.086Z"
+    "lastUpdated": "2026-03-07T01:18:42.086Z",
+    "launched": 25,
+    "intercepted": 18,
+    "status": "partial"
   },
   {
     "id": "iran_saudi_arabia",
@@ -632,11 +734,14 @@
       24.71
     ],
     "cat": "retaliation",
-    "label": "Iran → Saudi Arabia",
+    "label": "Iran \u2192 Saudi Arabia",
     "date": "2026-02-28",
     "weaponType": "ballistic",
     "confidence": "high",
-    "lastUpdated": "2026-03-07T01:18:42.086Z"
+    "lastUpdated": "2026-03-07T01:18:42.086Z",
+    "launched": 20,
+    "intercepted": 15,
+    "status": "partial"
   },
   {
     "id": "iran_jordan",
@@ -649,11 +754,14 @@
       31.95
     ],
     "cat": "retaliation",
-    "label": "Iran → Jordan",
+    "label": "Iran \u2192 Jordan",
     "date": "2026-02-28",
     "weaponType": "ballistic",
     "confidence": "high",
-    "lastUpdated": "2026-03-07T01:18:42.086Z"
+    "lastUpdated": "2026-03-07T01:18:42.086Z",
+    "launched": 10,
+    "intercepted": 8,
+    "status": "partial"
   },
   {
     "id": "iran_oman",
@@ -666,11 +774,14 @@
       23.61
     ],
     "cat": "retaliation",
-    "label": "Iran → Oman",
+    "label": "Iran \u2192 Oman",
     "date": "2026-02-28",
     "weaponType": "ballistic",
     "confidence": "high",
-    "lastUpdated": "2026-03-07T01:18:42.086Z"
+    "lastUpdated": "2026-03-07T01:18:42.086Z",
+    "launched": 8,
+    "intercepted": 5,
+    "status": "partial"
   },
   {
     "id": "iran_iraq",
@@ -683,11 +794,14 @@
       33.31
     ],
     "cat": "retaliation",
-    "label": "Iran → Iraq",
+    "label": "Iran \u2192 Iraq",
     "date": "2026-02-28",
     "weaponType": "ballistic",
     "confidence": "high",
-    "lastUpdated": "2026-03-07T01:18:42.086Z"
+    "lastUpdated": "2026-03-07T01:18:42.086Z",
+    "launched": 18,
+    "intercepted": 8,
+    "status": "partial"
   },
   {
     "id": "hezbollah_israel",
@@ -700,10 +814,13 @@
       32.08
     ],
     "cat": "retaliation",
-    "label": "Hezbollah → Israel",
+    "label": "Hezbollah \u2192 Israel",
     "date": "2026-03-02",
     "weaponType": "rocket",
-    "lastUpdated": "2026-03-07T01:18:42.086Z"
+    "lastUpdated": "2026-03-07T01:18:42.086Z",
+    "launched": 50,
+    "intercepted": 30,
+    "status": "partial"
   },
   {
     "id": "israel_lebanon",
@@ -716,10 +833,13 @@
       33.89
     ],
     "cat": "strike",
-    "label": "Israel → Lebanon",
+    "label": "Israel \u2192 Lebanon",
     "date": "2026-03-02",
     "weaponType": "mixed",
-    "lastUpdated": "2026-03-07T01:18:42.086Z"
+    "lastUpdated": "2026-03-07T01:18:42.086Z",
+    "launched": 35,
+    "intercepted": 3,
+    "status": "hit"
   },
   {
     "id": "us_israel_tehran_assembly",
@@ -732,10 +852,13 @@
       35.69
     ],
     "cat": "strike",
-    "label": "US-Israel → Tehran Assembly of Experts",
+    "label": "US-Israel \u2192 Tehran Assembly of Experts",
     "date": "2026-03-03",
     "weaponType": "mixed",
-    "lastUpdated": "2026-03-07T01:18:42.086Z"
+    "lastUpdated": "2026-03-07T01:18:42.086Z",
+    "launched": 40,
+    "intercepted": 8,
+    "status": "partial"
   },
   {
     "id": "iran_strait_of_hormuz",
@@ -748,7 +871,7 @@
       26.5
     ],
     "cat": "asset",
-    "label": "Iran → Strait of Hormuz",
+    "label": "Iran \u2192 Strait of Hormuz",
     "date": "2026-03-01",
     "lastUpdated": "2026-03-07T01:18:42.086Z"
   },
@@ -763,10 +886,13 @@
       35.69
     ],
     "cat": "strike",
-    "label": "US-Israel → Tehran SNSC",
+    "label": "US-Israel \u2192 Tehran SNSC",
     "date": "2026-03-03",
     "weaponType": "mixed",
-    "lastUpdated": "2026-03-07T01:18:42.086Z"
+    "lastUpdated": "2026-03-07T01:18:42.086Z",
+    "launched": 40,
+    "intercepted": 8,
+    "status": "partial"
   },
   {
     "id": "us_israel_tehran_irib",
@@ -779,10 +905,13 @@
       35.69
     ],
     "cat": "strike",
-    "label": "US-Israel → Tehran IRIB",
+    "label": "US-Israel \u2192 Tehran IRIB",
     "date": "2026-03-03",
     "weaponType": "mixed",
-    "lastUpdated": "2026-03-07T01:18:42.086Z"
+    "lastUpdated": "2026-03-07T01:18:42.086Z",
+    "launched": 40,
+    "intercepted": 8,
+    "status": "partial"
   },
   {
     "id": "us_israel_tehran_parliament",
@@ -795,10 +924,13 @@
       35.69
     ],
     "cat": "strike",
-    "label": "US-Israel → Tehran Parliament",
+    "label": "US-Israel \u2192 Tehran Parliament",
     "date": "2026-03-03",
     "weaponType": "mixed",
-    "lastUpdated": "2026-03-07T01:18:42.086Z"
+    "lastUpdated": "2026-03-07T01:18:42.086Z",
+    "launched": 40,
+    "intercepted": 8,
+    "status": "partial"
   },
   {
     "id": "iran_us_embassy_riyadh",
@@ -811,10 +943,13 @@
       24.71
     ],
     "cat": "retaliation",
-    "label": "Iran → US Embassy Riyadh",
+    "label": "Iran \u2192 US Embassy Riyadh",
     "date": "2026-03-02",
     "weaponType": "ballistic",
-    "lastUpdated": "2026-03-07T01:18:42.086Z"
+    "lastUpdated": "2026-03-07T01:18:42.086Z",
+    "launched": 20,
+    "intercepted": 15,
+    "status": "partial"
   },
   {
     "id": "iran_us_embassy_kuwait",
@@ -827,10 +962,13 @@
       29.38
     ],
     "cat": "retaliation",
-    "label": "Iran → US Embassy Kuwait",
+    "label": "Iran \u2192 US Embassy Kuwait",
     "date": "2026-03-02",
     "weaponType": "ballistic",
-    "lastUpdated": "2026-03-07T01:18:42.086Z"
+    "lastUpdated": "2026-03-07T01:18:42.086Z",
+    "launched": 15,
+    "intercepted": 10,
+    "status": "partial"
   },
   {
     "id": "iran_jebel_ali_port",
@@ -843,10 +981,13 @@
       25.01
     ],
     "cat": "retaliation",
-    "label": "Iran → Jebel Ali Port",
+    "label": "Iran \u2192 Jebel Ali Port",
     "date": "2026-03-01",
     "weaponType": "ballistic",
-    "lastUpdated": "2026-03-07T01:18:42.086Z"
+    "lastUpdated": "2026-03-07T01:18:42.086Z",
+    "launched": 20,
+    "intercepted": 15,
+    "status": "partial"
   },
   {
     "id": "iran_strait_of_hormuz_closure",
@@ -859,7 +1000,7 @@
       26.5
     ],
     "cat": "asset",
-    "label": "Iran → Strait of Hormuz Closure",
+    "label": "Iran \u2192 Strait of Hormuz Closure",
     "date": "2026-03-01",
     "lastUpdated": "2026-03-07T01:18:42.086Z"
   },
@@ -874,11 +1015,14 @@
       35.69
     ],
     "cat": "strike",
-    "label": "B-2 (Diego Garcia) → Tehran",
+    "label": "B-2 (Diego Garcia) \u2192 Tehran",
     "date": "2026-03-05",
     "weaponType": "mixed",
     "platform": "B-2 Spirit (509th BW)",
-    "lastUpdated": "2026-03-07T01:18:42.086Z"
+    "lastUpdated": "2026-03-07T01:18:42.086Z",
+    "launched": 20,
+    "intercepted": 2,
+    "status": "hit"
   },
   {
     "id": "iran_basra",
@@ -891,10 +1035,13 @@
       30.5
     ],
     "cat": "retaliation",
-    "label": "Iran → Basra (Halliburton facilities)",
+    "label": "Iran \u2192 Basra (Halliburton facilities)",
     "date": "2026-03-07",
     "weaponType": "ballistic",
-    "lastUpdated": "2026-03-07T01:18:42.086Z"
+    "lastUpdated": "2026-03-07T01:18:42.086Z",
+    "launched": 18,
+    "intercepted": 8,
+    "status": "partial"
   },
   {
     "id": "iran_akrotiri",
@@ -907,10 +1054,13 @@
       34.58
     ],
     "cat": "retaliation",
-    "label": "Iran → RAF Akrotiri",
+    "label": "Iran \u2192 RAF Akrotiri",
     "date": "2026-03-01",
     "weaponType": "ballistic",
-    "lastUpdated": "2026-03-07T01:18:42.086Z"
+    "lastUpdated": "2026-03-07T01:18:42.086Z",
+    "launched": 10,
+    "intercepted": 7,
+    "status": "partial"
   },
   {
     "id": "israel_tehran_mar6",
@@ -923,10 +1073,13 @@
       35.72
     ],
     "cat": "strike",
-    "label": "Israel → Tehran (Regime Infrastructure)",
+    "label": "Israel \u2192 Tehran (Regime Infrastructure)",
     "date": "2026-03-06",
     "weaponType": "mixed",
-    "lastUpdated": "2026-03-06T12:00:00.000Z"
+    "lastUpdated": "2026-03-06T12:00:00.000Z",
+    "launched": 20,
+    "intercepted": 4,
+    "status": "partial"
   },
   {
     "id": "israel_beirut_mar6",
@@ -939,10 +1092,13 @@
       33.85
     ],
     "cat": "strike",
-    "label": "Israel → Beirut (Dahiyeh)",
+    "label": "Israel \u2192 Beirut (Dahiyeh)",
     "date": "2026-03-06",
     "weaponType": "mixed",
-    "lastUpdated": "2026-03-06T12:00:00.000Z"
+    "lastUpdated": "2026-03-06T12:00:00.000Z",
+    "launched": 35,
+    "intercepted": 3,
+    "status": "hit"
   },
   {
     "id": "navy_tehran_mar6",
@@ -955,10 +1111,13 @@
       35.72
     ],
     "cat": "strike",
-    "label": "US Navy (Persian Gulf) → Tehran",
+    "label": "US Navy (Persian Gulf) \u2192 Tehran",
     "date": "2026-03-06",
     "weaponType": "cruise",
-    "lastUpdated": "2026-03-06T12:00:00.000Z"
+    "lastUpdated": "2026-03-06T12:00:00.000Z",
+    "launched": 30,
+    "intercepted": 5,
+    "status": "partial"
   },
   {
     "id": "ln_jan23_lincoln_deploy",
@@ -971,7 +1130,7 @@
       26.5
     ],
     "cat": "asset",
-    "label": "USS Lincoln → Persian Gulf",
+    "label": "USS Lincoln \u2192 Persian Gulf",
     "date": "2026-01-23",
     "lastUpdated": "2026-03-07T05:19:32.200Z"
   },
@@ -1004,7 +1163,9 @@
     "label": "Kheibar-2 IRBM test trajectory",
     "date": "2026-01-28",
     "weaponType": "ballistic",
-    "lastUpdated": "2026-03-07T05:19:32.200Z"
+    "lastUpdated": "2026-03-07T05:19:32.200Z",
+    "launched": 1,
+    "status": "unknown"
   },
   {
     "id": "ln_feb01_ford_med",
@@ -1017,7 +1178,7 @@
       34.5
     ],
     "cat": "asset",
-    "label": "USS Ford CSG → Eastern Med",
+    "label": "USS Ford CSG \u2192 Eastern Med",
     "date": "2026-02-01",
     "lastUpdated": "2026-03-07T05:19:32.200Z"
   },
@@ -1032,7 +1193,7 @@
       26.6
     ],
     "cat": "front",
-    "label": "IRGC gunboats → tanker standoff",
+    "label": "IRGC gunboats \u2192 tanker standoff",
     "date": "2026-02-03",
     "lastUpdated": "2026-03-07T05:19:32.200Z"
   },
@@ -1047,7 +1208,7 @@
       25.12
     ],
     "cat": "asset",
-    "label": "F-35A/F-15E deploy → Al Udeid",
+    "label": "F-35A/F-15E deploy \u2192 Al Udeid",
     "date": "2026-02-10",
     "lastUpdated": "2026-03-07T05:19:32.200Z"
   },
@@ -1062,7 +1223,7 @@
       21
     ],
     "cat": "asset",
-    "label": "B-2 Spirits → Diego Garcia",
+    "label": "B-2 Spirits \u2192 Diego Garcia",
     "date": "2026-02-10",
     "lastUpdated": "2026-03-07T05:19:32.200Z"
   },
@@ -1077,10 +1238,12 @@
       34.58
     ],
     "cat": "retaliation",
-    "label": "Suspected drone → RAF Akrotiri",
+    "label": "Suspected drone \u2192 RAF Akrotiri",
     "date": "2026-02-15",
     "weaponType": "drone",
-    "lastUpdated": "2026-03-07T05:19:32.200Z"
+    "lastUpdated": "2026-03-07T05:19:32.200Z",
+    "launched": 1,
+    "status": "unknown"
   },
   {
     "id": "ln_feb18_thaad_psab",
@@ -1093,7 +1256,7 @@
       24.06
     ],
     "cat": "asset",
-    "label": "THAAD deployment → Prince Sultan AB",
+    "label": "THAAD deployment \u2192 Prince Sultan AB",
     "date": "2026-02-18",
     "lastUpdated": "2026-03-07T05:19:32.200Z"
   },
@@ -1108,7 +1271,7 @@
       29.17
     ],
     "cat": "asset",
-    "label": "3rd ESC → Camp Buehring",
+    "label": "3rd ESC \u2192 Camp Buehring",
     "date": "2026-02-19",
     "lastUpdated": "2026-03-07T05:19:32.200Z"
   },
@@ -1123,7 +1286,7 @@
       34.5
     ],
     "cat": "asset",
-    "label": "Souda Bay → Ford CSG resupply",
+    "label": "Souda Bay \u2192 Ford CSG resupply",
     "date": "2026-02-20",
     "lastUpdated": "2026-03-07T05:19:32.200Z"
   },
@@ -1138,7 +1301,7 @@
       37
     ],
     "cat": "asset",
-    "label": "KC-135 tankers → Incirlik AB",
+    "label": "KC-135 tankers \u2192 Incirlik AB",
     "date": "2026-02-20",
     "lastUpdated": "2026-03-07T05:19:32.200Z"
   },
@@ -1153,7 +1316,7 @@
       26
     ],
     "cat": "asset",
-    "label": "USS Bataan ARG → Arabian Gulf",
+    "label": "USS Bataan ARG \u2192 Arabian Gulf",
     "date": "2026-02-21",
     "lastUpdated": "2026-03-07T05:19:32.200Z"
   },
@@ -1185,7 +1348,9 @@
     "cat": "retaliation",
     "label": "IRGC naval exercise Strait of Hormuz",
     "date": "2026-02-23",
-    "lastUpdated": "2026-03-07T05:19:32.200Z"
+    "lastUpdated": "2026-03-07T05:19:32.200Z",
+    "launched": 1,
+    "status": "unknown"
   },
   {
     "id": "ln_feb24_f15e_patrol",
@@ -1228,9 +1393,11 @@
       34.62
     ],
     "cat": "retaliation",
-    "label": "Nuclear material Natanz → Fordow",
+    "label": "Nuclear material Natanz \u2192 Fordow",
     "date": "2026-02-26",
-    "lastUpdated": "2026-03-07T05:19:32.200Z"
+    "lastUpdated": "2026-03-07T05:19:32.200Z",
+    "launched": 2,
+    "status": "unknown"
   },
   {
     "id": "ln_feb27_evac_flights",
@@ -1258,7 +1425,7 @@
       30.8
     ],
     "cat": "asset",
-    "label": "F-15E deploy → Muwaffaq al-Salti AB",
+    "label": "F-15E deploy \u2192 Muwaffaq al-Salti AB",
     "date": "2026-01-24",
     "lastUpdated": "2026-03-07T05:29:27.814Z"
   },
@@ -1273,7 +1440,7 @@
       30.8
     ],
     "cat": "asset",
-    "label": "F-35A deploy → Jordan",
+    "label": "F-35A deploy \u2192 Jordan",
     "date": "2026-01-25",
     "lastUpdated": "2026-03-07T05:29:27.814Z"
   },
@@ -1306,7 +1473,9 @@
     "label": "IRGC missile launcher dispersal",
     "date": "2026-01-29",
     "weaponType": "ballistic",
-    "lastUpdated": "2026-03-07T05:29:27.814Z"
+    "lastUpdated": "2026-03-07T05:29:27.814Z",
+    "launched": 1,
+    "status": "unknown"
   },
   {
     "id": "ln_jan30_s300_reposition",
@@ -1319,10 +1488,12 @@
       33.51
     ],
     "cat": "retaliation",
-    "label": "S-300 reposition → Natanz",
+    "label": "S-300 reposition \u2192 Natanz",
     "date": "2026-01-30",
     "weaponType": "ballistic",
-    "lastUpdated": "2026-03-07T05:29:27.814Z"
+    "lastUpdated": "2026-03-07T05:29:27.814Z",
+    "launched": 1,
+    "status": "unknown"
   },
   {
     "id": "ln_jan31_f35_buildup",
@@ -1335,7 +1506,7 @@
       30.8
     ],
     "cat": "asset",
-    "label": "F-35A reinforcements → Jordan",
+    "label": "F-35A reinforcements \u2192 Jordan",
     "date": "2026-01-31",
     "lastUpdated": "2026-03-07T05:29:27.814Z"
   },
@@ -1352,7 +1523,9 @@
     "cat": "retaliation",
     "label": "IRGC Hormuz live-fire drills",
     "date": "2026-02-02",
-    "lastUpdated": "2026-03-07T05:29:27.814Z"
+    "lastUpdated": "2026-03-07T05:29:27.814Z",
+    "launched": 1,
+    "status": "unknown"
   },
   {
     "id": "ln_feb04_us_israel_coord",
@@ -1395,7 +1568,7 @@
       23.6
     ],
     "cat": "asset",
-    "label": "US delegation → Muscat talks",
+    "label": "US delegation \u2192 Muscat talks",
     "date": "2026-02-06",
     "lastUpdated": "2026-03-07T05:29:27.814Z"
   },
@@ -1425,9 +1598,11 @@
       32.65
     ],
     "cat": "retaliation",
-    "label": "Centrifuge transfer Natanz → Isfahan",
+    "label": "Centrifuge transfer Natanz \u2192 Isfahan",
     "date": "2026-02-08",
-    "lastUpdated": "2026-03-07T05:29:27.814Z"
+    "lastUpdated": "2026-03-07T05:29:27.814Z",
+    "launched": 1,
+    "status": "unknown"
   },
   {
     "id": "ln_feb09_ford_atlantic",
@@ -1458,7 +1633,9 @@
     "label": "Israel intel brief: Iran missile rebuild",
     "date": "2026-02-11",
     "weaponType": "mixed",
-    "lastUpdated": "2026-03-07T05:29:27.814Z"
+    "lastUpdated": "2026-03-07T05:29:27.814Z",
+    "launched": 1,
+    "status": "unknown"
   },
   {
     "id": "ln_feb12_tunnel_logistics",
@@ -1473,7 +1650,9 @@
     "cat": "retaliation",
     "label": "Isfahan tunnel fortification ops",
     "date": "2026-02-12",
-    "lastUpdated": "2026-03-07T05:29:27.814Z"
+    "lastUpdated": "2026-03-07T05:29:27.814Z",
+    "launched": 1,
+    "status": "unknown"
   },
   {
     "id": "ln_feb13_ford_med",
@@ -1486,7 +1665,7 @@
       34.5
     ],
     "cat": "asset",
-    "label": "Ford CSG ordered → Middle East",
+    "label": "Ford CSG ordered \u2192 Middle East",
     "date": "2026-02-13",
     "lastUpdated": "2026-03-07T05:29:27.814Z"
   },
@@ -1504,7 +1683,9 @@
     "label": "US campaign plan: nuclear + state targets",
     "date": "2026-02-14",
     "weaponType": "mixed",
-    "lastUpdated": "2026-03-07T05:29:27.814Z"
+    "lastUpdated": "2026-03-07T05:29:27.814Z",
+    "launched": 1,
+    "status": "unknown"
   },
   {
     "id": "ln_feb16_smart_control",
@@ -1519,7 +1700,9 @@
     "cat": "retaliation",
     "label": "IRGC Smart Control exercises",
     "date": "2026-02-16",
-    "lastUpdated": "2026-03-07T05:29:27.814Z"
+    "lastUpdated": "2026-03-07T05:29:27.814Z",
+    "launched": 1,
+    "status": "unknown"
   },
   {
     "id": "ln_feb17_hormuz_closed",
@@ -1547,10 +1730,13 @@
       30.5
     ],
     "cat": "retaliation",
-    "label": "Iran → Basra (Halliburton facilities)",
+    "label": "Iran \u2192 Basra (Halliburton facilities)",
     "date": "2026-03-07",
     "weaponType": "ballistic",
-    "lastUpdated": "2026-03-07T06:15:56.708Z"
+    "lastUpdated": "2026-03-07T06:15:56.708Z",
+    "launched": 18,
+    "intercepted": 8,
+    "status": "partial"
   },
   {
     "id": "us_tehran_mehrabad",
@@ -1563,10 +1749,13 @@
       35.69
     ],
     "cat": "strike",
-    "label": "US → Tehran (Mehrabad Airport)",
+    "label": "US \u2192 Tehran (Mehrabad Airport)",
     "date": "2026-03-07",
     "weaponType": "mixed",
-    "lastUpdated": "2026-03-07T06:15:56.708Z"
+    "lastUpdated": "2026-03-07T06:15:56.708Z",
+    "launched": 10,
+    "intercepted": 2,
+    "status": "partial"
   },
   {
     "id": "israel_tehran_oil_mar8",
@@ -1579,9 +1768,12 @@
       35.689
     ],
     "cat": "strike",
-    "label": "Israel → Tehran Oil Storage Facility",
+    "label": "Israel \u2192 Tehran Oil Storage Facility",
     "date": "2026-03-08",
-    "lastUpdated": "2026-03-08T00:29:50.183Z"
+    "lastUpdated": "2026-03-08T00:29:50.183Z",
+    "launched": 20,
+    "intercepted": 4,
+    "status": "partial"
   },
   {
     "id": "israel_mehrabad_airport_mar8",
@@ -1594,9 +1786,12 @@
       35.689
     ],
     "cat": "strike",
-    "label": "Israel → Mehrabad International Airport",
+    "label": "Israel \u2192 Mehrabad International Airport",
     "date": "2026-03-08",
-    "lastUpdated": "2026-03-08T00:29:50.183Z"
+    "lastUpdated": "2026-03-08T00:29:50.183Z",
+    "launched": 15,
+    "intercepted": 3,
+    "status": "partial"
   },
   {
     "id": "israel_isfahan_military_mar8",
@@ -1609,9 +1804,12 @@
       32.654
     ],
     "cat": "strike",
-    "label": "Israel → Isfahan Military Targets",
+    "label": "Israel \u2192 Isfahan Military Targets",
     "date": "2026-03-08",
-    "lastUpdated": "2026-03-08T00:29:50.183Z"
+    "lastUpdated": "2026-03-08T00:29:50.183Z",
+    "launched": 15,
+    "intercepted": 3,
+    "status": "partial"
   },
   {
     "id": "iran_uae_mar8",
@@ -1624,9 +1822,13 @@
       24.25
     ],
     "cat": "retaliation",
-    "label": "Iran → UAE",
+    "label": "Iran \u2192 UAE",
     "date": "2026-03-08",
-    "lastUpdated": "2026-03-08T00:29:50.183Z"
+    "lastUpdated": "2026-03-08T00:29:50.183Z",
+    "launched": 15,
+    "intercepted": 10,
+    "status": "partial",
+    "weaponType": "ballistic"
   },
   {
     "id": "iran_bahrain_mar8",
@@ -1639,9 +1841,13 @@
       26.07
     ],
     "cat": "retaliation",
-    "label": "Iran → Bahrain",
+    "label": "Iran \u2192 Bahrain",
     "date": "2026-03-08",
-    "lastUpdated": "2026-03-08T00:29:50.183Z"
+    "lastUpdated": "2026-03-08T00:29:50.183Z",
+    "launched": 15,
+    "intercepted": 10,
+    "status": "partial",
+    "weaponType": "ballistic"
   },
   {
     "id": "iran_iraq_mar8",
@@ -1654,9 +1860,13 @@
       33.31
     ],
     "cat": "retaliation",
-    "label": "Iran → Iraq",
+    "label": "Iran \u2192 Iraq",
     "date": "2026-03-08",
-    "lastUpdated": "2026-03-08T00:29:50.183Z"
+    "lastUpdated": "2026-03-08T00:29:50.183Z",
+    "launched": 15,
+    "intercepted": 10,
+    "status": "partial",
+    "weaponType": "ballistic"
   },
   {
     "id": "israel_tehran_irib_mar8",
@@ -1669,9 +1879,12 @@
       35.689
     ],
     "cat": "strike",
-    "label": "Israel → IRIB Headquarters",
+    "label": "Israel \u2192 IRIB Headquarters",
     "date": "2026-03-08",
-    "lastUpdated": "2026-03-08T06:19:02.250Z"
+    "lastUpdated": "2026-03-08T06:19:02.250Z",
+    "launched": 20,
+    "intercepted": 4,
+    "status": "partial"
   },
   {
     "id": "israel_tehran_parliament_mar8",
@@ -1684,9 +1897,12 @@
       35.689
     ],
     "cat": "strike",
-    "label": "Israel → Iranian Parliament Building",
+    "label": "Israel \u2192 Iranian Parliament Building",
     "date": "2026-03-08",
-    "lastUpdated": "2026-03-08T06:19:02.250Z"
+    "lastUpdated": "2026-03-08T06:19:02.250Z",
+    "launched": 20,
+    "intercepted": 4,
+    "status": "partial"
   },
   {
     "id": "israel_tehran_assembly_experts_mar8",
@@ -1699,9 +1915,12 @@
       35.689
     ],
     "cat": "strike",
-    "label": "Israel → Assembly of Experts",
+    "label": "Israel \u2192 Assembly of Experts",
     "date": "2026-03-08",
-    "lastUpdated": "2026-03-08T06:19:02.250Z"
+    "lastUpdated": "2026-03-08T06:19:02.250Z",
+    "launched": 20,
+    "intercepted": 4,
+    "status": "partial"
   },
   {
     "id": "israel_tehran_sns_council_mar8",
@@ -1714,9 +1933,12 @@
       35.689
     ],
     "cat": "strike",
-    "label": "Israel → Supreme National Security Council",
+    "label": "Israel \u2192 Supreme National Security Council",
     "date": "2026-03-08",
-    "lastUpdated": "2026-03-08T06:19:02.250Z"
+    "lastUpdated": "2026-03-08T06:19:02.250Z",
+    "launched": 20,
+    "intercepted": 4,
+    "status": "partial"
   },
   {
     "id": "israel_tehran_expediency_council_mar8",
@@ -1729,9 +1951,12 @@
       35.689
     ],
     "cat": "strike",
-    "label": "Israel → Expediency Discernment Council",
+    "label": "Israel \u2192 Expediency Discernment Council",
     "date": "2026-03-08",
-    "lastUpdated": "2026-03-08T06:19:02.250Z"
+    "lastUpdated": "2026-03-08T06:19:02.250Z",
+    "launched": 20,
+    "intercepted": 4,
+    "status": "partial"
   },
   {
     "id": "israel_tehran_min_zadai_mar8",
@@ -1744,9 +1969,12 @@
       35.689
     ],
     "cat": "strike",
-    "label": "Israel → Min Zadai Facility",
+    "label": "Israel \u2192 Min Zadai Facility",
     "date": "2026-03-08",
-    "lastUpdated": "2026-03-08T06:19:02.250Z"
+    "lastUpdated": "2026-03-08T06:19:02.250Z",
+    "launched": 15,
+    "intercepted": 3,
+    "status": "partial"
   },
   {
     "id": "iran_akrotiri_mar8",
@@ -1759,9 +1987,13 @@
       34.58
     ],
     "cat": "retaliation",
-    "label": "Iran → RAF Akrotiri",
+    "label": "Iran \u2192 RAF Akrotiri",
     "date": "2026-03-08",
-    "lastUpdated": "2026-03-08T06:19:02.250Z"
+    "lastUpdated": "2026-03-08T06:19:02.250Z",
+    "launched": 15,
+    "intercepted": 10,
+    "status": "partial",
+    "weaponType": "ballistic"
   },
   {
     "id": "iran_dubai_mar8",
@@ -1774,9 +2006,13 @@
       25.2
     ],
     "cat": "retaliation",
-    "label": "Iran → Dubai",
+    "label": "Iran \u2192 Dubai",
     "date": "2026-03-08",
-    "lastUpdated": "2026-03-08T06:19:02.250Z"
+    "lastUpdated": "2026-03-08T06:19:02.250Z",
+    "launched": 15,
+    "intercepted": 10,
+    "status": "partial",
+    "weaponType": "ballistic"
   },
   {
     "id": "iran_oman_mar8",
@@ -1789,9 +2025,13 @@
       23.61
     ],
     "cat": "retaliation",
-    "label": "Iran → Oman",
+    "label": "Iran \u2192 Oman",
     "date": "2026-03-08",
-    "lastUpdated": "2026-03-08T06:19:02.250Z"
+    "lastUpdated": "2026-03-08T06:19:02.250Z",
+    "launched": 15,
+    "intercepted": 10,
+    "status": "partial",
+    "weaponType": "ballistic"
   },
   {
     "id": "iran_azerbaijan_mar8",
@@ -1804,8 +2044,12 @@
       40.41
     ],
     "cat": "retaliation",
-    "label": "Iran → Azerbaijan",
+    "label": "Iran \u2192 Azerbaijan",
     "date": "2026-03-08",
-    "lastUpdated": "2026-03-08T06:19:02.250Z"
+    "lastUpdated": "2026-03-08T06:19:02.250Z",
+    "launched": 15,
+    "intercepted": 10,
+    "status": "partial",
+    "weaponType": "ballistic"
   }
 ]

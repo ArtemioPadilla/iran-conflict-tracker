@@ -29,14 +29,37 @@ interface MissileAnimation {
   completed: boolean;
 }
 
-const MAX_CONCURRENT = 10;
+/** Max projectile entities per arc (visual fidelity cap) */
+const PER_ARC_CAP = 50;
+/** Max total projectile entities across all arcs (performance cap) */
+const MAX_TOTAL_PROJECTILES = 400;
+/** Max animated arcs (lines with trails) */
+const MAX_ARCS = 30;
 /** Minimum real-time visibility in seconds */
 const MIN_REAL_SECONDS = 2.0;
+
+// Seeded random for deterministic spread per line
+function seededRandom(seed: number): () => number {
+  let s = seed;
+  return () => {
+    s = (s * 16807 + 0) % 2147483647;
+    return (s - 1) / 2147483646;
+  };
+}
+
+function hashString(str: string): number {
+  let hash = 5381;
+  for (let i = 0; i < str.length; i++) {
+    hash = ((hash << 5) + hash + str.charCodeAt(i)) | 0;
+  }
+  return Math.abs(hash);
+}
 
 /**
  * Renders arcs for the current date's lines.
  * - When playing: animates strike/retaliation synced to sim-time velocity.
- *   Duration is scaled so animations always take at least ~2 real seconds.
+ *   Each arc spawns up to PER_ARC_CAP projectiles along randomized parallel
+ *   paths with staggered launch times — creating a realistic missile swarm.
  * - When not playing: shows all lines as static arcs.
  * - On date/lines change: cleans up all entities and rebuilds.
  */
@@ -89,10 +112,9 @@ export function useMissiles(
       staticEntitiesRef.current.push(entity);
     }
 
-    // Cap animated lines
-    const animatable = toAnimate.slice(0, MAX_CONCURRENT);
-    // Overflow goes to static
-    for (const line of toAnimate.slice(MAX_CONCURRENT)) {
+    // Cap animated arcs — overflow goes to static
+    const animatable = toAnimate.slice(0, MAX_ARCS);
+    for (const line of toAnimate.slice(MAX_ARCS)) {
       const positions = arc3D(line.from, line.to);
       const entity = viewer.entities.add({
         name: line.label,
@@ -108,115 +130,135 @@ export function useMissiles(
     if (animatable.length === 0) return;
 
     const baseSimTime = simTimeRef.current;
-    // Minimum sim-time duration that guarantees ~2 real seconds at current speed
     const minSimDuration = MIN_REAL_SECONDS * playbackSpeed * 1000;
-    // Stagger: 0.3 real seconds between launches, in sim-time units
     const staggerSim = 0.3 * playbackSpeed * 1000;
+    let totalProjectiles = 0;
 
     for (let i = 0; i < animatable.length; i++) {
       const line = animatable[i];
       const peakAlt = weaponPeakAlt(line.weaponType);
-      const arcPositions = arc3D(line.from, line.to, 60, peakAlt);
+      const mainArc = arc3D(line.from, line.to, 60, peakAlt);
       const physicalDuration = simFlightDurationTyped(line.from, line.to, line.weaponType);
       const simDuration = Math.max(physicalDuration, minSimDuration);
       const color = catToCesiumColor(line.cat);
-      const projSize = weaponProjectileSize(line.weaponType);
+      const baseSize = weaponProjectileSize(line.weaponType);
       const glowPwr = weaponGlowPower(line.weaponType);
 
-      // Sub-day timing: offset by actual hour if time field is present
+      // Sub-day timing offset
       let timeOffset = 0;
       if (line.time) {
         const match = line.time.match(/^(\d{1,2}):(\d{2})$/);
         if (match) {
           const hours = parseInt(match[1], 10);
           const mins = parseInt(match[2], 10);
-          // Offset from noon (43200000ms) which is the default simTime anchor
           timeOffset = ((hours * 3600 + mins * 60) - 43200) * 1000;
         }
       }
 
-      const anim: MissileAnimation = {
+      const arcStartTime = baseSimTime + i * staggerSim + timeOffset;
+
+      // How many projectiles for this line
+      const launched = line.launched || 1;
+      const remaining = MAX_TOTAL_PROJECTILES - totalProjectiles;
+      const projCount = Math.min(launched, PER_ARC_CAP, Math.max(1, remaining));
+
+      // Scale projectile size down for large swarms
+      const projSize = projCount > 10
+        ? Math.max(2, baseSize - 2)
+        : projCount > 5
+          ? Math.max(3, baseSize - 1)
+          : baseSize;
+
+      // Trail width scales with volume
+      const trailW = lineWidth(line.cat) + Math.min(projCount / 10, 3);
+
+      // ── Trail entity (single growing polyline per arc) ──
+      const trailAnim: MissileAnimation = {
         lineId: line.id,
-        startSimTime: baseSimTime + i * staggerSim + timeOffset,
+        startSimTime: arcStartTime,
         simDuration,
-        arcPositions,
-        trailEntity: null,
+        arcPositions: mainArc,
+        trailEntity: viewer.entities.add({
+          polyline: {
+            positions: new CallbackProperty(() => {
+              if (trailAnim.completed) return mainArc;
+              const simElapsed = simTimeRef.current - arcStartTime;
+              const progress = Math.min(Math.max(simElapsed / simDuration, 0), 1);
+              const segCount = Math.max(1, Math.floor(progress * mainArc.length));
+              return mainArc.slice(0, segCount);
+            }, false) as any,
+            width: trailW,
+            material: new PolylineGlowMaterialProperty({
+              glowPower: glowPwr,
+              color: color.withAlpha(line.confidence === 'low' ? 0.4 : 0.9),
+            }),
+          },
+        }),
         projectileEntity: null,
         completed: false,
       };
+      animationsRef.current.push(trailAnim);
 
-      // Trail entity — polyline that grows as missile advances
-      anim.trailEntity = viewer.entities.add({
-        polyline: {
-          positions: new CallbackProperty(() => {
-            if (anim.completed) return anim.arcPositions;
-            const simElapsed = simTimeRef.current - anim.startSimTime;
-            const progress = Math.min(Math.max(simElapsed / anim.simDuration, 0), 1);
-            const segCount = Math.max(1, Math.floor(progress * anim.arcPositions.length));
-            return anim.arcPositions.slice(0, segCount);
-          }, false) as any,
-          width: lineWidth(line.cat) + 1,
-          material: new PolylineGlowMaterialProperty({
-            glowPower: glowPwr,
-            color: color.withAlpha(line.confidence === 'low' ? 0.4 : 0.9),
-          }),
-        },
-      });
+      // ── Projectile swarm ──
+      const rng = seededRandom(hashString(line.id));
+      // Spread launches over first 40% of flight duration
+      const launchSpread = simDuration * 0.4;
+      // Lateral spread in degrees — scales with distance
+      const baseLateralSpread = projCount > 1 ? 0.4 : 0;
 
-      // Projectile entity — bright point at the missile head
-      anim.projectileEntity = viewer.entities.add({
-        position: new CallbackProperty(() => {
-          if (anim.completed) return anim.arcPositions[anim.arcPositions.length - 1];
-          const simElapsed = simTimeRef.current - anim.startSimTime;
-          const progress = Math.min(Math.max(simElapsed / anim.simDuration, 0), 1);
-          const idx = Math.min(
-            Math.floor(progress * (anim.arcPositions.length - 1)),
-            anim.arcPositions.length - 1,
-          );
-          return anim.arcPositions[idx];
-        }, false) as any,
-        point: {
-          pixelSize: projSize,
-          color: Color.WHITE,
-          outlineColor: color.withAlpha(0.8),
-          outlineWidth: projSize > 6 ? 5 : 4,
-        },
-      });
+      for (let p = 0; p < projCount; p++) {
+        // Randomize path for each projectile
+        const offsetLon = (rng() - 0.5) * baseLateralSpread;
+        const offsetLat = (rng() - 0.5) * baseLateralSpread;
+        const altFactor = 1 + (rng() - 0.5) * 0.2;
 
-      animationsRef.current.push(anim);
-
-      // Multi-projectile: render extra staggered projectiles for salvos
-      const salvoCount = line.launched ? Math.min(line.launched, 3) : 1;
-      if (salvoCount > 1) {
-        for (let s = 1; s < salvoCount; s++) {
-          const salvoOffset = s * 0.1 * staggerSim;
-          const salvoAnim: MissileAnimation = {
-            lineId: `${line.id}_salvo_${s}`,
-            startSimTime: anim.startSimTime + salvoOffset,
-            simDuration,
-            arcPositions,
-            trailEntity: null, // salvo projectiles share the main trail
-            projectileEntity: viewer.entities.add({
-              position: new CallbackProperty(() => {
-                const simElapsed = simTimeRef.current - (anim.startSimTime + salvoOffset);
-                const progress = Math.min(Math.max(simElapsed / simDuration, 0), 1);
-                const idx = Math.min(
-                  Math.floor(progress * (arcPositions.length - 1)),
-                  arcPositions.length - 1,
-                );
-                return arcPositions[idx];
-              }, false) as any,
-              point: {
-                pixelSize: projSize - 1,
-                color: Color.WHITE.withAlpha(0.7),
-                outlineColor: color.withAlpha(0.6),
-                outlineWidth: 3,
-              },
-            }),
-            completed: false,
-          };
-          animationsRef.current.push(salvoAnim);
+        // Generate spread arc for this projectile
+        let projArc: Cartesian3[];
+        if (projCount > 1) {
+          const projFrom: [number, number] = [
+            line.from[0] + offsetLon * 0.15,
+            line.from[1] + offsetLat * 0.15,
+          ];
+          const projTo: [number, number] = [
+            line.to[0] + offsetLon * 0.15,
+            line.to[1] + offsetLat * 0.15,
+          ];
+          projArc = arc3D(projFrom, projTo, 60, peakAlt * altFactor);
+        } else {
+          projArc = mainArc;
         }
+
+        // Stagger launch time
+        const projStart = arcStartTime + (projCount > 1 ? rng() * launchSpread : 0);
+
+        const projAnim: MissileAnimation = {
+          lineId: `${line.id}_p${p}`,
+          startSimTime: projStart,
+          simDuration,
+          arcPositions: projArc,
+          trailEntity: null,
+          projectileEntity: viewer.entities.add({
+            position: new CallbackProperty(() => {
+              if (projAnim.completed) return projArc[projArc.length - 1];
+              const simElapsed = simTimeRef.current - projStart;
+              const progress = Math.min(Math.max(simElapsed / simDuration, 0), 1);
+              const idx = Math.min(
+                Math.floor(progress * (projArc.length - 1)),
+                projArc.length - 1,
+              );
+              return projArc[idx];
+            }, false) as any,
+            point: {
+              pixelSize: p === 0 ? baseSize : projSize,
+              color: Color.WHITE.withAlpha(p === 0 ? 1 : 0.8),
+              outlineColor: color.withAlpha(p === 0 ? 0.8 : 0.5),
+              outlineWidth: p === 0 ? (baseSize > 6 ? 5 : 4) : Math.max(2, projSize - 1),
+            },
+          }),
+          completed: false,
+        };
+        animationsRef.current.push(projAnim);
+        totalProjectiles++;
       }
     }
 
@@ -234,7 +276,6 @@ export function useMissiles(
 
         const simElapsed = simTimeRef.current - anim.startSimTime;
         if (simElapsed >= anim.simDuration) {
-          // Animation complete — remove projectile, freeze trail
           if (anim.projectileEntity) {
             try { viewer.entities.remove(anim.projectileEntity); } catch { /* ok */ }
             anim.projectileEntity = null;

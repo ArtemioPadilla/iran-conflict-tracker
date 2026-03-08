@@ -4,23 +4,23 @@
     "label": "Days of Conflict",
     "value": "9",
     "color": "red",
-    "source": "Associated Press",
+    "source": "Al Jazeera",
     "contested": false,
     "delta": "+1",
     "trend": "up",
-    "lastUpdated": "2026-03-08T00:29:50.183Z"
+    "lastUpdated": "2026-03-08T06:19:02.250Z"
   },
   {
     "id": "iran_killed",
     "label": "Iran Killed",
     "value": "1,332",
     "color": "red",
-    "source": "Associated Press",
+    "source": "Al Jazeera",
     "contested": true,
     "contestNote": "Human Rights Activists News Agency: 1,000+; Iranian Red Crescent Society: 555",
     "delta": "+102",
     "trend": "up",
-    "lastUpdated": "2026-03-08T00:29:50.183Z"
+    "lastUpdated": "2026-03-08T06:19:02.250Z"
   },
   {
     "id": "us_killed",
@@ -31,40 +31,40 @@
     "contested": false,
     "delta": "0",
     "trend": "stable",
-    "lastUpdated": "2026-03-08T00:29:50.183Z"
+    "lastUpdated": "2026-03-08T06:19:02.250Z"
   },
   {
     "id": "gulf_killed",
     "label": "Gulf Region Killed",
     "value": "24",
     "color": "amber",
-    "source": "Associated Press",
+    "source": "Al Jazeera",
     "contested": false,
     "delta": "+3",
     "trend": "up",
-    "lastUpdated": "2026-03-08T00:29:50.183Z"
+    "lastUpdated": "2026-03-08T06:19:02.250Z"
   },
   {
     "id": "lebanon_killed",
     "label": "Lebanon Killed",
     "value": "217",
     "color": "amber",
-    "source": "Associated Press",
+    "source": "Al Jazeera",
     "contested": false,
     "delta": "+140",
     "trend": "up",
-    "lastUpdated": "2026-03-08T00:29:50.183Z"
+    "lastUpdated": "2026-03-08T06:19:02.250Z"
   },
   {
     "id": "brent_crude",
     "label": "Brent Crude",
-    "value": "$68.05",
+    "value": "$92.62",
     "color": "red",
-    "source": "Trading Economics",
+    "source": "Gulf News",
     "contested": false,
-    "delta": "+$0.50",
+    "delta": "+$24.57",
     "trend": "up",
-    "lastUpdated": "2026-03-08T00:29:50.183Z"
+    "lastUpdated": "2026-03-08T06:19:02.250Z"
   },
   {
     "id": "flights_cancelled",
@@ -75,7 +75,7 @@
     "contested": false,
     "delta": "0",
     "trend": "stable",
-    "lastUpdated": "2026-03-08T00:29:50.183Z"
+    "lastUpdated": "2026-03-08T06:19:02.250Z"
   },
   {
     "id": "countries_affected",
@@ -85,6 +85,6 @@
     "source": "Compiled",
     "contested": false,
     "trend": "stable",
-    "lastUpdated": "2026-03-08T00:29:50.183Z"
+    "lastUpdated": "2026-03-08T06:19:02.250Z"
   }
 ]

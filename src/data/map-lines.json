@@ -1554,5 +1554,155 @@
     "label": "Iran → Iraq",
     "date": "2026-03-08",
     "lastUpdated": "2026-03-08T00:29:50.183Z"
+  },
+  {
+    "id": "israel_tehran_irib_mar8",
+    "from": [
+      34.78,
+      32.08
+    ],
+    "to": [
+      51.389,
+      35.689
+    ],
+    "cat": "strike",
+    "label": "Israel → IRIB Headquarters",
+    "date": "2026-03-08",
+    "lastUpdated": "2026-03-08T06:19:02.250Z"
+  },
+  {
+    "id": "israel_tehran_parliament_mar8",
+    "from": [
+      34.78,
+      32.08
+    ],
+    "to": [
+      51.389,
+      35.689
+    ],
+    "cat": "strike",
+    "label": "Israel → Iranian Parliament Building",
+    "date": "2026-03-08",
+    "lastUpdated": "2026-03-08T06:19:02.250Z"
+  },
+  {
+    "id": "israel_tehran_assembly_experts_mar8",
+    "from": [
+      34.78,
+      32.08
+    ],
+    "to": [
+      51.389,
+      35.689
+    ],
+    "cat": "strike",
+    "label": "Israel → Assembly of Experts",
+    "date": "2026-03-08",
+    "lastUpdated": "2026-03-08T06:19:02.250Z"
+  },
+  {
+    "id": "israel_tehran_sns_council_mar8",
+    "from": [
+      34.78,
+      32.08
+    ],
+    "to": [
+      51.389,
+      35.689
+    ],
+    "cat": "strike",
+    "label": "Israel → Supreme National Security Council",
+    "date": "2026-03-08",
+    "lastUpdated": "2026-03-08T06:19:02.250Z"
+  },
+  {
+    "id": "israel_tehran_expediency_council_mar8",
+    "from": [
+      34.78,
+      32.08
+    ],
+    "to": [
+      51.389,
+      35.689
+    ],
+    "cat": "strike",
+    "label": "Israel → Expediency Discernment Council",
+    "date": "2026-03-08",
+    "lastUpdated": "2026-03-08T06:19:02.250Z"
+  },
+  {
+    "id": "israel_tehran_min_zadai_mar8",
+    "from": [
+      34.78,
+      32.08
+    ],
+    "to": [
+      51.389,
+      35.689
+    ],
+    "cat": "strike",
+    "label": "Israel → Min Zadai Facility",
+    "date": "2026-03-08",
+    "lastUpdated": "2026-03-08T06:19:02.250Z"
+  },
+  {
+    "id": "iran_akrotiri_mar8",
+    "from": [
+      51.39,
+      35.69
+    ],
+    "to": [
+      32.99,
+      34.58
+    ],
+    "cat": "retaliation",
+    "label": "Iran → RAF Akrotiri",
+    "date": "2026-03-08",
+    "lastUpdated": "2026-03-08T06:19:02.250Z"
+  },
+  {
+    "id": "iran_dubai_mar8",
+    "from": [
+      51.39,
+      35.69
+    ],
+    "to": [
+      55.27,
+      25.2
+    ],
+    "cat": "retaliation",
+    "label": "Iran → Dubai",
+    "date": "2026-03-08",
+    "lastUpdated": "2026-03-08T06:19:02.250Z"
+  },
+  {
+    "id": "iran_oman_mar8",
+    "from": [
+      51.39,
+      35.69
+    ],
+    "to": [
+      58.59,
+      23.61
+    ],
+    "cat": "retaliation",
+    "label": "Iran → Oman",
+    "date": "2026-03-08",
+    "lastUpdated": "2026-03-08T06:19:02.250Z"
+  },
+  {
+    "id": "iran_azerbaijan_mar8",
+    "from": [
+      51.39,
+      35.69
+    ],
+    "to": [
+      49.87,
+      40.41
+    ],
+    "cat": "retaliation",
+    "label": "Iran → Azerbaijan",
+    "date": "2026-03-08",
+    "lastUpdated": "2026-03-08T06:19:02.250Z"
   }
 ]

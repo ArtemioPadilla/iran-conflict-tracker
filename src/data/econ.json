@@ -2,42 +2,38 @@
   {
     "id": "brent_crude",
     "label": "Brent Crude",
-    "value": "$79.37/bbl",
-    "change": "+11.00%",
+    "value": "$83.00/bbl",
+    "change": "+6.7%",
     "direction": "up",
     "sparkData": [
-      70,
-      72,
-      75,
-      78,
-      80,
+      77.74,
+      79.37,
+      80.5,
+      81.2,
       82,
-      84,
-      79.37
+      83
     ],
     "color": "#e74c3c",
-    "source": "HyqFocus",
-    "lastUpdated": "2026-03-08T00:29:50.183Z"
+    "source": "Globe Capital Market LTD.",
+    "lastUpdated": "2026-03-08T06:19:02.250Z"
   },
   {
     "id": "wti_crude",
     "label": "WTI Crude",
     "value": "$88.00/bbl",
-    "change": "+6.70%",
+    "change": "+6.7%",
     "direction": "up",
     "sparkData": [
-      68,
-      70,
-      72,
+      71.23,
+      72.4,
       74,
       76,
       78,
-      79,
       88
     ],
     "color": "#e67e22",
     "source": "MarketMinute",
-    "lastUpdated": "2026-03-08T00:29:50.183Z"
+    "lastUpdated": "2026-03-08T06:19:02.250Z"
   },
   {
     "id": "gold_spot",
@@ -57,7 +53,7 @@
     ],
     "color": "#f1c40f",
     "source": "HyqFocus",
-    "lastUpdated": "2026-03-08T00:29:50.183Z"
+    "lastUpdated": "2026-03-08T06:19:02.250Z"
   },
   {
     "id": "sp500",
@@ -77,7 +73,7 @@
     ],
     "color": "#3498db",
     "source": "State Street SPDR S&P 500 ETF Trust",
-    "lastUpdated": "2026-03-08T00:29:50.183Z"
+    "lastUpdated": "2026-03-08T06:19:02.250Z"
   },
   {
     "id": "vix",
@@ -96,7 +92,7 @@
     ],
     "color": "#9b59b6",
     "source": "CBOE",
-    "lastUpdated": "2026-03-08T00:29:50.183Z"
+    "lastUpdated": "2026-03-08T06:19:02.250Z"
   },
   {
     "id": "iranian_rial",
@@ -115,7 +111,7 @@
     ],
     "color": "#e74c3c",
     "source": "Iran Intl",
-    "lastUpdated": "2026-03-08T00:29:50.183Z"
+    "lastUpdated": "2026-03-08T06:19:02.250Z"
   },
   {
     "id": "gas_price_us",
@@ -135,7 +131,7 @@
     ],
     "color": "#e74c3c",
     "source": "Kiplinger",
-    "lastUpdated": "2026-03-08T00:29:50.183Z"
+    "lastUpdated": "2026-03-08T06:19:02.250Z"
   },
   {
     "id": "shipping_rates",
@@ -154,6 +150,6 @@
     ],
     "color": "#e67e22",
     "source": "Freightos",
-    "lastUpdated": "2026-03-08T00:29:50.183Z"
+    "lastUpdated": "2026-03-08T06:19:02.250Z"
   }
 ]

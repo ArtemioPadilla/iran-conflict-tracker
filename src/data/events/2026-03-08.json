@@ -176,5 +176,85 @@
       }
     ],
     "lastUpdated": "2026-03-08T00:29:50.183Z"
+  },
+  {
+    "id": "israeli_strikes_lebanon_tehran_mar8",
+    "year": "Mar 8",
+    "title": "Israeli Strikes Kill 12 in Lebanon; Oil Facility in Tehran Targeted",
+    "type": "military",
+    "detail": "Israeli airstrikes on southern Lebanon and Beirut resulted in 12 fatalities, targeting commanders of Iran’s Revolutionary Guards’ Quds Force. Additionally, an Israeli strike on an oil storage facility in Tehran caused significant fires, marking the first targeting of a civilian industrial site in the conflict.",
+    "sources": [
+      {
+        "name": "Associated Press",
+        "tier": 2,
+        "url": "https://apnews.com/article/d086d66e54280838c925b65067858afb",
+        "pole": "western"
+      }
+    ],
+    "lastUpdated": "2026-03-08T06:19:02.250Z"
+  },
+  {
+    "id": "us_israel_consider_special_forces_iran_mar8",
+    "year": "Mar 8",
+    "title": "U.S. and Israel Consider Deploying Special Forces to Secure Iran's Nuclear Stockpile",
+    "type": "military",
+    "detail": "The U.S. and Israel are discussing the deployment of special forces to Iran to secure its stockpile of highly enriched uranium, aiming to prevent the development of nuclear weapons. Iran possesses approximately 450 kilograms of 60%-enriched uranium, which could be converted into weapons-grade material within weeks.",
+    "sources": [
+      {
+        "name": "Axios",
+        "tier": 2,
+        "url": "https://www.axios.com/2026/03/08/iran-ground-troops-special-forces-nuclear",
+        "pole": "western"
+      }
+    ],
+    "lastUpdated": "2026-03-08T06:19:02.250Z"
+  },
+  {
+    "id": "iran_rejects_ceasefire_prepares_invasion_mar7",
+    "year": "Mar 7",
+    "title": "Iran Rejects Cease-Fire Negotiations, Prepares for U.S. Ground Invasion",
+    "type": "diplomatic",
+    "detail": "Iranian Foreign Minister Abbas Araghchi rejected the idea of a cease-fire and declared the country's readiness to confront a U.S. ground invasion. This follows statements from U.S. President Donald Trump, who did not rule out deploying American troops.",
+    "sources": [
+      {
+        "name": "Time",
+        "tier": 2,
+        "url": "https://time.com/7382836/iran-us-israel-war-trump-araghchi-ground-invasion-cease-fire/",
+        "pole": "western"
+      }
+    ],
+    "lastUpdated": "2026-03-08T06:19:02.250Z"
+  },
+  {
+    "id": "tehran_explosions_us_warns_intensified_bombing_mar7",
+    "year": "Mar 7",
+    "title": "Explosions Rock Tehran; U.S. Warns of Intensified Bombing",
+    "type": "military",
+    "detail": "A series of explosions occurred in Tehran as the U.S. warned of an impending intensified bombing campaign. The Trump administration authorized a $151 million arms deal with Israel, with President Trump demanding Iran’s 'unconditional surrender' before any negotiations.",
+    "sources": [
+      {
+        "name": "Associated Press",
+        "tier": 2,
+        "url": "https://apnews.com/article/6108249f19c4bc162eacd7847976c174",
+        "pole": "western"
+      }
+    ],
+    "lastUpdated": "2026-03-08T06:19:02.250Z"
+  },
+  {
+    "id": "us_israel_attacks_iran_record_pace_mar6",
+    "year": "Mar 6",
+    "title": "U.S. and Israel Attacking Iran at 'Record Pace', War Monitor Says",
+    "type": "military",
+    "detail": "Research group Airwars reported that the U.S. and Israel have attacked Iran at a pace far surpassing other recent conflicts, with about 4,000 targets struck in the first four days of the offensive.",
+    "sources": [
+      {
+        "name": "Al Jazeera",
+        "tier": 2,
+        "url": "https://www.aljazeera.com/news/2026/3/6/us-and-israel-attacking-iran-at-record-pace-war-monitor-says",
+        "pole": "middle_eastern"
+      }
+    ],
+    "lastUpdated": "2026-03-08T06:19:02.250Z"
   }
 ]

@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { MAP_CATEGORIES } from '../../../lib/map-utils';
 import { type CameraPresetKey } from '../../../lib/cesium-config';
 import type { VisualMode } from './cesium-shaders';
@@ -18,6 +19,8 @@ interface Props {
   showFov?: boolean;
   onToggleFov?: () => void;
   fovCount?: number;
+  aisApiKey?: string;
+  onAisApiKeyChange?: (key: string) => void;
 }
 
 const PRESET_LABELS: Record<CameraPresetKey, string> = {
@@ -52,7 +55,12 @@ export default function CesiumControls({
   showFov,
   onToggleFov,
   fovCount,
+  aisApiKey,
+  onAisApiKeyChange,
 }: Props) {
+  const [aisKeyDraft, setAisKeyDraft] = useState('');
+  const hasAisKey = !!aisApiKey;
+
   return (
     <div className="globe-controls">
       {/* Category filters */}
@@ -170,10 +178,50 @@ export default function CesiumControls({
           Ships (AIS)
         </button>
         {layers.ships && (
-          <div className="globe-sublabel">
-            <span style={{ color: '#00ddaa' }}>&#9679; Underway</span>{' '}
-            <span style={{ color: '#888888' }}>&#9679; Anchored</span>
-          </div>
+          <>
+            <div className="globe-sublabel">
+              <span style={{ color: '#00ddaa' }}>&#9679; Underway</span>{' '}
+              <span style={{ color: '#888888' }}>&#9679; Anchored</span>
+            </div>
+            {!hasAisKey ? (
+              <div className="globe-ais-key-input">
+                <input
+                  type="password"
+                  placeholder="AISStream.io API key"
+                  value={aisKeyDraft}
+                  onChange={e => setAisKeyDraft(e.target.value)}
+                  onKeyDown={e => {
+                    if (e.key === 'Enter' && aisKeyDraft.trim()) {
+                      onAisApiKeyChange?.(aisKeyDraft.trim());
+                    }
+                  }}
+                />
+                <button
+                  className="globe-ais-key-save"
+                  onClick={() => {
+                    if (aisKeyDraft.trim()) onAisApiKeyChange?.(aisKeyDraft.trim());
+                  }}
+                  disabled={!aisKeyDraft.trim()}
+                >
+                  Connect
+                </button>
+                <div className="globe-ais-key-hint">
+                  Free key from <a href="https://aisstream.io" target="_blank" rel="noopener noreferrer">aisstream.io</a>
+                </div>
+              </div>
+            ) : (
+              <div className="globe-sublabel" style={{ gap: '6px' }}>
+                <span style={{ color: '#00ddaa' }}>AIS connected</span>
+                <button
+                  className="globe-ais-key-clear"
+                  onClick={() => onAisApiKeyChange?.('')}
+                  title="Disconnect and clear API key"
+                >
+                  &#x2715;
+                </button>
+              </div>
+            )}
+          </>
         )}
         <button
           className={`globe-filter${layers.quakes ? ' active' : ''}`}

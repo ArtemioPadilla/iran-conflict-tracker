@@ -50,7 +50,20 @@ function classifyShip(navStatus: number, speed: number): { color: string; size: 
   return { color: '#00aa88', size: 3, isAnchored: false };
 }
 
-const API_KEY = (import.meta as any).env?.PUBLIC_AISSTREAM_API_KEY || '';
+const LS_KEY = 'aisstream-api-key';
+
+/** Read AIS API key from localStorage */
+export function getStoredAisKey(): string {
+  try { return localStorage.getItem(LS_KEY) || ''; } catch { return ''; }
+}
+
+/** Save AIS API key to localStorage */
+export function setStoredAisKey(key: string): void {
+  try {
+    if (key) localStorage.setItem(LS_KEY, key);
+    else localStorage.removeItem(LS_KEY);
+  } catch { /* localStorage unavailable */ }
+}
 
 // Theater bounding box: lat 12-42N, lon 24-65E
 const BOUNDING_BOX: [[number, number], [number, number]] = [[12, 24], [42, 65]];
@@ -61,25 +74,16 @@ const MAX_BACKOFF_MS = 60_000;
 const INITIAL_BACKOFF_MS = 5_000;
 
 /** Live AIS ship tracking via AISStream.io WebSocket */
-export function useShips(viewer: CesiumViewer | null, enabled: boolean) {
+export function useShips(viewer: CesiumViewer | null, enabled: boolean, apiKey: string) {
   const [count, setCount] = useState(0);
   const shipsRef = useRef<Map<string, ShipState>>(new Map());
   const wsRef = useRef<WebSocket | null>(null);
   const backoffRef = useRef(INITIAL_BACKOFF_MS);
   const reconnectTimerRef = useRef<ReturnType<typeof setTimeout>>(undefined);
   const cleanupTimerRef = useRef<ReturnType<typeof setInterval>>(undefined);
-  const infoLoggedRef = useRef(false);
 
   useEffect(() => {
-    if (!enabled || !viewer) return;
-
-    if (!API_KEY) {
-      if (!infoLoggedRef.current) {
-        console.info('[Ships] AIS layer disabled \u2014 set PUBLIC_AISSTREAM_API_KEY to enable');
-        infoLoggedRef.current = true;
-      }
-      return;
-    }
+    if (!enabled || !viewer || !apiKey) return;
 
     let disposed = false;
 
@@ -92,7 +96,7 @@ export function useShips(viewer: CesiumViewer | null, enabled: boolean) {
       ws.onopen = () => {
         backoffRef.current = INITIAL_BACKOFF_MS;
         const subscription = {
-          APIKey: API_KEY,
+          APIKey: apiKey,
           BoundingBoxes: [BOUNDING_BOX],
           FilterMessageTypes: ['PositionReport'],
         };
@@ -227,7 +231,7 @@ export function useShips(viewer: CesiumViewer | null, enabled: boolean) {
       shipsRef.current.clear();
       setCount(0);
     };
-  }, [enabled, viewer]);
+  }, [enabled, viewer, apiKey]);
 
   return { count };
 }

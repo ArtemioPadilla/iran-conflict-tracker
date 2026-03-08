@@ -31,7 +31,7 @@ import { useFlights } from './useFlights';
 import { useEarthquakes } from './useEarthquakes';
 import { useWeather } from './useWeather';
 import { useNoFlyZones } from './useNoFlyZones';
-import { useShips } from './useShips';
+import { useShips, getStoredAisKey, setStoredAisKey } from './useShips';
 
 interface Props {
   points: MapPoint[];
@@ -93,6 +93,13 @@ export default function CesiumGlobe({ points, lines, kpis, meta, events = [] }: 
 
   // ── Satellite FOV footprints ──
   const [showFov, setShowFov] = useState(false);
+
+  // ── AIS API key (user-provided, stored in localStorage) ──
+  const [aisApiKey, setAisApiKey] = useState(() => getStoredAisKey());
+  const handleAisKeyChange = useCallback((key: string) => {
+    setStoredAisKey(key);
+    setAisApiKey(key);
+  }, []);
 
   // ── Timeline ──
   const dateRange = useMemo(() => {
@@ -320,7 +327,7 @@ export default function CesiumGlobe({ points, lines, kpis, meta, events = [] }: 
   const { count: quakeCount } = useEarthquakes(cesiumViewer, layers.quakes, currentDate);
   const { count: weatherCount } = useWeather(cesiumViewer, layers.weather, currentDate);
   const { count: nfzCount } = useNoFlyZones(cesiumViewer, layers.nfz, currentDate);
-  const { count: shipCount } = useShips(cesiumViewer, layers.ships && mode === 'live');
+  const { count: shipCount } = useShips(cesiumViewer, layers.ships && mode === 'live', aisApiKey);
 
   // ── Sync Cesium clock for day/night terminator ──
   useEffect(() => {
@@ -392,6 +399,8 @@ export default function CesiumGlobe({ points, lines, kpis, meta, events = [] }: 
         showFov={showFov}
         onToggleFov={() => setShowFov(prev => !prev)}
         fovCount={satFovCount}
+        aisApiKey={aisApiKey}
+        onAisApiKeyChange={handleAisKeyChange}
       />
 
       {/* Info panel */}

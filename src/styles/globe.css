@@ -158,6 +158,73 @@ body:has(.globe-wrapper) .tooltip {
   row-gap: 2px;
 }
 
+/* AIS API key input */
+.globe-ais-key-input {
+  padding: 4px 8px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  align-items: center;
+}
+.globe-ais-key-input input {
+  flex: 1;
+  min-width: 0;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 3px;
+  color: #e8e9ed;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.55rem;
+  padding: 3px 6px;
+  outline: none;
+}
+.globe-ais-key-input input:focus {
+  border-color: #00ddaa;
+}
+.globe-ais-key-save {
+  background: rgba(0, 221, 170, 0.15);
+  border: 1px solid rgba(0, 221, 170, 0.3);
+  border-radius: 3px;
+  color: #00ddaa;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.55rem;
+  padding: 3px 8px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.globe-ais-key-save:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+.globe-ais-key-save:not(:disabled):hover {
+  background: rgba(0, 221, 170, 0.25);
+}
+.globe-ais-key-hint {
+  width: 100%;
+  font-size: 0.45rem;
+  color: #6b7080;
+  font-family: 'JetBrains Mono', monospace;
+}
+.globe-ais-key-hint a {
+  color: #00ddaa;
+  text-decoration: none;
+}
+.globe-ais-key-hint a:hover {
+  text-decoration: underline;
+}
+.globe-ais-key-clear {
+  background: none;
+  border: none;
+  color: #888;
+  font-size: 0.6rem;
+  cursor: pointer;
+  padding: 0 2px;
+  line-height: 1;
+}
+.globe-ais-key-clear:hover {
+  color: #e74c3c;
+}
+
 /* Camera presets */
 .globe-preset-grid {
   display: grid;

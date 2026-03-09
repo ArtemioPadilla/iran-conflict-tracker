@@ -90,23 +90,25 @@ const STARLINK_CAP = 200;
 const FOV_HALF_ANGLE: Partial<Record<SatGroup, number>> = {
   recon: (1.5 * Math.PI) / 180,    // 1.5 deg — narrow high-res imaging
   military: (3.0 * Math.PI) / 180, // 3.0 deg — wider surveillance
-  geo: (8.7 * Math.PI) / 180,      // 8.7 deg — typical GEO comms beam
+  geo: (1.2 * Math.PI) / 180,      // 1.2 deg — realistic spot beam
 };
 
 const FOV_FILL_ALPHA: Partial<Record<SatGroup, number>> = {
-  recon: 0.08,
-  military: 0.08,
-  geo: 0.05,
+  recon: 0.05,
+  military: 0.05,
+  geo: 0.03,
 };
 
 const FOV_OUTLINE_ALPHA: Partial<Record<SatGroup, number>> = {
-  recon: 0.30,
-  military: 0.30,
-  geo: 0.20,
+  recon: 0.20,
+  military: 0.20,
+  geo: 0.12,
 };
 
 // Max LEO footprints (recon + military combined) for performance
-const FOV_LEO_CAP = 20;
+const FOV_LEO_CAP = 15;
+// Max GEO footprints over theater
+const FOV_GEO_CAP = 6;
 // Throttle interval for FOV position updates (ms)
 const FOV_UPDATE_INTERVAL_MS = 2000;
 
@@ -409,6 +411,7 @@ export function useSatellites(
       let geoFovAdded = 0;
 
       for (const sat of geoSats) {
+        if (geoFovAdded >= FOV_GEO_CAP) break;
         try {
           const posVel = satellite.propagate(sat.satrec, now);
           if (!posVel || typeof posVel.position === 'boolean' || !posVel.position) continue;

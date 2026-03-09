@@ -85,30 +85,31 @@ const THEATER_LON_MIN = 24;
 const THEATER_LON_MAX = 65;
 const STARLINK_CAP = 200;
 
-// ── FOV Configuration ──
-// Half-angle in radians for sensor field-of-view
+// ── FOV Configuration (LEO recon + military only) ──
 const FOV_HALF_ANGLE: Partial<Record<SatGroup, number>> = {
-  recon: (5.0 * Math.PI) / 180,    // 5 deg — ~44 km footprint at 500 km alt
-  military: (8.0 * Math.PI) / 180, // 8 deg — ~98 km footprint at 700 km alt
-  geo: (3.0 * Math.PI) / 180,      // 3 deg — ~1,870 km footprint at GEO
+  recon: (8.0 * Math.PI) / 180,     // 8 deg — ~70 km radius at 500 km alt
+  military: (10.0 * Math.PI) / 180, // 10 deg — ~123 km radius at 700 km alt
 };
 
 const FOV_FILL_ALPHA: Partial<Record<SatGroup, number>> = {
-  recon: 0.10,
-  military: 0.10,
-  geo: 0.06,
+  recon: 0.07,
+  military: 0.07,
 };
 
 const FOV_OUTLINE_ALPHA: Partial<Record<SatGroup, number>> = {
   recon: 0.35,
   military: 0.35,
-  geo: 0.20,
+};
+
+const FOV_CONE_ALPHA: Partial<Record<SatGroup, number>> = {
+  recon: 0.20,
+  military: 0.20,
 };
 
 // Max LEO footprints (recon + military combined) for performance
-const FOV_LEO_CAP = 15;
-// Max GEO footprints over theater
-const FOV_GEO_CAP = 8;
+const FOV_LEO_CAP = 12;
+// Number of cone ray lines per satellite
+const FOV_CONE_RAYS = 10;
 // Throttle interval for FOV position updates (ms)
 const FOV_UPDATE_INTERVAL_MS = 2000;
 
@@ -215,8 +216,6 @@ export function useSatellites(
   const satsRef = useRef<SatRecord[]>([]);
   const entitiesRef = useRef<Entity[]>([]);
   const fovEntitiesRef = useRef<Entity[]>([]);
-  const geoFovEntitiesRef = useRef<Entity[]>([]);
-  const geoFovCreatedRef = useRef(false);
   const animRef = useRef<number>(0);
   const fetchedRef = useRef(false);
   const lastFovUpdateRef = useRef<number>(0);
@@ -371,26 +370,19 @@ export function useSatellites(
     };
   }, [enabled, viewer, count]);
 
-  // ── FOV Footprint Management ──
-  // Separate effect for FOV so toggling FOV doesn't recreate satellite entities
+  // ── FOV Cone + Footprint Visualization (LEO recon/military only) ──
   useEffect(() => {
     if (!viewer || viewer.isDestroyed() || !enabled || satsRef.current.length === 0) {
       return;
     }
 
-    // Clean up existing FOV entities when toggling off or re-running
     const cleanupFov = () => {
       if (!viewer.isDestroyed()) {
         fovEntitiesRef.current.forEach(e => {
           try { viewer.entities.remove(e); } catch { /* ok */ }
         });
-        geoFovEntitiesRef.current.forEach(e => {
-          try { viewer.entities.remove(e); } catch { /* ok */ }
-        });
       }
       fovEntitiesRef.current = [];
-      geoFovEntitiesRef.current = [];
-      geoFovCreatedRef.current = false;
       setFovCount(0);
     };
 
@@ -399,67 +391,14 @@ export function useSatellites(
       return;
     }
 
-    // Create GEO FOV footprints (static — computed once)
-    const createGeoFootprints = () => {
-      if (geoFovCreatedRef.current) return;
-      const now = simTimeRef ? new Date(simTimeRef.current) : new Date();
-      const gmst = satellite.gstime(now);
-      const halfAngle = FOV_HALF_ANGLE.geo;
-      if (!halfAngle) return;
+    let fovAnimRef = 0;
 
-      const geoSats = satsRef.current.filter(s => s.group === 'geo');
-      let geoFovAdded = 0;
-
-      for (const sat of geoSats) {
-        if (geoFovAdded >= FOV_GEO_CAP) break;
-        try {
-          const posVel = satellite.propagate(sat.satrec, now);
-          if (!posVel || typeof posVel.position === 'boolean' || !posVel.position) continue;
-
-          const geodetic = satellite.eciToGeodetic(posVel.position as satellite.EciVec3<number>, gmst);
-          const lon = satellite.degreesLong(geodetic.longitude);
-          const lat = satellite.degreesLat(geodetic.latitude);
-          const altKm = geodetic.height;
-
-          // Only show GEO footprints for sats positioned over the theater longitude range
-          if (lon < THEATER_LON_MIN || lon > THEATER_LON_MAX) continue;
-
-          const radiusM = computeFootprintRadius(altKm, halfAngle);
-          const color = Color.fromCssColorString('#ff44ff');
-
-          const entity = viewer.entities.add({
-            name: `FOV: ${sat.name}`,
-            position: Cartesian3.fromDegrees(lon, lat, 0) as any,
-            ellipse: {
-              semiMajorAxis: radiusM,
-              semiMinorAxis: radiusM,
-              material: color.withAlpha(FOV_FILL_ALPHA.geo ?? 0.05),
-              outline: true,
-              outlineColor: color.withAlpha(FOV_OUTLINE_ALPHA.geo ?? 0.20),
-              outlineWidth: 1,
-              height: 0,
-            },
-          });
-          geoFovEntitiesRef.current.push(entity);
-          geoFovAdded++;
-        } catch {
-          // Propagation failed
-        }
-      }
-
-      geoFovCreatedRef.current = true;
-      return geoFovAdded;
-    };
-
-    // Create/update LEO FOV footprints (recon + military) with throttle
-    let leoFovAnimRef = 0;
-
-    const updateLeoFootprints = () => {
+    const updateFootprints = () => {
       if (viewer.isDestroyed()) return;
 
       const now = Date.now();
       if (now - lastFovUpdateRef.current < FOV_UPDATE_INTERVAL_MS) {
-        leoFovAnimRef = requestAnimationFrame(updateLeoFootprints);
+        fovAnimRef = requestAnimationFrame(updateFootprints);
         return;
       }
       lastFovUpdateRef.current = now;
@@ -467,7 +406,6 @@ export function useSatellites(
       const simNow = simTimeRef ? new Date(simTimeRef.current) : new Date();
       const gmst = satellite.gstime(simNow);
 
-      // Collect LEO sats (recon + military) currently over theater
       interface FovCandidate {
         sat: SatRecord;
         lon: number;
@@ -497,24 +435,27 @@ export function useSatellites(
         }
       }
 
-      // Remove old LEO FOV entities
+      // Remove old FOV entities
       fovEntitiesRef.current.forEach(e => {
         try { viewer.entities.remove(e); } catch { /* ok */ }
       });
       fovEntitiesRef.current = [];
 
-      // Create new LEO FOV entities
+      // Create ground footprint + cone ray lines for each candidate
       for (const c of candidates) {
         const halfAngle = FOV_HALF_ANGLE[c.sat.group];
         if (!halfAngle) continue;
 
         const radiusM = computeFootprintRadius(c.altKm, halfAngle);
+        const radiusKm = radiusM / 1000;
         const cssColor = c.sat.group === 'recon' ? '#ff8844' : '#ffcc00';
         const color = Color.fromCssColorString(cssColor);
-        const fillAlpha = FOV_FILL_ALPHA[c.sat.group] ?? 0.08;
-        const outlineAlpha = FOV_OUTLINE_ALPHA[c.sat.group] ?? 0.30;
+        const fillAlpha = FOV_FILL_ALPHA[c.sat.group] ?? 0.07;
+        const outlineAlpha = FOV_OUTLINE_ALPHA[c.sat.group] ?? 0.35;
+        const coneAlpha = FOV_CONE_ALPHA[c.sat.group] ?? 0.20;
 
-        const entity = viewer.entities.add({
+        // Ground footprint ellipse
+        const ellipseEntity = viewer.entities.add({
           name: `FOV: ${c.sat.name}`,
           position: Cartesian3.fromDegrees(c.lon, c.lat, 0) as any,
           ellipse: {
@@ -523,28 +464,47 @@ export function useSatellites(
             material: color.withAlpha(fillAlpha),
             outline: true,
             outlineColor: color.withAlpha(outlineAlpha),
-            outlineWidth: 1,
+            outlineWidth: 1.5,
             height: 0,
           },
         });
-        fovEntitiesRef.current.push(entity);
+        fovEntitiesRef.current.push(ellipseEntity);
+
+        // Cone ray lines: satellite → footprint edge points
+        const satPos = Cartesian3.fromDegrees(c.lon, c.lat, c.altKm * 1000);
+        const dLat = radiusKm / 111;
+        const dLon = radiusKm / (111 * Math.cos(c.lat * Math.PI / 180));
+        const conePositions: Cartesian3[] = [];
+
+        for (let i = 0; i < FOV_CONE_RAYS; i++) {
+          const angle = (2 * Math.PI * i) / FOV_CONE_RAYS;
+          const edgeLat = c.lat + dLat * Math.cos(angle);
+          const edgeLon = c.lon + dLon * Math.sin(angle);
+          const edgePos = Cartesian3.fromDegrees(edgeLon, edgeLat, 0);
+          conePositions.push(satPos, edgePos);
+        }
+
+        const coneEntity = viewer.entities.add({
+          polyline: {
+            positions: conePositions,
+            width: 1,
+            material: color.withAlpha(coneAlpha),
+          },
+        });
+        fovEntitiesRef.current.push(coneEntity);
       }
 
-      // Update total FOV count (LEO + GEO)
-      setFovCount(fovEntitiesRef.current.length + geoFovEntitiesRef.current.length);
+      setFovCount(candidates.length);
 
       if (!viewer.isDestroyed()) {
-        leoFovAnimRef = requestAnimationFrame(updateLeoFootprints);
+        fovAnimRef = requestAnimationFrame(updateFootprints);
       }
     };
 
-    // Initialize: create GEO footprints (static) and start LEO update loop
-    const geoAdded = createGeoFootprints() ?? 0;
-    setFovCount(geoAdded);
-    leoFovAnimRef = requestAnimationFrame(updateLeoFootprints);
+    fovAnimRef = requestAnimationFrame(updateFootprints);
 
     return () => {
-      cancelAnimationFrame(leoFovAnimRef);
+      cancelAnimationFrame(fovAnimRef);
       cleanupFov();
     };
   }, [showFov, enabled, viewer, count]);

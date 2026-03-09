@@ -387,7 +387,7 @@ export default function CesiumGlobe({ points, lines, kpis, meta, events = [] }: 
 
   // ── External data layers (synced to timeline) ──
   const { count: satCount, groupCounts: satGroupCounts, fovCount: satFovCount } = useSatellites(cesiumViewer, layers.satellites, simTimeRef, showFov, satTargets);
-  const { count: flightCount } = useFlights(cesiumViewer, layers.flights && mode === 'live');
+  const { count: flightCount, status: flightStatus } = useFlights(cesiumViewer, layers.flights && mode === 'live');
   const { count: quakeCount } = useEarthquakes(cesiumViewer, layers.quakes, currentDate);
   const { count: weatherCount } = useWeather(cesiumViewer, layers.weather, currentDate);
   const { count: nfzCount } = useNoFlyZones(cesiumViewer, layers.nfz, currentDate);
@@ -412,15 +412,17 @@ export default function CesiumGlobe({ points, lines, kpis, meta, events = [] }: 
     sats: layers.satellites && satCount > 0 ? satCount : undefined,
     fov: layers.satellites && showFov && satFovCount > 0 ? satFovCount : undefined,
     flights: mode === 'live' && layers.flights && flightCount > 0 ? flightCount : undefined,
+    flightStatus: mode === 'live' && layers.flights ? flightStatus : undefined,
     quakes: layers.quakes && quakeCount > 0 ? quakeCount : undefined,
     wx: layers.weather && weatherCount > 0 ? weatherCount : undefined,
     nfz: layers.nfz && nfzCount > 0 ? nfzCount : undefined,
     ships: mode === 'live' && layers.ships && shipCount > 0 ? shipCount : undefined,
+    shipNoKey: mode === 'live' && layers.ships && !aisApiKey,
     gpsJam: layers.gpsJam && gpsJamCount > 0 ? gpsJamCount : undefined,
     internetBlackout: layers.internetBlackout && internetBlackoutCount > 0 ? internetBlackoutCount : undefined,
     groundTruth: layers.groundTruth && groundTruthCount > 0 ? groundTruthCount : undefined,
     historical: mode === 'historical',
-  }), [filteredPoints.length, totalLines, layers, satCount, satFovCount, showFov, flightCount, quakeCount, weatherCount, nfzCount, shipCount, gpsJamCount, internetBlackoutCount, groundTruthCount, mode]);
+  }), [filteredPoints.length, totalLines, layers, satCount, satFovCount, showFov, flightCount, flightStatus, quakeCount, weatherCount, nfzCount, shipCount, aisApiKey, gpsJamCount, internetBlackoutCount, groundTruthCount, mode]);
 
   return (
     <div className="globe-wrapper">

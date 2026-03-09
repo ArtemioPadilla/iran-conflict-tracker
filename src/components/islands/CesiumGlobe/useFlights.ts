@@ -51,28 +51,70 @@ function isMilitaryFlight(f: FlightState): boolean {
   return MIL_CALLSIGN_PATTERNS.some(p => p.test(cs));
 }
 
-/** Fetch live flight data from OpenSky Network (free tier) */
+export type FlightStatus = 'idle' | 'loading' | 'ok' | 'rate-limited' | 'error';
+
+/** Fetch live flight data from OpenSky Network (free tier) with backoff */
 export function useFlights(viewer: CesiumViewer | null, enabled: boolean) {
   const [count, setCount] = useState(0);
+  const [status, setStatus] = useState<FlightStatus>('idle');
   const entitiesRef = useRef<Map<string, Entity>>(new Map());
   const trailEntitiesRef = useRef<Map<string, Entity>>(new Map());
-  const intervalRef = useRef<ReturnType<typeof setInterval>>(undefined);
+  const timerRef = useRef<ReturnType<typeof setTimeout>>(undefined);
+  const backoffRef = useRef(15_000);
+  const consecutiveFailsRef = useRef(0);
 
   useEffect(() => {
-    if (!enabled || !viewer) return;
+    if (!enabled || !viewer) {
+      setStatus('idle');
+      return;
+    }
+    let disposed = false;
+
+    const scheduleNext = () => {
+      if (disposed) return;
+      timerRef.current = setTimeout(fetchFlights, backoffRef.current);
+    };
 
     const fetchFlights = async () => {
-      try {
-        if (viewer.isDestroyed()) return;
+      if (disposed || viewer.isDestroyed()) return;
+      setStatus('loading');
 
+      try {
         // Middle East bounding box
         const url =
           'https://opensky-network.org/api/states/all?lamin=12&lamax=42&lomin=24&lomax=65';
         const res = await fetch(url);
-        if (!res.ok || viewer.isDestroyed()) return;
+        if (disposed || viewer.isDestroyed()) return;
+
+        if (res.status === 429) {
+          consecutiveFailsRef.current++;
+          backoffRef.current = Math.min(
+            15_000 * Math.pow(2, consecutiveFailsRef.current),
+            120_000,
+          );
+          console.warn(`OpenSky 429 — retry in ${Math.round(backoffRef.current / 1000)}s`);
+          setStatus('rate-limited');
+          scheduleNext();
+          return;
+        }
+
+        if (!res.ok) {
+          consecutiveFailsRef.current++;
+          backoffRef.current = Math.min(30_000 * consecutiveFailsRef.current, 120_000);
+          setStatus('error');
+          scheduleNext();
+          return;
+        }
 
         const data = await res.json();
-        if (!data.states || viewer.isDestroyed()) return;
+        if (!data.states || disposed || viewer.isDestroyed()) {
+          scheduleNext();
+          return;
+        }
+
+        // Reset backoff on success
+        consecutiveFailsRef.current = 0;
+        backoffRef.current = 15_000;
 
         const flights: FlightState[] = data.states.map((s: any[]) => ({
           icao24: s[0],
@@ -173,16 +215,22 @@ export function useFlights(viewer: CesiumViewer | null, enabled: boolean) {
         }
 
         setCount(airborne.length);
+        setStatus('ok');
       } catch (err) {
         console.warn('Failed to fetch flight data:', err);
+        consecutiveFailsRef.current++;
+        backoffRef.current = Math.min(30_000 * consecutiveFailsRef.current, 120_000);
+        setStatus('error');
       }
+
+      scheduleNext();
     };
 
     fetchFlights();
-    intervalRef.current = setInterval(fetchFlights, 15_000); // Every 15s (rate limit friendly)
 
     return () => {
-      clearInterval(intervalRef.current);
+      disposed = true;
+      clearTimeout(timerRef.current);
       if (!viewer.isDestroyed()) {
         entitiesRef.current.forEach((entity) => {
           try { viewer.entities.remove(entity); } catch { /* already removed */ }
@@ -197,5 +245,5 @@ export function useFlights(viewer: CesiumViewer | null, enabled: boolean) {
     };
   }, [enabled, viewer]);
 
-  return { count };
+  return { count, status };
 }

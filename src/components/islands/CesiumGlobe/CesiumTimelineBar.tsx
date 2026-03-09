@@ -8,10 +8,12 @@ export interface StatsData {
   sats?: number;
   fov?: number;
   flights?: number;
+  flightStatus?: string;
   quakes?: number;
   wx?: number;
   nfz?: number;
   ships?: number;
+  shipNoKey?: boolean;
   gpsJam?: number;
   internetBlackout?: number;
   groundTruth?: number;
@@ -383,12 +385,22 @@ export default function CesiumTimelineBar({
               <span style={{ color: '#ff8844' }}>{stats.fov} FOV</span>
             </>
           )}
-          {stats.flights != null && (
+          {stats.flights != null ? (
             <>
               <span className="globe-tl-stats-sep">&middot;</span>
               <span style={{ color: '#00aaff' }}>{stats.flights} flights</span>
             </>
-          )}
+          ) : stats.flightStatus === 'rate-limited' ? (
+            <>
+              <span className="globe-tl-stats-sep">&middot;</span>
+              <span style={{ color: '#666', fontSize: '0.45rem' }}>flights: retrying...</span>
+            </>
+          ) : stats.flightStatus === 'loading' ? (
+            <>
+              <span className="globe-tl-stats-sep">&middot;</span>
+              <span style={{ color: '#666', fontSize: '0.45rem' }}>flights: loading...</span>
+            </>
+          ) : null}
           {stats.quakes != null && (
             <>
               <span className="globe-tl-stats-sep">&middot;</span>
@@ -407,12 +419,17 @@ export default function CesiumTimelineBar({
               <span style={{ color: '#e74c3c' }}>{stats.nfz} NFZ</span>
             </>
           )}
-          {stats.ships != null && (
+          {stats.ships != null ? (
             <>
               <span className="globe-tl-stats-sep">&middot;</span>
               <span style={{ color: '#00ddaa' }}>{stats.ships} ships</span>
             </>
-          )}
+          ) : stats.shipNoKey ? (
+            <>
+              <span className="globe-tl-stats-sep">&middot;</span>
+              <span style={{ color: '#666', fontSize: '0.45rem' }}>ships: need AIS key</span>
+            </>
+          ) : null}
           {stats.gpsJam != null && (
             <>
               <span className="globe-tl-stats-sep">&middot;</span>

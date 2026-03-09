@@ -27,7 +27,8 @@ export function getIconDataUri(type: IconType, color?: string): string {
   if (cached) return cached;
 
   const svg = generateSvg(type, color);
-  const uri = 'data:image/svg+xml;base64,' + btoa(svg);
+  // Use encodeURIComponent instead of btoa — more reliable for SVG in Cesium billboards
+  const uri = 'data:image/svg+xml,' + encodeURIComponent(svg);
   iconCache.set(key, uri);
   return uri;
 }

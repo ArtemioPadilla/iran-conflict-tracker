@@ -75,7 +75,8 @@ jobs:
             - Update meta.json with current timestamp
 
             After updating, verify the changes by reading back modified files to confirm valid JSON.
-          claude_args: "--max-turns 50"
+          claude_args: "--max-turns 50 --debug"
+          show_full_output: "true"
 
       - name: Check for changes
         id: changes

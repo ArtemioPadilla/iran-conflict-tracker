@@ -1169,6 +1169,34 @@ body::before {
   letter-spacing: 0.08em;
 }
 
+/* ─── FEEDBACK FAB ─── */
+.feedback-fab {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.4);
+}
+.feedback-fab:hover,
+.feedback-fab:focus-visible {
+  color: var(--text-primary);
+  border-color: var(--border-light);
+  background: var(--bg-card-hover);
+  transform: scale(1.08);
+}
+
 /* ─── TOOLTIP ─── */
 .tooltip {
   position: fixed;

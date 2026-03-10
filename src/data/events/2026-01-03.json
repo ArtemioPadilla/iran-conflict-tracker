@@ -1,0 +1,40 @@
+[
+  {
+    "id": "jan3-rial-stabilization-fails",
+    "year": "Jan 3",
+    "title": "Government Rial Stabilization Attempt Fails",
+    "type": "economic",
+    "detail": "Iran's Central Bank attempts to stabilize the rial by injecting foreign reserves and setting an official rate of 1.38 million per USD. The black-market rate immediately diverges, trading at 1.42 million by end of day. Currency traders report panic buying of dollars and gold. Government blames 'foreign economic sabotage' for the currency collapse.",
+    "sources": [
+      { "name": "Central Bank of Iran", "tier": 1, "pole": "middle_eastern" },
+      { "name": "Reuters", "tier": 2, "pole": "western" },
+      { "name": "Financial Times", "tier": 2, "pole": "western" },
+      { "name": "Tasnim News", "tier": 2, "pole": "middle_eastern" }
+    ]
+  },
+  {
+    "id": "jan3-28-killed-three-days",
+    "year": "Jan 3",
+    "title": "28 Killed in 72 Hours Across 8 Provinces",
+    "type": "humanitarian",
+    "detail": "Iran Human Rights documents 28 protest-related deaths between December 31 and January 3 across 13 cities in 8 provinces. The deadliest incidents occurred in Kermanshah (7 killed), Isfahan (6 killed), and Tehran's southern suburbs (5 killed). Forensic evidence suggests both live ammunition and shotgun pellets were used at close range.",
+    "sources": [
+      { "name": "Iran Human Rights", "tier": 3, "pole": "international" },
+      { "name": "The Guardian", "tier": 2, "pole": "western" },
+      { "name": "Al Arabiya", "tier": 2, "pole": "middle_eastern" }
+    ]
+  },
+  {
+    "id": "jan3-eu-condemns-violence",
+    "year": "Jan 3",
+    "title": "EU Demands End to Lethal Force",
+    "type": "diplomatic",
+    "detail": "EU High Representative issues a statement demanding Iran immediately cease the use of lethal force against protesters and restore internet access. France, Germany, and the UK summon Iranian ambassadors. Tehran dismisses the statements as 'colonial interference' and recalls its ambassador to Paris for consultations.",
+    "sources": [
+      { "name": "EU External Action", "tier": 1, "pole": "western" },
+      { "name": "AFP", "tier": 2, "pole": "western" },
+      { "name": "Press TV", "tier": 2, "pole": "middle_eastern" },
+      { "name": "TASS", "tier": 2, "pole": "eastern" }
+    ]
+  }
+]

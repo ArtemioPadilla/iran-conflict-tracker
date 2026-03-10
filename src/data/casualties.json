@@ -68,13 +68,13 @@
   {
     "id": "uae",
     "category": "UAE",
-    "killed": "3",
-    "injured": "78",
+    "killed": "5",
+    "injured": "112+",
     "source": "UAE Ministry of Defense",
     "tier": 1,
     "contested": "no",
-    "note": "Casualties include foreign nationals; injuries from debris and shrapnel.",
-    "lastUpdated": "2026-03-08T21:56:37.543Z"
+    "note": "Includes 2 armed forces officers killed in helicopter crash (Mar 9) during operations. 4 killed and 112 injured from Iranian strikes. 21 drones hit civilian targets. Fujairah oil facility fire from debris.",
+    "lastUpdated": "2026-03-10"
   },
   {
     "id": "kuwait",
@@ -90,13 +90,13 @@
   {
     "id": "lebanon",
     "category": "Lebanon",
-    "killed": "400+",
-    "injured": "1,000+",
+    "killed": "486+",
+    "injured": "1,200+",
     "source": "Lebanese health authorities",
     "tier": 2,
     "contested": "evolving",
-    "note": "Over 500,000 displaced; includes civilians and Hezbollah fighters; Israeli strikes on Hezbollah and Quds Force positions. HRW reports white phosphorus use in residential areas.",
-    "lastUpdated": "2026-03-10T06:00:00.000Z"
+    "note": "Nearly 700,000 displaced; includes civilians and Hezbollah fighters; Israeli strikes on Hezbollah and Quds Force positions in Beirut suburbs and southern Lebanon. HRW reports white phosphorus use in residential areas. Lebanon government formally banned Hezbollah military activities.",
+    "lastUpdated": "2026-03-10"
   },
   {
     "id": "qatar",
@@ -141,6 +141,17 @@
     "contested": "no",
     "note": "At least 32 injured (including children) from Iranian strike on Sitra island; Bapco refinery struck causing force majeure; 1 fatality from earlier intercepted missile debris.",
     "lastUpdated": "2026-03-10T06:00:00.000Z"
+  },
+  {
+    "id": "saudi_arabia",
+    "category": "Saudi Arabia",
+    "killed": "2",
+    "injured": "12+",
+    "source": "Saudi Civil Defense Agency",
+    "tier": 1,
+    "contested": "no",
+    "note": "Two foreign nationals (Indian and Bangladeshi) killed in Iranian projectile strike on Al-Kharj compound. IRGC claimed target was radar systems. Saudi forces intercepted UAVs targeting Shaybah oil field.",
+    "lastUpdated": "2026-03-10"
   },
   {
     "id": "oman",

@@ -1423,9 +1423,31 @@
     "lat": 24.15,
     "cat": "retaliation",
     "label": "Al-Kharj, Saudi Arabia",
-    "sub": "Iranian projectile killed 2 civilians in Al-Kharj. Saudi forces also intercepted UAVs targeting the Shaybah oil field.",
+    "sub": "Iranian projectile killed 2 civilians (Indian, Bangladeshi nationals) in Al-Kharj. IRGC claimed target was radar systems. Saudi forces intercepted UAVs targeting Shaybah oil field.",
     "tier": 1,
     "date": "2026-03-09",
-    "lastUpdated": "2026-03-10T06:00:00.000Z"
+    "lastUpdated": "2026-03-10"
+  },
+  {
+    "id": "qatar_intercept_mar9",
+    "lon": 51.53,
+    "lat": 25.29,
+    "cat": "retaliation",
+    "label": "Qatar (17 missiles intercepted)",
+    "sub": "Qatar intercepted all 17 ballistic missiles and 6 drones from Iran. Air raid alerts at 03:15 local. No casualties or damage. Video released by Ministry of Defence.",
+    "tier": 1,
+    "date": "2026-03-09",
+    "lastUpdated": "2026-03-10"
+  },
+  {
+    "id": "shaybah_saudi_mar9",
+    "lon": 48.1,
+    "lat": 22.5,
+    "cat": "retaliation",
+    "label": "Shaybah Oil Field, Saudi Arabia",
+    "sub": "Saudi Arabia intercepted Iranian UAVs heading toward the Shaybah oil field. No damage reported.",
+    "tier": 1,
+    "date": "2026-03-09",
+    "lastUpdated": "2026-03-10"
   }
 ]

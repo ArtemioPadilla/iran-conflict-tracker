@@ -20,11 +20,20 @@
   {
     "id": "mojtaba_khamenei",
     "name": "Mojtaba Khamenei",
-    "role": "Supreme Leader of Iran (appointed Mar 9)",
+    "role": "Supreme Leader of Iran (appointed Mar 8)",
     "avatar": "ir",
     "initial": "MK",
-    "quote": "The appointment signals continuity — Mojtaba maintains close ties with the IRGC. No public statement issued since appointment.",
-    "lastUpdated": "2026-03-10T06:00:00.000Z"
+    "quote": "Appointed by Assembly of Experts on March 8, with IRGC, President Pezeshkian, and senior officials pledging allegiance. The 56-year-old hardliner maintains deep ties with the Revolutionary Guard. Russia pledged 'unwavering' support; Trump said any new supreme leader would need his approval or 'he's not going to last long.'",
+    "lastUpdated": "2026-03-10"
+  },
+  {
+    "id": "pezeshkian",
+    "name": "Masoud Pezeshkian",
+    "role": "President of Iran",
+    "avatar": "ir",
+    "initial": "MP",
+    "quote": "Issued rare apology to neighboring countries for Iranian retaliatory attacks on their territory. Announced Iran would stop striking neighbors from March 7 onward unless attacks originated from those countries. Despite this, Iranian drone strikes on Dubai continued.",
+    "lastUpdated": "2026-03-10"
   },
   {
     "id": "larijani",
@@ -86,8 +95,8 @@
     "role": "Iranian Foreign Minister",
     "avatar": "ir",
     "initial": "AA",
-    "quote": "Our powerful armed forces are prepared for this day and will teach the aggressors the lesson they deserve.",
-    "lastUpdated": "2026-03-08T21:56:37.543Z"
+    "quote": "We are not asking for a ceasefire. We don't see any reason why we should negotiate. We need to continue fighting for the sake of our people. Negotiate with the U.S. when we negotiated with them twice, and every time they attacked us in the middle of negotiations?",
+    "lastUpdated": "2026-03-10"
   },
   {
     "id": "rubio",

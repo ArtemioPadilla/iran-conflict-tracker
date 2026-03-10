@@ -36,25 +36,26 @@
   {
     "id": "gulf_killed",
     "label": "Gulf Region Killed",
-    "value": "4",
-    "color": "amber",
-    "source": "Wikipedia",
+    "value": "11+",
+    "color": "red",
+    "source": "Multiple Gulf defense ministries",
     "contested": false,
-    "delta": "-20",
-    "trend": "down",
-    "lastUpdated": "2026-03-08T21:56:37.543Z",
-    "deltaNote": "Previous data may have included casualties from broader regional conflicts."
+    "delta": "+7+",
+    "trend": "up",
+    "lastUpdated": "2026-03-10",
+    "deltaNote": "Includes UAE (5, inc. 2 military), Bahrain (1), Kuwait (2), Saudi Arabia (2 foreign nationals), Oman (1). Gulf states reporting first direct civilian fatalities from Iranian strikes."
   },
   {
     "id": "lebanon_killed",
     "label": "Lebanon Killed",
-    "value": "400+",
+    "value": "486+",
     "color": "amber",
     "source": "Lebanese health authorities",
     "contested": false,
-    "delta": "+183+",
+    "delta": "+86+",
+    "deltaNote": "Death toll rising as Israeli strikes on Hezbollah positions in southern Beirut and southern Lebanon continue.",
     "trend": "up",
-    "lastUpdated": "2026-03-10T06:00:00.000Z"
+    "lastUpdated": "2026-03-10"
   },
   {
     "id": "brent_crude",
@@ -71,24 +72,25 @@
   {
     "id": "flights_cancelled",
     "label": "Flights Cancelled",
-    "value": "27,000+",
+    "value": "35,000+",
     "color": "blue",
-    "source": "Domestic Operating",
+    "source": "FlightAware / Al Jazeera",
     "contested": false,
-    "delta": "+10,400",
+    "delta": "+8,000",
+    "deltaNote": "Dubai International Airport attacked by Iranian drones. Israel suspended all civilian air travel. UAE extended flight disruptions.",
     "trend": "up",
-    "lastUpdated": "2026-03-08T21:56:37.543Z"
+    "lastUpdated": "2026-03-10"
   },
   {
     "id": "countries_affected",
     "label": "Countries Affected",
-    "value": "12",
+    "value": "14+",
     "color": "blue",
-    "source": "Al Jazeera",
+    "source": "Al Jazeera / Reuters",
     "contested": false,
-    "trend": "down",
-    "lastUpdated": "2026-03-08T21:56:37.543Z",
-    "delta": "-2",
-    "deltaNote": "Revised count based on latest reports."
+    "trend": "up",
+    "lastUpdated": "2026-03-10",
+    "delta": "+2",
+    "deltaNote": "Iran, Israel, Lebanon, UAE, Bahrain, Kuwait, Qatar, Saudi Arabia, Oman, Iraq, Jordan, Azerbaijan, Turkey, Cyprus (UK RAF base). Pakistan also affected (consulate attack)."
   }
 ]

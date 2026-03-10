@@ -1,0 +1,42 @@
+[
+  {
+    "id": "iran-nearing-economic-collapse",
+    "year": "Dec 10",
+    "title": "Major Outlets Report Iran Nearing Economic Collapse",
+    "type": "economic",
+    "detail": "Time magazine, Euronews, and Al-Monitor publish concurrent analyses declaring Iran's economy is approaching collapse. Time's cover story cites the rial at 1,750,000 per USD (175,000 tomans), a 35% decline since the June Twelve-Day War. All three reports identify the convergence of snapback sanctions, war costs, and subsidy removal as creating an unprecedented fiscal crisis.",
+    "sources": [
+      { "name": "Time", "tier": 2, "pole": "western" },
+      { "name": "Euronews", "tier": 2, "pole": "western" },
+      { "name": "Al-Monitor", "tier": 2, "pole": "middle_eastern" },
+      { "name": "TASS", "tier": 2, "pole": "eastern" }
+    ],
+    "lastUpdated": "2026-03-10"
+  },
+  {
+    "id": "finance-minister-blames-war",
+    "year": "Dec 10",
+    "title": "Finance Minister Blames War for Rial Collapse",
+    "type": "economic",
+    "detail": "Iran's Minister of Economy and Finance publicly attributes the rial's historic decline to the costs of the June 2025 Twelve-Day War with Israel, stating the conflict 'burned through $8 billion in reserves and shattered investor confidence.' The rare admission contradicts the Supreme Leader's narrative of economic resilience and triggers a sharp rebuke from hardline media outlets.",
+    "sources": [
+      { "name": "IRNA", "tier": 1, "pole": "middle_eastern" },
+      { "name": "Reuters", "tier": 2, "pole": "western" },
+      { "name": "Fars News", "tier": 2, "pole": "middle_eastern" }
+    ],
+    "lastUpdated": "2026-03-10"
+  },
+  {
+    "id": "icg-warns-social-unrest",
+    "year": "Dec 10",
+    "title": "ICG Warns of Imminent Social Unrest in Iran",
+    "type": "humanitarian",
+    "detail": "The International Crisis Group publishes an urgent briefing warning that Iran's economic deterioration has created conditions for large-scale social unrest. The report notes that working-class Iranians are spending over 70% of household income on food, energy costs are spiraling, and public anger at the regime's war spending is reaching a tipping point not seen since the 2022 Mahsa Amini protests.",
+    "sources": [
+      { "name": "International Crisis Group", "tier": 3, "pole": "international" },
+      { "name": "BBC", "tier": 2, "pole": "western" },
+      { "name": "Xinhua", "tier": 2, "pole": "eastern" }
+    ],
+    "lastUpdated": "2026-03-10"
+  }
+]

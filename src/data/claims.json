@@ -320,5 +320,47 @@
     },
     "resolution": "CONTESTED — Conflicting reports on the operational status of the Strait of Hormuz amid escalating tensions.",
     "lastUpdated": "2026-03-08T21:56:37.543Z"
+  },
+  {
+    "id": "iran_cia_backchannel",
+    "question": "Did Iran reach out to the CIA to discuss ending the conflict?",
+    "sideA": {
+      "label": "Jerusalem Post / Western intelligence sources",
+      "text": "Iran reached out to the CIA through back channels to discuss a potential end to the conflict. Trump reportedly said 'it's too late' for such discussions."
+    },
+    "sideB": {
+      "label": "Iranian Foreign Ministry",
+      "text": "Iran's Foreign Ministry says there is no room to discuss a ceasefire while military attacks continue. Foreign Minister Araghchi: 'We are not asking for a ceasefire. We don't see any reason why we should negotiate.'"
+    },
+    "resolution": "CONTESTED — Reports of a backchannel conflict with public statements from both sides rejecting negotiations. Possible disconnect between Iranian diplomatic and military leadership.",
+    "lastUpdated": "2026-03-10"
+  },
+  {
+    "id": "pezeshkian_gulf_apology",
+    "question": "Did Iran stop attacking Gulf neighbors after Pezeshkian's apology?",
+    "sideA": {
+      "label": "Iranian President Pezeshkian",
+      "text": "Announced on March 7 that Iran would stop striking neighbors unless an attack originated from their territory. Issued a rare apology to neighboring countries for retaliatory attacks."
+    },
+    "sideB": {
+      "label": "Gulf state defense ministries",
+      "text": "Iranian drone and missile attacks on Gulf countries continued after Pezeshkian's announcement, including strikes on Dubai, Bahrain (Bapco refinery), Fujairah, Qatar (17 missiles), and Saudi Arabia (Al-Kharj) on March 9."
+    },
+    "resolution": "CONTRADICTORY — Pezeshkian's public apology and promise to stop Gulf attacks was immediately undercut by continued IRGC strikes. Internal power struggle between president and IRGC apparent.",
+    "lastUpdated": "2026-03-10"
+  },
+  {
+    "id": "war_cost_estimates",
+    "question": "How much is the US war on Iran costing per day?",
+    "sideA": {
+      "label": "CNN / Center for American Progress / CSIS",
+      "text": "CNN analysts estimate $890M+ per day. Center for American Progress estimated $5B by Day 4. CSIS placed the first 100-hour cost at $3.7B. Total projected to exceed $10B by Day 11."
+    },
+    "sideB": {
+      "label": "Trump Administration",
+      "text": "Trump characterized the energy price spike as 'a small price to pay' to eliminate Iran's nuclear threat. Administration has not released official cost figures."
+    },
+    "resolution": "EVOLVING — Independent estimates vary widely but all point to significant daily expenditure. Official figures not released.",
+    "lastUpdated": "2026-03-10"
   }
 ]

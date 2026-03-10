@@ -1,0 +1,40 @@
+[
+  {
+    "id": "jan6-rial-record-low",
+    "year": "Jan 6",
+    "title": "Rial Crashes to Record 1.5 Million per Dollar",
+    "type": "economic",
+    "detail": "The Iranian rial plunges to a new all-time low of 1.5 million per US dollar on the black market, a 9% drop in 72 hours. The Central Bank's stabilization attempt at 1.38 million has completely failed. Import costs for basic goods skyrocket, with bread prices doubling in some regions. Economists warn of hyperinflationary spiral.",
+    "sources": [
+      { "name": "Reuters", "tier": 2, "pole": "western" },
+      { "name": "Financial Times", "tier": 2, "pole": "western" },
+      { "name": "Tasnim News", "tier": 2, "pole": "middle_eastern" },
+      { "name": "Nikkei Asia", "tier": 2, "pole": "eastern" }
+    ]
+  },
+  {
+    "id": "jan6-tehran-bazaar-sitin",
+    "year": "Jan 6",
+    "title": "Sit-In at Tehran Grand Bazaar Dispersed with Tear Gas",
+    "type": "humanitarian",
+    "detail": "Hundreds of merchants and shopkeepers stage a sit-in at Tehran's Grand Bazaar, the commercial heart of the capital, demanding economic reforms and an end to the crackdown. Security forces fire tear gas and rubber bullets to disperse the crowd. The bazaar, a traditional power base for the regime, has been closed for over a week due to strikes and protests.",
+    "sources": [
+      { "name": "AP", "tier": 2, "pole": "western" },
+      { "name": "Iran International", "tier": 3, "pole": "middle_eastern" },
+      { "name": "Al Jazeera", "tier": 2, "pole": "middle_eastern" }
+    ]
+  },
+  {
+    "id": "jan6-iraqi-militia-reports",
+    "year": "Jan 6",
+    "title": "Reports: Iraqi Shia Militias Sent to Aid Crackdown",
+    "type": "military",
+    "detail": "Multiple reports indicate approximately 800 fighters from Iraqi Shia militia groups, including Kata'ib Hezbollah and Asa'ib Ahl al-Haq, have crossed into Iran to assist with protest suppression. The fighters are reportedly deployed to Khuzestan and border areas. Iraq's government denies the reports. Iran's IRGC dismisses the claims as 'baseless propaganda.'",
+    "sources": [
+      { "name": "Iran International", "tier": 3, "pole": "middle_eastern" },
+      { "name": "BBC", "tier": 2, "pole": "western" },
+      { "name": "Al Arabiya", "tier": 2, "pole": "middle_eastern" },
+      { "name": "TASS", "tier": 2, "pole": "eastern" }
+    ]
+  }
+]

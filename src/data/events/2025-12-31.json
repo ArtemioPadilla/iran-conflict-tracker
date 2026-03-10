@@ -1,0 +1,57 @@
+[
+  {
+    "id": "seven-killed-dec31",
+    "year": "Dec 31",
+    "title": "Seven Protesters Killed Including Shayan Asadollahi",
+    "type": "humanitarian",
+    "detail": "At least seven protesters were killed on the fourth day of unrest, including 28-year-old barber Shayan Asadollahi whose death became a rallying symbol for demonstrators. Lorestan and Ilam provinces, home to Kurdish and Luri minorities, saw the deadliest repression. Between December 31 and January 3, at least 28 people were killed in 13 cities across 8 provinces.",
+    "sources": [
+      { "name": "HRANA", "tier": 3, "pole": "international" },
+      { "name": "Amnesty International", "tier": 3, "pole": "international" },
+      { "name": "BBC Persian", "tier": 2, "pole": "western" },
+      { "name": "Iran International", "tier": 2, "pole": "western" }
+    ],
+    "lastUpdated": "2026-03-10"
+  },
+  {
+    "id": "closures-21-provinces",
+    "year": "Dec 31",
+    "title": "Government Orders Closures in 21 of 31 Provinces",
+    "type": "humanitarian",
+    "detail": "The Iranian government ordered broad closures of businesses, universities, and public spaces in 21 of 31 provinces, citing security concerns. The order effectively acknowledged the regime's inability to contain the protests through force alone. Banks and government offices operated under reduced hours with heavy security cordons.",
+    "sources": [
+      { "name": "IRNA", "tier": 1, "pole": "middle_eastern" },
+      { "name": "AP", "tier": 2, "pole": "western" },
+      { "name": "Al Jazeera", "tier": 2, "pole": "middle_eastern" }
+    ],
+    "lastUpdated": "2026-03-10"
+  },
+  {
+    "id": "protests-all-31-provinces",
+    "year": "Dec 31",
+    "title": "Protests Reach All 31 Provinces",
+    "type": "humanitarian",
+    "detail": "Despite internet shutdowns and a heavy security presence, protests spread to all 31 Iranian provinces by the end of December 31. Telephone and mobile internet cuts were reported in major cities. International observers noted this was the fastest geographic spread of protest activity in Iran's modern history, surpassing both the 2019 and 2022 movements.",
+    "sources": [
+      { "name": "NetBlocks", "tier": 3, "pole": "international" },
+      { "name": "Hengaw", "tier": 3, "pole": "international" },
+      { "name": "Reuters", "tier": 2, "pole": "western" },
+      { "name": "CGTN", "tier": 2, "pole": "eastern" }
+    ],
+    "lastUpdated": "2026-03-10"
+  },
+  {
+    "id": "minority-regions-deadliest-repression",
+    "year": "Dec 31",
+    "title": "Deadliest Repression Targets Minority Regions",
+    "type": "humanitarian",
+    "detail": "Lorestan and Ilam provinces, predominantly Kurdish and Luri areas, experienced the most severe security force response. Witnesses reported indiscriminate gunfire in Kuhdasht, Khorramabad, and Ilam city. Communication blackouts made verifying casualty figures extremely difficult, but exile-based human rights groups documented at least 15 deaths in these two provinces alone.",
+    "sources": [
+      { "name": "Hengaw", "tier": 3, "pole": "international" },
+      { "name": "HRW", "tier": 3, "pole": "international" },
+      { "name": "BBC Persian", "tier": 2, "pole": "western" },
+      { "name": "Tasnim News", "tier": 2, "pole": "middle_eastern" }
+    ],
+    "lastUpdated": "2026-03-10"
+  }
+]

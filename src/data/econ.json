@@ -40,9 +40,9 @@
   {
     "id": "gold_spot",
     "label": "Gold Spot",
-    "value": "$5,112.00/oz",
-    "change": "-3.33%",
-    "direction": "down",
+    "value": "$5,400/oz",
+    "change": "+2.7%",
+    "direction": "up",
     "sparkData": [
       5260,
       5394,
@@ -51,18 +51,19 @@
       5650,
       5740,
       5820,
-      5406.4,
-      5112
+      5406,
+      5112,
+      5400
     ],
     "color": "#f1c40f",
-    "source": "The Guardian",
-    "lastUpdated": "2026-03-08T21:56:37.543Z"
+    "source": "Reuters / CNN",
+    "lastUpdated": "2026-03-10"
   },
   {
     "id": "sp500",
     "label": "S&P 500",
-    "value": "6,723.80",
-    "change": "-1.30%",
+    "value": "6,769",
+    "change": "-2.2%",
     "direction": "down",
     "sparkData": [
       6920,
@@ -72,17 +73,18 @@
       6310,
       6240,
       6180,
-      6723.8
+      6724,
+      6769
     ],
     "color": "#3498db",
-    "source": "State Street SPDR S&P 500 ETF Trust",
-    "lastUpdated": "2026-03-08T21:56:37.543Z"
+    "source": "JPMorgan / Bloomberg",
+    "lastUpdated": "2026-03-10"
   },
   {
     "id": "vix",
     "label": "VIX",
-    "value": "42.8",
-    "change": "+140%",
+    "value": "31.5",
+    "change": "+77%",
     "direction": "up",
     "sparkData": [
       17.8,
@@ -91,16 +93,17 @@
       34,
       38,
       41,
-      42.8
+      42.8,
+      31.5
     ],
     "color": "#9b59b6",
     "source": "CBOE",
-    "lastUpdated": "2026-03-08T21:56:37.543Z"
+    "lastUpdated": "2026-03-10"
   },
   {
     "id": "iranian_rial",
     "label": "Iranian Rial",
-    "value": "3.2M/$1",
+    "value": "3.5M/$1",
     "change": "Record low",
     "direction": "up",
     "sparkData": [
@@ -110,11 +113,12 @@
       2200,
       2600,
       2900,
-      3200
+      3200,
+      3500
     ],
     "color": "#e74c3c",
     "source": "Iran Intl",
-    "lastUpdated": "2026-03-08T21:56:37.543Z"
+    "lastUpdated": "2026-03-10"
   },
   {
     "id": "gas_price_us",
@@ -138,7 +142,7 @@
   {
     "id": "shipping_rates",
     "label": "Shipping Rates",
-    "value": "+340%",
+    "value": "+400%",
     "change": "Hormuz premium",
     "direction": "up",
     "sparkData": [
@@ -148,10 +152,11 @@
       240,
       310,
       380,
-      440
+      440,
+      500
     ],
     "color": "#e67e22",
-    "source": "Freightos",
-    "lastUpdated": "2026-03-08T21:56:37.543Z"
+    "source": "Freightos / Bloomberg",
+    "lastUpdated": "2026-03-10"
   }
 ]

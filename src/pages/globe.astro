@@ -10,5 +10,6 @@ const events = flattenTimelineEvents(timeline);
 
 <BaseLayout title="3D Intelligence Globe — Iran Conflict Tracker">
   <a href="/iran-conflict-tracker/" class="globe-back-link">&larr; Dashboard</a>
+  <a href="/iran-conflict-tracker/about/" class="globe-about-link">About</a>
   <CesiumGlobe client:only="react" points={mapPoints} lines={mapLines} kpis={kpis} meta={meta} events={events} />
 </BaseLayout>

@@ -37,6 +37,27 @@ body:has(.globe-wrapper) .tooltip {
   background: rgba(10, 11, 14, 0.95);
 }
 
+.globe-about-link {
+  position: fixed;
+  top: 12px;
+  left: 120px;
+  z-index: 100;
+  color: var(--text-muted, #8b8fa2);
+  background: rgba(10, 11, 14, 0.85);
+  backdrop-filter: blur(8px);
+  padding: 6px 14px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.8rem;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+.globe-about-link:hover {
+  background: rgba(10, 11, 14, 0.95);
+  color: var(--text-primary, #e8e9ed);
+}
+
 /* Globe wrapper */
 .globe-wrapper {
   position: fixed;

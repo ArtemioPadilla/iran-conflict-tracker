@@ -1162,6 +1162,20 @@ body::before {
   line-height: 1.6;
 }
 
+.footer-links {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.72rem;
+}
+.footer-links a {
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.footer-links a:hover { color: var(--text-primary); }
+.footer-sep { color: var(--border-light); }
+
 .footer-updated {
   font-family: 'JetBrains Mono', monospace;
   font-size: 0.6rem;

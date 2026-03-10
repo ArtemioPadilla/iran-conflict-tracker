@@ -1,0 +1,222 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout title="About — Iran Conflict Tracker">
+  <div class="about-page">
+    <a class="about-back" href="/iran-conflict-tracker/">&larr; Dashboard</a>
+
+    <article class="about-content">
+      <h1>About This Project</h1>
+
+      <section>
+        <h2>What is this?</h2>
+        <p>
+          The Iran Conflict Tracker is an open-source intelligence dashboard that aggregates, visualizes, and contextualizes publicly available information about the 2026 Iran&#8211;US/Israel conflict.
+          It combines data from official sources, major news outlets, research institutions, and OSINT feeds into a single, navigable interface&mdash;including an interactive 2D theater map and a 3D globe.
+        </p>
+        <p>
+          Data is updated nightly via AI-assisted analysis of open sources. Every data point is tagged with a source tier (from official/primary to unverified) so readers can assess reliability at a glance.
+        </p>
+      </section>
+
+      <section>
+        <h2>Disclaimer &amp; No Guarantees</h2>
+        <p>
+          This dashboard is provided on a <strong>best-effort basis</strong>, with no warranties of any kind&mdash;express or implied. Specifically:
+        </p>
+        <ul>
+          <li>Information may be <strong>incomplete, delayed, or inaccurate</strong>. Conflict data is inherently uncertain and contested.</li>
+          <li>AI-assisted updates may introduce errors. All AI outputs are validated against schemas, but factual accuracy cannot be guaranteed.</li>
+          <li>This project does <strong>not</strong> endorse any political position, government narrative, or military action.</li>
+          <li>Nothing here constitutes professional intelligence analysis, legal advice, or journalistic reporting.</li>
+          <li>The dashboard presents <strong>multiple perspectives</strong> (Western, Middle Eastern, Eastern, International) without claiming any single perspective is correct.</li>
+        </ul>
+        <p>
+          Use this information at your own discretion. When in doubt, consult primary sources directly.
+        </p>
+      </section>
+
+      <section>
+        <h2>Inspiration</h2>
+        <p>
+          The 3D intelligence globe was inspired by the work at <strong>Spatial Intelligence</strong>&mdash;specifically their piece
+          <a href="https://www.spatialintelligence.ai/p/the-intelligence-monopoly-is-over" target="_blank" rel="noopener noreferrer">&ldquo;The Intelligence Monopoly is Over&rdquo;</a>.
+          Their vision of democratizing geospatial intelligence through accessible visualization was a driving motivation for this project.
+        </p>
+      </section>
+
+      <section>
+        <h2>Built With</h2>
+        <div class="credits-grid">
+          <div class="credit-item">
+            <strong>Astro</strong>
+            <span>Static site framework</span>
+          </div>
+          <div class="credit-item">
+            <strong>React</strong>
+            <span>Interactive island components</span>
+          </div>
+          <div class="credit-item">
+            <strong>CesiumJS</strong>
+            <span>3D globe visualization</span>
+          </div>
+          <div class="credit-item">
+            <strong>Resium</strong>
+            <span>React bindings for Cesium</span>
+          </div>
+          <div class="credit-item">
+            <strong>Leaflet</strong>
+            <span>2D interactive mapping</span>
+          </div>
+          <div class="credit-item">
+            <strong>satellite.js</strong>
+            <span>Satellite orbit propagation</span>
+          </div>
+          <div class="credit-item">
+            <strong>Zod</strong>
+            <span>Schema validation</span>
+          </div>
+          <div class="credit-item">
+            <strong>TypeScript</strong>
+            <span>Type-safe codebase</span>
+          </div>
+          <div class="credit-item">
+            <strong>Anthropic Claude API</strong>
+            <span>AI-assisted nightly data updates</span>
+          </div>
+          <div class="credit-item">
+            <strong>OpenAI API</strong>
+            <span>Alternate AI provider</span>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Open Source</h2>
+        <p>
+          This project is open source.
+          <a href="https://github.com/ArtemioPadilla/iran-conflict-tracker" target="_blank" rel="noopener noreferrer">View on GitHub</a>&mdash;contributions, bug reports, and feature suggestions are welcome.
+        </p>
+      </section>
+    </article>
+  </div>
+</BaseLayout>
+
+<style>
+  .about-page {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 4rem;
+  }
+
+  .about-back {
+    display: inline-block;
+    margin-bottom: 2rem;
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-family: 'DM Sans', sans-serif;
+    border: 1px solid var(--border);
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    transition: all 0.2s;
+  }
+  .about-back:hover {
+    color: var(--text-primary);
+    border-color: var(--border-light);
+    background: var(--bg-card);
+  }
+
+  .about-content h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 2rem;
+    letter-spacing: -0.02em;
+  }
+
+  .about-content h2 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 2rem 0 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+
+  .about-content p {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.88rem;
+    color: var(--text-secondary);
+    line-height: 1.75;
+    margin-bottom: 0.75rem;
+  }
+
+  .about-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0.75rem 0;
+  }
+  .about-content ul li {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    padding: 0.3rem 0 0.3rem 1.2rem;
+    position: relative;
+  }
+  .about-content ul li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.75rem;
+    width: 5px;
+    height: 5px;
+    background: var(--accent-red);
+    border-radius: 50%;
+  }
+
+  .about-content a {
+    color: var(--accent-blue);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s;
+  }
+  .about-content a:hover {
+    border-bottom-color: var(--accent-blue);
+  }
+
+  .credits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 0.75rem;
+    margin-top: 0.75rem;
+  }
+  .credit-item {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 0.75rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+  .credit-item strong {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.78rem;
+    color: var(--text-primary);
+  }
+  .credit-item span {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.72rem;
+    color: var(--text-muted);
+  }
+
+  @media (max-width: 640px) {
+    .about-page { padding: 1.5rem 1rem 3rem; }
+    .about-content h1 { font-size: 1.6rem; }
+    .credits-grid { grid-template-columns: 1fr; }
+  }
+</style>

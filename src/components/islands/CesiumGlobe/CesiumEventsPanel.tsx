@@ -60,8 +60,8 @@ export default function CesiumEventsPanel({ events, currentDate, isOpen, onToggl
   );
 
   const formatDisplayDate = (date: string) => {
-    const d = new Date(date + 'T00:00:00');
-    return d.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric', year: 'numeric' });
+    const d = new Date(date + 'T00:00:00Z');
+    return d.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
   };
 
   if (!isOpen) {
@@ -99,7 +99,7 @@ export default function CesiumEventsPanel({ events, currentDate, isOpen, onToggl
                 <div
                   className="globe-event-card-header"
                   onClick={() => setExpandedId(isExpanded ? null : ev.id)}
-                  style={(ev as any).confidence === 'low' ? { opacity: 0.6 } : undefined}
+                  style={ev.confidence === 'low' ? { opacity: 0.6 } : undefined}
                 >
                   <span
                     className="globe-event-type-badge"
@@ -107,17 +107,17 @@ export default function CesiumEventsPanel({ events, currentDate, isOpen, onToggl
                   >
                     {TYPE_LABELS[ev.type] || ev.type.toUpperCase()}
                   </span>
-                  {(ev as any).confidence && (
+                  {ev.confidence && (
                     <span
                       className="globe-event-confidence-dot"
-                      style={{ background: CONFIDENCE_COLORS[(ev as any).confidence] || '#888' }}
-                      title={`Confidence: ${(ev as any).confidence}`}
+                      style={{ background: CONFIDENCE_COLORS[ev.confidence] || '#888' }}
+                      title={`Confidence: ${ev.confidence}`}
                     />
                   )}
                   <h4 className="globe-event-title">{ev.title}</h4>
-                  {(ev as any).weaponTypes?.length > 0 && (
+                  {ev.weaponTypes && ev.weaponTypes.length > 0 && (
                     <span className="globe-event-weapon-badges">
-                      {(ev as any).weaponTypes.map((wt: string) => (
+                      {ev.weaponTypes.map((wt) => (
                         <span
                           key={wt}
                           className="globe-event-weapon-badge"
@@ -155,9 +155,9 @@ export default function CesiumEventsPanel({ events, currentDate, isOpen, onToggl
                     </div>
 
                     {/* Media (future support) */}
-                    {(ev as any).media?.length > 0 && (
+                    {ev.media && ev.media.length > 0 && (
                       <div className="globe-event-media">
-                        {(ev as any).media.map((m: any, i: number) => (
+                        {ev.media.map((m, i) => (
                           <a
                             key={i}
                             href={m.url}

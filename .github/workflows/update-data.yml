@@ -76,7 +76,12 @@ jobs:
 
             After updating, verify the changes by reading back modified files to confirm valid JSON.
 
-            IMPORTANT: Do NOT commit or push changes yourself. Just edit the files. The workflow will handle git operations.
+            IMPORTANT: After editing all files, you MUST commit and push the changes using Bash:
+              git add src/data/
+              git config user.email "github-actions[bot]@users.noreply.github.com"
+              git config user.name "github-actions[bot]"
+              git commit -m "chore(data): nightly AI update $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+              git push
           claude_args: "--max-turns 50 --dangerously-skip-permissions"
 
       - name: Check for changes
@@ -95,8 +100,28 @@ jobs:
             echo "Changes detected, will commit"
           fi
 
-      - name: Commit and push
+      - name: Validate JSON data files
+        id: validate
         if: steps.changes.outputs.changed == 'true'
+        run: |
+          echo "=== Validating JSON files ==="
+          invalid=0
+          for f in $(find src/data -name '*.json' -type f); do
+            if ! node -e "JSON.parse(require('fs').readFileSync('$f','utf8'))" 2>/dev/null; then
+              echo "INVALID JSON: $f"
+              invalid=$((invalid + 1))
+            fi
+          done
+          if [ "$invalid" -gt 0 ]; then
+            echo "valid=false" >> $GITHUB_OUTPUT
+            echo "$invalid JSON file(s) failed validation — skipping commit"
+          else
+            echo "valid=true" >> $GITHUB_OUTPUT
+            echo "All JSON files are valid"
+          fi
+
+      - name: Commit and push
+        if: steps.changes.outputs.changed == 'true' && steps.validate.outputs.valid == 'true'
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"

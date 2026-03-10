@@ -5,8 +5,17 @@
     "role": "US President",
     "avatar": "us",
     "initial": "DT",
-    "quote": "Iran's military forces have been significantly debilitated after four days of joint U.S.-Israeli strikes. Iran's navy, air force, radar systems, and air defense have all been neutralized; the nation has been 'knocked out' militarily.",
-    "lastUpdated": "2026-03-08T21:56:37.543Z"
+    "quote": "We're getting very close to finishing that too. The conflict is very far ahead of schedule. No deal with Iran except unconditional surrender. Most of the people we had in mind [to negotiate with] are dead. Pretty soon we are not going to know anybody.",
+    "lastUpdated": "2026-03-10T12:00:00.000Z"
+  },
+  {
+    "id": "leavitt",
+    "name": "Karoline Leavitt",
+    "role": "White House Press Secretary",
+    "avatar": "us",
+    "initial": "KL",
+    "quote": "When the President determines Iran no longer poses a threat to the United States and the goals of Operation Epic Fury have been met, Iran will effectively be in a state of unconditional surrender. We expect the war to continue for approximately four to six more weeks.",
+    "lastUpdated": "2026-03-10T12:00:00.000Z"
   },
   {
     "id": "hegseth",
@@ -32,8 +41,8 @@
     "role": "President of Iran",
     "avatar": "ir",
     "initial": "MP",
-    "quote": "Issued rare apology to neighboring countries for Iranian retaliatory attacks on their territory. Announced Iran would stop striking neighbors from March 7 onward unless attacks originated from those countries. Despite this, Iranian drone strikes on Dubai continued.",
-    "lastUpdated": "2026-03-10"
+    "quote": "That we surrender unconditionally is a dream that they must take with themselves to the grave. What we adhere to are international laws and humanitarian frameworks. Iran will never capitulate.",
+    "lastUpdated": "2026-03-10T12:00:00.000Z"
   },
   {
     "id": "larijani",

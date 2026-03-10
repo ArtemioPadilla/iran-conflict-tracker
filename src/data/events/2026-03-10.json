@@ -118,5 +118,122 @@
     ],
     "confidence": "high",
     "lastUpdated": "2026-03-10T06:00:00.000Z"
+  },
+  {
+    "id": "tehran-fuel-depot-march10-40-killed",
+    "year": "Mar 10",
+    "title": "Israeli Strikes on Tehran Fuel Depots Kill 40; Toxic Smoke Cloud Engulfs City of 10 Million",
+    "type": "military",
+    "detail": "Israeli airstrikes on March 10 targeted the Aghdasieh oil warehouse in northeast Tehran, the Shahran oil depot north of the city, a refinery in the south, and a depot in Karaj. At least 40 people were killed. Thick black toxic smoke hung over Tehran — a city of nearly 10 million — while residents reported difficulty breathing and oil-tainted rainfall staining buildings. The Israeli military stated the fuel complexes were used 'to distribute fuel to multiple military entities in Iran.' Iran's Red Crescent described the strikes as among the most devastating on civilian infrastructure since the war began.",
+    "sources": [
+      {
+        "name": "Al Jazeera",
+        "tier": 2,
+        "url": "https://www.aljazeera.com/news/liveblog/2026/3/10/iran-war-live-trump-says-conflict-will-be-over-soon-40-killed-in-tehran",
+        "pole": "middle_eastern"
+      },
+      {
+        "name": "TIME",
+        "tier": 2,
+        "url": "https://time.com/7383099/iran-news-oil-strikes-tehran/",
+        "pole": "western"
+      }
+    ],
+    "weaponTypes": ["cruise", "ballistic"],
+    "confidence": "high",
+    "lastUpdated": "2026-03-10T12:00:00.000Z"
+  },
+  {
+    "id": "iran-cluster-warhead-yehud",
+    "year": "Mar 10",
+    "title": "Iranian Cluster Warhead Missile Kills 2 Civilians in Yehud, Israel",
+    "type": "military",
+    "detail": "An Iranian missile carrying a cluster warhead struck multiple sites across central Israel on March 10, killing two civilians in the city of Yehud and wounding dozens. The strike was part of several overnight missile barrages targeting civilian areas south and east of Tel Aviv. Since the start of the conflict, at least 14 civilians have been killed in Israel and more than 2,000 Israelis wounded in Iranian attacks. The use of cluster munitions in populated areas raises fresh international humanitarian law concerns.",
+    "sources": [
+      {
+        "name": "Al Jazeera",
+        "tier": 2,
+        "url": "https://www.aljazeera.com/news/liveblog/2026/3/10/iran-war-live-trump-says-conflict-will-be-over-soon-40-killed-in-tehran",
+        "pole": "middle_eastern"
+      },
+      {
+        "name": "Wikipedia — 2026 Iran war",
+        "tier": 3,
+        "url": "https://en.wikipedia.org/wiki/2026_Iran_war",
+        "pole": "western"
+      }
+    ],
+    "weaponTypes": ["ballistic"],
+    "confidence": "high",
+    "lastUpdated": "2026-03-10T12:00:00.000Z"
+  },
+  {
+    "id": "white-house-war-4-6-more-weeks",
+    "year": "Mar 10",
+    "title": "White House Projects War to Continue 4–6 More Weeks; Trump Says 'Over Soon'",
+    "type": "diplomatic",
+    "detail": "White House press secretary Karoline Leavitt said on March 10 that the US expects the war to continue for approximately four to six more weeks. Leavitt stated that when Trump determines Iran 'no longer poses a threat to the United States,' Iran will be in a state of 'unconditional surrender.' Despite this, Trump told reporters the conflict 'will be over soon,' mirroring his earlier comments that it was 'very far ahead of schedule.' Iran's new Supreme Leader Mojtaba Khamenei and President Pezeshkian both publicly rejected any talk of surrender, with Pezeshkian calling US demands 'a dream they must take with them to the grave.'",
+    "sources": [
+      {
+        "name": "Al Jazeera",
+        "tier": 2,
+        "url": "https://www.aljazeera.com/news/liveblog/2026/3/10/iran-war-live-trump-says-conflict-will-be-over-soon-40-killed-in-tehran",
+        "pole": "middle_eastern"
+      },
+      {
+        "name": "CNBC",
+        "tier": 2,
+        "url": "https://www.cnbc.com/2026/03/09/iran-war-updates-oil-brent-wti-crude-110-gulf-gcc-uae-iraq-saudi-arabia-kurds.html",
+        "pole": "western"
+      }
+    ],
+    "confidence": "high",
+    "lastUpdated": "2026-03-10T12:00:00.000Z"
+  },
+  {
+    "id": "china-special-envoy-ceasefire-mediation",
+    "year": "Mar 10",
+    "title": "China Sends Special Envoy to Mediate Ceasefire; Iran Reaches Out via CIA Backchannel",
+    "type": "diplomatic",
+    "detail": "China sent a special envoy to the Middle East this week to push for a ceasefire, with top diplomat Wang Yi calling the conflict 'a war that should never have happened.' Reports emerged that Iran would allow only Chinese vessels to pass through the Strait of Hormuz, citing China's supportive stance. Separately, the Jerusalem Post reported that Iran's Ministry of Intelligence quietly reached out through another country's intelligence service to the CIA with an offer to discuss terms for ending the conflict. Trump reportedly responded: 'Most of the people we had in mind are dead. Pretty soon we are not going to know anybody,' signaling skepticism. Iran's Foreign Ministry publicly denied pursuing talks.",
+    "sources": [
+      {
+        "name": "Jerusalem Post",
+        "tier": 2,
+        "url": "https://www.jpost.com/middle-east/iran-news/article-888816",
+        "pole": "western"
+      },
+      {
+        "name": "CNBC",
+        "tier": 2,
+        "url": "https://www.cnbc.com/2026/03/09/iran-war-updates-oil-brent-wti-crude-110-gulf-gcc-uae-iraq-saudi-arabia-kurds.html",
+        "pole": "western"
+      }
+    ],
+    "confidence": "medium",
+    "lastUpdated": "2026-03-10T12:00:00.000Z"
+  },
+  {
+    "id": "us-8th-soldier-killed-march10",
+    "year": "Mar 10",
+    "title": "8th US Service Member Killed; Pentagon Confirms Total Combat Deaths",
+    "type": "military",
+    "detail": "The US military confirmed an 8th American service member has been killed in the conflict as of March 10. The Pentagon has confirmed a total of 8 deaths: 6 Army Reserve personnel killed in a drone strike at a command center in Kuwait on February 28, and Sgt. Benjamin N. Pennington (died March 8 from wounds sustained March 1 at Prince Sultan Air Base, Saudi Arabia), plus one additional casualty. More than 20 US personnel have been injured across the theater.",
+    "sources": [
+      {
+        "name": "Wikipedia — 2026 Iran war",
+        "tier": 3,
+        "url": "https://en.wikipedia.org/wiki/2026_Iran_war",
+        "pole": "western"
+      },
+      {
+        "name": "Al Jazeera",
+        "tier": 2,
+        "url": "https://www.aljazeera.com/news/liveblog/2026/3/10/iran-war-live-trump-says-conflict-will-be-over-soon-40-killed-in-tehran",
+        "pole": "middle_eastern"
+      }
+    ],
+    "confidence": "medium",
+    "lastUpdated": "2026-03-10T12:00:00.000Z"
   }
 ]

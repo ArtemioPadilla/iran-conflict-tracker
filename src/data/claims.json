@@ -362,5 +362,33 @@
     },
     "resolution": "EVOLVING — Independent estimates vary widely but all point to significant daily expenditure. Official figures not released.",
     "lastUpdated": "2026-03-10"
+  },
+  {
+    "id": "hormuz_closure_impact",
+    "question": "Has the effective closure of the Strait of Hormuz triggered a global energy crisis?",
+    "sideA": {
+      "label": "Rystad Energy / Stimson Center / RBC Capital Markets",
+      "text": "Traffic through the strait has fallen to near zero. 20 million barrels/day of oil — roughly 20% of global supply — is blocked. Analysts warn of potential $200/bbl oil and a global recession if the closure persists. 'Biggest energy crisis since the 1970s embargo.' European gas prices nearly doubled after Iran struck Qatari LNG facilities."
+    },
+    "sideB": {
+      "label": "US Navy / Trump Administration",
+      "text": "US Navy maintains a heightened military presence and insists the strait remains technically open. Trump has threatened to hit Iran '20 times harder' if it stops tankers. Strategic Petroleum Reserve release is under consideration."
+    },
+    "resolution": "EFFECTIVELY CLOSED — Commercial traffic has halted due to IRGC drone threats; US Navy presence has not restored civilian passage. Iran reportedly allowing only Chinese-flagged vessels to transit.",
+    "lastUpdated": "2026-03-10T12:00:00.000Z"
+  },
+  {
+    "id": "iran_cluster_munitions",
+    "question": "Did Iran use internationally banned cluster munitions against Israeli civilians?",
+    "sideA": {
+      "label": "Al Jazeera / Israeli authorities",
+      "text": "An Iranian missile with a cluster warhead struck residential areas of Yehud on March 10, killing 2 civilians and wounding dozens across multiple strike sites."
+    },
+    "sideB": {
+      "label": "Iranian Military",
+      "text": "Iran has not commented specifically on the Yehud strike. IRGC maintains its missiles target military infrastructure. Iran is not a signatory to the Convention on Cluster Munitions."
+    },
+    "resolution": "CONFIRMED — Multiple reports confirm cluster warhead used; civilian deaths verified. Raises international humanitarian law concerns. Neither Israel nor US are CCM signatories either.",
+    "lastUpdated": "2026-03-10T12:00:00.000Z"
   }
 ]

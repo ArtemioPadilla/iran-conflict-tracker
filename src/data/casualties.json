@@ -2,13 +2,13 @@
   {
     "id": "iran_strikes",
     "category": "Iran (strikes)",
-    "killed": "1,400+",
-    "injured": "5,600+",
+    "killed": "2,400+",
+    "injured": "7,000+",
     "source": "Al Jazeera / HRANA",
     "tier": 2,
     "contested": "yes",
-    "note": "HRANA reports 1,400+ killed including 181+ children under 10; internet blackout (~1% connectivity) severely limits verification.",
-    "lastUpdated": "2026-03-10T06:00:00.000Z"
+    "note": "Iranian Red Crescent confirmed ~800; HRANA estimates exceed 2,400 including 181+ children under 10. March 10 Israeli strikes on Tehran fuel depots killed at least 40. US forces struck 3,000+ targets since Feb 28. Internet blackout (~1% connectivity) severely limits verification.",
+    "lastUpdated": "2026-03-10T12:00:00.000Z"
   },
   {
     "id": "iran_minab_school",
@@ -46,24 +46,24 @@
   {
     "id": "us_service_members",
     "category": "US service members",
-    "killed": "7",
-    "injured": "20",
+    "killed": "8",
+    "injured": "20+",
     "source": "Pentagon",
     "tier": 1,
     "contested": "no",
-    "note": "Includes 4 in Kuwait (initial attack) and Sgt. Benjamin N. Pennington (1st Space Brigade, died Mar 8 from wounds at Prince Sultan AB, Saudi Arabia, Mar 1).",
-    "lastUpdated": "2026-03-10T06:00:00.000Z"
+    "note": "6 Army Reserve killed in Kuwait drone strike (Feb 28); Sgt. Benjamin N. Pennington (1st Space Brigade, died Mar 8 from wounds at Prince Sultan AB, Saudi Arabia, Mar 1); 1 additional casualty confirmed Mar 10.",
+    "lastUpdated": "2026-03-10T12:00:00.000Z"
   },
   {
     "id": "israel_retaliation",
     "category": "Israel (retaliation)",
-    "killed": "11",
-    "injured": "121",
-    "source": "Al Jazeera",
+    "killed": "14+",
+    "injured": "2,142+",
+    "source": "Al Jazeera / Israeli health authorities",
     "tier": 2,
     "contested": "evolving",
-    "note": "Includes 9 killed at Beit Shemesh synagogue; missile strikes on Tel Aviv & Jerusalem.",
-    "lastUpdated": "2026-03-08T21:56:37.543Z"
+    "note": "Includes 9 killed at Beit Shemesh synagogue; 2 civilians killed by Iranian cluster warhead missile in Yehud on March 10; missile strikes on Tel Aviv, Jerusalem, Yehud, and central Israel. 174+ attack waves recorded since Feb 28.",
+    "lastUpdated": "2026-03-10T12:00:00.000Z"
   },
   {
     "id": "uae",

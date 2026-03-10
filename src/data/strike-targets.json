@@ -376,5 +376,23 @@
     "time": "Mar 8",
     "tier": 1,
     "lastUpdated": "2026-03-08T21:56:37.543Z"
+  },
+  {
+    "id": "tehran_aghdasieh_oil_warehouse",
+    "name": "Aghdasieh Oil Warehouse & Shahran Depot — Tehran",
+    "detail": "Israeli strikes on March 10 targeted the Aghdasieh oil warehouse (northeast Tehran), Shahran oil depot (north Tehran), a south Tehran refinery, and a Karaj depot. At least 40 killed. Toxic black smoke engulfed Tehran; residents reported oil-tainted rainfall. IDF stated the facilities distributed fuel to IRGC military entities.",
+    "icon": "target",
+    "time": "Mar 10",
+    "tier": 1,
+    "lastUpdated": "2026-03-10T12:00:00.000Z"
+  },
+  {
+    "id": "yehud_cluster_strike_israel",
+    "name": "Yehud — Cluster Warhead Strike, Central Israel",
+    "detail": "Iran fired a missile with a cluster warhead that struck multiple sites in Yehud, a city east of Tel Aviv, killing 2 civilians and wounding dozens. One of the most destructive single Iranian strikes on Israeli civilians since the war began.",
+    "icon": "retaliation",
+    "time": "Mar 10",
+    "tier": 1,
+    "lastUpdated": "2026-03-10T12:00:00.000Z"
   }
 ]

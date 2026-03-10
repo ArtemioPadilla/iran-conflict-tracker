@@ -13,25 +13,37 @@
   {
     "id": "iran_killed",
     "label": "Iran Killed",
-    "value": "1,400+",
+    "value": "2,400+",
     "color": "red",
     "source": "Al Jazeera / HRANA",
     "contested": true,
-    "contestNote": "Iranian Red Crescent cites 1,200+; HRANA reports over 1,400 including civilians; internet blackout limits verification",
-    "delta": "+100+",
+    "contestNote": "Iranian Red Crescent reports ~800 confirmed; HRANA estimates exceed 2,400 including civilians and 181+ children; March 10 Tehran fuel depot strikes add 40 killed; internet blackout (~1% connectivity) severely limits verification",
+    "delta": "+1,000+",
     "trend": "up",
-    "lastUpdated": "2026-03-10T06:00:00.000Z"
+    "lastUpdated": "2026-03-10T12:00:00.000Z"
   },
   {
     "id": "us_killed",
     "label": "US Killed",
-    "value": "7",
+    "value": "8",
     "color": "amber",
     "source": "Pentagon",
     "contested": false,
     "delta": "+1",
     "trend": "up",
-    "lastUpdated": "2026-03-10T06:00:00.000Z"
+    "lastUpdated": "2026-03-10T12:00:00.000Z"
+  },
+  {
+    "id": "israel_killed",
+    "label": "Israel Killed",
+    "value": "14+",
+    "color": "amber",
+    "source": "Israeli health authorities / Al Jazeera",
+    "contested": false,
+    "delta": "+2",
+    "deltaNote": "2 civilians killed by Iranian cluster warhead missile in Yehud on March 10. Over 2,142 Israelis wounded in Iranian missile and drone attacks.",
+    "trend": "up",
+    "lastUpdated": "2026-03-10T12:00:00.000Z"
   },
   {
     "id": "gulf_killed",

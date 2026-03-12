@@ -7,6 +7,55 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+- **Ayotzinapa tracker** (Phase 8): Second tracker (`trackers/ayotzinapa/`) to validate multi-tracker system
+  - `tracker.json` config with map categories (disappearance, search, investigation, protest), custom AI prompt, and Ayotzinapa-specific event types
+  - 14 seed data files: meta, kpis (6 items), timeline (2 eras, 4 events), map-points (4 locations), claims (2 contested narratives), political (3 figures), plus empty arrays for unused sections
+  - Generates 2 pages: `/ayotzinapa/` (dashboard) and `/ayotzinapa/about/` (no globe -- disabled in config)
+  - Home page now shows 2 active tracker cards (Iran + Ayotzinapa)
+- **Home page** (Phase 5): `src/pages/index.astro` rewritten as tracker index showing active/archived tracker cards with status badges, section counts, and feature indicators (Map, 3D Globe)
+
+### Changed
+- `TimelineEventSchema.type` changed from `z.enum(['military', 'diplomatic', 'humanitarian', 'economic'])` to `z.string()` — supports arbitrary event types per tracker (same extensibility pattern as `cat` and `avatar`)
+- `GlobeConfigSchema.cameraPresets` changed from required to optional — trackers with `globe.enabled: false` no longer need camera presets
+
+### Removed
+- Old static `src/pages/globe.astro` and `src/pages/about.astro` (replaced by `[tracker]/globe.astro` and `[tracker]/about.astro`)
+- Backward-compat named exports from `src/lib/data.ts` (no longer needed — all pages use `loadTrackerData(slug)`)
+
+### Changed
+- `package.json` name changed from `iran-conflict-tracker` to `intel-dashboard`
+
+### Added (prior)
+- Multi-tracker update script (Phase 6 of generalization plan)
+  - `scripts/update-data.ts` now iterates over `trackers/*/tracker.json` configs instead of hardcoding Iran data
+  - Per-tracker system prompt (`ai.systemPrompt` with `{{today}}` template), search context (`ai.searchContext`), coordinate bounds (`ai.coordValidation`), start date (`startDate`), and enabled sections (`ai.enabledSections`)
+  - `TRACKER_SLUG` env var to target a single tracker (default: `all`)
+  - `SECTION_UPDATERS` map for config-to-function routing; deduplicates shared updaters (e.g. `military` and `assets`)
+  - `DEFAULT_SYSTEM_PROMPT` fallback for trackers without custom AI prompts
+  - GitHub Actions workflow updated: `TRACKER_SLUG` input, `git add trackers/`, per-tracker commit messages
+
+- Dynamic tracker routes (Phases 2-4 of generalization plan)
+  - `src/pages/[tracker]/index.astro` — parameterized dashboard page using `getStaticPaths`
+  - `src/pages/[tracker]/globe.astro` — parameterized 3D globe page (only for trackers with `globe.enabled`)
+  - `src/pages/[tracker]/about.astro` — parameterized about page
+  - `src/lib/data.ts` rewritten with `loadTrackerData(slug)` function that loads from `trackers/{slug}/data/`
+  - Backward-compatible default exports still work for existing `index.astro`, `globe.astro`, `about.astro`
+
+### Changed
+- **Base path**: changed from `/iran-conflict-tracker` to `/intel-dashboard` in `astro.config.mjs`
+- **Schema loosening**: `MapPointSchema.cat`, `MapLineSchema.cat`, `PolItemSchema.avatar` changed from enums to `z.string()` for extensibility; `TheaterCoordSchema` bounds removed (tracker-specific)
+- **Component parameterization**: `Header.astro`, `Footer.astro`, `PoliticalGrid.astro` accept optional `trackerSlug`/`navSections`/`githubRepo` props; `IntelMap.tsx` accepts `categories` prop; `MilitaryTabs.tsx` accepts `tabs` prop
+- **Constants**: `NAV_SECTIONS` and `MIL_TABS` now load from tracker config with fallback defaults
+- **BaseLayout.astro**: accepts `description`, `trackerSlug`, `githubRepo` props; SEO meta tags are parameterized
+- Font paths updated from `/iran-conflict-tracker/fonts/` to `/intel-dashboard/fonts/`
+
+- Tracker config infrastructure (Phase 1 of generalization plan)
+  - `trackers/iran-conflict/tracker.json` — extracted all Iran-specific config (map bounds, categories, camera presets, nav sections, AI prompts) into a standalone config file
+  - `trackers/iran-conflict/data/` — copied all 13 data JSON files + 85 event partition files
+  - `src/lib/tracker-config.ts` — Zod schema (`TrackerConfigSchema`) and inferred types for tracker configs
+  - `src/lib/tracker-registry.ts` — build-time registry using `import.meta.glob` to discover and validate all tracker configs
+
 ### Fixed
 - Globe missile timing: sim clock starts at midnight instead of noon so pre-dawn USA strikes (01:00-06:00) animate correctly instead of completing instantly
 - Schema hardening: `MapLineSchema` now validates `time` format (HH:MM), coordinate bounds (theater area), and `launched`/`intercepted` as non-negative integers; `MapPointSchema` validates coordinate bounds and date format

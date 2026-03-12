@@ -1,7 +1,7 @@
 import { useState, useEffect, useMemo, useCallback } from 'react';
 import type { MapPoint, MapLine } from '../../lib/schemas';
 import type { FlatEvent } from '../../lib/timeline-utils';
-import { MAP_CATEGORIES } from '../../lib/map-utils';
+import { MAP_CATEGORIES, type MapCategory } from '../../lib/map-utils';
 import { tierLabelFull, tierClass } from './map-helpers';
 import LeafletMap from './LeafletMap';
 import TimelineSlider from './TimelineSlider';
@@ -16,12 +16,15 @@ interface Props {
   points: MapPoint[];
   lines: MapLine[];
   events: FlatEvent[];
+  categories?: MapCategory[];
 }
 
-export default function IntelMap({ points, lines, events }: Props) {
+export default function IntelMap({ points, lines, events, categories }: Props) {
+  // Use prop categories with fallback to hardcoded defaults
+  const mapCategories = categories && categories.length > 0 ? categories : MAP_CATEGORIES;
   // ── Filters ──
   const [activeFilters, setActiveFilters] = useState<Set<string>>(
-    new Set(['strike', 'retaliation', 'asset', 'front']),
+    new Set(mapCategories.map(c => c.id)),
   );
   const [selectedPoint, setSelectedPoint] = useState<MapPoint | null>(null);
 
@@ -149,13 +152,13 @@ export default function IntelMap({ points, lines, events }: Props) {
   // Count points per category (for filter badges)
   const pointCounts = useMemo(() => {
     const cnts: Record<string, number> = {};
-    for (const c of MAP_CATEGORIES) cnts[c.id] = 0;
+    for (const c of mapCategories) cnts[c.id] = 0;
     for (const p of filteredPoints) cnts[p.cat] = (cnts[p.cat] || 0) + 1;
     return cnts;
-  }, [filteredPoints]);
+  }, [filteredPoints, mapCategories]);
 
   const selectedCategory = selectedPoint
-    ? MAP_CATEGORIES.find(c => c.id === selectedPoint.cat)
+    ? mapCategories.find(c => c.id === selectedPoint.cat)
     : null;
 
   // ── Active overlay count for stats ──
@@ -187,7 +190,7 @@ export default function IntelMap({ points, lines, events }: Props) {
 
         {/* Overlay: filter controls (top-left) */}
         <div className="map-controls-overlay">
-          {MAP_CATEGORIES.map(c => (
+          {mapCategories.map(c => (
             <button
               key={c.id}
               className={`map-filter${activeFilters.has(c.id) ? ' active' : ''}`}
@@ -213,7 +216,7 @@ export default function IntelMap({ points, lines, events }: Props) {
 
         {/* Overlay: legend (bottom-left) */}
         <div className="map-legend-overlay">
-          {MAP_CATEGORIES.map(c => (
+          {mapCategories.map(c => (
             <span key={c.id} className="map-legend-item">
               <span className="map-legend-dot" style={{ background: c.color }} />
               {c.label}

@@ -1,12 +1,21 @@
 ---
 import type { Meta } from '../../lib/schemas';
-import { NAV_SECTIONS } from '../../lib/constants';
+import type { NavSection } from '../../lib/tracker-config';
 
 interface Props {
   meta: Meta;
+  navSections?: NavSection[];
+  trackerSlug?: string;
+  globeEnabled?: boolean;
 }
 
-const { meta } = Astro.props;
+const { meta, navSections, trackerSlug, globeEnabled = true } = Astro.props;
+
+// Fallback for backward compat
+const sections = navSections ?? (await import('../../lib/constants')).NAV_SECTIONS;
+const basePath = import.meta.env.BASE_URL || '/intel-dashboard/';
+const globeHref = trackerSlug ? `${basePath}${trackerSlug}/globe/` : `${basePath}globe/`;
+const aboutHref = trackerSlug ? `${basePath}${trackerSlug}/about/` : `${basePath}about/`;
 ---
 <header class="site-header">
   <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -20,11 +29,11 @@ const { meta } = Astro.props;
     </div>
     <button class="mobile-menu-btn" aria-label="Toggle navigation menu" aria-expanded="false">&#9776;</button>
     <nav class="header-nav">
-      {NAV_SECTIONS.map(s => (
+      {sections.map(s => (
         <a class="nav-btn" href={`#${s.id}`}>{s.label}</a>
       ))}
-      <a class="nav-btn globe-nav-btn" href="/iran-conflict-tracker/globe/">3D Globe</a>
-      <a class="nav-btn about-nav-btn" href="/iran-conflict-tracker/about/">About</a>
+      {globeEnabled && <a class="nav-btn globe-nav-btn" href={globeHref}>3D Globe</a>}
+      <a class="nav-btn about-nav-btn" href={aboutHref}>About</a>
     </nav>
   </div>
 </header>

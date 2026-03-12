@@ -1,0 +1,508 @@
+[
+  {
+    "id": "iranian_missile_drone_attacks_gulf",
+    "year": "Mar 6",
+    "title": "Iran Launches Missile and Drone Attacks on Gulf Countries",
+    "type": "military",
+    "detail": "On March 1, 2026, Iran intensified its military offensive by launching hundreds of missiles and drones targeting Israel and several Gulf countries hosting U.S. military bases, including the United Arab Emirates, Bahrain, Qatar, Kuwait, Jordan, Iraq, and Oman. These attacks resulted in significant casualties and disrupted maritime traffic through the Strait of Hormuz, leading to the suspension of operations by major shipping companies.",
+    "sources": [
+      {
+        "name": "El Pa\u00eds",
+        "tier": 2,
+        "url": "https://elpais.com/internacional/2026-03-01/iran-lanza-una-nueva-ola-de-bombardeos-sobre-israel-y-paises-del-golfo-con-bases-de-ee-uu.html",
+        "pole": "western"
+      },
+      {
+        "name": "Al Jazeera",
+        "tier": 2,
+        "url": "https://www.aljazeera.com/news/2026/3/1/us-israel-attacks-on-iran-death-toll-and-injuries-live-tracker",
+        "pole": "middle_eastern"
+      }
+    ],
+    "lastUpdated": "2026-03-06T04:24:50.651Z"
+  },
+  {
+    "id": "us_israel_airstrikes_iran",
+    "year": "Mar 6",
+    "title": "U.S. and Israel Conduct Joint Airstrikes on Iran",
+    "type": "military",
+    "detail": "On February 28, 2026, the United States and Israel launched coordinated airstrikes targeting key Iranian officials and military infrastructure. The operation resulted in the assassination of Supreme Leader Ali Khamenei and other high-ranking officials, marking a significant escalation in the conflict.",
+    "sources": [
+      {
+        "name": "Axios",
+        "tier": 2,
+        "url": "https://www.axios.com/2026/02/28/iran-attack-supreme-leader-ali-khamenei",
+        "pole": "western"
+      },
+      {
+        "name": "Al Jazeera",
+        "tier": 2,
+        "url": "https://www.aljazeera.com/news/2026/3/1/us-israel-attacks-on-iran-death-toll-and-injuries-live-tracker",
+        "pole": "middle_eastern"
+      }
+    ],
+    "lastUpdated": "2026-03-06T04:24:50.651Z"
+  },
+  {
+    "id": "us_consulate_attack_karachi",
+    "year": "Mar 6",
+    "title": "U.S. Consulate in Karachi Attacked Amid Pro-Iran Protests",
+    "type": "military",
+    "detail": "On March 1, 2026, the U.S. Consulate in Karachi, Pakistan, was attacked by armed Shia Muslim protesters following the assassination of Iranian Supreme Leader Ali Khamenei. The protesters set fire to the consulate, broke windows, and clashed with security forces, resulting in at least 22 fatalities and over 120 injuries.",
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "tier": 3,
+        "url": "https://en.wikipedia.org/wiki/2026_attack_on_the_United_States_consulate_in_Karachi",
+        "pole": "international"
+      },
+      {
+        "name": "Al Jazeera",
+        "tier": 2,
+        "url": "https://www.aljazeera.com/news/2026/3/1/us-israel-attacks-on-iran-death-toll-and-injuries-live-tracker",
+        "pole": "middle_eastern"
+      }
+    ],
+    "lastUpdated": "2026-03-06T04:24:50.651Z"
+  },
+  {
+    "id": "hezbollah_strikes_israel",
+    "year": "Mar 6",
+    "title": "Hezbollah Launches Strikes on Israel",
+    "type": "military",
+    "detail": "On March 2, 2026, Hezbollah initiated strikes on Israel in response to the assassination of Iranian Supreme Leader Ali Khamenei. In retaliation, Israel conducted airstrikes targeting Hezbollah positions in Beirut, Lebanon, marking a significant escalation in the regional conflict.",
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "tier": 3,
+        "url": "https://en.wikipedia.org/wiki/2026_Hezbollah%E2%80%93Israel_strikes",
+        "pole": "international"
+      },
+      {
+        "name": "Al Jazeera",
+        "tier": 2,
+        "url": "https://www.aljazeera.com/news/2026/3/1/us-israel-attacks-on-iran-death-toll-and-injuries-live-tracker",
+        "pole": "middle_eastern"
+      }
+    ],
+    "lastUpdated": "2026-03-06T04:24:50.651Z"
+  },
+  {
+    "id": "us_house_rejects_war_powers_resolution",
+    "year": "Mar 6",
+    "title": "U.S. House Rejects War Powers Resolution to Halt Attacks on Iran",
+    "type": "diplomatic",
+    "detail": "On March 5, 2026, the U.S. House of Representatives narrowly rejected a war powers resolution aimed at halting President Trump's military actions against Iran. The vote reflects the ongoing debate within Congress over the scope of executive authority in military engagements.",
+    "sources": [
+      {
+        "name": "The Washington Post",
+        "tier": 2,
+        "url": "https://www.washingtonpost.com/national/2026/03/05/iran-israel-us-latest-march-05-2026/02abe1d4-1854-11f1-aef0-0aac8e8e94db_story.html",
+        "pole": "western"
+      },
+      {
+        "name": "Al Jazeera",
+        "tier": 2,
+        "url": "https://www.aljazeera.com/news/2026/3/1/us-israel-attacks-on-iran-death-toll-and-injuries-live-tracker",
+        "pole": "middle_eastern"
+      }
+    ],
+    "lastUpdated": "2026-03-06T04:24:50.651Z"
+  },
+  {
+    "id": "french_security_high_alert",
+    "year": "Mar 6",
+    "title": "France Places Security Forces on High Alert Following Airstrikes on Iran",
+    "type": "diplomatic",
+    "detail": "On March 2, 2026, French Interior Minister Laurent Nu\u00f1ez instructed domestic security forces to go on high alert due to concerns over potential repercussions following U.S. and Israeli airstrikes on Iran. The directive emphasized heightened security around diplomatic missions and sites linked to the involved nations.",
+    "sources": [
+      {
+        "name": "Le Monde",
+        "tier": 2,
+        "url": "https://www.lemonde.fr/en/international/article/2026/03/02/french-domestic-security-forces-placed-on-high-alert-following-airstrikes-on-iran_6750991_4.html",
+        "pole": "western"
+      },
+      {
+        "name": "Al Jazeera",
+        "tier": 2,
+        "url": "https://www.aljazeera.com/news/2026/3/1/us-israel-attacks-on-iran-death-toll-and-injuries-live-tracker",
+        "pole": "middle_eastern"
+      }
+    ],
+    "lastUpdated": "2026-03-06T04:24:50.651Z"
+  },
+  {
+    "id": "israel_us_strikes_iran_lebanon",
+    "year": "Mar 6",
+    "title": "Israel and U.S. Intensify Strikes on Iran and Lebanon",
+    "type": "military",
+    "detail": "On March 6, 2026, Israel launched intense airstrikes targeting Tehran and Kermanshah in Iran, as well as Beirut in Lebanon. Concurrently, the U.S. struck the Iranian drone carrier IRIS Shahid Bagheri at sea. These coordinated attacks mark a significant escalation in regional hostilities.",
+    "sources": [
+      {
+        "name": "Associated Press",
+        "tier": 2,
+        "url": "https://apnews.com/article/6108249f19c4bc162eacd7847976c174",
+        "pole": "western"
+      },
+      {
+        "name": "Al Jazeera",
+        "tier": 2,
+        "url": "https://www.aljazeera.com/news/2026/3/4/israel-iran-continue-attacks-as-war-enters-its-fifth-day-engulfs-region",
+        "pole": "middle_eastern"
+      }
+    ],
+    "lastUpdated": "2026-03-06T04:38:18.553Z"
+  },
+  {
+    "id": "iran_retaliatory_strikes_gulf",
+    "year": "Mar 6",
+    "title": "Iran Launches Retaliatory Strikes Across Gulf Nations",
+    "type": "military",
+    "detail": "Following the joint U.S.-Israeli strikes, Iran responded with drone and missile attacks targeting Kuwait, Qatar, Saudi Arabia, and Bahrain\u2014countries hosting U.S. military forces. These retaliatory strikes have resulted in civilian and military casualties across the region.",
+    "sources": [
+      {
+        "name": "Associated Press",
+        "tier": 2,
+        "url": "https://apnews.com/article/6108249f19c4bc162eacd7847976c174",
+        "pole": "western"
+      },
+      {
+        "name": "Al Jazeera",
+        "tier": 2,
+        "url": "https://www.aljazeera.com/news/2026/3/4/israel-iran-continue-attacks-as-war-enters-its-fifth-day-engulfs-region",
+        "pole": "middle_eastern"
+      }
+    ],
+    "lastUpdated": "2026-03-06T04:38:18.553Z"
+  },
+  {
+    "id": "iranian_strikes_uae",
+    "year": "Mar 6",
+    "title": "Iranian Strikes on United Arab Emirates Cause Civilian Casualties",
+    "type": "military",
+    "detail": "Since February 28, 2026, Iran has launched numerous missile and drone attacks on the United Arab Emirates, resulting in three civilian deaths and 78 injuries. The attacks have caused significant damage to infrastructure in cities like Dubai and Abu Dhabi.",
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "tier": 4,
+        "url": "https://en.wikipedia.org/wiki/2026_Iranian_strikes_on_the_United_Arab_Emirates",
+        "pole": "international"
+      },
+      {
+        "name": "Al Jazeera",
+        "tier": 2,
+        "url": "https://www.aljazeera.com/news/2026/3/1/us-israel-attacks-on-iran-death-toll-and-injuries-live-tracker",
+        "pole": "middle_eastern"
+      }
+    ],
+    "lastUpdated": "2026-03-06T04:38:18.553Z"
+  },
+  {
+    "id": "strait_of_hormuz_crisis",
+    "year": "Mar 6",
+    "title": "Strait of Hormuz Crisis Disrupts Global Shipping",
+    "type": "economic",
+    "detail": "The Strait of Hormuz, a vital maritime choke point for global energy trade, has experienced significant disruption since February 28, 2026. Following joint military strikes by the U.S. and Israel on Iran, Iran's Islamic Revolutionary Guard Corps issued warnings prohibiting vessel passage through the strait, leading to an effective halt in shipping traffic.",
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "tier": 4,
+        "url": "https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_crisis",
+        "pole": "international"
+      },
+      {
+        "name": "Al Jazeera",
+        "tier": 2,
+        "url": "https://www.aljazeera.com/news/2026/3/4/israel-iran-continue-attacks-as-war-enters-its-fifth-day-engulfs-region",
+        "pole": "middle_eastern"
+      }
+    ],
+    "lastUpdated": "2026-03-06T04:38:18.553Z"
+  },
+  {
+    "id": "israel_us_intensify_strikes_iran_lebanon",
+    "year": "Mar 6",
+    "title": "Israel and U.S. Intensify Strikes on Iran and Lebanon",
+    "type": "military",
+    "detail": "Israeli and U.S. forces have launched intense air and sea strikes targeting Iran and Lebanon. Israel initiated a sweeping airstrike campaign on Tehran and other Iranian cities, damaging Iran's air defenses and missile infrastructure, while also heavily bombing Hezbollah-held areas in Beirut. Concurrently, the U.S. struck an Iranian drone carrier at sea and used B-2 bombers to destroy deeply buried missile launch facilities and other key military sites in Iran.",
+    "sources": [
+      {
+        "name": "Associated Press",
+        "tier": 2,
+        "url": "https://apnews.com/article/6108249f19c4bc162eacd7847976c174",
+        "pole": "western"
+      }
+    ],
+    "lastUpdated": "2026-03-06T05:26:50.690Z"
+  },
+  {
+    "id": "iran_retaliatory_attacks_gulf",
+    "year": "Mar 6",
+    "title": "Iran Launches Retaliatory Attacks Across Gulf Nations",
+    "type": "military",
+    "detail": "In response to joint U.S.-Israeli strikes, Iran has launched missile and drone attacks on U.S. military-hosting nations including Kuwait, Qatar, Saudi Arabia, and Bahrain. These attacks have resulted in at least 13 civilian deaths and six U.S. soldiers killed in Kuwait.",
+    "sources": [
+      {
+        "name": "Associated Press",
+        "tier": 2,
+        "url": "https://apnews.com/article/69d5bc227e468f06e20e5ad069330c7d",
+        "pole": "western"
+      }
+    ],
+    "lastUpdated": "2026-03-06T05:26:50.690Z"
+  },
+  {
+    "id": "iranian_strikes_on_azerbaijan",
+    "year": "Mar 6",
+    "title": "Iranian Strikes on Azerbaijan",
+    "type": "military",
+    "detail": "On 5 March 2026, two one-way attack drones struck the Azerbaijani exclave of Nakhchivan, resulting in damage to the airport and injuries to four civilians. Azerbaijan blamed the attack on Iran and vowed a response, while Iran denied involvement, suggesting it was an Israeli false flag operation.",
+    "sources": [
+      {
+        "name": "The Guardian",
+        "tier": 2,
+        "url": "https://www.theguardian.com/world/2026/mar/05/azerbaijan-accuses-iran-of-terrorist-drone-attack-on-airport-that-injured-four-people",
+        "pole": "western"
+      }
+    ],
+    "lastUpdated": "2026-03-06T05:26:50.690Z"
+  },
+  {
+    "id": "israel_strikes_beirut_suburbs",
+    "year": "Mar 6",
+    "title": "Israel Strikes Beirut's Southern Suburbs After Evacuation Order",
+    "type": "military",
+    "detail": "On Thursday, Israel launched airstrikes on southern suburbs of Beirut following a mass evacuation order issued to residents of the densely populated area. The strikes targeted Hezbollah-held areas amid escalating hostilities between Israel and Hezbollah.",
+    "sources": [
+      {
+        "name": "Associated Press",
+        "tier": 2,
+        "url": "https://apnews.com/article/55b660c3e8cc071078533d8d2a8f93a2",
+        "pole": "western"
+      }
+    ],
+    "lastUpdated": "2026-03-06T05:26:50.690Z"
+  },
+  {
+    "id": "iranian_attacks_on_persian_gulf",
+    "year": "Mar 6",
+    "title": "Iran's Attacks Across the Persian Gulf Create Regional Chaos",
+    "type": "military",
+    "detail": "Since the joint U.S.-Israeli military operation, Iran has unleashed a coordinated and widespread missile and drone assault across the Middle East, targeting Israel, U.S. bases, and energy infrastructure in the Persian Gulf, as well as extending attacks to neighboring countries like Turkey and Azerbaijan.",
+    "sources": [
+      {
+        "name": "Associated Press",
+        "tier": 2,
+        "url": "https://apnews.com/article/36a51df550a4bd766f8c83b8d8c0f701",
+        "pole": "western"
+      }
+    ],
+    "lastUpdated": "2026-03-06T05:26:50.690Z"
+  },
+  {
+    "id": "gulf_nations_frustrated_us_iran_strikes",
+    "year": "Mar 6",
+    "title": "Gulf Nations Express Frustration Over Lack of Notice on Iran Strikes",
+    "type": "diplomatic",
+    "detail": "Several Gulf nations, including Saudi Arabia, Kuwait, and Bahrain, have expressed growing frustration with the United States over a lack of prior warning before the joint U.S.-Israeli strike on Iran. These countries criticized the U.S. for poor communication and insufficient defense support, noting that their interceptor stockpiles are rapidly depleting and that American defenses are primarily focused on Israel and U.S. troops, not on defending Gulf allies.",
+    "sources": [
+      {
+        "name": "Associated Press",
+        "tier": 2,
+        "url": "https://apnews.com/article/69d5bc227e468f06e20e5ad069330c7d",
+        "pole": "western"
+      }
+    ],
+    "lastUpdated": "2026-03-06T05:43:43.246Z"
+  },
+  {
+    "id": "iran_widespread_missile_drone_attacks",
+    "year": "Mar 6",
+    "title": "Iran Launches Widespread Missile and Drone Attacks Across Middle East",
+    "type": "military",
+    "detail": "Following the joint U.S.-Israeli military operation that led to the death of Iran's Supreme Leader Ayatollah Ali Khamenei, Iran has unleashed a coordinated and widespread missile and drone assault across the Middle East. Thousands of projectiles have targeted Israel, U.S. bases, and energy infrastructure in the Persian Gulf, while extending attacks to neighboring countries like Turkey and Azerbaijan. Analysts suggest Iran's strategy is to pressure U.S. allies and civilians by creating chaos and elevating the costs of prolonged conflict, thereby compelling them to push for diplomatic resolutions.",
+    "sources": [
+      {
+        "name": "Associated Press",
+        "tier": 2,
+        "url": "https://apnews.com/article/36a51df550a4bd766f8c83b8d8c0f701",
+        "pole": "western"
+      }
+    ],
+    "lastUpdated": "2026-03-06T05:43:43.246Z"
+  },
+  {
+    "id": "un_security_council_emergency_meeting",
+    "year": "Mar 6",
+    "title": "U.S. and Israel Clash with Iran at Emergency UN Security Council Meeting",
+    "type": "diplomatic",
+    "detail": "At an emergency United Nations Security Council meeting, the United States and Israel faced off against Iran following a series of escalating strikes in the Middle East. U.N. Secretary-General Ant\u00f3nio Guterres condemned both the U.S.-Israeli and Iranian attacks, warning of a potential broader conflict if de-escalation efforts fail. Guterres stated that the airstrikes violated international law and stressed the importance of returning to diplomacy.",
+    "sources": [
+      {
+        "name": "Associated Press",
+        "tier": 2,
+        "url": "https://apnews.com/article/9140bca9241fb99be8cb3cff2c650741",
+        "pole": "western"
+      }
+    ],
+    "lastUpdated": "2026-03-06T05:43:43.246Z"
+  },
+  {
+    "id": "iran_accuses_us_israel_natanz_strike",
+    "year": "Mar 6",
+    "title": "Iran Accuses U.S. and Israel of Striking Natanz Enrichment Facility",
+    "type": "military",
+    "detail": "During a special session of the IAEA Board of Governors in Vienna, Iran\u2019s Ambassador to the International Atomic Energy Agency (IAEA), Reza Najafi, accused the United States and Israel of launching airstrikes on the Natanz uranium enrichment facility. He condemned the attacks as unlawful and called on IAEA member states to denounce them. Najafi asserted that the accusations against Iran developing nuclear weapons are baseless.",
+    "sources": [
+      {
+        "name": "Associated Press",
+        "tier": 2,
+        "url": "https://apnews.com/article/3e08a78093e62dc76beb86ba1fca69ae",
+        "pole": "western"
+      }
+    ],
+    "lastUpdated": "2026-03-06T05:43:43.246Z"
+  },
+  {
+    "id": "us_israel_launch_operation_epic_fury",
+    "year": "Mar 6",
+    "title": "U.S. and Israel Launch Operation Epic Fury Against Iran",
+    "type": "military",
+    "detail": "The United States and Israel launched military strikes against Iran as part of what President Donald Trump labeled a 'massive and ongoing' campaign aimed at overthrowing the Iranian regime. The offensive, called Operation Epic Fury, followed months of failed negotiations over Iran's nuclear program and escalating tensions, including Iran\u2019s violent suppression of widespread protests. Trump, in a message to the Iranian people, urged them to seize the opportunity to overthrow their government, warning of continued bombings.",
+    "sources": [
+      {
+        "name": "Time",
+        "tier": 2,
+        "url": "https://time.com/7346357/iran-strikes-news-us-trump-protests/",
+        "pole": "western"
+      }
+    ],
+    "lastUpdated": "2026-03-06T05:43:43.246Z"
+  },
+  {
+    "id": "iran_closes_strait_of_hormuz",
+    "year": "Mar 6",
+    "title": "Iran Closes Strait of Hormuz",
+    "type": "economic",
+    "detail": "On March 3, 2026, Iran's Islamic Revolutionary Guard Corps (IRGC) announced the closure of the Strait of Hormuz, a critical maritime passage through which approximately 20% of global oil trade flows. This action was in response to joint U.S.-Israeli military operations targeting Iranian sites. The closure has led to a significant disruption in global energy supplies, causing oil prices to surge and prompting major shipping firms to suspend operations in the area.",
+    "sources": [
+      {
+        "name": "Israel Hayom",
+        "tier": 2,
+        "url": "https://www.israelhayom.com/2026/03/03/israel-us-joint-strike-iran-tehran",
+        "pole": "western"
+      },
+      {
+        "name": "The Guardian",
+        "tier": 2,
+        "url": "https://www.theguardian.com/world/2026/mar/02/oil-prices-rise-as-iran-war-threatens-shipping-through-strait-of-hormuz",
+        "pole": "western"
+      },
+      {
+        "name": "Al Jazeera",
+        "tier": 2,
+        "url": "https://www.aljazeera.com/news/2026/3/2/after-irans-salvo-hit-their-skylines-will-gulf-states-enter-the-war",
+        "pole": "middle_eastern"
+      }
+    ],
+    "lastUpdated": "2026-03-06T05:57:54.619Z"
+  },
+  {
+    "id": "us_urges_americans_to_leave_middle_east",
+    "year": "Mar 6",
+    "title": "U.S. Urges Americans to Leave Middle East Amid Escalating Conflict",
+    "type": "diplomatic",
+    "detail": "On March 3, 2026, the U.S. State Department issued a directive urging American citizens to leave 14 countries across the Middle East due to escalating military actions involving the U.S., Israel, and Iran. The department also announced the closure of U.S. embassies in Kuwait and Saudi Arabia, citing security concerns as Iran's retaliatory strikes intensified across the region.",
+    "sources": [
+      {
+        "name": "Fox News",
+        "tier": 2,
+        "url": "https://www.foxnews.com/live-news/us-iran-israel-war-latest-march-3",
+        "pole": "western"
+      },
+      {
+        "name": "Al Jazeera",
+        "tier": 2,
+        "url": "https://www.aljazeera.com/news/2026/3/4/israel-iran-continue-attacks-as-war-enters-its-fifth-day-engulfs-region",
+        "pole": "middle_eastern"
+      }
+    ],
+    "lastUpdated": "2026-03-06T05:57:54.619Z"
+  },
+  {
+    "id": "iranian_missile_attacks_us_bases",
+    "year": "Mar 6",
+    "title": "Iran Launches Missile Attacks on U.S. Bases in Gulf States",
+    "type": "military",
+    "detail": "On March 4, 2026, Iran launched over 500 ballistic missiles and 2,000 drones targeting U.S. military bases in Gulf countries, including Saudi Arabia, the United Arab Emirates, Kuwait, and Bahrain. These attacks were in retaliation for the joint U.S.-Israeli military operations against Iranian targets. The strikes resulted in casualties and significant infrastructure damage, further escalating regional tensions.",
+    "sources": [
+      {
+        "name": "Al Jazeera",
+        "tier": 2,
+        "url": "https://www.aljazeera.com/news/2026/3/4/what-we-know-on-day-five-of-us-israeli-attacks-on-iran",
+        "pole": "middle_eastern"
+      },
+      {
+        "name": "Associated Press",
+        "tier": 2,
+        "url": "https://apnews.com/article/e1c316da4ce809407122590a6872aa85",
+        "pole": "western"
+      }
+    ],
+    "lastUpdated": "2026-03-06T05:57:54.619Z"
+  },
+  {
+    "id": "trump_declares_iran_knocked_out",
+    "year": "Mar 6",
+    "title": "President Trump Declares Iran 'Knocked Out' Militarily",
+    "type": "diplomatic",
+    "detail": "On March 4, 2026, President Donald Trump announced that Iran's military capabilities had been significantly degraded following joint U.S.-Israeli strikes. He stated that Iran's navy, air force, radar systems, and air defenses had been neutralized, asserting that the nation had been 'knocked out' militarily. Despite these claims, Iran continued to launch retaliatory attacks, indicating ongoing resistance.",
+    "sources": [
+      {
+        "name": "Time",
+        "tier": 2,
+        "url": "https://time.com/7382322/trump-iran-war-progress-knocked-out-reason-for-strikes/",
+        "pole": "western"
+      },
+      {
+        "name": "Al Jazeera",
+        "tier": 2,
+        "url": "https://www.aljazeera.com/news/2026/3/4/what-we-know-on-day-five-of-us-israeli-attacks-on-iran",
+        "pole": "middle_eastern"
+      }
+    ],
+    "lastUpdated": "2026-03-06T05:57:54.619Z"
+  },
+  {
+    "id": "intense_israeli_us_strikes_iran_lebanon",
+    "year": "Mar 6",
+    "title": "Intense Israeli and U.S. Strikes Hit Iran and Lebanon",
+    "type": "military",
+    "detail": "Israel and the United States have conducted widespread airstrikes against Iran and Lebanon, targeting Tehran and Kermanshah, and destroying most of Iran\u2019s air defenses and missile launchers. The U.S. also struck the Iranian drone carrier IRIS Shahid Bagheri and previously sank an Iranian frigate off Sri Lanka. Iran retaliated with missile and drone attacks on U.S.-allied Gulf states, including Qatar, Saudi Arabia, Bahrain, and Kuwait, resulting in six U.S. soldiers killed. Clashes between Israel and Hezbollah in Lebanon have intensified, with Israeli airstrikes around Beirut causing widespread panic and hospital evacuations. The death toll has surpassed 1,230 in Iran, over 120 in Lebanon, and more than a dozen in Israel.",
+    "sources": [
+      {
+        "name": "Associated Press",
+        "tier": 2,
+        "url": "https://apnews.com/article/6108249f19c4bc162eacd7847976c174",
+        "pole": "western"
+      }
+    ],
+    "lastUpdated": "2026-03-06T06:21:53.605Z"
+  },
+  {
+    "id": "iran_targets_us_allies_embassy_riyadh",
+    "year": "Mar 6",
+    "title": "Iran Targets U.S. Allies, Hits American Embassy in Riyadh",
+    "type": "military",
+    "detail": "In response to U.S. and Israeli airstrikes, Iran launched retaliatory attacks targeting U.S. allies in the Middle East. Two drones struck the U.S. Embassy in Riyadh, Saudi Arabia, causing a small fire and minor damage. The U.S. Mission in Saudi Arabia issued a 'shelter in place' alert for Riyadh, Jeddah, and Dhahran. Concurrently, Israel reported missile launches from Iran, the United Arab Emirates engaged its air defenses against incoming ballistic missiles, Qatar shot down two Iranian fighter jets, and Bahrain activated its sirens, urging calm. These developments mark a significant escalation in regional tensions.",
+    "sources": [
+      {
+        "name": "Axios",
+        "tier": 2,
+        "url": "https://www.axios.com/2026/03/03/iran-us-embassy-riyadh-saudi-arabia-drones",
+        "pole": "western"
+      }
+    ],
+    "lastUpdated": "2026-03-06T06:21:53.605Z"
+  }
+]

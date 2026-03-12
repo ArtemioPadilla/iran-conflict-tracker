@@ -1,0 +1,43 @@
+{
+  "lastRun": "2026-03-10T12:00:00.000Z",
+  "provider": "anthropic",
+  "model": "claude-opus-4-6",
+  "sections": {
+    "meta": {
+      "status": "updated"
+    },
+    "kpis": {
+      "status": "updated",
+      "itemCount": 8
+    },
+    "events": {
+      "status": "unchanged",
+      "newFiles": [],
+      "newEvents": 0
+    },
+    "casualties": {
+      "status": "updated",
+      "itemCount": 16
+    },
+    "econ": {
+      "status": "updated",
+      "itemCount": 8
+    },
+    "political": {
+      "status": "updated",
+      "itemCount": 31
+    },
+    "map": {
+      "status": "updated",
+      "newPoints": 3
+    },
+    "claims": {
+      "status": "updated",
+      "itemCount": 26
+    },
+    "map-lines": {
+      "status": "updated",
+      "newLines": 8
+    }
+  }
+}

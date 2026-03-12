@@ -24,8 +24,10 @@ const PROVIDER: Provider = (process.env.AI_PROVIDER as Provider) || 'anthropic';
 const ANTHROPIC_MODEL = process.env.ANTHROPIC_MODEL || 'claude-sonnet-4-6';
 const OPENAI_MODEL = process.env.OPENAI_MODEL || 'gpt-4o';
 
-const DATA_DIR = join(process.cwd(), 'src', 'data');
-const EVENTS_DIR = join(DATA_DIR, 'events');
+const TRACKERS_DIR = join(process.cwd(), 'trackers');
+// DATA_DIR and EVENTS_DIR are set per-tracker in main()
+let DATA_DIR = '';
+let EVENTS_DIR = '';
 const today = new Date().toISOString().split('T')[0];
 const now = new Date().toISOString();
 
@@ -286,9 +288,11 @@ function normalizeEventYear(event: Record<string, unknown>): void {
   console.warn(`[timeline] Unrecognized year format: "${year}" — leaving as-is`);
 }
 
-/** Validate map line coordinates are within theater bounds */
+/** Validate map line coordinates are within theater bounds (uses per-tracker COORD_BOUNDS) */
 function validateLineCoords(line: { from: [number, number]; to: [number, number] }): boolean {
-  const inBounds = (lon: number, lat: number) => lon >= 20 && lon <= 70 && lat >= 10 && lat <= 50;
+  const inBounds = (lon: number, lat: number) =>
+    lon >= COORD_BOUNDS.lonMin && lon <= COORD_BOUNDS.lonMax &&
+    lat >= COORD_BOUNDS.latMin && lat <= COORD_BOUNDS.latMax;
   return inBounds(line.from[0], line.from[1]) && inBounds(line.to[0], line.to[1]);
 }
 
@@ -502,7 +506,13 @@ async function callAIWithRetry(
 
 // ─── System Prompt ───
 
-const SYSTEM_PROMPT = `You are an intelligence analyst updating a conflict tracking dashboard.
+// Per-tracker state — set in main() before calling section updaters
+let ACTIVE_SYSTEM_PROMPT = '';
+let SEARCH_CONTEXT = 'events of interest';
+let COORD_BOUNDS = { lonMin: 20, lonMax: 75, latMin: 5, latMax: 50 };
+let TRACKER_START_DATE = '2026-01-01';
+
+const DEFAULT_SYSTEM_PROMPT = `You are an intelligence analyst updating a conflict tracking dashboard.
 Today's date is ${today}. You have access to web search to find the latest information.
 CRITICAL: Your entire response must be ONLY a raw JSON array or object — no markdown, no code fences, no prose, no explanation before or after.
 Do NOT wrap in \`\`\`json blocks. Do NOT add any text before [ or {. Just output the JSON directly.
@@ -543,7 +553,7 @@ async function updateKPIs(): Promise<SectionResult> {
   try {
     const current = readJSON<z.infer<typeof KpiSchema>[]>('kpis.json');
     const fields = describeFields(KpiSchema);
-    const text = await callAIWithRetry(SYSTEM_PROMPT, `Search for the latest data on the Iran-US/Israel conflict as of ${today}.
+    const text = await callAIWithRetry(ACTIVE_SYSTEM_PROMPT, `Search for the latest data on the ${SEARCH_CONTEXT} as of ${today}.
 Return updated KPI metrics as a JSON array.
 
 Each object must have these fields:
@@ -590,7 +600,7 @@ async function updateTimeline(): Promise<SectionResult> {
     const lastUpdated = readJSON<{ lastRun: string | null }>('update-log.json').lastRun || '2026-03-02';
     const fields = describeFields(TimelineEventSchema);
 
-    const text = await callAIWithRetry(SYSTEM_PROMPT, `Search for new significant events in the Iran-US/Israel conflict since ${lastUpdated}.
+    const text = await callAIWithRetry(ACTIVE_SYSTEM_PROMPT, `Search for new significant events in the ${SEARCH_CONTEXT} since ${lastUpdated}.
 Search across ALL media poles: Western (Reuters, AP, CNN), Middle Eastern (Al Jazeera, IRNA, Press TV), Eastern (Xinhua, CGTN), and International (UN, HRW, IAEA).
 Return any new timeline entries as a JSON array. Return an empty array [] if nothing significant happened.
 
@@ -682,7 +692,7 @@ async function updateMapPoints(): Promise<SectionResult> {
       base: false,
     }, null, 2);
 
-    const text = await callAIWithRetry(SYSTEM_PROMPT, `Search for NEW military locations, strike targets, or asset deployments in the Iran-US/Israel conflict since ${maxDate}.
+    const text = await callAIWithRetry(ACTIVE_SYSTEM_PROMPT, `Search for NEW military locations, strike targets, or asset deployments in the ${SEARCH_CONTEXT} since ${maxDate}.
 Return ONLY NEW points as a JSON array. Return [] if nothing new.
 Do NOT return existing points — I will merge them server-side.
 
@@ -691,8 +701,8 @@ ${example}
 
 Field rules:
 - "id": lowercase_snake_case, unique (e.g. "tehran_strike_mar7")
-- "lon": number, range 25–65
-- "lat": number, range 20–42
+- "lon": number, range ${COORD_BOUNDS.lonMin}–${COORD_BOUNDS.lonMax}
+- "lat": number, range ${COORD_BOUNDS.latMin}–${COORD_BOUNDS.latMax}
 - "cat": one of "strike", "retaliation", "asset", "front"
 - "label": short name of the location
 - "sub": description of what happened
@@ -712,8 +722,8 @@ Existing IDs (do NOT reuse): ${[...existingIds].slice(-30).join(', ')}
 Return ONLY new points as a JSON array.`,
       'map-points',
       // Retry prompt — even simpler
-      `Search for new military events in the Iran-US/Israel conflict on ${today}.
-Return new map points as a JSON array. Each point needs: id (string), lon (number 25-65), lat (number 20-42), cat ("strike"|"retaliation"|"asset"|"front"), label (string), sub (string), tier (1|2|3|4), date ("${today}").
+      `Search for new military events in the ${SEARCH_CONTEXT} on ${today}.
+Return new map points as a JSON array. Each point needs: id (string), lon (number ${COORD_BOUNDS.lonMin}-${COORD_BOUNDS.lonMax}), lat (number ${COORD_BOUNDS.latMin}-${COORD_BOUNDS.latMax}), cat ("strike"|"retaliation"|"asset"|"front"), label (string), sub (string), tier (1|2|3|4), date ("${today}").
 Example: ${example}
 Return [] if nothing new.`,
     );
@@ -726,7 +736,7 @@ Return [] if nothing new.`,
     const newPoints = validItems
       .filter(p => !existingIds.has(p.id))
       .filter(p => {
-        if (p.lon < 25 || p.lon > 65 || p.lat < 20 || p.lat > 42) {
+        if (p.lon < COORD_BOUNDS.lonMin || p.lon > COORD_BOUNDS.lonMax || p.lat < COORD_BOUNDS.latMin || p.lat > COORD_BOUNDS.latMax) {
           console.warn(`[map-points] Out-of-bounds: ${p.id} (${p.lon}, ${p.lat})`);
           return false;
         }
@@ -792,7 +802,7 @@ async function updateMapLines(): Promise<SectionResult> {
       notes: 'CENTCOM reports 12 Tomahawks; IRNA claims only 4 reached target',
     }, null, 2);
 
-    const text = await callAIWithRetry(SYSTEM_PROMPT, `Search for NEW military strike routes, retaliation vectors, or front lines in the Iran-US/Israel conflict since ${maxDate}.
+    const text = await callAIWithRetry(ACTIVE_SYSTEM_PROMPT, `Search for NEW military strike routes, retaliation vectors, or front lines in the ${SEARCH_CONTEXT} since ${maxDate}.
 Return ONLY NEW lines as a JSON array. Return [] if nothing new.
 Do NOT return existing lines — I will merge them server-side.
 
@@ -828,7 +838,7 @@ Existing IDs (do NOT reuse): ${[...existingIds].slice(-30).join(', ')}
 Return ONLY new lines as a JSON array.`,
       'map-lines',
       // Retry prompt
-      `Search for new military strikes or retaliations in the Iran-US/Israel conflict on ${today}.
+      `Search for new military strikes or retaliations in the ${SEARCH_CONTEXT} on ${today}.
 Return new arc lines as a JSON array. Each needs: id (string), from ([lon,lat]), to ([lon,lat]), cat ("strike"|"retaliation"|"asset"|"front"), label (string), date ("${today}").
 REQUIRED for strike/retaliation: weaponType ("ballistic"|"cruise"|"drone"|"rocket"|"mixed"|"unknown"), time ("HH:MM" 24h UTC).
 Optional: launched (int), intercepted (int), confidence ("high"|"medium"|"low"), platform (string), status ("hit"|"intercepted"|"partial"|"unknown"), damage (string), casualties (string), notes (string).
@@ -880,7 +890,7 @@ async function updateCasualties(): Promise<SectionResult> {
   try {
     const current = readJSON<z.infer<typeof CasualtyRowSchema>[]>('casualties.json');
     const fields = describeFields(CasualtyRowSchema);
-    const text = await callAIWithRetry(SYSTEM_PROMPT, `Search for the latest casualty figures from the Iran-US/Israel conflict as of ${today}.
+    const text = await callAIWithRetry(ACTIVE_SYSTEM_PROMPT, `Search for the latest casualty figures from the ${SEARCH_CONTEXT} as of ${today}.
 Return the updated casualty table as a JSON array.
 
 Each object must have these fields:
@@ -916,7 +926,7 @@ async function updateEcon(): Promise<SectionResult> {
   try {
     const current = readJSON<z.infer<typeof EconItemSchema>[]>('econ.json');
     const fields = describeFields(EconItemSchema);
-    const text = await callAIWithRetry(SYSTEM_PROMPT, `Search for current market prices related to the Iran conflict: crude oil (Brent, WTI), gold, S&P 500, VIX, Iranian rial.
+    const text = await callAIWithRetry(ACTIVE_SYSTEM_PROMPT, `Search for current market prices and economic indicators related to the ${SEARCH_CONTEXT}.
 Return updated economic indicators as a JSON array.
 
 Each object must have these fields:
@@ -951,7 +961,7 @@ async function updateClaims(): Promise<SectionResult> {
   try {
     const current = readJSON<z.infer<typeof ClaimSchema>[]>('claims.json');
     const fields = describeFields(ClaimSchema);
-    const text = await callAIWithRetry(SYSTEM_PROMPT, `Search for the latest contested claims and information disputes in the Iran-US/Israel conflict as of ${today}.
+    const text = await callAIWithRetry(ACTIVE_SYSTEM_PROMPT, `Search for the latest contested claims and information disputes in the ${SEARCH_CONTEXT} as of ${today}.
 Search across ALL media poles to find contrasting narratives: Western vs Middle Eastern vs Eastern vs International perspectives.
 Return updated contested claims as a JSON array.
 
@@ -989,7 +999,7 @@ async function updatePolitical(): Promise<SectionResult> {
   try {
     const current = readJSON<z.infer<typeof PolItemSchema>[]>('political.json');
     const fields = describeFields(PolItemSchema);
-    const text = await callAIWithRetry(SYSTEM_PROMPT, `Search for the latest political statements and diplomatic developments in the Iran-US/Israel conflict as of ${today}.
+    const text = await callAIWithRetry(ACTIVE_SYSTEM_PROMPT, `Search for the latest political statements and diplomatic developments in the ${SEARCH_CONTEXT} as of ${today}.
 Return updated political statements as a JSON array.
 
 Each object must have these fields:
@@ -1028,7 +1038,7 @@ async function updateMilitary(): Promise<SectionResult> {
     const strikeFields = describeFields(StrikeItemSchema);
     const assetFields = describeFields(AssetSchema);
 
-    const text = await callAIWithRetry(SYSTEM_PROMPT, `Search for the latest military operations in the Iran-US/Israel conflict as of ${today}.
+    const text = await callAIWithRetry(ACTIVE_SYSTEM_PROMPT, `Search for the latest military operations in the ${SEARCH_CONTEXT} as of ${today}.
 Return a JSON object with three arrays:
 
 {
@@ -1078,7 +1088,7 @@ Update with the latest information. Return the complete object with all three ar
 async function updateMeta(): Promise<SectionResult> {
   try {
     const current = readJSON<{ dayCount: number; lastUpdated: string; [key: string]: unknown }>('meta.json');
-    const start = new Date('2026-02-28T00:00:00Z');
+    const start = new Date(`${TRACKER_START_DATE}T00:00:00Z`);
     const days = Math.ceil((Date.now() - start.getTime()) / (1000 * 60 * 60 * 24));
     current.dayCount = days;
     current.dateline = `DAY ${days} \u2014 ${new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }).toUpperCase()} \u2014 SITUATION REPORT`;
@@ -1091,68 +1101,149 @@ async function updateMeta(): Promise<SectionResult> {
   }
 }
 
+// ─── Section Runner ───
+
+/** Map config section names to updater functions */
+const SECTION_UPDATERS: Record<string, () => Promise<SectionResult>> = {
+  kpis: updateKPIs,
+  timeline: updateTimeline,
+  mapPoints: updateMapPoints,
+  mapLines: updateMapLines,
+  casualties: updateCasualties,
+  econ: updateEcon,
+  claims: updateClaims,
+  political: updatePolitical,
+  // "military" updates strikes, retaliation, and assets together
+  military: updateMilitary,
+  assets: updateMilitary,
+};
+
 // ─── Main ───
 
 async function main() {
-  const sections = (process.env.UPDATE_SECTIONS || 'all').split(',').map(s => s.trim());
-  const runAll = sections.includes('all');
+  const targetSlug = process.env.TRACKER_SLUG || 'all';
+  const sectionFilter = (process.env.UPDATE_SECTIONS || 'all').split(',').map(s => s.trim());
+  const runAllSections = sectionFilter.includes('all');
 
   console.log(`[update-data] Starting update at ${now}`);
   console.log(`[update-data] Provider: ${PROVIDER} (${PROVIDER === 'openai' ? OPENAI_MODEL : ANTHROPIC_MODEL})`);
-  console.log(`[update-data] Sections: ${runAll ? 'all' : sections.join(', ')}`);
+  console.log(`[update-data] Target tracker: ${targetSlug}`);
 
-  // Ensure events directory exists
-  if (!existsSync(EVENTS_DIR)) mkdirSync(EVENTS_DIR, { recursive: true });
-
-  const results: Record<string, SectionResult> = {};
-
-  // Always update meta (no API call needed)
-  results.meta = await updateMeta();
-
-  // Run API-dependent sections sequentially to avoid rate limits
-  // Order matters: military → map-points → map-lines (each feeds into the next)
-  if (runAll || sections.includes('kpis')) results.kpis = await updateKPIs();
-  if (runAll || sections.includes('timeline')) results.timeline = await updateTimeline();
-  if (runAll || sections.includes('casualties')) results.casualties = await updateCasualties();
-  if (runAll || sections.includes('econ')) results.econ = await updateEcon();
-  if (runAll || sections.includes('claims')) results.claims = await updateClaims();
-  if (runAll || sections.includes('political')) results.political = await updatePolitical();
-  if (runAll || sections.includes('military')) results.military = await updateMilitary();
-  if (runAll || sections.includes('map')) results.map = await updateMapPoints();
-  if (runAll || sections.includes('map-lines')) results['map-lines'] = await updateMapLines();
-
-  // Write update log
-  const log = {
-    lastRun: now,
-    provider: PROVIDER,
-    model: PROVIDER === 'openai' ? OPENAI_MODEL : ANTHROPIC_MODEL,
-    sections: results,
-  };
-  writeJSON('update-log.json', log);
-
-  // Summary
-  console.log('\n[update-data] Results:');
-  let hasUpdates = false;
-  let hasErrors = false;
-  for (const [section, result] of Object.entries(results)) {
-    const icon = result.status === 'updated' ? '\u2713' : result.status === 'skipped' ? '\u2298' : '\u2717';
-    const details = [
-      result.reason ? `(${result.reason})` : '',
-      result.itemCount ? `${result.itemCount} items` : '',
-      result.newEvents !== undefined ? `${result.newEvents} new events` : '',
-    ].filter(Boolean).join(' \u2014 ');
-    console.log(`  ${icon} ${section}: ${result.status}${details ? ` \u2014 ${details}` : ''}`);
-    if (result.status === 'updated') hasUpdates = true;
-    if (result.status === 'error') hasErrors = true;
+  if (!existsSync(TRACKERS_DIR)) {
+    console.error(`[update-data] Trackers directory not found: ${TRACKERS_DIR}`);
+    process.exit(1);
   }
 
-  // Exit 0 if any section succeeded (partial success is OK)
-  if (hasUpdates) {
+  const trackerDirs = readdirSync(TRACKERS_DIR).filter(d => {
+    const configPath = join(TRACKERS_DIR, d, 'tracker.json');
+    return existsSync(configPath);
+  });
+
+  if (trackerDirs.length === 0) {
+    console.error('[update-data] No trackers found with tracker.json');
+    process.exit(1);
+  }
+
+  let globalHasUpdates = false;
+  let globalHasErrors = false;
+
+  for (const dir of trackerDirs) {
+    if (targetSlug !== 'all' && dir !== targetSlug) continue;
+
+    const configPath = join(TRACKERS_DIR, dir, 'tracker.json');
+    const config = JSON.parse(readFileSync(configPath, 'utf8'));
+
+    if (!config.ai?.enabledSections?.length) {
+      console.log(`[update-data] Skipping "${dir}" -- no AI sections configured`);
+      continue;
+    }
+
+    console.log(`\n${'='.repeat(60)}`);
+    console.log(`[update-data] Updating tracker: ${config.name} (${dir})`);
+    console.log(`${'='.repeat(60)}\n`);
+
+    // Set per-tracker globals
+    DATA_DIR = join(TRACKERS_DIR, dir, 'data');
+    EVENTS_DIR = join(DATA_DIR, 'events');
+    TRACKER_START_DATE = config.startDate || '2026-01-01';
+    ACTIVE_SYSTEM_PROMPT = config.ai.systemPrompt
+      ? config.ai.systemPrompt.replace(/\{\{today\}\}/g, today)
+      : DEFAULT_SYSTEM_PROMPT;
+    SEARCH_CONTEXT = config.ai.searchContext || 'events of interest';
+
+    if (config.ai.coordValidation) {
+      COORD_BOUNDS = config.ai.coordValidation;
+    }
+
+    // Ensure directories exist
+    if (!existsSync(DATA_DIR)) mkdirSync(DATA_DIR, { recursive: true });
+    if (!existsSync(EVENTS_DIR)) mkdirSync(EVENTS_DIR, { recursive: true });
+
+    // Determine which sections to run
+    const enabledSections = new Set<string>(config.ai.enabledSections);
+    const results: Record<string, SectionResult> = {};
+    const alreadyRan = new Set<string>();
+
+    // Always update meta (no API call needed)
+    results.meta = await updateMeta();
+
+    // Run enabled sections sequentially to avoid rate limits
+    for (const sectionName of enabledSections) {
+      if (!runAllSections && !sectionFilter.includes(sectionName)) continue;
+
+      const updater = SECTION_UPDATERS[sectionName];
+      if (!updater) {
+        console.warn(`[update-data] Unknown section "${sectionName}" — skipping`);
+        continue;
+      }
+
+      // Avoid running the same updater twice (e.g. "military" and "assets" both map to updateMilitary)
+      const updaterKey = updater.name;
+      if (alreadyRan.has(updaterKey)) continue;
+      alreadyRan.add(updaterKey);
+
+      results[sectionName] = await updater();
+    }
+
+    // Write update log
+    const log = {
+      lastRun: now,
+      tracker: dir,
+      provider: PROVIDER,
+      model: PROVIDER === 'openai' ? OPENAI_MODEL : ANTHROPIC_MODEL,
+      sections: results,
+    };
+    writeJSON('update-log.json', log);
+
+    // Summary for this tracker
+    console.log(`\n[${dir}] Results:`);
+    let hasUpdates = false;
+    let hasErrors = false;
+    for (const [section, result] of Object.entries(results)) {
+      const icon = result.status === 'updated' ? '\u2713' : result.status === 'skipped' ? '\u2298' : '\u2717';
+      const details = [
+        result.reason ? `(${result.reason})` : '',
+        result.itemCount ? `${result.itemCount} items` : '',
+        result.newEvents !== undefined ? `${result.newEvents} new events` : '',
+      ].filter(Boolean).join(' \u2014 ');
+      console.log(`  ${icon} ${section}: ${result.status}${details ? ` \u2014 ${details}` : ''}`);
+      if (result.status === 'updated') hasUpdates = true;
+      if (result.status === 'error') hasErrors = true;
+    }
+
+    if (hasUpdates) globalHasUpdates = true;
+    if (hasErrors) globalHasErrors = true;
+
+    console.log(`\n[update-data] Tracker "${dir}" update complete`);
+  }
+
+  // Global exit status
+  if (globalHasUpdates) {
     console.log('\n[update-data] Done. Some sections updated successfully.');
-    if (hasErrors) {
+    if (globalHasErrors) {
       console.warn('[update-data] Warning: some sections had errors (see above).');
     }
-  } else if (hasErrors) {
+  } else if (globalHasErrors) {
     console.error('\n[update-data] All sections failed.');
     process.exit(1);
   } else {

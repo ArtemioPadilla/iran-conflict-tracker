@@ -1,0 +1,41 @@
+[
+  {
+    "id": "jan21-f35-f15e-additional-deploy",
+    "year": "Jan 21",
+    "title": "Additional F-35 and F-15E Squadrons Deploy to Gulf",
+    "type": "military",
+    "detail": "The Pentagon confirms the deployment of an additional F-35A squadron from the 388th Fighter Wing (Hill AFB, Utah) and remaining F-15E aircraft from the 494th EFS to Gulf bases. The 35-aircraft deployment from RAF Lakenheath is now complete. Combined with existing assets, the US now has over 150 combat aircraft within striking range of Iran, the highest concentration since Operation Iraqi Freedom.",
+    "sources": [
+      { "name": "Pentagon", "tier": 1, "pole": "western" },
+      { "name": "CENTCOM", "tier": 1, "pole": "western" },
+      { "name": "Defence Security Asia", "tier": 3, "pole": "eastern" },
+      { "name": "Al Jazeera", "tier": 2, "pole": "middle_eastern" }
+    ]
+  },
+  {
+    "id": "jan21-iran-tests-missile",
+    "year": "Jan 21",
+    "title": "Iran Tests Ballistic Missile Amid Tensions",
+    "type": "military",
+    "detail": "Iran's IRGC Aerospace Force conducts a ballistic missile test, launching what analysts identify as a Khorramshahr-4 medium-range ballistic missile into the Dasht-e Kavir desert. The test, described by Iran as 'routine,' is widely interpreted as a signal to the US and its allies. The UN Security Council calls the test a 'provocation.' Israel raises its alert level.",
+    "sources": [
+      { "name": "IRNA", "tier": 1, "pole": "middle_eastern" },
+      { "name": "Reuters", "tier": 2, "pole": "western" },
+      { "name": "IDF", "tier": 1, "pole": "middle_eastern" },
+      { "name": "TASS", "tier": 2, "pole": "eastern" }
+    ]
+  },
+  {
+    "id": "jan21-diplomatic-channels-strained",
+    "year": "Jan 21",
+    "title": "Diplomatic Channels Between Iran and West Near Breaking Point",
+    "type": "diplomatic",
+    "detail": "Switzerland, which represents US interests in Iran, reports that diplomatic communications have become 'extremely difficult.' Oman, which has historically mediated between Iran and the US, fails to arrange backchannel talks. The EU's envoy to Tehran is recalled after Iran revokes their diplomatic privileges. Analysts warn that the closure of diplomatic channels significantly increases the risk of miscalculation.",
+    "sources": [
+      { "name": "Reuters", "tier": 2, "pole": "western" },
+      { "name": "Al Arabiya", "tier": 2, "pole": "middle_eastern" },
+      { "name": "Xinhua", "tier": 2, "pole": "eastern" },
+      { "name": "ICG", "tier": 3, "pole": "international" }
+    ]
+  }
+]

@@ -1,42 +1,66 @@
-# 2026 Iran Conflict — Intelligence Dashboard
+# Intel Dashboard — Multi-Topic Intelligence Platform
 
-A comprehensive, source-cited intelligence dashboard tracking the 2026 Iran-US/Israel conflict (Operation Epic Fury / Roaring Lion). Built with Astro 5, TypeScript, and React — auto-updated nightly via AI web search.
+A config-driven intelligence dashboard platform for tracking events of interest. Each tracker is a self-contained dashboard with its own data, map region, sections, and AI update prompts. Built with Astro 5, TypeScript, and React — auto-updated nightly via AI web search.
 
-**[→ Live Dashboard](https://artemiopadilla.github.io/iran-conflict-tracker/)**
+**[Live Dashboard](https://artemiopadilla.github.io/intel-dashboard/)**
 
 ---
 
-## Overview
+## Active Trackers
 
-This dashboard visualizes the ongoing conflict that began February 28, 2026, when the US and Israel launched coordinated strikes on Iran. It covers the full historical arc from 1941 through the present day across seven sections, with all data points individually sourced and classified by reliability tier.
+| Tracker | Description | Sections | Map | Globe |
+|---------|-------------|----------|-----|-------|
+| **[Iran Conflict](https://artemiopadilla.github.io/intel-dashboard/iran-conflict/)** | 2026 Iran-US/Israel conflict (Operation Epic Fury / Roaring Lion) | 9 | Middle East theater | 3D |
+| **[Ayotzinapa](https://artemiopadilla.github.io/intel-dashboard/ayotzinapa/)** | 2014 forced disappearance of 43 students in Iguala, Guerrero, Mexico | 6 | Mexico | — |
 
-### Sections
+---
 
-| # | Section | Description |
-|---|---------|-------------|
-| 01 | **Historical Timeline** | Interactive timeline from 1941 Allied invasion through Feb 28, 2026 strikes. Click any node for sourced details. |
-| 02 | **Intelligence Map** | SVG theater map with 27 plotted points: strike targets, retaliation hits, US assets, active fronts. Filterable by category. |
-| 03 | **Military Operations** | Tabbed view: strike targets in Iran, Iranian retaliation across Gulf/Israel, US assets deployed. |
-| 04 | **Humanitarian Impact** | Casualty table with contested/verified badges for every figure. |
-| 05 | **Economic Impact** | Market data with sparkline charts: Brent, WTI, gold, S&P 500, VIX, Iranian rial. |
-| 06 | **Contested Claims** | Side-by-side source comparison for the most disputed claims, with resolution assessments. |
-| 07 | **Political & Diplomatic** | Key statements from all parties with role/affiliation context. |
+## How It Works
+
+Each tracker is defined by a `tracker.json` config file + data directory:
+
+```
+trackers/
+  iran-conflict/
+    tracker.json          # Config: sections, map bounds, AI prompts, categories
+    data/
+      meta.json, kpis.json, timeline.json, map-points.json, ...
+      events/             # Daily partitioned event files (YYYY-MM-DD.json)
+  ayotzinapa/
+    tracker.json
+    data/...
+```
+
+The platform auto-discovers all trackers at build time and generates:
+- **Home page** (`/`) — card index of all trackers
+- **Dashboard** (`/{slug}/`) — full dashboard with configured sections
+- **3D Globe** (`/{slug}/globe/`) — if enabled in config
+- **About** (`/{slug}/about/`) — per-tracker about page
+
+### Adding a New Tracker
+
+1. Create `trackers/{slug}/tracker.json` (copy from an existing tracker as template)
+2. Configure: name, sections, map bounds/categories, AI prompts
+3. Add seed data files in `trackers/{slug}/data/`
+4. Run `npm run build` — done
 
 ### Source Tier System
 
 Every data point is classified:
 
-- 🔴 **Tier 1 — Primary/Official**: CENTCOM, IDF, White House, IAEA, UN, government statements
-- 🔵 **Tier 2 — Major Outlet**: Reuters, AP, CNN, BBC, NPR, Al Jazeera, Bloomberg, WaPo
-- 🟡 **Tier 3 — Institutional**: Oxford Economics, CSIS, HRW, HRANA, Hengaw, NetBlocks
-- ⚪ **Tier 4 — Unverified**: Social media, IRGC military claims, unattributed video
+- **Tier 1 — Primary/Official**: Government statements, official bodies
+- **Tier 2 — Major Outlet**: Reuters, AP, CNN, BBC, Al Jazeera, etc.
+- **Tier 3 — Institutional**: Research institutions, NGOs, watchdogs
+- **Tier 4 — Unverified**: Social media, unattributed claims
 
 ---
 
 ## Tech Stack
 
 - **[Astro 5](https://astro.build)** — static site generator with TypeScript
-- **React** — interactive islands (map, timeline, military tabs)
+- **React** — interactive islands (map, timeline, military tabs, 3D globe)
+- **CesiumJS** — 3D globe visualization
+- **Leaflet** — 2D interactive mapping
 - **Zod** — runtime schema validation for data integrity
 - **Anthropic Claude / OpenAI** — nightly AI-powered data updates via web search
 - **GitHub Actions** — CI/CD: auto-deploy + scheduled data refresh
@@ -46,52 +70,39 @@ Every data point is classified:
 ## Project Structure
 
 ```
-iran-conflict-tracker/
+intel-dashboard/
+├── trackers/                          # Tracker configs + data
+│   ├── iran-conflict/
+│   │   ├── tracker.json               # Tracker config
+│   │   └── data/                      # JSON data files
+│   │       ├── meta.json, kpis.json, timeline.json, ...
+│   │       └── events/                # Daily event partitions
+│   └── ayotzinapa/
+│       ├── tracker.json
+│       └── data/...
 ├── src/
-│   ├── pages/index.astro              # Composition root
-│   ├── layouts/BaseLayout.astro       # HTML shell, fonts, scroll animations
+│   ├── pages/
+│   │   ├── index.astro                # Home: tracker index
+│   │   └── [tracker]/                 # Dynamic routes per tracker
+│   │       ├── index.astro            # Dashboard
+│   │       ├── globe.astro            # 3D globe (if enabled)
+│   │       └── about.astro            # About page
+│   ├── layouts/BaseLayout.astro       # HTML shell, SEO, fonts
 │   ├── components/
-│   │   ├── static/                    # Server-rendered (zero JS shipped)
-│   │   │   ├── Header.astro
-│   │   │   ├── Hero.astro
-│   │   │   ├── KpiStrip.astro
-│   │   │   ├── CasualtyTable.astro
-│   │   │   ├── EconGrid.astro
-│   │   │   ├── ClaimsMatrix.astro
-│   │   │   ├── PoliticalGrid.astro
-│   │   │   ├── SourceLegend.astro
-│   │   │   └── Footer.astro
-│   │   └── islands/                   # Client-hydrated React components
-│   │       ├── TimelineSection.tsx
-│   │       ├── IntelMap.tsx
-│   │       └── MilitaryTabs.tsx
-│   ├── data/                          # JSON data files (AI-updatable)
-│   │   ├── kpis.json
-│   │   ├── timeline.json
-│   │   ├── map-points.json
-│   │   ├── map-lines.json
-│   │   ├── strike-targets.json
-│   │   ├── retaliation.json
-│   │   ├── assets.json
-│   │   ├── casualties.json
-│   │   ├── econ.json
-│   │   ├── claims.json
-│   │   ├── political.json
-│   │   ├── meta.json
-│   │   └── update-log.json
-│   ├── lib/                           # Shared utilities & types
-│   │   ├── schemas.ts                 # Zod schemas (single source of truth)
-│   │   ├── map-utils.ts              # SVG map projection & data
-│   │   ├── tier-utils.ts             # Source tier helpers
-│   │   └── constants.ts              # UI structure constants
-│   └── styles/global.css             # Dark theme stylesheet
+│   │   ├── static/                    # Server-rendered (zero JS)
+│   │   └── islands/                   # Client-hydrated React
+│   ├── lib/
+│   │   ├── tracker-config.ts          # TrackerConfigSchema (Zod)
+│   │   ├── tracker-registry.ts        # Auto-discovers trackers
+│   │   ├── data.ts                    # loadTrackerData(slug)
+│   │   ├── schemas.ts                 # Data Zod schemas
+│   │   └── ...                        # Utilities
+│   └── styles/global.css              # Dark theme
 ├── scripts/
-│   └── update-data.ts                 # AI nightly update script
+│   └── update-data.ts                 # AI nightly updater (multi-tracker)
 ├── .github/workflows/
 │   ├── deploy.yml                     # Build + deploy to GitHub Pages
 │   └── update-data.yml                # Nightly AI data refresh
-├── astro.config.mjs
-├── tsconfig.json
 └── package.json
 ```
 
@@ -117,37 +128,35 @@ npm run preview
 
 ## Nightly AI Updates
 
-The dashboard data is automatically refreshed daily at 6 AM UTC via GitHub Actions. The update script uses AI with web search to find new developments and updates all data sections.
+Data is automatically refreshed daily at 6 AM UTC via GitHub Actions. The update script iterates over all trackers with AI sections configured, using each tracker's custom system prompt and search context.
 
 ### Supported Providers
 
 | Provider | API Key Env Var | Model Env Var | Default Model |
 |----------|----------------|---------------|---------------|
-| **Anthropic** (default) | `ANTHROPIC_API_KEY` | `ANTHROPIC_MODEL` | `claude-sonnet-4-20250514` |
+| **Anthropic** (default) | `ANTHROPIC_API_KEY` | `ANTHROPIC_MODEL` | `claude-sonnet-4-6` |
 | **OpenAI** | `OPENAI_API_KEY` | `OPENAI_MODEL` | `gpt-4o` |
-
-Set `AI_PROVIDER` to `anthropic` or `openai` to choose the provider.
 
 ### Run locally
 
 ```bash
-# Using Anthropic (default)
+# Update all trackers
 ANTHROPIC_API_KEY=sk-ant-... npm run update-data
+
+# Update a specific tracker
+TRACKER_SLUG=iran-conflict ANTHROPIC_API_KEY=sk-ant-... npm run update-data
 
 # Using OpenAI
 AI_PROVIDER=openai OPENAI_API_KEY=sk-... npm run update-data
-
-# Update specific sections only
-UPDATE_SECTIONS=timeline,kpis,casualties npm run update-data
 ```
 
 ### GitHub Actions setup
 
-1. Go to repo **Settings → Secrets and variables → Actions**
+1. Go to repo **Settings > Secrets and variables > Actions**
 2. Add `ANTHROPIC_API_KEY` (and/or `OPENAI_API_KEY`)
 3. Optionally add `AI_PROVIDER` if using OpenAI
 
-The workflow commits changes to `src/data/` and pushes to `main`, which triggers the deploy workflow automatically.
+The workflow commits changes to `trackers/*/data/` and pushes to `main`, triggering the deploy workflow.
 
 ---
 
@@ -155,10 +164,10 @@ The workflow commits changes to `src/data/` and pushes to `main`, which triggers
 
 ### GitHub Pages (Recommended)
 
-1. Go to repo **Settings → Pages**
+1. Go to repo **Settings > Pages**
 2. Set source to **GitHub Actions**
 3. The included workflow auto-deploys on every push to `main`
-4. Site available at: `https://<username>.github.io/iran-conflict-tracker/`
+4. Site available at: `https://<username>.github.io/intel-dashboard/`
 
 ### Other hosts
 
@@ -169,9 +178,34 @@ npm run build
 
 ---
 
+## Tracker Config Reference
+
+Each `tracker.json` supports these fields:
+
+| Field | Required | Description |
+|-------|----------|-------------|
+| `slug` | Yes | URL path segment (lowercase, hyphens) |
+| `name` | Yes | Full display name |
+| `shortName` | Yes | Card/header title |
+| `description` | Yes | SEO and card description |
+| `status` | Yes | `active`, `archived`, or `draft` |
+| `startDate` | Yes | ISO date string (for day count) |
+| `sections` | Yes | Array of section IDs to render |
+| `navSections` | Yes | Navigation structure |
+| `map` | No | Map config: bounds, center, categories |
+| `globe` | No | Globe config: camera presets |
+| `militaryTabs` | No | Custom tab labels for military section |
+| `politicalAvatars` | No | Avatar IDs for political figures |
+| `eventTypes` | No | Custom event type strings |
+| `ai` | No | AI update config: systemPrompt, searchContext, enabledSections |
+| `icon` | No | Emoji for index card |
+| `color` | No | Accent color (hex) |
+
+---
+
 ## Disclaimer
 
-This dashboard aggregates publicly available information from multiple sources and perspectives. It does not endorse any particular political position or narrative. All contested claims are explicitly marked. Source classifications reflect general reliability tiers, not endorsements of specific reporting.
+This platform aggregates publicly available information from multiple sources and perspectives. It does not endorse any particular political position or narrative. All contested claims are explicitly marked. Source classifications reflect general reliability tiers, not endorsements of specific reporting.
 
 ---
 

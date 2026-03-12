@@ -1,0 +1,290 @@
+[
+  {
+    "id": "trump",
+    "name": "Donald Trump",
+    "role": "US President",
+    "avatar": "us",
+    "initial": "DT",
+    "quote": "We're getting very close to finishing that too. The conflict is very far ahead of schedule. No deal with Iran except unconditional surrender. Most of the people we had in mind [to negotiate with] are dead. Pretty soon we are not going to know anybody.",
+    "lastUpdated": "2026-03-10T12:00:00.000Z"
+  },
+  {
+    "id": "leavitt",
+    "name": "Karoline Leavitt",
+    "role": "White House Press Secretary",
+    "avatar": "us",
+    "initial": "KL",
+    "quote": "When the President determines Iran no longer poses a threat to the United States and the goals of Operation Epic Fury have been met, Iran will effectively be in a state of unconditional surrender. We expect the war to continue for approximately four to six more weeks.",
+    "lastUpdated": "2026-03-10T12:00:00.000Z"
+  },
+  {
+    "id": "hegseth",
+    "name": "Pete Hegseth",
+    "role": "Secretary of Defense",
+    "avatar": "us",
+    "initial": "PH",
+    "quote": "This is not an endless war like Iraq. More American casualties are likely, but the operation aims to dismantle Iran's missile capabilities and prevent nuclear proliferation.",
+    "lastUpdated": "2026-03-08T21:56:37.543Z"
+  },
+  {
+    "id": "mojtaba_khamenei",
+    "name": "Mojtaba Khamenei",
+    "role": "Supreme Leader of Iran (appointed Mar 8)",
+    "avatar": "ir",
+    "initial": "MK",
+    "quote": "Appointed by Assembly of Experts on March 8, with IRGC, President Pezeshkian, and senior officials pledging allegiance. The 56-year-old hardliner maintains deep ties with the Revolutionary Guard. Russia pledged 'unwavering' support; Trump said any new supreme leader would need his approval or 'he's not going to last long.'",
+    "lastUpdated": "2026-03-10"
+  },
+  {
+    "id": "pezeshkian",
+    "name": "Masoud Pezeshkian",
+    "role": "President of Iran",
+    "avatar": "ir",
+    "initial": "MP",
+    "quote": "That we surrender unconditionally is a dream that they must take with themselves to the grave. What we adhere to are international laws and humanitarian frameworks. Iran will never capitulate.",
+    "lastUpdated": "2026-03-10T12:00:00.000Z"
+  },
+  {
+    "id": "larijani",
+    "name": "Ali Larijani",
+    "role": "Security Council Secretary",
+    "avatar": "ir",
+    "initial": "AL",
+    "quote": "Iran will not negotiate with the US. The enemy is trying to plunder and disintegrate our nation. Any secessionist movement will face severe consequences.",
+    "lastUpdated": "2026-03-08T21:56:37.543Z"
+  },
+  {
+    "id": "irgc",
+    "name": "IRGC Statement",
+    "role": "Islamic Revolutionary Guard Corps",
+    "avatar": "ir",
+    "initial": "IR",
+    "quote": "The enemy must know that its happy days are over, and it will no longer be safe anywhere in the world, even in its own homes.",
+    "lastUpdated": "2026-03-08T21:56:37.543Z"
+  },
+  {
+    "id": "kaine",
+    "name": "Tim Kaine",
+    "role": "US Senator (D-VA)",
+    "avatar": "us",
+    "initial": "TK",
+    "quote": "The Constitution says we are not supposed to be at war without a vote of Congress.",
+    "lastUpdated": "2026-03-08T21:56:37.543Z"
+  },
+  {
+    "id": "guterres",
+    "name": "António Guterres",
+    "role": "UN Secretary-General",
+    "avatar": "un",
+    "initial": "AG",
+    "quote": "The world must pull back from the brink of a wider war. I deplore the military strikes across Iran by Israel and the United States of America, and the subsequent retaliatory strikes by Iran.",
+    "lastUpdated": "2026-03-08T21:56:37.543Z"
+  },
+  {
+    "id": "massie",
+    "name": "Thomas Massie",
+    "role": "US Rep. (R-KY)",
+    "avatar": "us",
+    "initial": "TM",
+    "quote": "I am opposed to this War. This is not 'America First.'",
+    "lastUpdated": "2026-03-08T21:56:37.543Z"
+  },
+  {
+    "id": "erdogan",
+    "name": "Recep Tayyip Erdoğan",
+    "role": "President of Turkey",
+    "avatar": "other",
+    "initial": "RE",
+    "quote": "US-Israeli attacks violate Iran's sovereignty. However, Iran's retaliatory attacks on Gulf countries are also unacceptable.",
+    "lastUpdated": "2026-03-08T21:56:37.543Z"
+  },
+  {
+    "id": "araghchi",
+    "name": "Abbas Araghchi",
+    "role": "Iranian Foreign Minister",
+    "avatar": "ir",
+    "initial": "AA",
+    "quote": "We are not asking for a ceasefire. We don't see any reason why we should negotiate. We need to continue fighting for the sake of our people. Negotiate with the U.S. when we negotiated with them twice, and every time they attacked us in the middle of negotiations?",
+    "lastUpdated": "2026-03-10"
+  },
+  {
+    "id": "rubio",
+    "name": "Marco Rubio",
+    "role": "US Secretary of State",
+    "avatar": "us",
+    "initial": "MR",
+    "quote": "We knew that there was going to be an Israeli action. We knew that that would precipitate an attack against American forces, and we knew that if we didn't pre-emptively go after them before they launched those attacks, we would suffer higher casualties.",
+    "lastUpdated": "2026-03-08T21:56:37.543Z"
+  },
+  {
+    "id": "netanyahu",
+    "name": "Benjamin Netanyahu",
+    "role": "Israeli Prime Minister",
+    "avatar": "il",
+    "initial": "BN",
+    "quote": "There are many signs that [Khamenei] is no longer alive. Our joint operation will create the conditions for the brave Iranian people to take their fate into their own hands.",
+    "lastUpdated": "2026-03-08T21:56:37.543Z"
+  },
+  {
+    "id": "lavrov",
+    "name": "Sergey Lavrov",
+    "role": "Russian Foreign Minister",
+    "avatar": "other",
+    "initial": "SL",
+    "quote": "The joint U.S.-Israeli military strikes on Iran are a preplanned and unprovoked act of armed aggression against a sovereign UN member state.",
+    "lastUpdated": "2026-03-08T21:56:37.543Z"
+  },
+  {
+    "id": "pope_leo",
+    "name": "Pope Leo XIV",
+    "role": "Pope",
+    "avatar": "other",
+    "initial": "PL",
+    "quote": "I strongly condemn the escalating violence in Iran and the broader Middle East, warning against a 'spiral of violence' that could lead to irreversible division.",
+    "lastUpdated": "2026-03-08T21:56:37.543Z"
+  },
+  {
+    "id": "iravani",
+    "name": "Amir Saeid Iravani",
+    "role": "Iran's Ambassador to the UN",
+    "avatar": "ir",
+    "initial": "AI",
+    "quote": "This is not only an act of aggression; it is a war crime and a crime against humanity.",
+    "lastUpdated": "2026-03-08T21:56:37.543Z"
+  },
+  {
+    "id": "waltz",
+    "name": "Mike Waltz",
+    "role": "US Ambassador to the UN",
+    "avatar": "us",
+    "initial": "MW",
+    "quote": "Iran cannot have a nuclear weapon. That principle is not a matter of politics. It's a matter of global security.",
+    "lastUpdated": "2026-03-08T21:56:37.543Z"
+  },
+  {
+    "id": "danon",
+    "name": "Danny Danon",
+    "role": "Israel's UN Ambassador",
+    "avatar": "il",
+    "initial": "DD",
+    "quote": "We are stopping extremism before it becomes unstoppable. We will ensure that no radical regime armed with nuclear weapons and ballistic missiles can threaten our people or the entire world.",
+    "lastUpdated": "2026-03-08T21:56:37.543Z"
+  },
+  {
+    "id": "najafi",
+    "name": "Reza Najafi",
+    "role": "Iran's Ambassador to the IAEA",
+    "avatar": "ir",
+    "initial": "RN",
+    "quote": "The accusations against Iran developing nuclear weapons are baseless. The attacks on Natanz are unlawful and must be condemned.",
+    "lastUpdated": "2026-03-08T21:56:37.543Z"
+  },
+  {
+    "id": "johnson",
+    "name": "Mike Johnson",
+    "role": "US House Speaker",
+    "avatar": "us",
+    "initial": "MJ",
+    "quote": "Israel's imminent plans to act independently against Iran necessitated our preemptive involvement to avoid higher casualties.",
+    "lastUpdated": "2026-03-08T21:56:37.543Z"
+  },
+  {
+    "id": "sharif",
+    "name": "Shehbaz Sharif",
+    "role": "Prime Minister of Pakistan",
+    "avatar": "other",
+    "initial": "SS",
+    "quote": "International law prohibits the targeting of heads of state. The killing of Iran’s leader is unacceptable.",
+    "lastUpdated": "2026-03-08T21:56:37.543Z"
+  },
+  {
+    "id": "ramaphosa",
+    "name": "Cyril Ramaphosa",
+    "role": "President of South Africa",
+    "avatar": "other",
+    "initial": "CR",
+    "quote": "There can be no military solution to fundamentally political problems. The 'pre-emptive' justification for the war is questionable.",
+    "lastUpdated": "2026-03-08T21:56:37.543Z"
+  },
+  {
+    "id": "xi",
+    "name": "Xi Jinping",
+    "role": "President of China",
+    "avatar": "other",
+    "initial": "XJ",
+    "quote": "It is unacceptable to blatantly kill the leader of a sovereign state. Iran's sovereignty, security, and territorial integrity should be respected.",
+    "lastUpdated": "2026-03-08T21:56:37.543Z"
+  },
+  {
+    "id": "turk",
+    "name": "Volker Türk",
+    "role": "UN High Commissioner for Human Rights",
+    "avatar": "un",
+    "initial": "VT",
+    "quote": "I deplore the military strikes across Iran by Israel and the United States of America, and the subsequent retaliatory strikes by Iran. As always, in any armed conflict, it is civilians who end up paying the ultimate price.",
+    "lastUpdated": "2026-03-08T21:56:37.543Z"
+  },
+  {
+    "id": "baghaei",
+    "name": "Esmaeil Baghaei",
+    "role": "Iran's Ministry of Foreign Affairs Spokesman",
+    "avatar": "ir",
+    "initial": "EB",
+    "quote": "Any American intervention would be a recipe for an all-out war in the region.",
+    "lastUpdated": "2026-03-07T07:23:42.482Z"
+  },
+  {
+    "id": "ghalibaf",
+    "name": "Mohammad Bagher Ghalibaf",
+    "role": "Speaker of the Iranian Parliament",
+    "avatar": "ir",
+    "initial": "MBG",
+    "quote": "The U.S. and Israel will regret their actions. Iran's response will be swift and decisive.",
+    "lastUpdated": "2026-03-07T07:23:42.482Z"
+  },
+  {
+    "id": "danilov",
+    "name": "Oleksiy Danilov",
+    "role": "Secretary of the National Security and Defense Council of Ukraine",
+    "avatar": "other",
+    "initial": "OD",
+    "quote": "Ukraine stands ready to assist in counter-drone efforts to ensure regional stability.",
+    "lastUpdated": "2026-03-06T04:38:18.553Z"
+  },
+  {
+    "id": "aljubeir",
+    "name": "Adel al-Jubeir",
+    "role": "Saudi Minister of State for Foreign Affairs",
+    "avatar": "other",
+    "initial": "AAJ",
+    "quote": "Iran's aggression and violations of the sovereignty of Gulf states will have grave consequences if continued.",
+    "lastUpdated": "2026-03-06T04:38:18.553Z"
+  },
+  {
+    "id": "albusaidi",
+    "name": "Badr Albusaidi",
+    "role": "Oman's Foreign Minister",
+    "avatar": "other",
+    "initial": "BA",
+    "quote": "Active and serious negotiations have yet again been undermined. I urge the United States not to get sucked in further. This is not your war.",
+    "lastUpdated": "2026-03-06T04:38:18.553Z"
+  },
+  {
+    "id": "von_der_leyen",
+    "name": "Ursula von der Leyen",
+    "role": "European Commission President",
+    "avatar": "other",
+    "initial": "UVL",
+    "quote": "The conflict is greatly concerning. All parties must exercise maximum restraint, protect civilians, and fully respect international law.",
+    "lastUpdated": "2026-03-06T04:38:18.553Z"
+  },
+  {
+    "id": "costa",
+    "name": "Antonio Costa",
+    "role": "European Council President",
+    "avatar": "other",
+    "initial": "AC",
+    "quote": "We urge all parties to exercise maximum restraint, to protect civilians, and to fully respect international law.",
+    "lastUpdated": "2026-03-06T04:38:18.553Z"
+  }
+]

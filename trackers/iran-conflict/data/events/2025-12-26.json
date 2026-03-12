@@ -1,0 +1,42 @@
+[
+  {
+    "id": "rial-nears-1445000",
+    "year": "Dec 26",
+    "title": "Rial Nears 1,445,000/USD as Exchange Shops Close",
+    "type": "economic",
+    "detail": "The rial traded at 1,440,000-1,445,000 per US dollar, with many exchange shops refusing to sell dollars altogether. The Central Bank ordered police to shut down unlicensed currency dealers. Black market transactions moved to encrypted messaging platforms, making the true rate difficult to track.",
+    "sources": [
+      { "name": "Donya-e Eqtesad", "tier": 2, "pole": "middle_eastern" },
+      { "name": "Reuters", "tier": 2, "pole": "western" },
+      { "name": "Iran International", "tier": 2, "pole": "western" }
+    ],
+    "lastUpdated": "2026-03-10"
+  },
+  {
+    "id": "tehran-bazaar-unrest-grows",
+    "year": "Dec 26",
+    "title": "Tehran Grand Bazaar Merchants Organize Protest Plans",
+    "type": "economic",
+    "detail": "Merchants in Tehran's Grand Bazaar circulated messages on social media calling for a coordinated shutdown. Mobile phone sellers in the Alaeddin and Charsoo complexes reported a 60% drop in sales as customers could not afford goods repriced daily. Guild leaders warned that a full bazaar strike was imminent.",
+    "sources": [
+      { "name": "ILNA", "tier": 2, "pole": "middle_eastern" },
+      { "name": "BBC Persian", "tier": 2, "pole": "western" },
+      { "name": "Shargh Daily", "tier": 2, "pole": "middle_eastern" }
+    ],
+    "lastUpdated": "2026-03-10"
+  },
+  {
+    "id": "food-import-crisis-dec26",
+    "year": "Dec 26",
+    "title": "Food Import Financing Under Strain",
+    "type": "humanitarian",
+    "detail": "Iranian importers reported difficulty securing letters of credit for essential food imports including wheat, rice, and cooking oil. Banks demanded dollar-denominated guarantees that many traders could no longer afford. The government allocated emergency foreign currency reserves for basic goods, but traders said disbursement was slow and insufficient.",
+    "sources": [
+      { "name": "WFP", "tier": 1, "pole": "international" },
+      { "name": "Financial Times", "tier": 2, "pole": "western" },
+      { "name": "ISNA", "tier": 2, "pole": "middle_eastern" },
+      { "name": "Xinhua", "tier": 2, "pole": "eastern" }
+    ],
+    "lastUpdated": "2026-03-10"
+  }
+]

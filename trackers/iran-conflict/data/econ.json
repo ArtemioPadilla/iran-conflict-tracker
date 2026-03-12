@@ -1,0 +1,181 @@
+[
+  {
+    "id": "brent_crude",
+    "label": "Brent Crude",
+    "value": "$112.98/bbl",
+    "change": "+45.3%",
+    "direction": "up",
+    "sparkData": [
+      77.74,
+      79.37,
+      82,
+      88,
+      94,
+      108,
+      112.98
+    ],
+    "color": "#e74c3c",
+    "source": "Reuters / Al Jazeera",
+    "lastUpdated": "2026-03-10T06:00:00.000Z"
+  },
+  {
+    "id": "wti_crude",
+    "label": "WTI Crude",
+    "value": "$109.50/bbl",
+    "change": "+43.7%",
+    "direction": "up",
+    "sparkData": [
+      71.23,
+      72.4,
+      76,
+      84,
+      91,
+      103,
+      109.5
+    ],
+    "color": "#e67e22",
+    "source": "Reuters / Al Jazeera",
+    "lastUpdated": "2026-03-10T06:00:00.000Z"
+  },
+  {
+    "id": "gold_spot",
+    "label": "Gold Spot",
+    "value": "$5,400/oz",
+    "change": "+2.7%",
+    "direction": "up",
+    "sparkData": [
+      5260,
+      5394,
+      5480,
+      5560,
+      5650,
+      5740,
+      5820,
+      5406,
+      5112,
+      5400
+    ],
+    "color": "#f1c40f",
+    "source": "Reuters / CNN",
+    "lastUpdated": "2026-03-10"
+  },
+  {
+    "id": "sp500",
+    "label": "S&P 500",
+    "value": "6,769",
+    "change": "-2.2%",
+    "direction": "down",
+    "sparkData": [
+      6920,
+      6860,
+      6640,
+      6420,
+      6310,
+      6240,
+      6180,
+      6724,
+      6769
+    ],
+    "color": "#3498db",
+    "source": "JPMorgan / Bloomberg",
+    "lastUpdated": "2026-03-10"
+  },
+  {
+    "id": "vix",
+    "label": "VIX",
+    "value": "31.5",
+    "change": "+77%",
+    "direction": "up",
+    "sparkData": [
+      17.8,
+      21.17,
+      28,
+      34,
+      38,
+      41,
+      42.8,
+      31.5
+    ],
+    "color": "#9b59b6",
+    "source": "CBOE",
+    "lastUpdated": "2026-03-10"
+  },
+  {
+    "id": "iranian_rial",
+    "label": "Iranian Rial",
+    "value": "3.5M/$1",
+    "change": "Record low",
+    "direction": "up",
+    "sparkData": [
+      800,
+      1500,
+      1800,
+      2200,
+      2600,
+      2900,
+      3200,
+      3500
+    ],
+    "color": "#e74c3c",
+    "source": "Iran Intl",
+    "lastUpdated": "2026-03-10"
+  },
+  {
+    "id": "gas_price_us",
+    "label": "US Gas Price",
+    "value": "$3.45/gal",
+    "change": "+50¢ in 1 week",
+    "direction": "up",
+    "sparkData": [
+      2.95,
+      3.1,
+      3.2,
+      3.3,
+      3.35,
+      3.4,
+      3.45
+    ],
+    "color": "#e74c3c",
+    "source": "NPR / AAA",
+    "lastUpdated": "2026-03-10T06:00:00.000Z"
+  },
+  {
+    "id": "shipping_rates",
+    "label": "Shipping Rates",
+    "value": "Near Zero",
+    "change": "Hormuz effectively closed",
+    "direction": "up",
+    "sparkData": [
+      100,
+      120,
+      180,
+      240,
+      310,
+      380,
+      440,
+      500
+    ],
+    "color": "#e67e22",
+    "source": "Freightos / Bloomberg / Kpler",
+    "lastUpdated": "2026-03-10T12:00:00.000Z"
+  },
+  {
+    "id": "hormuz_traffic",
+    "label": "Hormuz Traffic",
+    "value": "~0%",
+    "change": "IRGC drone closure",
+    "direction": "down",
+    "sparkData": [
+      100,
+      90,
+      60,
+      30,
+      10,
+      3,
+      1
+    ],
+    "color": "#e74c3c",
+    "source": "Kpler / NPR / CNBC",
+    "lastUpdated": "2026-03-10T12:00:00.000Z"
+  }
+]

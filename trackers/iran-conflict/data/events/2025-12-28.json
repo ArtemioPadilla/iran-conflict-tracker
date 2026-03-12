@@ -1,0 +1,15 @@
+[
+  {
+    "id": "un_condemns_iran_dec",
+    "year": "Dec 28",
+    "title": "UN Condemns Iran Violence",
+    "type": "diplomatic",
+    "detail": "UN High Commissioner for Human Rights calls for independent investigation into protest killings. Rial collapses to 1.6M/$1. Russia and China block Security Council statement.",
+    "sources": [
+      { "name": "UN OHCHR", "tier": 1, "pole": "international" },
+      { "name": "Reuters", "tier": 2, "pole": "western" },
+      { "name": "Xinhua", "tier": 2, "pole": "eastern" },
+      { "name": "IRNA", "tier": 1, "pole": "middle_eastern" }
+    ]
+  }
+]

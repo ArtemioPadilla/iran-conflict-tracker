@@ -1,50 +1,233 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import Header from '../components/static/Header.astro';
-import Hero from '../components/static/Hero.astro';
-import KpiStrip from '../components/static/KpiStrip.astro';
-import CasualtyTable from '../components/static/CasualtyTable.astro';
-import EconGrid from '../components/static/EconGrid.astro';
-import ClaimsMatrix from '../components/static/ClaimsMatrix.astro';
-import PoliticalGrid from '../components/static/PoliticalGrid.astro';
-import SourceLegend from '../components/static/SourceLegend.astro';
-import Footer from '../components/static/Footer.astro';
+import { loadAllTrackers } from '../lib/tracker-registry';
 
-import TimelineSection from '../components/islands/TimelineSection';
-import IntelMap from '../components/islands/IntelMap';
-import MilitaryTabs from '../components/islands/MilitaryTabs';
-
-import {
-  kpis, timeline, mapPoints, mapLines,
-  strikeTargets, retaliationData, assetsData,
-  casualties, econ, claims, political, meta,
-} from '../lib/data';
-import { flattenTimelineEvents } from '../lib/timeline-utils';
-
-const flatEvents = flattenTimelineEvents(timeline);
+const trackers = loadAllTrackers();
+const active = trackers.filter(t => t.status === 'active');
+const archived = trackers.filter(t => t.status === 'archived');
 ---
-<BaseLayout title="2026 Iran Conflict — Live Intelligence Dashboard">
-  <Header meta={meta} />
-  <main id="main-content">
-    <Hero meta={meta} />
-    <KpiStrip kpis={kpis} />
+<BaseLayout title="Intel Dashboard — Event Tracker Platform">
+  <main class="index-page">
+    <header class="index-hero">
+      <h1 class="index-title">Intel Dashboard</h1>
+      <p class="index-subtitle">Multi-topic intelligence dashboards with sourced data, interactive maps, and contested claims tracking.</p>
+    </header>
 
-    <!-- Theater: sticky map + scrolling intel -->
-    <div class="theater-layout">
-      <div class="theater-map">
-        <IntelMap client:only="react" points={mapPoints} lines={mapLines} events={flatEvents} />
-      </div>
-      <div class="theater-scroll">
-        <TimelineSection client:visible timeline={timeline} />
-        <MilitaryTabs client:visible strikeTargets={strikeTargets} retaliationData={retaliationData} assetsData={assetsData} />
-        <CasualtyTable casualties={casualties} />
-        <EconGrid econ={econ} />
-        <ClaimsMatrix claims={claims} />
-        <PoliticalGrid political={political} />
-      </div>
-    </div>
+    {active.length > 0 && (
+      <section class="tracker-section">
+        <h2 class="section-label">Active Trackers</h2>
+        <div class="tracker-grid">
+          {active.map(t => (
+            <a href={`/${t.slug}/`} class="tracker-card" style={`--card-accent: ${t.color || '#3498db'}`}>
+              <div class="tracker-card-header">
+                <span class="tracker-icon">{t.icon || ''}</span>
+                <span class="tracker-status active">LIVE</span>
+              </div>
+              <h3 class="tracker-name">{t.shortName}</h3>
+              <p class="tracker-desc">{t.description}</p>
+              <div class="tracker-meta">
+                <span class="tracker-sections">{t.sections.length} sections</span>
+                {t.map?.enabled && <span class="tracker-has-map">Map</span>}
+                {t.globe?.enabled && <span class="tracker-has-globe">3D Globe</span>}
+              </div>
+            </a>
+          ))}
+        </div>
+      </section>
+    )}
 
-    <SourceLegend />
+    {archived.length > 0 && (
+      <section class="tracker-section">
+        <h2 class="section-label">Archived</h2>
+        <div class="tracker-grid">
+          {archived.map(t => (
+            <a href={`/${t.slug}/`} class="tracker-card archived" style={`--card-accent: ${t.color || '#6b7280'}`}>
+              <div class="tracker-card-header">
+                <span class="tracker-icon">{t.icon || ''}</span>
+                <span class="tracker-status archived">ARCHIVED</span>
+              </div>
+              <h3 class="tracker-name">{t.shortName}</h3>
+              <p class="tracker-desc">{t.description}</p>
+            </a>
+          ))}
+        </div>
+      </section>
+    )}
+
+    <footer class="index-footer">
+      <p>Open-source intelligence platform. <a href="https://github.com/ArtemioPadilla/intel-dashboard" target="_blank" rel="noopener noreferrer">View on GitHub</a></p>
+    </footer>
   </main>
-  <Footer meta={meta} />
 </BaseLayout>
+
+<style>
+  .index-page {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem 4rem;
+    min-height: 100vh;
+  }
+
+  .index-hero {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .index-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    letter-spacing: -0.03em;
+    margin-bottom: 0.5rem;
+  }
+
+  .index-subtitle {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    max-width: 560px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+
+  .tracker-section {
+    margin-bottom: 2.5rem;
+  }
+
+  .section-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .tracker-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1rem;
+  }
+
+  .tracker-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.25rem;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    border-top: 3px solid var(--card-accent, var(--accent-blue));
+  }
+
+  .tracker-card:hover {
+    border-color: var(--border-light);
+    background: var(--bg-card-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+
+  .tracker-card.archived {
+    opacity: 0.7;
+  }
+
+  .tracker-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .tracker-icon {
+    font-size: 1.5rem;
+  }
+
+  .tracker-status {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.6rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
+  }
+
+  .tracker-status.active {
+    background: rgba(46, 204, 113, 0.15);
+    color: var(--accent-green);
+    border: 1px solid rgba(46, 204, 113, 0.3);
+  }
+
+  .tracker-status.archived {
+    background: rgba(149, 165, 166, 0.15);
+    color: var(--text-muted);
+    border: 1px solid var(--border);
+  }
+
+  .tracker-name {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0;
+  }
+
+  .tracker-desc {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    margin: 0;
+    flex: 1;
+  }
+
+  .tracker-meta {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-top: 0.25rem;
+  }
+
+  .tracker-meta span {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.62rem;
+    color: var(--text-muted);
+    background: var(--bg-secondary);
+    padding: 0.15rem 0.4rem;
+    border-radius: 3px;
+    border: 1px solid var(--border);
+  }
+
+  .index-footer {
+    text-align: center;
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+  }
+
+  .index-footer p {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.78rem;
+    color: var(--text-muted);
+  }
+
+  .index-footer a {
+    color: var(--accent-blue);
+    text-decoration: none;
+  }
+
+  .index-footer a:hover {
+    text-decoration: underline;
+  }
+
+  @media (max-width: 640px) {
+    .index-page { padding: 2rem 1rem 3rem; }
+    .index-title { font-size: 2rem; }
+    .tracker-grid { grid-template-columns: 1fr; }
+  }
+</style>

@@ -1,7 +1,6 @@
 /**
- * Centralized data loader — reads JSON files, merges partitioned events,
- * validates everything through Zod schemas, and exports typed arrays
- * for consumption by Astro pages and React islands.
+ * Centralized data loader — reads tracker data files, merges partitioned events,
+ * validates everything through Zod schemas, and returns typed data object.
  */
 import { z } from 'zod';
 import {
@@ -19,92 +18,108 @@ import {
   MetaSchema,
 } from './schemas';
 
-// ── Static JSON imports (Vite-resolved at build time) ──
-
-import kpisRaw from '../data/kpis.json';
-import timelineRaw from '../data/timeline.json';
-import mapPointsRaw from '../data/map-points.json';
-import mapLinesRaw from '../data/map-lines.json';
-import strikeTargetsRaw from '../data/strike-targets.json';
-import retaliationRaw from '../data/retaliation.json';
-import assetsRaw from '../data/assets.json';
-import casualtiesRaw from '../data/casualties.json';
-import econRaw from '../data/econ.json';
-import claimsRaw from '../data/claims.json';
-import politicalRaw from '../data/political.json';
-import metaRaw from '../data/meta.json';
-
-// ── Partitioned event files (Vite glob import) ──
-
-const eventModules = import.meta.glob<{ default: unknown }>(
-  '../data/events/*.json',
+// ── Eagerly load all tracker data at build time ──
+const dataModules = import.meta.glob<{ default: unknown }>(
+  '../../trackers/*/data/*.json',
   { eager: true },
 );
 
+const eventModules = import.meta.glob<{ default: unknown }>(
+  '../../trackers/*/data/events/*.json',
+  { eager: true },
+);
+
+// ── Helper: get a data file for a specific tracker ──
+function getTrackerData(slug: string, filename: string): unknown {
+  const key = `../../trackers/${slug}/data/${filename}`;
+  const mod = dataModules[key];
+  if (!mod) return undefined;
+  return 'default' in mod ? mod.default : mod;
+}
+
 // ── Timeline assembly ──
+const MONTH_NAMES: Record<string, string> = {
+  '01': 'Jan', '02': 'Feb', '03': 'Mar', '04': 'Apr', '05': 'May', '06': 'Jun',
+  '07': 'Jul', '08': 'Aug', '09': 'Sep', '10': 'Oct', '11': 'Nov', '12': 'Dec',
+};
 
-function loadTimeline() {
-  const eras = z.array(TimelineEraSchema).parse(timelineRaw);
+function loadTimeline(slug: string, eraLabel?: string) {
+  const timelineRaw = getTrackerData(slug, 'timeline.json');
+  const eras = z.array(TimelineEraSchema).parse(timelineRaw ?? []);
 
-  // Collect all partitioned daily events, sorted by filename (date order)
-  const MONTH_NAMES: Record<string, string> = {
-    '01': 'Jan', '02': 'Feb', '03': 'Mar', '04': 'Apr', '05': 'May', '06': 'Jun',
-    '07': 'Jul', '08': 'Aug', '09': 'Sep', '10': 'Oct', '11': 'Nov', '12': 'Dec',
-  };
+  // Collect partitioned daily events for this tracker
+  const prefix = `../../trackers/${slug}/data/events/`;
   const dailyEvents = Object.keys(eventModules)
+    .filter(p => p.startsWith(prefix))
     .sort()
     .flatMap((path) => {
       const mod = eventModules[path];
       const raw = 'default' in mod ? mod.default : mod;
       const events = z.array(TimelineEventSchema).parse(raw);
 
-      // Derive date from filename (e.g. "../data/events/2026-03-05.json" → "Mar 5")
       const match = path.match(/(\d{4})-(\d{2})-(\d{2})\.json$/);
       if (match) {
         const monLabel = MONTH_NAMES[match[2]];
-        const day = String(Number(match[3])); // strip leading zero
+        const day = String(Number(match[3]));
         if (monLabel) {
           for (const ev of events) {
-            // Fix bare-year entries the AI updater sometimes produces
             if (/^\d{4}$/.test(ev.year)) {
               ev.year = `${monLabel} ${day}`;
             }
           }
         }
       }
-
       return events;
     });
 
   if (dailyEvents.length > 0) {
-    const crisisEra = { era: 'Crisis & War 2026', events: dailyEvents };
-    eras.push(crisisEra);
+    eras.push({ era: eraLabel || 'Events', events: dailyEvents });
   }
 
   return eras;
 }
 
-// ── Validated exports ──
-
-export const kpis = z.array(KpiSchema).parse(kpisRaw);
-export const timeline = loadTimeline();
-export const mapPoints = z.array(MapPointSchema).parse(mapPointsRaw);
-export const mapLines = z.array(MapLineSchema).parse(mapLinesRaw);
-
-// Cross-field validation: strike/retaliation lines must have weaponType + time for rendering
-for (const line of mapLines) {
-  if ((line.cat === 'strike' || line.cat === 'retaliation') && (!line.weaponType || !line.time)) {
-    throw new Error(
-      `MapLine "${line.id}" (cat=${line.cat}) missing required fields: ` +
-      `${!line.weaponType ? 'weaponType ' : ''}${!line.time ? 'time' : ''}`.trim(),
-    );
-  }
+// ── Main loader ──
+export interface TrackerData {
+  kpis: z.infer<typeof KpiSchema>[];
+  timeline: z.infer<typeof TimelineEraSchema>[];
+  mapPoints: z.infer<typeof MapPointSchema>[];
+  mapLines: z.infer<typeof MapLineSchema>[];
+  strikeTargets: z.infer<typeof StrikeItemSchema>[];
+  retaliationData: z.infer<typeof StrikeItemSchema>[];
+  assetsData: z.infer<typeof AssetSchema>[];
+  casualties: z.infer<typeof CasualtyRowSchema>[];
+  econ: z.infer<typeof EconItemSchema>[];
+  claims: z.infer<typeof ClaimSchema>[];
+  political: z.infer<typeof PolItemSchema>[];
+  meta: z.infer<typeof MetaSchema>;
 }
-export const strikeTargets = z.array(StrikeItemSchema).parse(strikeTargetsRaw);
-export const retaliationData = z.array(StrikeItemSchema).parse(retaliationRaw);
-export const assetsData = z.array(AssetSchema).parse(assetsRaw);
-export const casualties = z.array(CasualtyRowSchema).parse(casualtiesRaw);
-export const econ = z.array(EconItemSchema).parse(econRaw);
-export const claims = z.array(ClaimSchema).parse(claimsRaw);
-export const political = z.array(PolItemSchema).parse(politicalRaw);
-export const meta = MetaSchema.parse(metaRaw);
+
+export function loadTrackerData(slug: string, eraLabel?: string): TrackerData {
+  const kpis = z.array(KpiSchema).parse(getTrackerData(slug, 'kpis.json') ?? []);
+  const timeline = loadTimeline(slug, eraLabel);
+  const mapPoints = z.array(MapPointSchema).parse(getTrackerData(slug, 'map-points.json') ?? []);
+  const mapLines = z.array(MapLineSchema).parse(getTrackerData(slug, 'map-lines.json') ?? []);
+
+  // Cross-field validation: strike/retaliation lines must have weaponType + time
+  for (const line of mapLines) {
+    if ((line.cat === 'strike' || line.cat === 'retaliation') && (!line.weaponType || !line.time)) {
+      throw new Error(
+        `MapLine "${line.id}" (cat=${line.cat}) missing required fields: ` +
+        `${!line.weaponType ? 'weaponType ' : ''}${!line.time ? 'time' : ''}`.trim(),
+      );
+    }
+  }
+
+  const strikeTargets = z.array(StrikeItemSchema).parse(getTrackerData(slug, 'strike-targets.json') ?? []);
+  const retaliationData = z.array(StrikeItemSchema).parse(getTrackerData(slug, 'retaliation.json') ?? []);
+  const assetsData = z.array(AssetSchema).parse(getTrackerData(slug, 'assets.json') ?? []);
+  const casualties = z.array(CasualtyRowSchema).parse(getTrackerData(slug, 'casualties.json') ?? []);
+  const econ = z.array(EconItemSchema).parse(getTrackerData(slug, 'econ.json') ?? []);
+  const claims = z.array(ClaimSchema).parse(getTrackerData(slug, 'claims.json') ?? []);
+  const political = z.array(PolItemSchema).parse(getTrackerData(slug, 'political.json') ?? []);
+  const meta = MetaSchema.parse(getTrackerData(slug, 'meta.json'));
+
+  return { kpis, timeline, mapPoints, mapLines, strikeTargets, retaliationData, assetsData, casualties, econ, claims, political, meta };
+}
+

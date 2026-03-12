@@ -1,0 +1,56 @@
+[
+  {
+    "era": "The Disappearance (2014)",
+    "events": [
+      {
+        "id": "iguala_attack",
+        "year": "Sep 26, 2014",
+        "title": "43 Students Forcibly Disappeared in Iguala",
+        "type": "humanitarian",
+        "detail": "Students from the Ayotzinapa Rural Teachers' College were attacked by municipal police in Iguala, Guerrero. 43 students were taken and have not been seen since. 6 people were killed and 25 injured in the attacks.",
+        "sources": [
+          { "name": "GIEI First Report", "tier": 1 },
+          { "name": "Associated Press", "tier": 2 }
+        ]
+      },
+      {
+        "id": "historical_truth",
+        "year": "Nov 7, 2014",
+        "title": "Government Announces 'Historical Truth'",
+        "type": "political",
+        "detail": "Attorney General Jes\u00fas Murillo Karam presents the 'historical truth': students were killed by Guerreros Unidos cartel and incinerated at Cocula garbage dump. This version is later debunked by independent investigators.",
+        "sources": [
+          { "name": "PGR Mexico", "tier": 1 },
+          { "name": "El Universal", "tier": 2 }
+        ]
+      }
+    ]
+  },
+  {
+    "era": "Independent Investigations (2015-2023)",
+    "events": [
+      {
+        "id": "giei_first_report",
+        "year": "Sep 6, 2015",
+        "title": "GIEI Debunks 'Historical Truth'",
+        "type": "investigation",
+        "detail": "The Interdisciplinary Group of Independent Experts (GIEI), appointed by the IACHR, publishes its first report concluding that the government's version is scientifically impossible. The Cocula dump could not have reached temperatures needed to incinerate 43 bodies.",
+        "sources": [
+          { "name": "GIEI / IACHR", "tier": 1 },
+          { "name": "Proceso", "tier": 2 }
+        ]
+      },
+      {
+        "id": "truth_commission",
+        "year": "Aug 18, 2022",
+        "title": "Truth Commission: 'Crime of State'",
+        "type": "political",
+        "detail": "The Ayotzinapa Truth and Access to Justice Commission declares the disappearance a 'crime of state' involving coordination between government officials, security forces, and organized crime.",
+        "sources": [
+          { "name": "Mexican Government Truth Commission", "tier": 1 },
+          { "name": "La Jornada", "tier": 2 }
+        ]
+      }
+    ]
+  }
+]

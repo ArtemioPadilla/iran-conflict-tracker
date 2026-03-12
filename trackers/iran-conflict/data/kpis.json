@@ -1,0 +1,108 @@
+[
+  {
+    "id": "days_of_conflict",
+    "label": "Days of Conflict",
+    "value": "11",
+    "color": "red",
+    "source": "Al Jazeera",
+    "contested": false,
+    "delta": "+2",
+    "trend": "up",
+    "lastUpdated": "2026-03-10T06:00:00.000Z"
+  },
+  {
+    "id": "iran_killed",
+    "label": "Iran Killed",
+    "value": "2,400+",
+    "color": "red",
+    "source": "Al Jazeera / HRANA",
+    "contested": true,
+    "contestNote": "Iranian Red Crescent reports ~800 confirmed; HRANA estimates exceed 2,400 including civilians and 181+ children; March 10 Tehran fuel depot strikes add 40 killed; internet blackout (~1% connectivity) severely limits verification",
+    "delta": "+1,000+",
+    "trend": "up",
+    "lastUpdated": "2026-03-10T12:00:00.000Z"
+  },
+  {
+    "id": "us_killed",
+    "label": "US Killed",
+    "value": "8",
+    "color": "amber",
+    "source": "Pentagon",
+    "contested": false,
+    "delta": "+1",
+    "trend": "up",
+    "lastUpdated": "2026-03-10T12:00:00.000Z"
+  },
+  {
+    "id": "israel_killed",
+    "label": "Israel Killed",
+    "value": "14+",
+    "color": "amber",
+    "source": "Israeli health authorities / Al Jazeera",
+    "contested": false,
+    "delta": "+2",
+    "deltaNote": "2 civilians killed by Iranian cluster warhead missile in Yehud on March 10. Over 2,142 Israelis wounded in Iranian missile and drone attacks.",
+    "trend": "up",
+    "lastUpdated": "2026-03-10T12:00:00.000Z"
+  },
+  {
+    "id": "gulf_killed",
+    "label": "Gulf Region Killed",
+    "value": "11+",
+    "color": "red",
+    "source": "Multiple Gulf defense ministries",
+    "contested": false,
+    "delta": "+7+",
+    "trend": "up",
+    "lastUpdated": "2026-03-10",
+    "deltaNote": "Includes UAE (5, inc. 2 military), Bahrain (1), Kuwait (2), Saudi Arabia (2 foreign nationals), Oman (1). Gulf states reporting first direct civilian fatalities from Iranian strikes."
+  },
+  {
+    "id": "lebanon_killed",
+    "label": "Lebanon Killed",
+    "value": "486+",
+    "color": "amber",
+    "source": "Lebanese health authorities",
+    "contested": false,
+    "delta": "+86+",
+    "deltaNote": "Death toll rising as Israeli strikes on Hezbollah positions in southern Beirut and southern Lebanon continue.",
+    "trend": "up",
+    "lastUpdated": "2026-03-10"
+  },
+  {
+    "id": "brent_crude",
+    "label": "Brent Crude",
+    "value": "$112.98",
+    "color": "red",
+    "source": "Al Jazeera / Reuters",
+    "contested": false,
+    "delta": "+$22.98",
+    "trend": "up",
+    "lastUpdated": "2026-03-10T06:00:00.000Z",
+    "deltaNote": "Surged to $119.50 intraday on March 9 — highest since Russia's 2022 invasion of Ukraine."
+  },
+  {
+    "id": "flights_cancelled",
+    "label": "Flights Cancelled",
+    "value": "35,000+",
+    "color": "blue",
+    "source": "FlightAware / Al Jazeera",
+    "contested": false,
+    "delta": "+8,000",
+    "deltaNote": "Dubai International Airport attacked by Iranian drones. Israel suspended all civilian air travel. UAE extended flight disruptions.",
+    "trend": "up",
+    "lastUpdated": "2026-03-10"
+  },
+  {
+    "id": "countries_affected",
+    "label": "Countries Affected",
+    "value": "14+",
+    "color": "blue",
+    "source": "Al Jazeera / Reuters",
+    "contested": false,
+    "trend": "up",
+    "lastUpdated": "2026-03-10",
+    "delta": "+2",
+    "deltaNote": "Iran, Israel, Lebanon, UAE, Bahrain, Kuwait, Qatar, Saudi Arabia, Oman, Iraq, Jordan, Azerbaijan, Turkey, Cyprus (UK RAF base). Pakistan also affected (consulate attack)."
+  }
+]

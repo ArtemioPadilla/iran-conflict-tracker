@@ -3,18 +3,23 @@ import type { Meta } from '../../lib/schemas';
 
 interface Props {
   meta: Meta;
+  trackerSlug?: string;
+  githubRepo?: string;
 }
 
-const { meta } = Astro.props;
+const { meta, trackerSlug, githubRepo } = Astro.props;
+const basePath = import.meta.env.BASE_URL || '/intel-dashboard/';
+const aboutHref = trackerSlug ? `${basePath}${trackerSlug}/about/` : `${basePath}about/`;
+const githubUrl = githubRepo ? `https://github.com/${githubRepo}` : 'https://github.com/ArtemioPadilla/iran-conflict-tracker';
 ---
 <footer class="site-footer">
   <div class="footer-inner">
     <div class="footer-note">{meta.footerNote}</div>
     <div class="footer-disclaimer">This dashboard presents information from multiple perspectives and does not endorse any particular narrative.</div>
     <div class="footer-links">
-      <a href="/iran-conflict-tracker/about/">About &amp; Credits</a>
+      <a href={aboutHref}>About &amp; Credits</a>
       <span class="footer-sep">&middot;</span>
-      <a href="https://github.com/ArtemioPadilla/iran-conflict-tracker" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href={githubUrl} target="_blank" rel="noopener noreferrer">GitHub</a>
     </div>
     <div class="footer-updated">Last updated: {meta.lastUpdated}</div>
   </div>

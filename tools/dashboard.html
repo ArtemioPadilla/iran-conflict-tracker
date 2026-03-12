@@ -643,6 +643,42 @@ tr:last-child td { border-bottom: none; }
 <div class="section" id="activity"><h2>Recent Activity</h2>
 <h3>Git Log</h3>
 <div class="commit-line">
+  <span class="commit-hash">4182e0b</span>
+  <span class="commit-badge" style="background:#EF4444">fix</span>
+  <span class="commit-msg">fix(ci): prevent Claude from bypassing validation gate</span>
+  <span class="commit-date">2026-03-11</span>
+</div>
+<div class="commit-line">
+  <span class="commit-hash">0b1965d</span>
+  <span class="commit-badge" style="background:#94a3b8">chore</span>
+  <span class="commit-msg">chore(data): nightly AI update 2026-03-11T06:31:18Z</span>
+  <span class="commit-date">2026-03-11</span>
+</div>
+<div class="commit-line">
+  <span class="commit-hash">2461408</span>
+  <span class="commit-badge" style="background:#EF4444">fix</span>
+  <span class="commit-msg">fix(fact-cards): XSS escaping, connector centering, anchor height, rou</span>
+  <span class="commit-date">2026-03-10</span>
+</div>
+<div class="commit-line">
+  <span class="commit-hash">5bda71f</span>
+  <span class="commit-badge" style="background:#10B981">feat</span>
+  <span class="commit-msg">feat(about): add data pipeline visualization, tradeoffs, and contribut</span>
+  <span class="commit-date">2026-03-10</span>
+</div>
+<div class="commit-line">
+  <span class="commit-hash">7b86300</span>
+  <span class="commit-badge" style="background:#10B981">feat</span>
+  <span class="commit-msg">feat(map): add floating fact cards overlay for 2D and 3D maps</span>
+  <span class="commit-date">2026-03-10</span>
+</div>
+<div class="commit-line">
+  <span class="commit-hash">f363fd8</span>
+  <span class="commit-badge" style="background:#EF4444">fix</span>
+  <span class="commit-msg">fix(globe): normalize CesiumEventsPanel to UTC and remove unsafe type </span>
+  <span class="commit-date">2026-03-10</span>
+</div>
+<div class="commit-line">
   <span class="commit-hash">c8c5c55</span>
   <span class="commit-badge" style="background:#EF4444">fix</span>
   <span class="commit-msg">fix(schemas): harden schemas, cross-field validation, and globe timing</span>
@@ -666,46 +702,12 @@ tr:last-child td { border-bottom: none; }
   <span class="commit-msg">feat: add About page with disclaimer, credits, and inspiration</span>
   <span class="commit-date">2026-03-09</span>
 </div>
-<div class="commit-line">
-  <span class="commit-hash">de51f36</span>
-  <span class="commit-badge" style="background:#EF4444">fix</span>
-  <span class="commit-msg">fix: resolve 20 tech debt items (TD-001 through TD-023)</span>
-  <span class="commit-date">2026-03-09</span>
-</div>
-<div class="commit-line">
-  <span class="commit-hash">ad6c23b</span>
-  <span class="commit-badge" style="background:#94a3b8">chore</span>
-  <span class="commit-msg">chore(data): nightly AI update 2026-03-10T05:03:57Z</span>
-  <span class="commit-date">2026-03-10</span>
-</div>
-<div class="commit-line">
-  <span class="commit-hash">19223ed</span>
-  <span class="commit-badge" style="background:#10B981">feat</span>
-  <span class="commit-msg">feat(ui): add floating feedback button linking to GitHub Issues</span>
-  <span class="commit-date">2026-03-09</span>
-</div>
-<div class="commit-line">
-  <span class="commit-hash">7d2fcf2</span>
-  <span class="commit-badge" style="background:#EF4444">fix</span>
-  <span class="commit-msg">fix(ci): have Claude commit/push during its execution</span>
-  <span class="commit-date">2026-03-09</span>
-</div>
-<div class="commit-line">
-  <span class="commit-hash">d529c5a</span>
-  <span class="commit-badge" style="background:#EF4444">fix</span>
-  <span class="commit-msg">fix(ci): improve change detection and prevent Claude self-committing</span>
-  <span class="commit-date">2026-03-09</span>
-</div>
-<div class="commit-line">
-  <span class="commit-hash">9e74ece</span>
-  <span class="commit-badge" style="background:#EF4444">fix</span>
-  <span class="commit-msg">fix(ci): bypass permissions for headless CI execution</span>
-  <span class="commit-date">2026-03-09</span>
-</div>
 <h3 style='margin-top:16px'>Changelog (Unreleased)</h3>
 <div class="changelog-cats">
+<span class="changelog-cat">Added: 2 items</span>
+<span class="changelog-cat">Changed: 2 items</span>
+<span class="changelog-cat">Removed: 2 items</span>
 <span class="changelog-cat">Fixed: 5 items</span>
-<span class="changelog-cat">Added: 22 items</span>
 </div>
 <h3 style='margin-top:16px'>Agent Memory Snippets</h3>
 <div style="margin-bottom:4px"><span style="color:#fff;font-weight:600">agent-triforce-centinela-qa</span></div>
@@ -731,9 +733,8 @@ tr:last-child td { border-bottom: none; }
 - **Migration target**: Astro with typed JSON data files in `src/data/` and TypeScript utilities in `src/lib/`
 
 ## Key File Locations
-- `src/lib/schemas.ts` — Zod schemas for all data types (13 schemas, 13 inferred types)
-- `src/lib/tier-utils.ts` — tierClass, tierLabel, contestedBadge functions
--</div>
+- `src/lib/schemas.ts` — Zod schemas (16 schemas, 17 types); `cat`, `avatar` now `z.string()` (extensible)
+- `src/lib/data.ts` — `loadTrackerData(slug)` loads from</div>
 <div style="margin-bottom:4px"><span style="color:#fff;font-weight:600">agent-triforce-prometeo-pm</span></div>
 <div class="memory-block"># PROMETEO Memory — Iran Conflict Tracker
 
@@ -755,6 +756,6 @@ tr:last-child td { border-bottom: none; }
 <div class="cl-breakdown">
 </div>
 </div>
-<div class="gen-time">Generated 2026-03-10 00:48:27 by tools/dashboard.py</div>
+<div class="gen-time">Generated 2026-03-11 18:06:52 by tools/dashboard.py</div>
 </body>
 </html>

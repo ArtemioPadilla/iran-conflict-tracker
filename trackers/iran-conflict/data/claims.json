@@ -1,0 +1,394 @@
+[
+  {
+    "id": "imminent_threat",
+    "question": "Did Iran pose an imminent threat to the US?",
+    "sideA": {
+      "label": "White House",
+      "text": "Iran was reviving nuclear weapons program, developing missiles that could reach the US."
+    },
+    "sideB": {
+      "label": "Pentagon / Intel",
+      "text": "Briefers told Congress Iran had no plans to strike US forces unless Israel attacked first. DNI: Iran \"not building a nuclear weapon.\""
+    },
+    "resolution": "CONTESTED — Pentagon briefing directly undercuts the White House's central justification for strikes.",
+    "lastUpdated": "2026-03-08T06:19:02.250Z"
+  },
+  {
+    "id": "lincoln_struck",
+    "question": "Was the USS Abraham Lincoln struck?",
+    "sideA": {
+      "label": "IRGC",
+      "text": "Claimed 4 ballistic missiles hit the carrier."
+    },
+    "sideB": {
+      "label": "CENTCOM",
+      "text": "\"The Lincoln was not hit. The missiles didn't even come close.\" Lincoln continued launching aircraft."
+    },
+    "resolution": "CENTCOM denial is authoritative — Lincoln confirmed operational with photo evidence.",
+    "lastUpdated": "2026-03-08T06:19:02.250Z"
+  },
+  {
+    "id": "minab_school_deaths",
+    "question": "How many died in the Minab school strike?",
+    "sideA": {
+      "label": "Iran (official)",
+      "text": "Death toll revised upward from 5 to 148 (prosecutor) to 165–180 (governor, Health Ministry)."
+    },
+    "sideB": {
+      "label": "US / Israel",
+      "text": "Israel says \"not aware of any US or Israeli strike on a school.\" CNN geolocated video to school."
+    },
+    "resolution": "UNRESOLVED — School confirmed 200ft from IRGC base. Independent verification impossible under blackout.",
+    "lastUpdated": "2026-03-08T06:19:02.250Z"
+  },
+  {
+    "id": "protest_deaths",
+    "question": "How many died in the Jan 2026 protest crackdowns?",
+    "sideA": {
+      "label": "Iranian Government",
+      "text": "3,117 killed (official announcement January 21)."
+    },
+    "sideB": {
+      "label": "HRANA / TIME / ICHR",
+      "text": "Estimates range from 7,000 confirmed names (HRANA) to 43,000 (ICHR). TIME cites ~30,000 in 48 hours."
+    },
+    "resolution": "HEAVILY CONTESTED — Internet blackout prevents verification. 10x+ gap between lowest and highest estimates.",
+    "lastUpdated": "2026-03-08T06:19:02.250Z"
+  },
+  {
+    "id": "regime_change",
+    "question": "Is this a \"regime change\" war?",
+    "sideA": {
+      "label": "Hegseth (DoD)",
+      "text": "\"This is not a so-called regime change war.\""
+    },
+    "sideB": {
+      "label": "Actions taken",
+      "text": "Khamenei assassinated. Trump: \"take back your country.\" State TV hacked. Regime infrastructure systematically destroyed."
+    },
+    "resolution": "CONTRADICTORY — Official messaging denies regime change while actions clearly target regime collapse.",
+    "lastUpdated": "2026-03-08T06:19:02.250Z"
+  },
+  {
+    "id": "natanz_strike",
+    "question": "Was the Natanz nuclear facility struck by US-Israeli airstrikes?",
+    "sideA": {
+      "label": "Iranian Ambassador to IAEA",
+      "text": "Accused the US and Israel of launching airstrikes on the Natanz uranium enrichment facility, condemning the attacks as unlawful."
+    },
+    "sideB": {
+      "label": "IAEA Director-General",
+      "text": "Stated the agency had no indication that any of Iran’s nuclear facilities, including Natanz, had been struck, noting the lack of elevated radiation levels."
+    },
+    "resolution": "CONTESTED — Conflicting reports from Iranian officials and the IAEA regarding the targeting of Natanz.",
+    "lastUpdated": "2026-03-08T06:19:02.250Z"
+  },
+  {
+    "id": "civilian_casualties",
+    "question": "How many civilians have been killed in the US-Israeli bombing campaign on Iran?",
+    "sideA": {
+      "label": "HRANA",
+      "text": "Reported over 1,000 civilian deaths, including at least 181 children under the age of ten, in the first five days of the bombing campaign."
+    },
+    "sideB": {
+      "label": "US Department of Defense",
+      "text": "Claims that military operations are targeting Iranian military infrastructure and efforts are made to minimize civilian casualties."
+    },
+    "resolution": "CONTESTED — Discrepancy between human rights organizations' reports and US military statements on civilian casualties.",
+    "lastUpdated": "2026-03-08T06:19:02.250Z"
+  },
+  {
+    "id": "frigate_sinking",
+    "question": "Did a US submarine sink the Iranian frigate IRIS Dena?",
+    "sideA": {
+      "label": "Iranian Foreign Minister",
+      "text": "Publicly acknowledged that a U.S. submarine sank the Iranian frigate near Sri Lanka, calling it an \"atrocity\" and warning of severe consequences."
+    },
+    "sideB": {
+      "label": "US Navy",
+      "text": "Has not confirmed or denied involvement in the sinking of the IRIS Dena, maintaining operational security."
+    },
+    "resolution": "CONTESTED — Iran's official acknowledgment contrasts with the US's lack of confirmation regarding the incident.",
+    "lastUpdated": "2026-03-08T06:19:02.250Z"
+  },
+  {
+    "id": "air_defense",
+    "question": "Is the US capable of intercepting all Iranian missile and drone attacks?",
+    "sideA": {
+      "label": "US Defense Secretary",
+      "text": "Confirmed that while the US maintains air superiority over Iran, not all Iranian missile or drone attacks can be stopped."
+    },
+    "sideB": {
+      "label": "Iranian Military",
+      "text": "Claims that their missile and drone capabilities can penetrate US and Israeli air defenses, causing significant damage."
+    },
+    "resolution": "CONTESTED — US acknowledges limitations in intercepting all attacks, while Iran asserts the effectiveness of their offensive capabilities.",
+    "lastUpdated": "2026-03-08T06:19:02.250Z"
+  },
+  {
+    "id": "operation_legality",
+    "question": "Are the US-Israeli attacks against Iran legal under international law?",
+    "sideA": {
+      "label": "UN Special Rapporteur",
+      "text": "Stated that the joint US-Israeli strikes against Iran likely violate the UN Charter’s prohibition on aggression and lack any valid legal justification."
+    },
+    "sideB": {
+      "label": "US State Department",
+      "text": "Argues that the strikes are in self-defense against an imminent threat posed by Iran's nuclear and missile programs."
+    },
+    "resolution": "CONTESTED — Divergent interpretations of international law regarding the legality of the military actions.",
+    "lastUpdated": "2026-03-08T06:19:02.250Z"
+  },
+  {
+    "id": "strait_of_hormuz_closure",
+    "question": "Has Iran closed the Strait of Hormuz in response to US-Israeli military actions?",
+    "sideA": {
+      "label": "Iranian IRGC",
+      "text": "Issued warnings prohibiting vessel passage through the Strait, leading to an effective halt in shipping traffic."
+    },
+    "sideB": {
+      "label": "US Navy",
+      "text": "Reports indicate that while Iran has threatened closure, the Strait remains open with heightened military presence to ensure safe passage."
+    },
+    "resolution": "CONTESTED — Conflicting reports on the operational status of the Strait of Hormuz amid escalating tensions.",
+    "lastUpdated": "2026-03-08T06:19:02.250Z"
+  },
+  {
+    "id": "iranian_missile_strikes",
+    "question": "Did Iran launch missile strikes against Israel and U.S. military bases?",
+    "sideA": {
+      "label": "Iranian State Media",
+      "text": "Confirmed missile strikes targeting Israeli cities and U.S. military bases in the region as retaliation for recent attacks."
+    },
+    "sideB": {
+      "label": "U.S. Department of Defense",
+      "text": "Acknowledged missile launches from Iran but stated that most were intercepted with minimal damage reported."
+    },
+    "resolution": "CONTESTED — Discrepancy between Iranian claims of successful strikes and U.S. reports of effective defense measures.",
+    "lastUpdated": "2026-03-08T21:56:37.543Z"
+  },
+  {
+    "id": "us_israel_coordination",
+    "question": "Did the U.S. coordinate with Israel in the recent military strikes on Iran?",
+    "sideA": {
+      "label": "U.S. Administration Officials",
+      "text": "Confirmed joint military operations with Israel targeting Iranian facilities and leadership."
+    },
+    "sideB": {
+      "label": "Iranian Government",
+      "text": "Accused the U.S. of backing Israeli attacks but claimed to have 'solid proof' of U.S. involvement."
+    },
+    "resolution": "CONTESTED — While U.S. officials confirm coordination, Iran presents evidence alleging deeper U.S. involvement.",
+    "lastUpdated": "2026-03-08T21:56:37.543Z"
+  },
+  {
+    "id": "hezbollah_strikes",
+    "question": "Did Hezbollah launch missile strikes against Israel from Lebanon?",
+    "sideA": {
+      "label": "Hezbollah",
+      "text": "Confirmed launching multiple missiles from Lebanon into Israel in response to Israeli and U.S. strikes on Iran."
+    },
+    "sideB": {
+      "label": "Israeli Defense Forces (IDF)",
+      "text": "Reported intercepting one projectile and stated that others fell in open areas, causing minimal damage."
+    },
+    "resolution": "CONTESTED — Hezbollah claims successful strikes, while Israel reports minimal impact due to interceptions.",
+    "lastUpdated": "2026-03-08T21:56:37.543Z"
+  },
+  {
+    "id": "iranian_cyberattack",
+    "question": "Did Iran conduct a cyberattack on Jordan's national wheat silos?",
+    "sideA": {
+      "label": "Jordanian National Cybersecurity Center",
+      "text": "Confirmed thwarting a cyberattack targeting the electronic control systems of the country's national wheat silos, attributing the attack to Iran."
+    },
+    "sideB": {
+      "label": "Iranian Government",
+      "text": "Denied involvement in any cyberattacks against Jordan, calling the allegations baseless."
+    },
+    "resolution": "CONTESTED — Jordan attributes the cyberattack to Iran, while Iran denies any involvement.",
+    "lastUpdated": "2026-03-08T21:56:37.543Z"
+  },
+  {
+    "id": "iranian_strikes_uae",
+    "question": "Did Iran launch missile and drone attacks on the United Arab Emirates?",
+    "sideA": {
+      "label": "UAE Defense Ministry",
+      "text": "Reported that Iran launched 189 ballistic missiles, 941 drone attacks, and 3 cruise missiles against the UAE, resulting in 3 deaths and 78 injuries."
+    },
+    "sideB": {
+      "label": "Iranian Government",
+      "text": "Acknowledged targeting military installations in the UAE but denied causing civilian casualties, stating efforts were made to avoid non-combatant areas."
+    },
+    "resolution": "CONTESTED — UAE reports civilian casualties from Iranian attacks, while Iran claims to have targeted only military sites.",
+    "lastUpdated": "2026-03-08T21:56:37.543Z"
+  },
+  {
+    "id": "khamenei_assassination",
+    "question": "Was Iranian Supreme Leader Ali Khamenei assassinated by U.S.-Israeli airstrikes?",
+    "sideA": {
+      "label": "Iranian Government",
+      "text": "Confirmed the death of Supreme Leader Ali Khamenei due to airstrikes conducted by the U.S. and Israel."
+    },
+    "sideB": {
+      "label": "U.S. and Israeli Officials",
+      "text": "Acknowledged conducting airstrikes targeting Iranian leadership but have not confirmed the death of Khamenei."
+    },
+    "resolution": "CONTESTED — Iran confirms Khamenei's death, while U.S. and Israeli officials have not provided confirmation.",
+    "lastUpdated": "2026-03-08T21:56:37.543Z"
+  },
+  {
+    "id": "iranian_cyber_operations",
+    "question": "Did Iran conduct cyber operations against U.S. and Israeli military systems?",
+    "sideA": {
+      "label": "Iranian State Media",
+      "text": "Reported successful cyberattacks disrupting U.S. and Israeli military communications and infrastructure."
+    },
+    "sideB": {
+      "label": "U.S. Department of Defense",
+      "text": "Acknowledged attempts by Iranian cyber units but stated that all attacks were successfully defended against with no operational impact."
+    },
+    "resolution": "CONTESTED — Iran claims successful cyber operations, while the U.S. reports no significant impact from such attacks.",
+    "lastUpdated": "2026-03-08T21:56:37.543Z"
+  },
+  {
+    "id": "minab_school_strike",
+    "question": "Was the deadly blast at Shajareh Tayyebeh Elementary School in Minab caused by a U.S. airstrike?",
+    "sideA": {
+      "label": "AP News",
+      "text": "Satellite imagery and expert analysis suggest the explosion was caused by a U.S. airstrike, with the blast killing over 165 people, mostly children."
+    },
+    "sideB": {
+      "label": "U.S. Military",
+      "text": "Neither the U.S. nor Israel accepted responsibility for the strike; however, the U.S. military acknowledged nearby operations and launched an internal investigation."
+    },
+    "resolution": "CONTESTED — Evidence points to U.S. involvement, but official confirmation is pending.",
+    "lastUpdated": "2026-03-08T21:56:37.543Z"
+  },
+  {
+    "id": "natanz_airstrike",
+    "question": "Did U.S.-Israeli airstrikes target the Natanz uranium enrichment facility?",
+    "sideA": {
+      "label": "Iranian Ambassador to IAEA",
+      "text": "Accused the U.S. and Israel of launching airstrikes on the Natanz facility, condemning the attacks as unlawful."
+    },
+    "sideB": {
+      "label": "IAEA Director-General",
+      "text": "Stated the agency had no indication that any of Iran’s nuclear facilities, including Natanz, had been struck, noting the lack of elevated radiation levels."
+    },
+    "resolution": "CONTESTED — Conflicting reports from Iranian officials and the IAEA regarding the targeting of Natanz.",
+    "lastUpdated": "2026-03-08T21:56:37.543Z"
+  },
+  {
+    "id": "iranian_military_losses",
+    "question": "Has Iran's military been significantly debilitated by U.S.-Israeli strikes?",
+    "sideA": {
+      "label": "President Donald Trump",
+      "text": "Declared that Iran's military forces have been 'knocked out,' with its navy, air force, radar systems, and air defense neutralized."
+    },
+    "sideB": {
+      "label": "Iranian Foreign Minister Abbas Araghchi",
+      "text": "Rejected the idea of a ceasefire and declared Iran's readiness to confront a U.S. ground invasion, indicating continued military capability."
+    },
+    "resolution": "CONTESTED — U.S. claims of debilitating Iran's military are contradicted by Iran's assertions of ongoing readiness.",
+    "lastUpdated": "2026-03-08T21:56:37.543Z"
+  },
+  {
+    "id": "regime_change_intent",
+    "question": "Is the U.S.-Israeli military campaign in Iran aimed at regime change?",
+    "sideA": {
+      "label": "U.S. Defense Secretary Pete Hegseth",
+      "text": "Emphasized that the conflict aims to neutralize threats, not enact regime change, despite the killing of Supreme Leader Ayatollah Ali Khamenei."
+    },
+    "sideB": {
+      "label": "Iranian Government",
+      "text": "Accused the U.S. and Israel of targeting regime infrastructure and leadership, suggesting an intent toward regime change."
+    },
+    "resolution": "CONTESTED — Official U.S. statements deny regime change intent, but actions targeting Iranian leadership suggest otherwise.",
+    "lastUpdated": "2026-03-08T21:56:37.543Z"
+  },
+  {
+    "id": "strait_of_hormuz_status",
+    "question": "Has Iran closed the Strait of Hormuz in response to U.S.-Israeli military actions?",
+    "sideA": {
+      "label": "Iranian IRGC",
+      "text": "Issued warnings prohibiting vessel passage through the Strait, leading to an effective halt in shipping traffic."
+    },
+    "sideB": {
+      "label": "U.S. Navy",
+      "text": "Reports indicate that while Iran has threatened closure, the Strait remains open with heightened military presence to ensure safe passage."
+    },
+    "resolution": "CONTESTED — Conflicting reports on the operational status of the Strait of Hormuz amid escalating tensions.",
+    "lastUpdated": "2026-03-08T21:56:37.543Z"
+  },
+  {
+    "id": "iran_cia_backchannel",
+    "question": "Did Iran reach out to the CIA to discuss ending the conflict?",
+    "sideA": {
+      "label": "Jerusalem Post / Western intelligence sources",
+      "text": "Iran reached out to the CIA through back channels to discuss a potential end to the conflict. Trump reportedly said 'it's too late' for such discussions."
+    },
+    "sideB": {
+      "label": "Iranian Foreign Ministry",
+      "text": "Iran's Foreign Ministry says there is no room to discuss a ceasefire while military attacks continue. Foreign Minister Araghchi: 'We are not asking for a ceasefire. We don't see any reason why we should negotiate.'"
+    },
+    "resolution": "CONTESTED — Reports of a backchannel conflict with public statements from both sides rejecting negotiations. Possible disconnect between Iranian diplomatic and military leadership.",
+    "lastUpdated": "2026-03-10"
+  },
+  {
+    "id": "pezeshkian_gulf_apology",
+    "question": "Did Iran stop attacking Gulf neighbors after Pezeshkian's apology?",
+    "sideA": {
+      "label": "Iranian President Pezeshkian",
+      "text": "Announced on March 7 that Iran would stop striking neighbors unless an attack originated from their territory. Issued a rare apology to neighboring countries for retaliatory attacks."
+    },
+    "sideB": {
+      "label": "Gulf state defense ministries",
+      "text": "Iranian drone and missile attacks on Gulf countries continued after Pezeshkian's announcement, including strikes on Dubai, Bahrain (Bapco refinery), Fujairah, Qatar (17 missiles), and Saudi Arabia (Al-Kharj) on March 9."
+    },
+    "resolution": "CONTRADICTORY — Pezeshkian's public apology and promise to stop Gulf attacks was immediately undercut by continued IRGC strikes. Internal power struggle between president and IRGC apparent.",
+    "lastUpdated": "2026-03-10"
+  },
+  {
+    "id": "war_cost_estimates",
+    "question": "How much is the US war on Iran costing per day?",
+    "sideA": {
+      "label": "CNN / Center for American Progress / CSIS",
+      "text": "CNN analysts estimate $890M+ per day. Center for American Progress estimated $5B by Day 4. CSIS placed the first 100-hour cost at $3.7B. Total projected to exceed $10B by Day 11."
+    },
+    "sideB": {
+      "label": "Trump Administration",
+      "text": "Trump characterized the energy price spike as 'a small price to pay' to eliminate Iran's nuclear threat. Administration has not released official cost figures."
+    },
+    "resolution": "EVOLVING — Independent estimates vary widely but all point to significant daily expenditure. Official figures not released.",
+    "lastUpdated": "2026-03-10"
+  },
+  {
+    "id": "hormuz_closure_impact",
+    "question": "Has the effective closure of the Strait of Hormuz triggered a global energy crisis?",
+    "sideA": {
+      "label": "Rystad Energy / Stimson Center / RBC Capital Markets",
+      "text": "Traffic through the strait has fallen to near zero. 20 million barrels/day of oil — roughly 20% of global supply — is blocked. Analysts warn of potential $200/bbl oil and a global recession if the closure persists. 'Biggest energy crisis since the 1970s embargo.' European gas prices nearly doubled after Iran struck Qatari LNG facilities."
+    },
+    "sideB": {
+      "label": "US Navy / Trump Administration",
+      "text": "US Navy maintains a heightened military presence and insists the strait remains technically open. Trump has threatened to hit Iran '20 times harder' if it stops tankers. Strategic Petroleum Reserve release is under consideration."
+    },
+    "resolution": "EFFECTIVELY CLOSED — Commercial traffic has halted due to IRGC drone threats; US Navy presence has not restored civilian passage. Iran reportedly allowing only Chinese-flagged vessels to transit.",
+    "lastUpdated": "2026-03-10T12:00:00.000Z"
+  },
+  {
+    "id": "iran_cluster_munitions",
+    "question": "Did Iran use internationally banned cluster munitions against Israeli civilians?",
+    "sideA": {
+      "label": "Al Jazeera / Israeli authorities",
+      "text": "An Iranian missile with a cluster warhead struck residential areas of Yehud on March 10, killing 2 civilians and wounding dozens across multiple strike sites."
+    },
+    "sideB": {
+      "label": "Iranian Military",
+      "text": "Iran has not commented specifically on the Yehud strike. IRGC maintains its missiles target military infrastructure. Iran is not a signatory to the Convention on Cluster Munitions."
+    },
+    "resolution": "CONFIRMED — Multiple reports confirm cluster warhead used; civilian deaths verified. Raises international humanitarian law concerns. Neither Israel nor US are CCM signatories either.",
+    "lastUpdated": "2026-03-10T12:00:00.000Z"
+  }
+]

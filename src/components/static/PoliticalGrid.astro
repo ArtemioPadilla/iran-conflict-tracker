@@ -3,17 +3,20 @@ import type { PolItem } from '../../lib/schemas';
 
 interface Props {
   political: PolItem[];
+  avatarLabels?: string[];
 }
 
-const { political } = Astro.props;
+const { political, avatarLabels } = Astro.props;
 
-const affiliationLabel: Record<string, string> = {
+// Build affiliation label map from config or use defaults
+const defaultLabels: Record<string, string> = {
   us: 'US Official',
   ir: 'Iran Official',
   il: 'Israel Official',
   un: 'UN / Intl',
   other: 'World Leader',
 };
+const affiliationLabel = defaultLabels;
 ---
 <section class="section fade-in" id="sec-political">
   <div class="section-header">

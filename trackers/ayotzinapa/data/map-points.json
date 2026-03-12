@@ -1,0 +1,42 @@
+[
+  {
+    "id": "iguala_attack",
+    "lon": -99.54,
+    "lat": 18.35,
+    "cat": "disappearance",
+    "label": "Iguala Attack Sites",
+    "sub": "Main attack on Juan N. \u00c1lvarez street and surrounding areas",
+    "tier": 1,
+    "date": "2014-09-26"
+  },
+  {
+    "id": "cocula_dump",
+    "lon": -99.63,
+    "lat": 18.24,
+    "cat": "search",
+    "label": "Cocula Garbage Dump",
+    "sub": "Government claimed incineration site; debunked by GIEI",
+    "tier": 1,
+    "date": "2014-10-15"
+  },
+  {
+    "id": "ayotzinapa_school",
+    "lon": -99.64,
+    "lat": 17.59,
+    "cat": "investigation",
+    "label": "Ayotzinapa Normal School",
+    "sub": "Ra\u00fal Isidro Burgos Rural Teachers' College",
+    "tier": 1,
+    "date": "2014-09-26"
+  },
+  {
+    "id": "mexico_city_protests",
+    "lon": -99.13,
+    "lat": 19.43,
+    "cat": "protest",
+    "label": "Mexico City Mass Protests",
+    "sub": "Hundreds of thousands marched demanding justice",
+    "tier": 2,
+    "date": "2014-10-22"
+  }
+]

@@ -1,0 +1,44 @@
+[
+  {
+    "id": "grand-bazaar-shutdown-day2",
+    "year": "Dec 29",
+    "title": "Grand Bazaar Shutdown Enters Second Day",
+    "type": "economic",
+    "detail": "Tehran's Grand Bazaar remained shuttered for a second consecutive day. The Alaeddin and Charsoo mobile phone complexes, Yaftabad furniture market, and Delavaran market all joined the closure. Approximately 100 businessmen marched from Lalezar Street toward Imam Khomeini Square before security forces halted them at the Istanbul intersection.",
+    "sources": [
+      { "name": "ILNA", "tier": 2, "pole": "middle_eastern" },
+      { "name": "Reuters", "tier": 2, "pole": "western" },
+      { "name": "HRANA", "tier": 3, "pole": "international" },
+      { "name": "Tasnim News", "tier": 2, "pole": "middle_eastern" }
+    ],
+    "lastUpdated": "2026-03-10"
+  },
+  {
+    "id": "protests-spread-17-provinces",
+    "year": "Dec 29",
+    "title": "Protests Spread to 17 Provinces",
+    "type": "humanitarian",
+    "detail": "Economic protests expanded to 17 of Iran's 31 provinces. In Hamedan City, tear gas was deployed and clashes erupted on Boali Street in the southern districts. Demonstrators chanted slogans against both the economic situation and the political establishment. Social media videos showed large crowds in Kermanshah, Shiraz, and Mashhad.",
+    "sources": [
+      { "name": "Hengaw", "tier": 3, "pole": "international" },
+      { "name": "BBC Persian", "tier": 2, "pole": "western" },
+      { "name": "AP", "tier": 2, "pole": "western" },
+      { "name": "IRNA", "tier": 1, "pole": "middle_eastern" }
+    ],
+    "lastUpdated": "2026-03-10"
+  },
+  {
+    "id": "cbi-governor-farzin-resigns",
+    "year": "Dec 29",
+    "title": "Central Bank Governor Farzin Resigns",
+    "type": "economic",
+    "detail": "Central Bank of Iran Governor Mohammad Reza Farzin submitted his resignation amid the currency crisis, becoming the first CBI governor forced out by market pressure since 2018. His departure was widely interpreted as an acknowledgment that monetary tools alone could not arrest the rial's collapse. No immediate successor was named.",
+    "sources": [
+      { "name": "Central Bank of Iran", "tier": 1, "pole": "middle_eastern" },
+      { "name": "Reuters", "tier": 2, "pole": "western" },
+      { "name": "Al Jazeera", "tier": 2, "pole": "middle_eastern" },
+      { "name": "Nikkei Asia", "tier": 2, "pole": "eastern" }
+    ],
+    "lastUpdated": "2026-03-10"
+  }
+]

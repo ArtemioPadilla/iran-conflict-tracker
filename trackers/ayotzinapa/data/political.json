@@ -1,0 +1,29 @@
+[
+  {
+    "id": "amlo_promise",
+    "name": "Andr\u00e9s Manuel L\u00f3pez Obrador",
+    "role": "President of Mexico (2018-2024)",
+    "avatar": "mx-gov",
+    "initial": "A",
+    "quote": "We will know the truth about what happened to the 43 students from Ayotzinapa.",
+    "lastUpdated": "2026-03-10"
+  },
+  {
+    "id": "vidulfo_rosales",
+    "name": "Vidulfo Rosales",
+    "role": "Attorney for Ayotzinapa Families",
+    "avatar": "victims",
+    "initial": "V",
+    "quote": "The families will not stop until all 43 are found and those responsible are held accountable.",
+    "lastUpdated": "2026-03-10"
+  },
+  {
+    "id": "un_committee",
+    "name": "UN Committee on Enforced Disappearances",
+    "role": "International Body",
+    "avatar": "intl",
+    "initial": "U",
+    "quote": "Mexico must conduct a thorough, independent investigation and bring all perpetrators to justice.",
+    "lastUpdated": "2026-03-10"
+  }
+]

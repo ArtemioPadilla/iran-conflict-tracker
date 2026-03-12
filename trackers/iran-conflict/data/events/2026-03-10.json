@@ -1,0 +1,239 @@
+[
+  {
+    "id": "iran-war-day-11-sitrep",
+    "year": "Mar 10",
+    "title": "Day 11: Conflict Continues as Iran Installs New Leadership, No Ceasefire in Sight",
+    "type": "military",
+    "detail": "The US-Israel war on Iran entered its eleventh day with no ceasefire prospects. A senior Iranian official told CNN that Israel's attacks on oil and fuel depots have pushed the conflict into a 'new phase,' with Iran threatening retaliatory strikes on energy infrastructure. An Iranian Foreign Ministry spokesperson stated Iran has no interest in negotiations while under attack. Iran has fired over 500 ballistic missiles and nearly 2,000 drones since February 28, with roughly 40% aimed at Israel and 60% at US regional targets.",
+    "sources": [
+      {
+        "name": "CNN",
+        "tier": 2,
+        "url": "https://www.cnn.com/2026/03/08/middleeast/us-israel-iran-middle-east-war-what-we-know-intl-hnk",
+        "pole": "western"
+      },
+      {
+        "name": "Al Jazeera",
+        "tier": 2,
+        "url": "https://www.aljazeera.com/news/2026/3/9/what-is-the-us-endgame-in-iran-as-the-war-escalates",
+        "pole": "middle_eastern"
+      }
+    ],
+    "confidence": "high",
+    "lastUpdated": "2026-03-10T06:00:00.000Z"
+  },
+  {
+    "id": "us-strikes-2000-iran-targets",
+    "year": "Mar 10",
+    "title": "US Forces Have Struck Nearly 2,000 Targets in Iran Since Feb. 28",
+    "type": "military",
+    "detail": "US forces have struck nearly 2,000 targets in Iran since the start of Operation Epic Fury, eliminating top Iranian officials including the former Supreme Leader. Strikes have hit nuclear facilities, military infrastructure, and critical civilian infrastructure such as oil refineries. Both the US and Israel now claim to control Iranian airspace. Airwars war monitor previously noted strikes were occurring at a pace 'far surpassing other recent conflicts.'",
+    "sources": [
+      {
+        "name": "PBS NewsHour",
+        "tier": 2,
+        "url": "https://www.pbs.org/newshour/world/the-war-in-iran-has-entered-a-second-week-heres-where-things-stand",
+        "pole": "western"
+      },
+      {
+        "name": "Al Jazeera",
+        "tier": 2,
+        "url": "https://www.aljazeera.com/news/2026/3/9/iran-war-what-is-happening-on-day-10-of-us-israel-attacks",
+        "pole": "middle_eastern"
+      }
+    ],
+    "confidence": "high",
+    "lastUpdated": "2026-03-10T06:00:00.000Z"
+  },
+  {
+    "id": "us-war-cost-5-billion-day4",
+    "year": "Mar 10",
+    "title": "US War Cost Estimated at $890M+ Per Day; Total May Exceed $10B",
+    "type": "economic",
+    "detail": "CNN analysts estimate the conflict is costing the United States at least $890 million per day, if not more. The Center for American Progress estimated the total at $5 billion by March 3 (Day 4); the Center for Strategic and International Studies placed the first 100-hour cost at $3.7 billion. With the conflict now in its second week, total US expenditure is projected to have surpassed $10 billion.",
+    "sources": [
+      {
+        "name": "Al Jazeera",
+        "tier": 2,
+        "url": "https://www.aljazeera.com/news/2026/3/9/what-is-the-us-endgame-in-iran-as-the-war-escalates",
+        "pole": "middle_eastern"
+      },
+      {
+        "name": "PBS NewsHour",
+        "tier": 2,
+        "url": "https://www.pbs.org/newshour/world/the-war-in-iran-has-entered-a-second-week-heres-where-things-stand",
+        "pole": "western"
+      }
+    ],
+    "confidence": "medium",
+    "lastUpdated": "2026-03-10T06:00:00.000Z"
+  },
+  {
+    "id": "us-senate-democrats-condemn-school-strike",
+    "year": "Mar 10",
+    "title": "Senate Democrats Condemn US Strike on Minab Girls' School; NPR Investigation Raises Questions",
+    "type": "diplomatic",
+    "detail": "Top Senate Democrats condemned what they called a U.S. airstrike on Shajareh Tayyebeh Elementary School in Minab on February 28, saying they were 'horrified' by reports of 165–180 killed, mostly children. An NPR investigation found the strike appeared consistent with a precision airstrike on a nearby military compound, raising questions about whether outdated targeting data caused civilian deaths. Neither the US nor Israel has accepted responsibility.",
+    "sources": [
+      {
+        "name": "NPR",
+        "tier": 2,
+        "url": "https://www.npr.org/2026/03/09/nx-s1-5742327/us-israel-iran-war-new-supreme-leader",
+        "pole": "western"
+      }
+    ],
+    "confidence": "medium",
+    "lastUpdated": "2026-03-10T06:00:00.000Z"
+  },
+  {
+    "id": "iran-internet-blackout-1pct",
+    "year": "Mar 10",
+    "title": "Iranian Internet Connectivity Collapses to ~1% of Normal Levels",
+    "type": "humanitarian",
+    "detail": "Iran's internet connectivity has collapsed to approximately 1% of normal levels, according to OHCHR. The communications blackout isolates civilians, preventing them from understanding or documenting events, and severely limits independent verification of casualty figures and strike damage. The UN High Commissioner for Human Rights has called this weaponization of communications restrictions a grave humanitarian concern.",
+    "sources": [
+      {
+        "name": "OHCHR",
+        "tier": 1,
+        "url": "https://www.ohchr.org/en/press-briefing-notes/2026/03/middle-east-crisis-plays-out-worst-fears-talks-only-way-out",
+        "pole": "international"
+      }
+    ],
+    "confidence": "high",
+    "lastUpdated": "2026-03-10T06:00:00.000Z"
+  },
+  {
+    "id": "uk-bases-used-limited-defensive-purpose",
+    "year": "Mar 10",
+    "title": "UK Allows US Use of RAF Bases for 'Limited Defensive Purpose' Against Iranian Missiles",
+    "type": "diplomatic",
+    "detail": "UK Prime Minister Keir Starmer confirmed the US could use UK military bases for a 'specific and limited defensive purpose' to destroy Iranian missiles at source. An Iranian drone struck the UK's RAF base in Cyprus during the conflict. The UK has not participated offensively. Starmer, alongside France and Germany, had condemned Iranian counterstrikes and called for diplomacy, while stating he does 'not believe in regime change from the skies.'",
+    "sources": [
+      {
+        "name": "House of Commons Library",
+        "tier": 1,
+        "url": "https://commonslibrary.parliament.uk/research-briefings/cbp-10521/",
+        "pole": "western"
+      }
+    ],
+    "confidence": "high",
+    "lastUpdated": "2026-03-10T06:00:00.000Z"
+  },
+  {
+    "id": "tehran-fuel-depot-march10-40-killed",
+    "year": "Mar 10",
+    "title": "Israeli Strikes on Tehran Fuel Depots Kill 40; Toxic Smoke Cloud Engulfs City of 10 Million",
+    "type": "military",
+    "detail": "Israeli airstrikes on March 10 targeted the Aghdasieh oil warehouse in northeast Tehran, the Shahran oil depot north of the city, a refinery in the south, and a depot in Karaj. At least 40 people were killed. Thick black toxic smoke hung over Tehran — a city of nearly 10 million — while residents reported difficulty breathing and oil-tainted rainfall staining buildings. The Israeli military stated the fuel complexes were used 'to distribute fuel to multiple military entities in Iran.' Iran's Red Crescent described the strikes as among the most devastating on civilian infrastructure since the war began.",
+    "sources": [
+      {
+        "name": "Al Jazeera",
+        "tier": 2,
+        "url": "https://www.aljazeera.com/news/liveblog/2026/3/10/iran-war-live-trump-says-conflict-will-be-over-soon-40-killed-in-tehran",
+        "pole": "middle_eastern"
+      },
+      {
+        "name": "TIME",
+        "tier": 2,
+        "url": "https://time.com/7383099/iran-news-oil-strikes-tehran/",
+        "pole": "western"
+      }
+    ],
+    "weaponTypes": ["cruise", "ballistic"],
+    "confidence": "high",
+    "lastUpdated": "2026-03-10T12:00:00.000Z"
+  },
+  {
+    "id": "iran-cluster-warhead-yehud",
+    "year": "Mar 10",
+    "title": "Iranian Cluster Warhead Missile Kills 2 Civilians in Yehud, Israel",
+    "type": "military",
+    "detail": "An Iranian missile carrying a cluster warhead struck multiple sites across central Israel on March 10, killing two civilians in the city of Yehud and wounding dozens. The strike was part of several overnight missile barrages targeting civilian areas south and east of Tel Aviv. Since the start of the conflict, at least 14 civilians have been killed in Israel and more than 2,000 Israelis wounded in Iranian attacks. The use of cluster munitions in populated areas raises fresh international humanitarian law concerns.",
+    "sources": [
+      {
+        "name": "Al Jazeera",
+        "tier": 2,
+        "url": "https://www.aljazeera.com/news/liveblog/2026/3/10/iran-war-live-trump-says-conflict-will-be-over-soon-40-killed-in-tehran",
+        "pole": "middle_eastern"
+      },
+      {
+        "name": "Wikipedia — 2026 Iran war",
+        "tier": 3,
+        "url": "https://en.wikipedia.org/wiki/2026_Iran_war",
+        "pole": "western"
+      }
+    ],
+    "weaponTypes": ["ballistic"],
+    "confidence": "high",
+    "lastUpdated": "2026-03-10T12:00:00.000Z"
+  },
+  {
+    "id": "white-house-war-4-6-more-weeks",
+    "year": "Mar 10",
+    "title": "White House Projects War to Continue 4–6 More Weeks; Trump Says 'Over Soon'",
+    "type": "diplomatic",
+    "detail": "White House press secretary Karoline Leavitt said on March 10 that the US expects the war to continue for approximately four to six more weeks. Leavitt stated that when Trump determines Iran 'no longer poses a threat to the United States,' Iran will be in a state of 'unconditional surrender.' Despite this, Trump told reporters the conflict 'will be over soon,' mirroring his earlier comments that it was 'very far ahead of schedule.' Iran's new Supreme Leader Mojtaba Khamenei and President Pezeshkian both publicly rejected any talk of surrender, with Pezeshkian calling US demands 'a dream they must take with them to the grave.'",
+    "sources": [
+      {
+        "name": "Al Jazeera",
+        "tier": 2,
+        "url": "https://www.aljazeera.com/news/liveblog/2026/3/10/iran-war-live-trump-says-conflict-will-be-over-soon-40-killed-in-tehran",
+        "pole": "middle_eastern"
+      },
+      {
+        "name": "CNBC",
+        "tier": 2,
+        "url": "https://www.cnbc.com/2026/03/09/iran-war-updates-oil-brent-wti-crude-110-gulf-gcc-uae-iraq-saudi-arabia-kurds.html",
+        "pole": "western"
+      }
+    ],
+    "confidence": "high",
+    "lastUpdated": "2026-03-10T12:00:00.000Z"
+  },
+  {
+    "id": "china-special-envoy-ceasefire-mediation",
+    "year": "Mar 10",
+    "title": "China Sends Special Envoy to Mediate Ceasefire; Iran Reaches Out via CIA Backchannel",
+    "type": "diplomatic",
+    "detail": "China sent a special envoy to the Middle East this week to push for a ceasefire, with top diplomat Wang Yi calling the conflict 'a war that should never have happened.' Reports emerged that Iran would allow only Chinese vessels to pass through the Strait of Hormuz, citing China's supportive stance. Separately, the Jerusalem Post reported that Iran's Ministry of Intelligence quietly reached out through another country's intelligence service to the CIA with an offer to discuss terms for ending the conflict. Trump reportedly responded: 'Most of the people we had in mind are dead. Pretty soon we are not going to know anybody,' signaling skepticism. Iran's Foreign Ministry publicly denied pursuing talks.",
+    "sources": [
+      {
+        "name": "Jerusalem Post",
+        "tier": 2,
+        "url": "https://www.jpost.com/middle-east/iran-news/article-888816",
+        "pole": "western"
+      },
+      {
+        "name": "CNBC",
+        "tier": 2,
+        "url": "https://www.cnbc.com/2026/03/09/iran-war-updates-oil-brent-wti-crude-110-gulf-gcc-uae-iraq-saudi-arabia-kurds.html",
+        "pole": "western"
+      }
+    ],
+    "confidence": "medium",
+    "lastUpdated": "2026-03-10T12:00:00.000Z"
+  },
+  {
+    "id": "us-8th-soldier-killed-march10",
+    "year": "Mar 10",
+    "title": "8th US Service Member Killed; Pentagon Confirms Total Combat Deaths",
+    "type": "military",
+    "detail": "The US military confirmed an 8th American service member has been killed in the conflict as of March 10. The Pentagon has confirmed a total of 8 deaths: 6 Army Reserve personnel killed in a drone strike at a command center in Kuwait on February 28, and Sgt. Benjamin N. Pennington (died March 8 from wounds sustained March 1 at Prince Sultan Air Base, Saudi Arabia), plus one additional casualty. More than 20 US personnel have been injured across the theater.",
+    "sources": [
+      {
+        "name": "Wikipedia — 2026 Iran war",
+        "tier": 3,
+        "url": "https://en.wikipedia.org/wiki/2026_Iran_war",
+        "pole": "western"
+      },
+      {
+        "name": "Al Jazeera",
+        "tier": 2,
+        "url": "https://www.aljazeera.com/news/liveblog/2026/3/10/iran-war-live-trump-says-conflict-will-be-over-soon-40-killed-in-tehran",
+        "pole": "middle_eastern"
+      }
+    ],
+    "confidence": "medium",
+    "lastUpdated": "2026-03-10T12:00:00.000Z"
+  }
+]

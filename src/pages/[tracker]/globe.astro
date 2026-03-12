@@ -1,0 +1,32 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CesiumGlobe from '../../components/islands/CesiumGlobe/CesiumGlobe';
+import { loadTrackerData } from '../../lib/data';
+import { loadAllTrackers } from '../../lib/tracker-registry';
+import type { TrackerConfig } from '../../lib/tracker-config';
+import { flattenTimelineEvents } from '../../lib/timeline-utils';
+import '../../styles/globe.css';
+
+export function getStaticPaths() {
+  const trackers = loadAllTrackers();
+  return trackers
+    .filter(t => t.status !== 'draft' && t.globe?.enabled)
+    .map(t => ({
+      params: { tracker: t.slug },
+      props: { config: t },
+    }));
+}
+
+interface Props {
+  config: TrackerConfig;
+}
+
+const { config } = Astro.props;
+const data = loadTrackerData(config.slug, config.eraLabel);
+const events = flattenTimelineEvents(data.timeline);
+---
+<BaseLayout title={`3D Intelligence Globe — ${config.shortName}`} trackerSlug={config.slug}>
+  <a href={`/${config.slug}/`} class="globe-back-link">&larr; Dashboard</a>
+  <a href={`/${config.slug}/about/`} class="globe-about-link">About</a>
+  <CesiumGlobe client:only="react" points={data.mapPoints} lines={data.mapLines} kpis={data.kpis} meta={data.meta} events={events} />
+</BaseLayout>

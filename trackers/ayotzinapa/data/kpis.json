@@ -1,0 +1,58 @@
+[
+  {
+    "id": "missing_students",
+    "label": "Students Still Missing",
+    "value": "43",
+    "color": "red",
+    "source": "GIEI / IACHR",
+    "contested": false,
+    "lastUpdated": "2026-03-10"
+  },
+  {
+    "id": "years_elapsed",
+    "label": "Years Since Disappearance",
+    "value": "11+",
+    "color": "amber",
+    "source": "Timeline",
+    "contested": false,
+    "lastUpdated": "2026-03-10"
+  },
+  {
+    "id": "remains_identified",
+    "label": "Remains Identified",
+    "value": "3",
+    "color": "red",
+    "source": "Argentine Forensic Anthropology Team",
+    "contested": true,
+    "contestNote": "Independent identification by EAAF; government initially claimed all incinerated at Cocula dump",
+    "lastUpdated": "2026-03-10"
+  },
+  {
+    "id": "arrests_made",
+    "label": "Arrests Made",
+    "value": "142+",
+    "color": "blue",
+    "source": "Mexican Attorney General",
+    "contested": true,
+    "contestNote": "Many confessions obtained under torture; multiple cases dismissed by courts",
+    "lastUpdated": "2026-03-10"
+  },
+  {
+    "id": "investigations",
+    "label": "Major Investigations",
+    "value": "4",
+    "color": "amber",
+    "source": "GIEI, PGR, FGR, Truth Commission",
+    "contested": false,
+    "lastUpdated": "2026-03-10"
+  },
+  {
+    "id": "giei_reports",
+    "label": "GIEI Reports Published",
+    "value": "6",
+    "color": "green",
+    "source": "IACHR / GIEI",
+    "contested": false,
+    "lastUpdated": "2026-03-10"
+  }
+]

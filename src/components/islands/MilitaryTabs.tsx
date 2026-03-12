@@ -50,9 +50,11 @@ interface Props {
   strikeTargets: StrikeItem[];
   retaliationData: StrikeItem[];
   assetsData: Asset[];
+  tabs?: { id: string; label: string }[];
 }
 
-export default function MilitaryTabs({ strikeTargets, retaliationData, assetsData }: Props) {
+export default function MilitaryTabs({ strikeTargets, retaliationData, assetsData, tabs }: Props) {
+  const milTabs = tabs ?? MIL_TABS;
   const [activeTab, setActiveTab] = useState('strikes');
 
   const dateRange = useMemo(
@@ -88,7 +90,7 @@ export default function MilitaryTabs({ strikeTargets, retaliationData, assetsDat
         {dateRange && <span className="section-count">{dateRange}</span>}
       </div>
       <div className="tab-row" role="tablist" aria-label="Military operations categories">
-        {MIL_TABS.map(t => (
+        {milTabs.map(t => (
           <button
             key={t.id}
             role="tab"

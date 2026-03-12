@@ -1,0 +1,40 @@
+[
+  {
+    "id": "jan1-new-year-protests",
+    "year": "Jan 1",
+    "title": "New Year Protests Intensify",
+    "type": "humanitarian",
+    "detail": "Protests enter their fifth day with no sign of abating despite heavy security presence. Live ammunition reported in Tehran, Isfahan, Tabriz, and Ahvaz. At least 12 killed overnight according to activist networks. Protesters chant anti-regime slogans and burn government buildings in multiple cities.",
+    "sources": [
+      { "name": "HRANA", "tier": 3, "pole": "international" },
+      { "name": "BBC Persian", "tier": 2, "pole": "western" },
+      { "name": "Fars News", "tier": 2, "pole": "middle_eastern" },
+      { "name": "Xinhua", "tier": 2, "pole": "eastern" }
+    ]
+  },
+  {
+    "id": "jan1-security-forces-live-ammo",
+    "year": "Jan 1",
+    "title": "Security Forces Firing Live Rounds in 13 Cities",
+    "type": "humanitarian",
+    "detail": "Eyewitness videos verified by NetBlocks and Iran Human Rights show IRGC-affiliated Basij paramilitaries firing live ammunition at unarmed demonstrators in at least 13 cities across 8 provinces. Hospitals in Tehran and Isfahan report being overwhelmed with gunshot victims. Regime warns of 'decisive action' against what it calls 'rioters and agents of foreign powers.'",
+    "sources": [
+      { "name": "NetBlocks", "tier": 3, "pole": "international" },
+      { "name": "Iran Human Rights", "tier": 3, "pole": "international" },
+      { "name": "CNN", "tier": 2, "pole": "western" },
+      { "name": "IRNA", "tier": 1, "pole": "middle_eastern" }
+    ]
+  },
+  {
+    "id": "jan1-trump-tweets-support",
+    "year": "Jan 1",
+    "title": "Trump Posts Support for Iranian Protesters",
+    "type": "diplomatic",
+    "detail": "President Trump posts on Truth Social in support of Iranian protesters, calling the regime's crackdown 'barbaric' and warning of consequences. State Department issues formal statement condemning the use of lethal force against demonstrators. Iran's foreign ministry accuses Washington of 'blatant interference in internal affairs.'",
+    "sources": [
+      { "name": "White House", "tier": 1, "pole": "western" },
+      { "name": "Press TV", "tier": 2, "pole": "middle_eastern" },
+      { "name": "Reuters", "tier": 2, "pole": "western" }
+    ]
+  }
+]

@@ -1,0 +1,41 @@
+[
+  {
+    "id": "bazaar-merchants-protest-dec12",
+    "year": "Dec 12",
+    "title": "Tehran Bazaar Merchants Stage Walkout",
+    "type": "economic",
+    "detail": "Hundreds of merchants at Tehran's Grand Bazaar close shops in an uncoordinated protest against spiraling import costs and the rial's collapse. The bazaar, historically a barometer of Iranian social stability, has not seen significant shutdowns since the 2018 currency crisis. Security forces maintain a visible presence but do not intervene as closures spread to bazaars in Isfahan and Tabriz.",
+    "sources": [
+      { "name": "Iran International", "tier": 2, "pole": "middle_eastern" },
+      { "name": "AP", "tier": 2, "pole": "western" },
+      { "name": "Hengaw", "tier": 3, "pole": "international" }
+    ],
+    "lastUpdated": "2026-03-10"
+  },
+  {
+    "id": "oil-revenue-shortfall-dec",
+    "year": "Dec 12",
+    "title": "Iran's Oil Revenue Falls 30% Below Budget",
+    "type": "economic",
+    "detail": "Iranian parliamentary budget committee leaks reveal oil and gas revenues are running 30% below the government's fiscal year projections. Snapback sanctions have reduced crude exports to an estimated 800,000 barrels per day, down from 1.3 million bpd pre-sanctions. China, Iran's largest remaining customer, has leveraged the situation to demand deeper discounts, further squeezing revenue.",
+    "sources": [
+      { "name": "ISNA", "tier": 2, "pole": "middle_eastern" },
+      { "name": "CSIS", "tier": 3, "pole": "western" },
+      { "name": "Xinhua", "tier": 2, "pole": "eastern" }
+    ],
+    "lastUpdated": "2026-03-10"
+  },
+  {
+    "id": "healthcare-system-strain-dec",
+    "year": "Dec 12",
+    "title": "Hospitals Report Critical Medicine Shortages",
+    "type": "humanitarian",
+    "detail": "Iran's Medical Council reports that hospitals across the country are facing critical shortages of imported pharmaceuticals, including insulin, chemotherapy drugs, and surgical anesthetics. The elimination of the preferential exchange rate has made importing medicines three times more expensive. Medical professionals warn that chronic disease patients are rationing doses, with cancer treatment delays reported in multiple provinces.",
+    "sources": [
+      { "name": "Iran Medical Council", "tier": 1, "pole": "middle_eastern" },
+      { "name": "Human Rights Watch", "tier": 3, "pole": "international" },
+      { "name": "Al Jazeera", "tier": 2, "pole": "middle_eastern" }
+    ],
+    "lastUpdated": "2026-03-10"
+  }
+]

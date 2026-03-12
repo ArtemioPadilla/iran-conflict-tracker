@@ -1,0 +1,27 @@
+[
+  {
+    "id": "jan4-oil-workers-strike",
+    "year": "Jan 4",
+    "title": "Oil Workers Strike Spreads to Major Fields",
+    "type": "economic",
+    "detail": "Workers at Iran's South Pars gas field and Abadan refinery join the nationwide strike, threatening to disrupt Iran's oil production. Output reportedly drops by 400,000 barrels per day. Brent crude rises 3.2% on the news. The Oil Ministry warns striking workers of 'severe consequences' including termination and prosecution.",
+    "sources": [
+      { "name": "Reuters", "tier": 2, "pole": "western" },
+      { "name": "SHANA (Oil Ministry)", "tier": 1, "pole": "middle_eastern" },
+      { "name": "Bloomberg", "tier": 2, "pole": "western" }
+    ]
+  },
+  {
+    "id": "jan4-mass-arrests-universities",
+    "year": "Jan 4",
+    "title": "Mass Arrests Target Students and Organizers",
+    "type": "humanitarian",
+    "detail": "Security forces raid dormitories at Tehran University, Sharif University, and Isfahan University of Technology, arresting over 300 students. Prominent labor organizers and human rights lawyers are detained in overnight raids. HRANA estimates total detentions have surpassed 3,000 since December 27.",
+    "sources": [
+      { "name": "HRANA", "tier": 3, "pole": "international" },
+      { "name": "Amnesty International", "tier": 3, "pole": "international" },
+      { "name": "BBC Persian", "tier": 2, "pole": "western" },
+      { "name": "Tasnim News", "tier": 2, "pole": "middle_eastern" }
+    ]
+  }
+]

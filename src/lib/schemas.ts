@@ -50,7 +50,7 @@ export const TimelineEventSchema = z.object({
   id: z.string(),
   year: z.string(),
   title: z.string(),
-  type: z.enum(['military', 'diplomatic', 'humanitarian', 'economic']),
+  type: z.string(),
   active: z.boolean().optional(),
   detail: z.string(),
   sources: z.array(SourceSchema),
@@ -76,18 +76,15 @@ const TimeFieldSchema = z.string().regex(
 /** ISO date format YYYY-MM-DD */
 const DateFieldSchema = z.string().regex(/^\d{4}-\d{2}-\d{2}$/, 'Date must be YYYY-MM-DD');
 
-/** Theater coordinate: [lon, lat] bounded to operational area */
-const TheaterCoordSchema = z.tuple([
-  z.number().min(20, 'Longitude must be ≥ 20°E').max(75, 'Longitude must be ≤ 75°E'),
-  z.number().min(5, 'Latitude must be ≥ 5°N').max(50, 'Latitude must be ≤ 50°N'),
-]);
+/** Theater coordinate: [lon, lat] — bounds are tracker-specific, validated at config level */
+const TheaterCoordSchema = z.tuple([z.number(), z.number()]);
 
 // ── Map ──
 export const MapPointSchema = z.object({
   id: z.string(),
-  lon: z.number().min(20).max(75),
-  lat: z.number().min(5).max(50),
-  cat: z.enum(['strike', 'retaliation', 'asset', 'front']),
+  lon: z.number(),
+  lat: z.number(),
+  cat: z.string(),
   label: z.string(),
   sub: z.string(),
   tier: TierSchema,
@@ -102,7 +99,7 @@ export const MapLineSchema = z.object({
   id: z.string(),
   from: TheaterCoordSchema,
   to: TheaterCoordSchema,
-  cat: z.enum(['strike', 'retaliation', 'asset', 'front']),
+  cat: z.string(),
   label: z.string(),
   date: DateFieldSchema,
   weaponType: WeaponTypeSchema.optional(),
@@ -179,7 +176,7 @@ export const PolItemSchema = z.object({
   id: z.string(),
   name: z.string(),
   role: z.string(),
-  avatar: z.enum(['us', 'ir', 'il', 'un', 'other']),
+  avatar: z.string(),
   initial: z.string(),
   quote: z.string(),
   lastUpdated: z.string().optional(),

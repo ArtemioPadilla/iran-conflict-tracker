@@ -1,0 +1,39 @@
+[
+  {
+    "id": "jan11-international-condemnation-grows",
+    "year": "Jan 11",
+    "title": "Global Condemnation Intensifies",
+    "type": "diplomatic",
+    "detail": "A cascade of international condemnation follows the emerging evidence of mass killings. The G7 issues a joint statement calling for 'accountability for those responsible.' France, Germany, and the UK announce coordinated expulsion of Iranian diplomats. Canada and Australia impose targeted sanctions on IRGC commanders. China calls for 'restraint from all sides' while opposing external intervention.",
+    "sources": [
+      { "name": "G7", "tier": 1, "pole": "western" },
+      { "name": "Reuters", "tier": 2, "pole": "western" },
+      { "name": "Xinhua", "tier": 2, "pole": "eastern" },
+      { "name": "Al Arabiya", "tier": 2, "pole": "middle_eastern" }
+    ]
+  },
+  {
+    "id": "jan11-protests-continue-defiance",
+    "year": "Jan 11",
+    "title": "Protests Resume in Defiance of Crackdown",
+    "type": "humanitarian",
+    "detail": "Despite the massacres of the preceding days, protests re-emerge in multiple cities, particularly in Kurdish regions (Sanandaj, Kermanshah) and Baluchistan (Zahedan). The demonstrations shift from economic grievances to explicitly calling for regime change. Graffiti reading 'Death to the Dictator' and 'We Will Not Forget Jan 8-9' appears across cities.",
+    "sources": [
+      { "name": "Hengaw", "tier": 3, "pole": "international" },
+      { "name": "BBC Persian", "tier": 2, "pole": "western" },
+      { "name": "Iran International", "tier": 3, "pole": "middle_eastern" }
+    ]
+  },
+  {
+    "id": "jan11-partial-internet-restoration",
+    "year": "Jan 11",
+    "title": "Partial Internet Restored in Select Areas",
+    "type": "humanitarian",
+    "detail": "Iran partially restores internet connectivity in some provinces, though at severely reduced speeds and with social media platforms remaining blocked. The partial restoration allows a flood of images and videos documenting the massacre to reach the outside world. NetBlocks reports connectivity at approximately 15% of normal levels. Experts believe the regime restored access selectively to monitor communications.",
+    "sources": [
+      { "name": "NetBlocks", "tier": 3, "pole": "international" },
+      { "name": "Cloudflare Radar", "tier": 3, "pole": "western" },
+      { "name": "AP", "tier": 2, "pole": "western" }
+    ]
+  }
+]

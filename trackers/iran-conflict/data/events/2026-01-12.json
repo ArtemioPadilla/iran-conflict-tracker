@@ -1,0 +1,15 @@
+[
+  {
+    "id": "un_emergency_session",
+    "year": "Jan 12",
+    "title": "UN Human Rights Emergency Session",
+    "type": "diplomatic",
+    "detail": "UN Human Rights Council holds special session on Iran. Resolution condemns massacre, calls for fact-finding mission. China abstains, Russia votes against. US announces new sanctions targeting IRGC commanders.",
+    "sources": [
+      { "name": "UN HRC", "tier": 1, "pole": "international" },
+      { "name": "AP", "tier": 2, "pole": "western" },
+      { "name": "TASS", "tier": 2, "pole": "eastern" },
+      { "name": "Al Arabiya", "tier": 2, "pole": "middle_eastern" }
+    ]
+  }
+]

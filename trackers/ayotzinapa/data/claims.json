@@ -1,0 +1,30 @@
+[
+  {
+    "id": "historical_truth_claim",
+    "question": "Were the 43 students incinerated at the Cocula garbage dump?",
+    "sideA": {
+      "label": "Government (2014)",
+      "text": "Attorney General Murillo Karam claimed students were killed and incinerated by Guerreros Unidos at Cocula dump."
+    },
+    "sideB": {
+      "label": "GIEI / Independent Experts",
+      "text": "Fire experiments proved the dump could not reach necessary temperatures. No DNA evidence of 43 bodies found at site."
+    },
+    "resolution": "Debunked by GIEI in September 2015. The 'historical truth' is no longer the official version.",
+    "lastUpdated": "2026-03-10"
+  },
+  {
+    "id": "state_involvement",
+    "question": "Was the Mexican military involved in the disappearance?",
+    "sideA": {
+      "label": "Mexican Government",
+      "text": "Initially denied military involvement. Later investigations revealed the 27th Infantry Battalion was present and had intelligence on the events."
+    },
+    "sideB": {
+      "label": "GIEI / Truth Commission",
+      "text": "Multiple lines of evidence point to military intelligence awareness and possible direct participation. The Truth Commission declared it a 'crime of state'."
+    },
+    "resolution": "Ongoing. Arrest warrants issued for military personnel in 2022, but a judge later dismissed some charges.",
+    "lastUpdated": "2026-03-10"
+  }
+]

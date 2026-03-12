@@ -1,0 +1,374 @@
+[
+  {
+    "id": "israel_us_continued_strikes_iran_mar7",
+    "year": "Mar 7",
+    "title": "Israel and U.S. Continue Strikes on Iranian Military Sites",
+    "type": "military",
+    "detail": "On March 7, 2026, Israel and the United States continued their aerial campaign against Iran, targeting remaining air defense installations and ballistic missile storage facilities. The strikes focused on degrading Iran's retaliatory capacity as the conflict entered its eighth day. CENTCOM reported sorties from both carrier strike groups and land-based assets.",
+    "sources": [
+      {
+        "name": "Associated Press",
+        "tier": 2,
+        "pole": "western"
+      },
+      {
+        "name": "Al Jazeera",
+        "tier": 2,
+        "pole": "middle_eastern"
+      }
+    ],
+    "lastUpdated": "2026-03-07T00:00:00.000Z"
+  },
+  {
+    "id": "iran_strikes_basra_halliburton_mar7",
+    "year": "Mar 7",
+    "title": "Iranian Strikes Hit Halliburton and KBR Facilities in Basra",
+    "type": "military",
+    "detail": "On March 7, 2026, Iranian missiles struck Halliburton and KBR contractor facilities near Basra, Iraq, causing fires and significant damage to logistics infrastructure supporting coalition operations. The attacks marked an expansion of Iranian targeting to include Western private-sector assets in the region.",
+    "sources": [
+      {
+        "name": "Reuters",
+        "tier": 2,
+        "pole": "western"
+      },
+      {
+        "name": "Al Mayadeen",
+        "tier": 2,
+        "pole": "middle_eastern"
+      }
+    ],
+    "lastUpdated": "2026-03-07T00:00:00.000Z"
+  },
+  {
+    "id": "trump_demands_unconditional_surrender_mar7",
+    "year": "Mar 7",
+    "title": "Trump Reiterates Demand for Iran's Unconditional Surrender",
+    "type": "diplomatic",
+    "detail": "On March 7, 2026, President Trump reiterated his demand for Iran's unconditional surrender, stating the military campaign would continue until Iran dismantles its nuclear program and missile infrastructure. The ultimatum was rejected by Iran's Acting Supreme National Security Council, which vowed continued resistance.",
+    "sources": [
+      {
+        "name": "Axios",
+        "tier": 2,
+        "pole": "western"
+      },
+      {
+        "name": "Press TV",
+        "tier": 2,
+        "pole": "middle_eastern"
+      }
+    ],
+    "lastUpdated": "2026-03-07T00:00:00.000Z"
+  },
+  {
+    "id": "humanitarian_crisis_iran_hospitals_mar7",
+    "year": "Mar 7",
+    "title": "Iranian Hospitals Overwhelmed as Civilian Casualties Mount",
+    "type": "humanitarian",
+    "detail": "By March 7, 2026, hospitals across Tehran and Isfahan reported being overwhelmed with civilian casualties from ongoing airstrikes. The Iranian Red Crescent Society reported critical shortages of blood supplies and surgical equipment. International relief organizations called for humanitarian corridors but access remained blocked by continued military operations.",
+    "sources": [
+      {
+        "name": "ICRC",
+        "tier": 1,
+        "pole": "international"
+      },
+      {
+        "name": "IRNA",
+        "tier": 2,
+        "pole": "middle_eastern"
+      }
+    ],
+    "lastUpdated": "2026-03-07T00:00:00.000Z"
+  },
+  {
+    "id": "oil_prices_surge_hormuz_mar7",
+    "year": "Mar 7",
+    "title": "Oil Prices Surge Past $140 as Hormuz Closure Continues",
+    "type": "economic",
+    "detail": "On March 7, 2026, Brent crude surged past $140 per barrel as Iran's closure of the Strait of Hormuz entered its fifth day. Over 200 vessels remained anchored outside the strait, unable to transit. Global energy markets experienced extreme volatility, with European natural gas prices also spiking amid fears of prolonged supply disruption.",
+    "sources": [
+      {
+        "name": "Bloomberg",
+        "tier": 2,
+        "pole": "western"
+      },
+      {
+        "name": "Xinhua",
+        "tier": 2,
+        "pole": "eastern"
+      }
+    ],
+    "lastUpdated": "2026-03-07T00:00:00.000Z"
+  },
+  {
+    "id": "iran_strikes_halliburton_basra",
+    "year": "Mar 7",
+    "title": "Iranian Strikes Hit Halliburton Facilities in Basra",
+    "type": "military",
+    "detail": "On March 7, 2026, Iranian forces launched strikes targeting U.S.-based oil company Halliburton's facilities in Basra, Iraq, causing significant damage.",
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "tier": 2,
+        "url": "https://en.wikipedia.org/wiki/2026_Iran_war",
+        "pole": "international"
+      }
+    ],
+    "lastUpdated": "2026-03-07T06:15:56.708Z"
+  },
+  {
+    "id": "tehran_airport_strike",
+    "year": "Mar 7",
+    "title": "Tehran's Mehrabad International Airport Struck",
+    "type": "military",
+    "detail": "In the early hours of March 7, 2026, Tehran's Mehrabad International Airport was struck, resulting in significant damage to infrastructure.",
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "tier": 2,
+        "url": "https://en.wikipedia.org/wiki/2026_Iran_war",
+        "pole": "international"
+      }
+    ],
+    "lastUpdated": "2026-03-07T06:15:56.708Z"
+  },
+  {
+    "id": "iran_missile_stockpile_depletion",
+    "year": "Mar 7",
+    "title": "Iran's Ballistic Missile Stockpile Depleting",
+    "type": "military",
+    "detail": "Reports indicate that after a week of hostilities, Iran's ballistic missile stockpile may have reduced to approximately 1,000 missiles.",
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "tier": 2,
+        "url": "https://en.wikipedia.org/wiki/2026_Iran_war",
+        "pole": "international"
+      }
+    ],
+    "lastUpdated": "2026-03-07T06:15:56.708Z"
+  },
+  {
+    "id": "earthquake_bandar_abbas",
+    "year": "Mar 7",
+    "title": "Earthquake Strikes Near Bandar Abbas",
+    "type": "humanitarian",
+    "detail": "A 4.1 magnitude earthquake was reported west of Bandar Abbas, Iran, on March 7, 2026.",
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "tier": 2,
+        "url": "https://en.wikipedia.org/wiki/2026_Iran_war",
+        "pole": "international"
+      }
+    ],
+    "lastUpdated": "2026-03-07T06:15:56.708Z"
+  },
+  {
+    "id": "f1_race_decision_delayed",
+    "year": "Mar 7",
+    "title": "Formula 1 Delays Decision on Middle East Races Amid Iran Conflict",
+    "type": "economic",
+    "detail": "Formula One has postponed making a decision on whether to cancel its April races in Bahrain and Saudi Arabia due to the ongoing conflict involving Iran.",
+    "sources": [
+      {
+        "name": "Associated Press",
+        "tier": 2,
+        "url": "https://apnews.com/article/d00f738172bd37aa3972948aa0874944",
+        "pole": "western"
+      }
+    ],
+    "lastUpdated": "2026-03-07T06:15:56.708Z"
+  },
+  {
+    "id": "iran_rejects_ceasefire_prepares_for_invasion",
+    "year": "Mar 7",
+    "title": "Iran Rejects Cease-Fire, Prepares for U.S. Ground Invasion",
+    "type": "diplomatic",
+    "detail": "Iranian Foreign Minister Abbas Araghchi has rejected cease-fire negotiations and declared Iran's readiness to confront a potential U.S. ground invasion. This follows U.S. President Donald Trump's statements not ruling out deploying American troops and reports of extensive civilian casualties in Iran due to U.S.-Israeli bombings.",
+    "sources": [
+      {
+        "name": "Time",
+        "tier": 2,
+        "url": "https://time.com/7382836/iran-us-israel-war-trump-araghchi-ground-invasion-cease-fire/",
+        "pole": "western"
+      }
+    ],
+    "lastUpdated": "2026-03-07T07:23:42.482Z"
+  },
+  {
+    "id": "iran_targets_gulf_states_us_warns_of_intensified_campaign",
+    "year": "Mar 7",
+    "title": "Iran Targets Gulf States; U.S. Warns of Intensified Campaign",
+    "type": "military",
+    "detail": "Iran has launched attacks on Gulf Arab states, including Bahrain and Saudi Arabia, targeting areas such as Dubai and strategic oil infrastructure. In response, the U.S. and Israel have intensified strikes on Iran, aiming at military, leadership, and nuclear facilities. President Trump stated that the U.S. would only negotiate after Iran's 'unconditional surrender' and proposed U.S. support to rebuild Iran once 'acceptable' leadership is in place.",
+    "sources": [
+      {
+        "name": "Associated Press",
+        "tier": 2,
+        "url": "https://apnews.com/article/d347fd6a03185f51d670bf4e7cbf5373",
+        "pole": "western"
+      }
+    ],
+    "lastUpdated": "2026-03-07T07:23:42.482Z"
+  },
+  {
+    "id": "iran_world_cup_participation_uncertain",
+    "year": "Mar 7",
+    "title": "Iran's World Cup Participation Uncertain Amid Conflict",
+    "type": "diplomatic",
+    "detail": "As the 2026 FIFA World Cup approaches, Iran's participation is uncertain due to the ongoing conflict involving the U.S. and Israel. The war has resulted in the death of Iran's Supreme Leader and over 1,000 civilians, raising logistical and ethical concerns about Iran's involvement in the tournament.",
+    "sources": [
+      {
+        "name": "Time",
+        "tier": 2,
+        "url": "https://time.com/7382885/iran-war-united-states-world-cup-2026/",
+        "pole": "western"
+      }
+    ],
+    "lastUpdated": "2026-03-07T07:23:42.482Z"
+  },
+  {
+    "id": "formula1_delays_decision_on_middle_east_races",
+    "year": "Mar 7",
+    "title": "Formula 1 Delays Decision on Middle East Races Amid Conflict",
+    "type": "economic",
+    "detail": "Formula One has postponed making a decision on whether to cancel its April races in Bahrain and Saudi Arabia due to the ongoing conflict involving Iran. Both countries have been impacted by Iranian retaliation following U.S. and Israeli strikes. Canceling the races could cost F1 over $100 million due to the loss of race fees and media revenue.",
+    "sources": [
+      {
+        "name": "Associated Press",
+        "tier": 2,
+        "url": "https://apnews.com/article/d00f738172bd37aa3972948aa0874944",
+        "pole": "western"
+      }
+    ],
+    "lastUpdated": "2026-03-07T07:23:42.482Z"
+  },
+  {
+    "id": "iran_launches_missiles_israel_us_bases",
+    "year": "Mar 4",
+    "title": "Iran Launches Missiles at Israel and U.S. Bases",
+    "type": "military",
+    "detail": "Iran has launched missile strikes against Israel and U.S. military bases in retaliation for a campaign initiated by the U.S. and Israel. This follows the sinking of an Iranian warship by an American submarine and the death of Iran's Supreme Leader Ayatollah Ali Khamenei. Iran has struck targets in Israel, Bahrain, Kuwait, and near NATO-member Turkey, while Israel has resumed airstrikes on Hezbollah in southern Beirut.",
+    "sources": [
+      {
+        "name": "Associated Press",
+        "tier": 2,
+        "url": "https://apnews.com/article/e1c316da4ce809407122590a6872aa85",
+        "pole": "western"
+      }
+    ],
+    "lastUpdated": "2026-03-07T07:23:42.482Z"
+  },
+  {
+    "id": "explosions_tehran_us_warns_of_intensified_bombing",
+    "year": "Mar 6",
+    "title": "Explosions Rock Tehran; U.S. Warns of Intensified Bombing",
+    "type": "military",
+    "detail": "Explosions have rocked Tehran as Iranian missile retaliations target Israel. The U.S. has warned of an impending and intensified bombing campaign, marking the most aggressive phase in the weeklong war. President Trump authorized a $151 million arms deal with Israel and demanded Iran's 'unconditional surrender' before any negotiations.",
+    "sources": [
+      {
+        "name": "Associated Press",
+        "tier": 2,
+        "url": "https://apnews.com/article/6108249f19c4bc162eacd7847976c174",
+        "pole": "western"
+      }
+    ],
+    "lastUpdated": "2026-03-07T07:23:42.482Z"
+  },
+  {
+    "id": "us_israel_attacks_iran_at_record_pace",
+    "year": "Mar 6",
+    "title": "U.S. and Israel Attacking Iran at 'Record Pace'",
+    "type": "military",
+    "detail": "The United States and Israel have attacked Iran at a pace that far surpasses other recent conflicts, with the initial days of the assault resulting in significantly more targets hit per day than any campaign in recent decades.",
+    "sources": [
+      {
+        "name": "Al Jazeera",
+        "tier": 2,
+        "url": "https://www.aljazeera.com/news/2026/3/6/us-and-israel-attacking-iran-at-record-pace-war-monitor-says",
+        "pole": "middle_eastern"
+      }
+    ],
+    "lastUpdated": "2026-03-07T07:23:42.482Z"
+  },
+  {
+    "id": "operation_epic_fury_situation_report",
+    "year": "Mar 6",
+    "title": "Operation Epic Fury: Situation Report",
+    "type": "military",
+    "detail": "As of March 6, 2026, the U.S.-Israeli joint operation against Iran, Operation Epic Fury, has entered its seventh day. Developments include continued heavy airstrikes on Tehran and other Iranian sites, a sharp 90% drop in Iranian ballistic missile attacks attributed to B-2 bomber strikes on buried launchers, and U.S./Israeli claims of near-complete air superiority and destruction of 80% of air defenses.",
+    "sources": [
+      {
+        "name": "Roan Capital Partners",
+        "tier": 3,
+        "url": "https://roancp.com/situation-report-epic-fury-us-iranian-conflict-as-of-march-06-2026/",
+        "pole": "western"
+      }
+    ],
+    "lastUpdated": "2026-03-07T07:23:42.482Z"
+  },
+  {
+    "id": "escalation_risks_persist_after_us_israel_strikes",
+    "year": "Mar 6",
+    "title": "Escalation Risks Persist After U.S.–Israel Strikes on Iran",
+    "type": "military",
+    "detail": "As of March 5, the U.S. has conducted over 2,000 strikes in Iran, and Israel has carried out over 1,500, resulting in over 1,000 deaths in Iran. President Trump projected that the operation against Iran will likely last four to five weeks and encouraged Iranian citizens to challenge the legitimacy of the current regime.",
+    "sources": [
+      {
+        "name": "Solace Global",
+        "tier": 3,
+        "url": "https://www.solaceglobal.com/news/2026/03/06/iran-conflict-outlook-after-us-israel-strikes/",
+        "pole": "western"
+      }
+    ],
+    "lastUpdated": "2026-03-07T07:23:42.482Z"
+  },
+  {
+    "id": "strait_of_hormuz_crisis_disrupts_global_shipping",
+    "year": "Mar 7",
+    "title": "Strait of Hormuz Crisis Disrupts Global Shipping",
+    "type": "economic",
+    "detail": "The Strait of Hormuz, a vital maritime choke point for global energy trade, has experienced ongoing disruption since February 28, 2026, following joint military strikes by the U.S. and Israel on Iran. In response, Iran launched retaliatory missile and drone attacks and issued warnings prohibiting vessel passage through the strait, leading to an effective halt in shipping traffic.",
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "tier": 3,
+        "url": "https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_crisis",
+        "pole": "international"
+      }
+    ],
+    "lastUpdated": "2026-03-07T07:23:42.482Z"
+  },
+  {
+    "id": "economic_impact_of_2026_iran_war",
+    "year": "Mar 7",
+    "title": "Economic Impact of the 2026 Iran War",
+    "type": "economic",
+    "detail": "The U.S.-Israeli military strikes on Iran beginning February 28, 2026, and Iran's subsequent retaliatory actions, have had global and regional economic consequences, including immediate surges in oil and gas prices, disruptions in aviation and tourism, declines in stock markets, and heightened volatility in financial markets.",
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "tier": 3,
+        "url": "https://en.wikipedia.org/wiki/Economic_impact_of_the_2026_Iran_war",
+        "pole": "international"
+      }
+    ],
+    "lastUpdated": "2026-03-07T07:23:42.482Z"
+  },
+  {
+    "id": "israel_declares_state_of_emergency",
+    "year": "Mar 7",
+    "title": "Israel Declares State of Emergency Amid Iran Conflict",
+    "type": "military",
+    "detail": "Since February 28, 2026, a state of emergency has been implemented in Israel due to the ongoing conflict with Iran. The order includes school and business closures, prohibition of public gatherings, increased border presence, and suspension of civilian air travel.",
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "tier": 3,
+        "url": "https://en.wikipedia.org/wiki/2026_Israeli_state_of_emergency",
+        "pole": "international"
+      }
+    ],
+    "lastUpdated": "2026-03-07T07:23:42.482Z"
+  }
+]

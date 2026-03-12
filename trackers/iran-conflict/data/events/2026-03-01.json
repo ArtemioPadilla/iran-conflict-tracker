@@ -1,0 +1,44 @@
+[
+  {
+    "id": "iran_retaliates_gulf",
+    "year": "Mar 1",
+    "title": "Iran Retaliates Across Gulf",
+    "type": "military",
+    "active": true,
+    "detail": "Iran launches massive retaliatory strikes. 137 missiles and 209 drones at UAE (3 killed, 58 injured). 65 missiles at Qatar's Al Udeid AB. Camp Buehring drone strike kills 4 US troops. Bahrain 5th Fleet HQ targeted.",
+    "sources": [
+      { "name": "CENTCOM", "tier": 1, "pole": "western" },
+      { "name": "IRNA", "tier": 1, "pole": "middle_eastern" },
+      { "name": "Al Jazeera", "tier": 2, "pole": "middle_eastern" },
+      { "name": "Xinhua", "tier": 2, "pole": "eastern" },
+      { "name": "Reuters", "tier": 2, "pole": "western" }
+    ]
+  },
+  {
+    "id": "hormuz_shutdown",
+    "year": "Mar 1",
+    "title": "Strait of Hormuz Shut Down",
+    "type": "economic",
+    "active": true,
+    "detail": "IRGC Navy declares Strait of Hormuz 'closed to hostile traffic.' Over 150 tankers anchored. 15 million barrels/day of oil transit disrupted. Oil surges past $142/bbl. Lloyd's of London suspends Gulf shipping insurance.",
+    "sources": [
+      { "name": "IRGC Navy", "tier": 1, "pole": "middle_eastern" },
+      { "name": "Bloomberg", "tier": 2, "pole": "western" },
+      { "name": "Kpler", "tier": 3, "pole": "international" },
+      { "name": "CGTN", "tier": 2, "pole": "eastern" }
+    ]
+  },
+  {
+    "id": "lincoln_claim_denied",
+    "year": "Mar 1",
+    "title": "IRGC Claims Hit on USS Lincoln",
+    "type": "military",
+    "detail": "IRGC claims anti-ship ballistic missile struck USS Abraham Lincoln. CENTCOM categorically denies: 'Not hit. Not even close.' Lincoln continues flight operations. Satellite imagery shows carrier intact.",
+    "sources": [
+      { "name": "CENTCOM", "tier": 1, "pole": "western" },
+      { "name": "IRNA", "tier": 1, "pole": "middle_eastern" },
+      { "name": "Planet Labs", "tier": 3, "pole": "international" },
+      { "name": "Global Times", "tier": 2, "pole": "eastern" }
+    ]
+  }
+]

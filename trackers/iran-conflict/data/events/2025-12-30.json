@@ -1,0 +1,43 @@
+[
+  {
+    "id": "three-protesters-killed-dec30",
+    "year": "Dec 30",
+    "title": "Three Protesters Killed as Crackdown Intensifies",
+    "type": "humanitarian",
+    "detail": "Security forces killed three protesters on the third day of nationwide unrest: Amirhesam Khodayarifard in Kuhdasht (Lorestan), Dariush Ansari Bakhtiariwand in Fuladshahr (Isfahan), and Khodadad Shirvani in Marvdasht (Fars). Witnesses reported live ammunition used against demonstrators. Human rights organizations called for urgent international intervention.",
+    "sources": [
+      { "name": "HRANA", "tier": 3, "pole": "international" },
+      { "name": "Amnesty International", "tier": 3, "pole": "international" },
+      { "name": "BBC Persian", "tier": 2, "pole": "western" },
+      { "name": "Fars News", "tier": 2, "pole": "middle_eastern" }
+    ],
+    "lastUpdated": "2026-03-10"
+  },
+  {
+    "id": "severe-clashes-major-cities",
+    "year": "Dec 30",
+    "title": "Severe Confrontations in Tehran, Isfahan, Shiraz, Kermanshah",
+    "type": "humanitarian",
+    "detail": "Major clashes erupted between protesters and security forces in at least four major cities. In Tehran, demonstrators set fire to banks and government buildings near Enghelab Square. In Isfahan, crowds blocked the Si-o-se-pol bridge. Kermanshah saw running battles in bazaar districts. The IRGC deployed anti-riot units with armored vehicles to multiple provincial capitals.",
+    "sources": [
+      { "name": "AP", "tier": 2, "pole": "western" },
+      { "name": "Al Jazeera", "tier": 2, "pole": "middle_eastern" },
+      { "name": "Hengaw", "tier": 3, "pole": "international" },
+      { "name": "CGTN", "tier": 2, "pole": "eastern" }
+    ],
+    "lastUpdated": "2026-03-10"
+  },
+  {
+    "id": "internet-throttled-dec30",
+    "year": "Dec 30",
+    "title": "Internet Throttled Across Major Cities",
+    "type": "humanitarian",
+    "detail": "Internet monitoring groups reported severe bandwidth throttling across Iran's major cities, with mobile data speeds dropping to near-unusable levels. Instagram and WhatsApp were completely blocked. NetBlocks recorded connectivity at approximately 15% of normal levels in Tehran and below 10% in protest hotspots like Kermanshah and Lorestan.",
+    "sources": [
+      { "name": "NetBlocks", "tier": 3, "pole": "international" },
+      { "name": "OONI", "tier": 3, "pole": "international" },
+      { "name": "Reuters", "tier": 2, "pole": "western" }
+    ],
+    "lastUpdated": "2026-03-10"
+  }
+]

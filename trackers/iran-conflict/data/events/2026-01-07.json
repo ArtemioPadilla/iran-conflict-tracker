@@ -1,0 +1,39 @@
+[
+  {
+    "id": "jan7-clashes-multiple-cities",
+    "year": "Jan 7",
+    "title": "Deadly Clashes Erupt Across Multiple Cities",
+    "type": "humanitarian",
+    "detail": "NPR and multiple outlets report intensifying clashes between security forces and protesters in Tehran, Isfahan, Shiraz, Kermanshah, and Tabriz. At least 34 killed in a single day, the deadliest since protests began. Protesters erect barricades and set fire to police stations. Security forces use both live rounds and vehicle-mounted water cannons.",
+    "sources": [
+      { "name": "NPR", "tier": 2, "pole": "western" },
+      { "name": "Iran Human Rights", "tier": 3, "pole": "international" },
+      { "name": "Al Jazeera", "tier": 2, "pole": "middle_eastern" }
+    ]
+  },
+  {
+    "id": "jan7-internet-near-total-shutdown",
+    "year": "Jan 7",
+    "title": "Internet Throttled to Near-Total Shutdown",
+    "type": "humanitarian",
+    "detail": "NetBlocks confirms internet connectivity across Iran has dropped to below 5% of normal levels, effectively a near-total blackout. Mobile data is completely severed in Tehran, Isfahan, and Shiraz. International calling is intermittent. The regime is systematically isolating the population ahead of what analysts fear will be an escalated crackdown.",
+    "sources": [
+      { "name": "NetBlocks", "tier": 3, "pole": "international" },
+      { "name": "Cloudflare Radar", "tier": 3, "pole": "western" },
+      { "name": "The Guardian", "tier": 2, "pole": "western" },
+      { "name": "Press TV", "tier": 2, "pole": "middle_eastern" }
+    ]
+  },
+  {
+    "id": "jan7-death-toll-surging",
+    "year": "Jan 7",
+    "title": "Death Toll Surpasses 300",
+    "type": "humanitarian",
+    "detail": "Combined reporting from HRANA, Iran Human Rights, and Amnesty International places the cumulative protest death toll above 300 since December 27. The organizations warn the true figure is likely higher due to the internet shutdown preventing documentation. Hospitals in major cities report being ordered by authorities not to record gunshot wounds as protest-related.",
+    "sources": [
+      { "name": "HRANA", "tier": 3, "pole": "international" },
+      { "name": "Amnesty International", "tier": 3, "pole": "international" },
+      { "name": "BBC Persian", "tier": 2, "pole": "western" }
+    ]
+  }
+]

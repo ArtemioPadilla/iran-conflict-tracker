@@ -1,0 +1,178 @@
+[
+  {
+    "id": "iran_strikes",
+    "category": "Iran (strikes)",
+    "killed": "2,400+",
+    "injured": "7,000+",
+    "source": "Al Jazeera / HRANA",
+    "tier": 2,
+    "contested": "yes",
+    "note": "Iranian Red Crescent confirmed ~800; HRANA estimates exceed 2,400 including 181+ children under 10. March 10 Israeli strikes on Tehran fuel depots killed at least 40. US forces struck 3,000+ targets since Feb 28. Internet blackout (~1% connectivity) severely limits verification.",
+    "lastUpdated": "2026-03-10T12:00:00.000Z"
+  },
+  {
+    "id": "iran_minab_school",
+    "category": "Iran — Minab school",
+    "killed": "168–180",
+    "injured": "95",
+    "source": "Al Jazeera",
+    "tier": 2,
+    "contested": "yes",
+    "note": "Schoolgirls and staff killed in missile strike on primary school.",
+    "lastUpdated": "2026-03-08T21:56:37.543Z"
+  },
+  {
+    "id": "iran_isfahan_uni",
+    "category": "Iran — Isfahan University",
+    "killed": "12",
+    "injured": "34",
+    "source": "IRNA",
+    "tier": 2,
+    "contested": "evolving",
+    "note": "Pentagon denies civilian site.",
+    "lastUpdated": "2026-03-08T21:56:37.543Z"
+  },
+  {
+    "id": "iran_officials",
+    "category": "Iran officials",
+    "killed": "48",
+    "injured": "—",
+    "source": "Pentagon",
+    "tier": 1,
+    "contested": "partial",
+    "note": "Includes Supreme Leader Ali Khamenei; figures are evolving.",
+    "lastUpdated": "2026-03-08T21:56:37.543Z"
+  },
+  {
+    "id": "us_service_members",
+    "category": "US service members",
+    "killed": "8",
+    "injured": "20+",
+    "source": "Pentagon",
+    "tier": 1,
+    "contested": "no",
+    "note": "6 Army Reserve killed in Kuwait drone strike (Feb 28); Sgt. Benjamin N. Pennington (1st Space Brigade, died Mar 8 from wounds at Prince Sultan AB, Saudi Arabia, Mar 1); 1 additional casualty confirmed Mar 10.",
+    "lastUpdated": "2026-03-10T12:00:00.000Z"
+  },
+  {
+    "id": "israel_retaliation",
+    "category": "Israel (retaliation)",
+    "killed": "14+",
+    "injured": "2,142+",
+    "source": "Al Jazeera / Israeli health authorities",
+    "tier": 2,
+    "contested": "evolving",
+    "note": "Includes 9 killed at Beit Shemesh synagogue; 2 civilians killed by Iranian cluster warhead missile in Yehud on March 10; missile strikes on Tel Aviv, Jerusalem, Yehud, and central Israel. 174+ attack waves recorded since Feb 28.",
+    "lastUpdated": "2026-03-10T12:00:00.000Z"
+  },
+  {
+    "id": "uae",
+    "category": "UAE",
+    "killed": "5",
+    "injured": "112+",
+    "source": "UAE Ministry of Defense",
+    "tier": 1,
+    "contested": "no",
+    "note": "Includes 2 armed forces officers killed in helicopter crash (Mar 9) during operations. 4 killed and 112 injured from Iranian strikes. 21 drones hit civilian targets. Fujairah oil facility fire from debris.",
+    "lastUpdated": "2026-03-10"
+  },
+  {
+    "id": "kuwait",
+    "category": "Kuwait",
+    "killed": "2",
+    "injured": "6",
+    "source": "Kuwait Ministry of Health",
+    "tier": 1,
+    "contested": "no",
+    "note": "",
+    "lastUpdated": "2026-03-08T21:56:37.543Z"
+  },
+  {
+    "id": "lebanon",
+    "category": "Lebanon",
+    "killed": "486+",
+    "injured": "1,200+",
+    "source": "Lebanese health authorities",
+    "tier": 2,
+    "contested": "evolving",
+    "note": "Nearly 700,000 displaced; includes civilians and Hezbollah fighters; Israeli strikes on Hezbollah and Quds Force positions in Beirut suburbs and southern Lebanon. HRW reports white phosphorus use in residential areas. Lebanon government formally banned Hezbollah military activities.",
+    "lastUpdated": "2026-03-10"
+  },
+  {
+    "id": "qatar",
+    "category": "Qatar",
+    "killed": "0",
+    "injured": "16",
+    "source": "Qatar Ministry of Interior",
+    "tier": 1,
+    "contested": "no",
+    "note": "",
+    "lastUpdated": "2026-03-08T21:56:37.543Z"
+  },
+  {
+    "id": "iraq",
+    "category": "Iraq (Erbil + Al Asad)",
+    "killed": "4",
+    "injured": "3",
+    "source": "Al Jazeera, CENTCOM",
+    "tier": 2,
+    "contested": "evolving",
+    "note": "Includes 4 Popular Mobilization Forces fighters killed; 3 injured.",
+    "lastUpdated": "2026-03-08T21:56:37.543Z"
+  },
+  {
+    "id": "prewar_protests",
+    "category": "Pre-war protests",
+    "killed": "3,117–43,000",
+    "injured": "26,541 det.",
+    "source": "Multiple",
+    "tier": "all",
+    "contested": "heavily",
+    "note": "Wide range.",
+    "lastUpdated": "2026-03-08T21:56:37.543Z"
+  },
+  {
+    "id": "bahrain",
+    "category": "Bahrain",
+    "killed": "1",
+    "injured": "32+",
+    "source": "Bahrain state news agency",
+    "tier": 1,
+    "contested": "no",
+    "note": "At least 32 injured (including children) from Iranian strike on Sitra island; Bapco refinery struck causing force majeure; 1 fatality from earlier intercepted missile debris.",
+    "lastUpdated": "2026-03-10T06:00:00.000Z"
+  },
+  {
+    "id": "saudi_arabia",
+    "category": "Saudi Arabia",
+    "killed": "2",
+    "injured": "12+",
+    "source": "Saudi Civil Defense Agency",
+    "tier": 1,
+    "contested": "no",
+    "note": "Two foreign nationals (Indian and Bangladeshi) killed in Iranian projectile strike on Al-Kharj compound. IRGC claimed target was radar systems. Saudi forces intercepted UAVs targeting Shaybah oil field.",
+    "lastUpdated": "2026-03-10"
+  },
+  {
+    "id": "oman",
+    "category": "Oman",
+    "killed": "1",
+    "injured": "5",
+    "source": "Oman Ministry of Interior",
+    "tier": 1,
+    "contested": "no",
+    "note": "Fatality and injuries from projectile hitting a tanker off Muscat coast.",
+    "lastUpdated": "2026-03-08T21:56:37.543Z"
+  },
+  {
+    "id": "pakistan_consulate_attack",
+    "category": "Pakistan — US Consulate attack",
+    "killed": "10–16",
+    "injured": "60+",
+    "source": "US Consulate Karachi",
+    "tier": 1,
+    "contested": "yes",
+    "note": "Protesters stormed US Consulate; security forces opened fire.",
+    "lastUpdated": "2026-03-08T21:56:37.543Z"
+  }
+]

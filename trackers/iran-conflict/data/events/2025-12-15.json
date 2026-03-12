@@ -1,0 +1,15 @@
+[
+  {
+    "id": "crackdown_begins",
+    "year": "Dec 15",
+    "title": "Regime Crackdown Begins",
+    "type": "humanitarian",
+    "detail": "IRGC deploys Basij paramilitaries to Tehran, Isfahan, and Shiraz. At least 47 killed in 3 days. Internet throttled to 5% capacity. Protests continue despite live-fire response.",
+    "sources": [
+      { "name": "NetBlocks", "tier": 3, "pole": "international" },
+      { "name": "HRANA", "tier": 3, "pole": "international" },
+      { "name": "BBC Persian", "tier": 2, "pole": "western" },
+      { "name": "Fars News", "tier": 2, "pole": "middle_eastern" }
+    ]
+  }
+]

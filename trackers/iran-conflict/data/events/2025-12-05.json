@@ -1,0 +1,41 @@
+[
+  {
+    "id": "fuel-subsidy-tier-introduced",
+    "year": "Dec 5",
+    "title": "New Fuel Subsidy Tier Raises Petrol Prices",
+    "type": "economic",
+    "detail": "The Iranian government introduces a new fuel subsidy tier that effectively raises petrol prices for most consumers. The base allocation of 60 liters per month remains at subsidized rates, but the second tier now costs 50% more than the previous rate. Analysts warn the move will cascade into transport and food delivery costs within days.",
+    "sources": [
+      { "name": "ISNA", "tier": 2, "pole": "middle_eastern" },
+      { "name": "AP", "tier": 2, "pole": "western" },
+      { "name": "Tasnim News", "tier": 2, "pole": "middle_eastern" }
+    ],
+    "lastUpdated": "2026-03-10"
+  },
+  {
+    "id": "energy-crisis-deepens-dec",
+    "year": "Dec 5",
+    "title": "Electricity and Gas Disruptions Enter Second Winter",
+    "type": "humanitarian",
+    "detail": "Rolling blackouts and natural gas cuts continue across Iranian provinces for a second consecutive winter. Hospitals in Isfahan and Tabriz report operating on backup generators for up to 8 hours daily. The energy crisis, which began in late 2024 due to aging infrastructure and rising demand, is exacerbated by reduced fuel imports under snapback sanctions.",
+    "sources": [
+      { "name": "Euronews", "tier": 2, "pole": "western" },
+      { "name": "IRNA", "tier": 1, "pole": "middle_eastern" },
+      { "name": "Human Rights Watch", "tier": 3, "pole": "international" }
+    ],
+    "lastUpdated": "2026-03-10"
+  },
+  {
+    "id": "food-prices-72pct-yoy",
+    "year": "Dec 5",
+    "title": "Food Prices 72% Higher Year-Over-Year",
+    "type": "economic",
+    "detail": "Iran's Statistical Center reports food prices are 72% higher than December 2024. Bread, rice, and cooking oil have seen the steepest increases. The elimination of the preferential exchange rate for agricultural imports is expected to push prices even higher in coming weeks. Queues at government-subsidized stores stretch for blocks in working-class neighborhoods of Tehran and Mashhad.",
+    "sources": [
+      { "name": "Statistical Center of Iran", "tier": 1, "pole": "middle_eastern" },
+      { "name": "Al Jazeera", "tier": 2, "pole": "middle_eastern" },
+      { "name": "NPR", "tier": 2, "pole": "western" }
+    ],
+    "lastUpdated": "2026-03-10"
+  }
+]

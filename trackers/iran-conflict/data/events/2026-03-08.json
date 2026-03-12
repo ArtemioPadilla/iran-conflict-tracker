@@ -1,0 +1,439 @@
+[
+  {
+    "id": "us_israel_intensify_airstrikes_tehran_isfahan_mar7",
+    "year": "Mar 7",
+    "title": "U.S. and Israel Intensify Airstrikes on Tehran and Isfahan",
+    "type": "military",
+    "detail": "U.S. and Israeli forces executed a broad-scale wave of strikes targeting infrastructure in Tehran and Isfahan, marking the most aggressive phase in the weeklong conflict. The attacks aimed at undermining the Iranian regime's facilities and military capabilities.",
+    "sources": [
+      {
+        "name": "Al Jazeera",
+        "tier": 2,
+        "url": "https://www.aljazeera.com/news/2026/3/7/tehran-pounded-in-week-two-of-us-israel-war-iran-targets-israel",
+        "pole": "middle_eastern"
+      },
+      {
+        "name": "AP News",
+        "tier": 2,
+        "url": "https://apnews.com/article/6108249f19c4bc162eacd7847976c174",
+        "pole": "western"
+      }
+    ],
+    "lastUpdated": "2026-03-08T00:29:50.183Z"
+  },
+  {
+    "id": "iran_missile_strikes_israel_mar7",
+    "year": "Mar 7",
+    "title": "Iran Launches Missile Strikes on Israel",
+    "type": "military",
+    "detail": "In retaliation to intensified airstrikes, Iran fired missiles targeting Israel. The Israeli military confirmed the attacks and reported that air defense systems intercepted several missiles, preventing significant damage.",
+    "sources": [
+      {
+        "name": "Al Jazeera",
+        "tier": 2,
+        "url": "https://www.aljazeera.com/news/2026/3/7/tehran-pounded-in-week-two-of-us-israel-war-iran-targets-israel",
+        "pole": "middle_eastern"
+      },
+      {
+        "name": "AP News",
+        "tier": 2,
+        "url": "https://apnews.com/article/6108249f19c4bc162eacd7847976c174",
+        "pole": "western"
+      }
+    ],
+    "lastUpdated": "2026-03-08T00:29:50.183Z"
+  },
+  {
+    "id": "us_approves_arms_sale_israel_mar7",
+    "year": "Mar 7",
+    "title": "U.S. Approves $151 Million Arms Sale to Israel",
+    "type": "military",
+    "detail": "The U.S. government approved a $151 million arms deal with Israel to bolster its military capabilities amid the ongoing conflict with Iran. The deal includes advanced munitions and defense systems.",
+    "sources": [
+      {
+        "name": "Al Jazeera",
+        "tier": 2,
+        "url": "https://www.aljazeera.com/news/2026/3/7/tehran-pounded-in-week-two-of-us-israel-war-iran-targets-israel",
+        "pole": "middle_eastern"
+      },
+      {
+        "name": "AP News",
+        "tier": 2,
+        "url": "https://apnews.com/article/6108249f19c4bc162eacd7847976c174",
+        "pole": "western"
+      }
+    ],
+    "lastUpdated": "2026-03-08T00:29:50.183Z"
+  },
+  {
+    "id": "iranian_president_apologizes_neighbors_mar7",
+    "year": "Mar 7",
+    "title": "Iranian President Apologizes to Neighboring Countries",
+    "type": "diplomatic",
+    "detail": "Iranian President Masoud Pezeshkian issued a rare apology to neighboring countries for recent attacks, signaling a desire to de-escalate regional tensions. However, hard-line leaders within Iran criticized this stance and indicated continued retaliation against U.S. and Israeli targets.",
+    "sources": [
+      {
+        "name": "AP News",
+        "tier": 2,
+        "url": "https://apnews.com/article/9edb192be983f9ede197cb6612a83dc6",
+        "pole": "western"
+      }
+    ],
+    "lastUpdated": "2026-03-08T00:29:50.183Z"
+  },
+  {
+    "id": "us_warns_intensified_bombing_mar7",
+    "year": "Mar 7",
+    "title": "U.S. Warns of Intensified Bombing Campaign",
+    "type": "military",
+    "detail": "The U.S. administration warned of an impending and intensified bombing campaign against Iran, marking the most aggressive phase in the ongoing conflict. President Trump demanded Iran's unconditional surrender before any negotiations.",
+    "sources": [
+      {
+        "name": "AP News",
+        "tier": 2,
+        "url": "https://apnews.com/article/6108249f19c4bc162eacd7847976c174",
+        "pole": "western"
+      }
+    ],
+    "lastUpdated": "2026-03-08T00:29:50.183Z"
+  },
+  {
+    "id": "iranian_missile_strikes_gulf_states_mar7",
+    "year": "Mar 7",
+    "title": "Iranian Missile Strikes Target Gulf States",
+    "type": "military",
+    "detail": "Iran launched missile and drone attacks on several Gulf countries, including Saudi Arabia, Qatar, Bahrain, and the United Arab Emirates. Saudi officials reported intercepting multiple drones heading toward the Shaybah oil field.",
+    "sources": [
+      {
+        "name": "NBC Palm Springs",
+        "tier": 2,
+        "url": "https://www.nbcpalmsprings.com/2026/03/07/usisrael-war-with-iran-enters-eighth-day-as-regional-strikes-escalate-and-casualties-rise",
+        "pole": "western"
+      }
+    ],
+    "lastUpdated": "2026-03-08T00:29:50.183Z"
+  },
+  {
+    "id": "us_suspends_kuwait_embassy_operations_mar7",
+    "year": "Mar 7",
+    "title": "U.S. Suspends Operations at Kuwait Embassy",
+    "type": "diplomatic",
+    "detail": "The United States announced the suspension of its embassy operations in Kuwait amid escalating regional tensions and security concerns stemming from the ongoing conflict with Iran.",
+    "sources": [
+      {
+        "name": "Gulf News",
+        "tier": 2,
+        "url": "https://gulfnews.com/world/americas/us-israel-iran-war-day-6-iran-israel-strikes-continue-uae-extends-limited-flights-1.500463753",
+        "pole": "middle_eastern"
+      }
+    ],
+    "lastUpdated": "2026-03-08T00:29:50.183Z"
+  },
+  {
+    "id": "israel_destroyed_60_percent_iran_missile_launchers_mar7",
+    "year": "Mar 7",
+    "title": "Israel Claims Destruction of Over 60% of Iran's Missile Launchers",
+    "type": "military",
+    "detail": "Israel's military chief reported that more than 60% of Iran's ballistic missile launchers and 80% of its air-defense systems have been destroyed in the ongoing U.S.-Israeli campaign against Iran.",
+    "sources": [
+      {
+        "name": "Gulf News",
+        "tier": 2,
+        "url": "https://gulfnews.com/world/americas/us-israel-iran-war-day-6-iran-israel-strikes-continue-uae-extends-limited-flights-1.500463753",
+        "pole": "middle_eastern"
+      }
+    ],
+    "lastUpdated": "2026-03-08T00:29:50.183Z"
+  },
+  {
+    "id": "iranian_missile_stockpile_depletion_mar7",
+    "year": "Mar 7",
+    "title": "Iran's Ballistic Missile Stockpile Depleting",
+    "type": "military",
+    "detail": "Reports indicate that Iran's ballistic missile stockpile is depleting rapidly due to the ongoing conflict, with estimates suggesting that Iran may have only around one thousand ballistic missiles remaining.",
+    "sources": [
+      {
+        "name": "NDTV",
+        "tier": 2,
+        "url": "https://www.ndtv.com/world-news/iran-missile-stockpile-depleting-amid-ongoing-conflict-2026-03-07",
+        "pole": "western"
+      }
+    ],
+    "lastUpdated": "2026-03-08T00:29:50.183Z"
+  },
+  {
+    "id": "iranian_strike_oil_tanker_strait_of_hormuz_mar7",
+    "year": "Mar 7",
+    "title": "Iranian Strike on Oil Tanker in Strait of Hormuz",
+    "type": "military",
+    "detail": "The Islamic Revolutionary Guard Corps (IRGC) attacked the Malta-flagged oil tanker Prima with a drone after the vessel allegedly ignored repeated warnings from the IRGC Navy regarding the prohibition of traffic through the Strait of Hormuz.",
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "tier": 3,
+        "url": "https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_crisis",
+        "pole": "international"
+      }
+    ],
+    "lastUpdated": "2026-03-08T00:29:50.183Z"
+  },
+  {
+    "id": "israeli_strikes_lebanon_tehran_mar8",
+    "year": "Mar 8",
+    "title": "Israeli Strikes Kill 12 in Lebanon; Oil Facility in Tehran Targeted",
+    "type": "military",
+    "detail": "Israeli airstrikes on southern Lebanon and Beirut resulted in 12 fatalities, targeting commanders of Iran’s Revolutionary Guards’ Quds Force. Additionally, an Israeli strike on an oil storage facility in Tehran caused significant fires, marking the first targeting of a civilian industrial site in the conflict.",
+    "sources": [
+      {
+        "name": "Associated Press",
+        "tier": 2,
+        "url": "https://apnews.com/article/d086d66e54280838c925b65067858afb",
+        "pole": "western"
+      }
+    ],
+    "lastUpdated": "2026-03-08T06:19:02.250Z"
+  },
+  {
+    "id": "us_israel_consider_special_forces_iran_mar8",
+    "year": "Mar 8",
+    "title": "U.S. and Israel Consider Deploying Special Forces to Secure Iran's Nuclear Stockpile",
+    "type": "military",
+    "detail": "The U.S. and Israel are discussing the deployment of special forces to Iran to secure its stockpile of highly enriched uranium, aiming to prevent the development of nuclear weapons. Iran possesses approximately 450 kilograms of 60%-enriched uranium, which could be converted into weapons-grade material within weeks.",
+    "sources": [
+      {
+        "name": "Axios",
+        "tier": 2,
+        "url": "https://www.axios.com/2026/03/08/iran-ground-troops-special-forces-nuclear",
+        "pole": "western"
+      }
+    ],
+    "lastUpdated": "2026-03-08T06:19:02.250Z"
+  },
+  {
+    "id": "iran_rejects_ceasefire_prepares_invasion_mar7",
+    "year": "Mar 7",
+    "title": "Iran Rejects Cease-Fire Negotiations, Prepares for U.S. Ground Invasion",
+    "type": "diplomatic",
+    "detail": "Iranian Foreign Minister Abbas Araghchi rejected the idea of a cease-fire and declared the country's readiness to confront a U.S. ground invasion. This follows statements from U.S. President Donald Trump, who did not rule out deploying American troops.",
+    "sources": [
+      {
+        "name": "Time",
+        "tier": 2,
+        "url": "https://time.com/7382836/iran-us-israel-war-trump-araghchi-ground-invasion-cease-fire/",
+        "pole": "western"
+      }
+    ],
+    "lastUpdated": "2026-03-08T06:19:02.250Z"
+  },
+  {
+    "id": "tehran_explosions_us_warns_intensified_bombing_mar7",
+    "year": "Mar 7",
+    "title": "Explosions Rock Tehran; U.S. Warns of Intensified Bombing",
+    "type": "military",
+    "detail": "A series of explosions occurred in Tehran as the U.S. warned of an impending intensified bombing campaign. The Trump administration authorized a $151 million arms deal with Israel, with President Trump demanding Iran’s 'unconditional surrender' before any negotiations.",
+    "sources": [
+      {
+        "name": "Associated Press",
+        "tier": 2,
+        "url": "https://apnews.com/article/6108249f19c4bc162eacd7847976c174",
+        "pole": "western"
+      }
+    ],
+    "lastUpdated": "2026-03-08T06:19:02.250Z"
+  },
+  {
+    "id": "us_israel_attacks_iran_record_pace_mar6",
+    "year": "Mar 6",
+    "title": "U.S. and Israel Attacking Iran at 'Record Pace', War Monitor Says",
+    "type": "military",
+    "detail": "Research group Airwars reported that the U.S. and Israel have attacked Iran at a pace far surpassing other recent conflicts, with about 4,000 targets struck in the first four days of the offensive.",
+    "sources": [
+      {
+        "name": "Al Jazeera",
+        "tier": 2,
+        "url": "https://www.aljazeera.com/news/2026/3/6/us-and-israel-attacking-iran-at-record-pace-war-monitor-says",
+        "pole": "middle_eastern"
+      }
+    ],
+    "lastUpdated": "2026-03-08T06:19:02.250Z"
+  },
+  {
+    "id": "tehran_fuel_depot_strikes",
+    "year": "Mar 8",
+    "title": "Israeli Airstrikes on Tehran Fuel Depots Cause Toxic Smoke and Acid Rain",
+    "type": "military",
+    "detail": "Israeli airstrikes targeted multiple fuel depots in Tehran, resulting in prolonged fires that released hazardous fumes. The Iranian capital is now engulfed in toxic smoke, leading to black acid rain and severe air pollution. Residents report 'unbreathable' air, with many experiencing respiratory issues and skin irritation. Iran's Red Crescent has warned that the rain is highly acidic and poses significant health risks.",
+    "sources": [
+      {
+        "name": "Time",
+        "tier": 2,
+        "url": "https://time.com/7383099/iran-news-oil-strikes-tehran/",
+        "pole": "western"
+      },
+      {
+        "name": "Al Jazeera",
+        "tier": 2,
+        "url": "https://www.aljazeera.com/news/2026/3/7/tehran-pounded-in-week-two-of-us-israel-war-iran-targets-israel",
+        "pole": "middle_eastern"
+      }
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "https://time.com/7383099/iran-news-oil-strikes-tehran/",
+        "caption": "Smoke rising over Tehran following Israeli airstrikes on fuel depots.",
+        "source": "Time"
+      }
+    ],
+    "confidence": "high",
+    "lastUpdated": "2026-03-08T21:56:37.543Z"
+  },
+  {
+    "id": "mojtaba_khamenei_succeeds_supreme_leader",
+    "year": "Mar 8",
+    "title": "Mojtaba Khamenei Named Successor to Iran's Supreme Leader",
+    "type": "diplomatic",
+    "detail": "Iranian state television announced that Mojtaba Khamenei, son of the late Supreme Leader Ali Khamenei, has been appointed as his successor. This move consolidates control over military strategy through the Revolutionary Guard amid the ongoing conflict. The appointment follows the death of the elder Khamenei in an Israeli strike, which has escalated tensions in the region.",
+    "sources": [
+      {
+        "name": "Associated Press",
+        "tier": 2,
+        "url": "https://apnews.com/article/d086d66e54280838c925b65067858afb",
+        "pole": "western"
+      },
+      {
+        "name": "Al Jazeera",
+        "tier": 2,
+        "url": "https://www.aljazeera.com/news/2026/3/7/iran-war-what-is-happening-on-day-eight-of-us-israel-attacks",
+        "pole": "middle_eastern"
+      }
+    ],
+    "confidence": "high",
+    "lastUpdated": "2026-03-08T21:56:37.543Z"
+  },
+  {
+    "id": "us_considers_special_forces_iran_nuclear_stockpile",
+    "year": "Mar 8",
+    "title": "U.S. Weighs Deploying Special Forces to Secure Iran's Nuclear Stockpile",
+    "type": "military",
+    "detail": "The United States, in coordination with Israel, is considering deploying special forces into Iran to secure its stockpile of highly enriched uranium. Concerns center around Iran's 450 kilograms of uranium enriched to 60%, which can be rapidly converted to weapons-grade material. This mission would require ground forces to penetrate heavily fortified nuclear storage sites.",
+    "sources": [
+      {
+        "name": "Axios",
+        "tier": 2,
+        "url": "https://www.axios.com/2026/03/08/iran-ground-troops-special-forces-nuclear",
+        "pole": "western"
+      },
+      {
+        "name": "Al Jazeera",
+        "tier": 2,
+        "url": "https://www.aljazeera.com/news/2026/3/6/us-and-israel-attacking-iran-at-record-pace-war-monitor-says",
+        "pole": "middle_eastern"
+      }
+    ],
+    "confidence": "high",
+    "lastUpdated": "2026-03-08T21:56:37.543Z"
+  },
+  {
+    "id": "us_dismayed_israel_fuel_strikes",
+    "year": "Mar 8",
+    "title": "U.S. Expresses Dismay Over Israel's Strikes on Iranian Fuel Depots",
+    "type": "diplomatic",
+    "detail": "The United States expressed dismay over Israel's airstrikes on 30 Iranian fuel depots, carried out without prior consultation. While Israel notified the U.S. military in advance, American officials were surprised by the scale of the operation. The strikes caused massive fires visible across Tehran and filled the capital with smoke. U.S. officials are concerned that targeting infrastructure used by civilians could rally Iranian public opinion behind the regime and destabilize global oil markets.",
+    "sources": [
+      {
+        "name": "Axios",
+        "tier": 2,
+        "url": "https://www.axios.com/2026/03/08/us-dismayed-israel-iran-fuel-strikes",
+        "pole": "western"
+      },
+      {
+        "name": "Al Jazeera",
+        "tier": 2,
+        "url": "https://www.aljazeera.com/news/2026/3/7/tehran-pounded-in-week-two-of-us-israel-war-iran-targets-israel",
+        "pole": "middle_eastern"
+      }
+    ],
+    "confidence": "high",
+    "lastUpdated": "2026-03-08T21:56:37.543Z"
+  },
+  {
+    "id": "iran_missile_drone_attacks_gulf",
+    "year": "Mar 8",
+    "title": "Iran Launches Missile and Drone Attacks on Gulf Countries",
+    "type": "military",
+    "detail": "Iran launched 16 ballistic missiles and over 117 drones targeting Gulf countries, including the United Arab Emirates and Bahrain. The UAE's Defense Ministry reported intercepting all 16 missiles and most of the drones, though four drones fell in UAE territory. Bahrain reported damage to a desalination plant from an Iranian drone strike. These attacks are part of Iran's retaliation against U.S. and Israeli strikes.",
+    "sources": [
+      {
+        "name": "Newsmax",
+        "tier": 2,
+        "url": "https://www.newsmax.com/world/globaltalk/iran-israel-us-march-8-2026/2026/03/08/id/1248710/",
+        "pole": "western"
+      },
+      {
+        "name": "Al Jazeera",
+        "tier": 2,
+        "url": "https://www.aljazeera.com/news/2026/3/7/iran-war-what-is-happening-on-day-eight-of-us-israel-attacks",
+        "pole": "middle_eastern"
+      }
+    ],
+    "weaponTypes": [
+      "ballistic",
+      "drone"
+    ],
+    "confidence": "high",
+    "lastUpdated": "2026-03-08T21:56:37.543Z"
+  },
+  {
+    "id": "iranian_missile_strikes_israel",
+    "year": "Mar 8",
+    "title": "Iran Launches Missiles at Israel; No Casualties Reported",
+    "type": "military",
+    "detail": "Iran's Islamic Revolutionary Guard Corps (IRGC) claimed responsibility for missile strikes targeting military sites in Tel Aviv and Beersheba, as well as the Muwaffaq Salti Air Base in Azraq, Jordan. Israeli rescue services reported at least three people injured by shrapnel from the missiles. The attacks are part of Iran's ongoing retaliation against U.S. and Israeli military actions.",
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "tier": 3,
+        "url": "https://en.wikipedia.org/wiki/Timeline_of_the_2026_Iran_war",
+        "pole": "international"
+      },
+      {
+        "name": "Al Jazeera",
+        "tier": 2,
+        "url": "https://www.aljazeera.com/news/2026/3/7/tehran-pounded-in-week-two-of-us-israel-war-iran-targets-israel",
+        "pole": "middle_eastern"
+      }
+    ],
+    "weaponTypes": [
+      "ballistic"
+    ],
+    "confidence": "medium",
+    "lastUpdated": "2026-03-08T21:56:37.543Z"
+  },
+  {
+    "id": "iranian_drone_strike_kuwait",
+    "year": "Mar 8",
+    "title": "Iranian Drone Strike Sets Kuwait City Tower Ablaze",
+    "type": "military",
+    "detail": "An Iranian drone strike targeted a tower belonging to the Public Institution for Social Security in Kuwait City, causing a significant fire. The attack is part of Iran's broader campaign of retaliatory strikes against U.S. allies in the region. Kuwaiti authorities reported two officers killed during the incident.",
+    "sources": [
+      {
+        "name": "Wikipedia",
+        "tier": 3,
+        "url": "https://en.wikipedia.org/wiki/Timeline_of_the_2026_Iran_war",
+        "pole": "international"
+      },
+      {
+        "name": "Al Jazeera",
+        "tier": 2,
+        "url": "https://www.aljazeera.com/news/2026/3/7/iran-war-what-is-happening-on-day-eight-of-us-israel-attacks",
+        "pole": "middle_eastern"
+      }
+    ],
+    "weaponTypes": [
+      "drone"
+    ],
+    "confidence": "medium",
+    "lastUpdated": "2026-03-08T21:56:37.543Z"
+  }
+]

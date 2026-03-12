@@ -1,0 +1,147 @@
+[
+  {
+    "era": "Cold War Era",
+    "events": [
+      {
+        "id": "allied_invasion_1941",
+        "year": "1941",
+        "title": "Allied Invasion of Iran",
+        "type": "military",
+        "detail": "Britain and USSR invade Iran to secure oil fields and supply lines. Reza Shah abdicates; his son Mohammad Reza Pahlavi takes the throne.",
+        "sources": [{ "name": "US State Dept", "tier": 1, "url": "https://history.state.gov" }]
+      },
+      {
+        "id": "cia_coup_1953",
+        "year": "1953",
+        "title": "CIA Coup (Op. Ajax)",
+        "type": "diplomatic",
+        "detail": "CIA and MI6 overthrow PM Mossadegh after he nationalized oil. ~300 killed. Shah consolidated power. CIA acknowledged role in 2013.",
+        "sources": [
+          { "name": "NSA Archive", "tier": 1, "url": "https://nsarchive.gwu.edu" },
+          { "name": "History.com", "tier": 2, "url": "https://history.com" }
+        ]
+      },
+      {
+        "id": "islamic_revolution_1979",
+        "year": "1979",
+        "title": "Islamic Revolution",
+        "type": "military",
+        "detail": "Shah flees Jan 16. Khomeini returns Feb 1. Nov 4: Students seize US Embassy; 52 hostages held 444 days. Failed rescue kills 8 US troops.",
+        "sources": [
+          { "name": "US State Dept", "tier": 1 },
+          { "name": "CNN", "tier": 2 }
+        ]
+      }
+    ]
+  },
+  {
+    "era": "Iran-Iraq War",
+    "events": [
+      {
+        "id": "iran_iraq_war",
+        "year": "1980\u201388",
+        "title": "Iran-Iraq War",
+        "type": "military",
+        "detail": "Iraq invades Iran; US provides intelligence to Iraq. ~1 million killed total. Chemical weapons used extensively by Iraq.",
+        "sources": [{ "name": "Britannica", "tier": 3 }]
+      },
+      {
+        "id": "iran_air_655",
+        "year": "1988",
+        "title": "Iran Air 655",
+        "type": "humanitarian",
+        "detail": "USS Vincennes shoots down civilian Airbus A300 over Strait of Hormuz. All 290 killed including 66 children. US paid $131.8M settlement, never apologized.",
+        "sources": [
+          { "name": "ICJ Case 79", "tier": 1 },
+          { "name": "PBS Frontline", "tier": 2 }
+        ]
+      }
+    ]
+  },
+  {
+    "era": "Nuclear Standoff",
+    "events": [
+      {
+        "id": "axis_of_evil_2002",
+        "year": "2002",
+        "title": "Axis of Evil / Facilities Revealed",
+        "type": "diplomatic",
+        "detail": "Bush names Iran in \"Axis of Evil.\" Exile group reveals secret nuclear facilities at Natanz and Arak.",
+        "sources": [{ "name": "White House Archives", "tier": 1 }]
+      },
+      {
+        "id": "jcpoa_2015",
+        "year": "2015",
+        "title": "JCPOA Nuclear Deal",
+        "type": "diplomatic",
+        "detail": "Iran agrees to reduce enriched uranium by 97%, limit enrichment to 3.67%, reduce centrifuges by two-thirds, allow IAEA inspections.",
+        "sources": [
+          { "name": "Arms Control Assoc", "tier": 3 },
+          { "name": "IAEA", "tier": 1 }
+        ]
+      },
+      {
+        "id": "trump_exits_jcpoa_2018",
+        "year": "2018",
+        "title": "Trump Exits JCPOA",
+        "type": "diplomatic",
+        "detail": "Trump withdraws from JCPOA despite IAEA confirming Iranian compliance. Reimposed \"maximum pressure\" sanctions. Iran begins exceeding JCPOA limits in 2019.",
+        "sources": [
+          { "name": "Wikipedia", "tier": 3 },
+          { "name": "Arms Control", "tier": 3 }
+        ]
+      },
+      {
+        "id": "soleimani_killed_2020",
+        "year": "2020",
+        "title": "Soleimani Killed",
+        "type": "military",
+        "detail": "US drone strike at Baghdad airport kills IRGC Quds Force commander Soleimani and Iraqi PMF deputy al-Muhandis. Iran retaliates with missiles at Al Asad, wounding 110 US troops.",
+        "sources": [
+          { "name": "CENTCOM", "tier": 1 },
+          { "name": "Al Jazeera", "tier": 2 }
+        ]
+      }
+    ]
+  },
+  {
+    "era": "Escalation 2023\u201325",
+    "events": [
+      {
+        "id": "oct7_gaza_war",
+        "year": "Oct 2023",
+        "title": "Oct 7 Attack & Gaza War",
+        "type": "military",
+        "detail": "Hamas attacks southern Israel, killing ~1,200. Israel invades Gaza. Regional escalation with Hezbollah, Houthis, and Iran-backed militias.",
+        "sources": [{ "name": "AP/Reuters", "tier": 2 }]
+      },
+      {
+        "id": "first_iran_israel_exchange",
+        "year": "Apr 2024",
+        "title": "First Iran-Israel Exchange",
+        "type": "military",
+        "detail": "Israel bombs Iranian consulate in Damascus. Iran launches 170+ drones and 100+ ballistic missiles at Israel; ~99% intercepted. Israel strikes Isfahan.",
+        "sources": [{ "name": "UK House of Commons", "tier": 3 }]
+      },
+      {
+        "id": "second_exchange_2024",
+        "year": "Oct 2024",
+        "title": "Second Exchange",
+        "type": "military",
+        "detail": "Iran fires ballistic missiles at Israel. Israel destroys most of Iran's Russian-supplied S-300 air defense systems near Tehran.",
+        "sources": [{ "name": "UK House of Commons", "tier": 3 }]
+      },
+      {
+        "id": "twelve_day_war_2025",
+        "year": "Jun 2025",
+        "title": "Twelve-Day War",
+        "type": "military",
+        "detail": "Israel launches 200+ jets at 100+ targets. US enters with B-2 bombers. 600+ Iranians killed. IRGC chief Salami and nuclear scientists killed. Ceasefire June 24.",
+        "sources": [
+          { "name": "Al Jazeera", "tier": 2 },
+          { "name": "CRS Report", "tier": 1 }
+        ]
+      }
+    ]
+  }
+]

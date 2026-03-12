@@ -3,9 +3,17 @@ import '../styles/global.css';
 
 interface Props {
   title: string;
+  description?: string;
+  trackerSlug?: string;
+  githubRepo?: string;
 }
 
-const { title } = Astro.props;
+const { title, description, trackerSlug, githubRepo } = Astro.props;
+const siteUrl = import.meta.env.SITE || 'https://artemiopadilla.github.io';
+const basePath = import.meta.env.BASE_URL || '/intel-dashboard';
+const pageUrl = trackerSlug ? `${siteUrl}${basePath}${trackerSlug}/` : `${siteUrl}${basePath}`;
+const desc = description || 'Multi-topic intelligence dashboard with sourced data, interactive maps, and contested claims tracking.';
+const githubUrl = githubRepo ? `https://github.com/${githubRepo}` : 'https://github.com/ArtemioPadilla/intel-dashboard';
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -13,36 +21,30 @@ const { title } = Astro.props;
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{title}</title>
-  <meta name="description" content="Comprehensive intelligence dashboard tracking the 2026 Iran-US/Israel conflict with sourced data, interactive map, and contested claims matrix.">
-  <meta property="og:title" content="2026 Iran Conflict — Intelligence Dashboard">
-  <meta property="og:description" content="Operation Epic Fury / Roaring Lion — live intelligence dashboard. Strike locations, casualties, economic impact, multi-pole sourcing, contested claims.">
+  <meta name="description" content={desc}>
+  <meta property="og:title" content={title}>
+  <meta property="og:description" content={desc}>
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://artemiopadilla.github.io/iran-conflict-tracker/">
-  <meta property="og:image" content="https://artemiopadilla.github.io/iran-conflict-tracker/og-card.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
+  <meta property="og:url" content={pageUrl}>
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="https://artemiopadilla.github.io/iran-conflict-tracker/og-card.png">
   <meta name="theme-color" content="#0a0b0e">
-  <link rel="canonical" href="https://artemiopadilla.github.io/iran-conflict-tracker/">
+  <link rel="canonical" href={pageUrl}>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔴</text></svg>">
-  <script is:inline type="application/ld+json">
-  {
+  <script is:inline type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "2026 Iran Conflict — Intelligence Dashboard",
-    "description": "Comprehensive intelligence dashboard tracking the 2026 Iran-US/Israel conflict with sourced data, interactive map, and contested claims matrix.",
-    "url": "https://artemiopadilla.github.io/iran-conflict-tracker/"
-  }
-  </script>
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="/iran-conflict-tracker/fonts/dm-sans-latin.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="/iran-conflict-tracker/fonts/jetbrains-mono-latin.woff2">
+    "name": title,
+    "description": desc,
+    "url": pageUrl,
+  })} />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href={`${basePath}fonts/dm-sans-latin.woff2`}>
+  <link rel="preload" as="font" type="font/woff2" crossorigin href={`${basePath}fonts/jetbrains-mono-latin.woff2`}>
 </head>
 <body>
   <div class="tooltip" id="tooltip"></div>
   <a
     class="feedback-fab"
-    href="https://github.com/ArtemioPadilla/iran-conflict-tracker/issues/new/choose"
+    href={`${githubUrl}/issues/new/choose`}
     target="_blank"
     rel="noopener noreferrer"
     title="Report issue or suggest a feature"

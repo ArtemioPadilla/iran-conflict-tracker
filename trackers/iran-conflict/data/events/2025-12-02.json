@@ -1,0 +1,41 @@
+[
+  {
+    "id": "rial-crosses-120k-tomans",
+    "year": "Dec 2",
+    "title": "Rial Hits Historic Low Against Dollar",
+    "type": "economic",
+    "detail": "The Iranian rial crosses 120,600 tomans per US dollar on the open market, a new all-time low. The Emami gold coin surges past 124 million tomans. Currency traders cite the lingering impact of September 2025 UN snapback sanctions, which froze Iranian assets abroad and reimposed missile-related penalties.",
+    "sources": [
+      { "name": "Iran International", "tier": 2, "pole": "middle_eastern" },
+      { "name": "Reuters", "tier": 2, "pole": "western" },
+      { "name": "Central Bank of Iran", "tier": 1, "pole": "middle_eastern" }
+    ],
+    "lastUpdated": "2026-03-10"
+  },
+  {
+    "id": "preferential-fx-rate-eliminated",
+    "year": "Dec 2",
+    "title": "Government Ends Subsidized Exchange Rate",
+    "type": "economic",
+    "detail": "Iran's government eliminates the preferential exchange rate of 285,000 rials per dollar previously reserved for essential goods imports including oilseeds, livestock feed, and fertilizers. Importers must now purchase forex at the open-market rate, effectively tripling input costs for basic food production overnight.",
+    "sources": [
+      { "name": "Al-Monitor", "tier": 2, "pole": "middle_eastern" },
+      { "name": "IRNA", "tier": 1, "pole": "middle_eastern" },
+      { "name": "Financial Tribune", "tier": 3, "pole": "middle_eastern" }
+    ],
+    "lastUpdated": "2026-03-10"
+  },
+  {
+    "id": "snapback-sanctions-impact-dec",
+    "year": "Dec 2",
+    "title": "Snapback Sanctions Continue to Squeeze Economy",
+    "type": "diplomatic",
+    "detail": "Three months after the September 2025 UN snapback, Iranian officials acknowledge the sanctions have frozen over $12 billion in overseas assets and halted arms trade. The Finance Minister publicly blames the June 2025 Twelve-Day War with Israel for accelerating the rial's collapse, calling it a 'compounding shock' on top of existing sanctions pressure.",
+    "sources": [
+      { "name": "UN Security Council", "tier": 1, "pole": "international" },
+      { "name": "BBC Persian", "tier": 2, "pole": "western" },
+      { "name": "Press TV", "tier": 2, "pole": "middle_eastern" }
+    ],
+    "lastUpdated": "2026-03-10"
+  }
+]

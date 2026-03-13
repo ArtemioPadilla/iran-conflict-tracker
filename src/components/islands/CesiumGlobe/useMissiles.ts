@@ -215,7 +215,9 @@ export function useMissiles(
       };
     }
 
-    const baseSimTime = new Date(currentDate + 'T00:00:00Z').getTime();
+    // Anchor all animations to the current clock time so they're visible
+    // regardless of where we are in the day
+    const effectStartMs = viewer.isDestroyed() ? Date.now() : viewerNowMs(viewer);
     let totalProjectiles = 0;
 
     for (let i = 0; i < animatable.length; i++) {
@@ -229,18 +231,7 @@ export function useMissiles(
       const baseSize = weaponProjectileSize(line.weaponType);
       const glowPwr = weaponGlowPower(line.weaponType);
 
-      // Sub-day timing offset
-      let timeOffset = 0;
-      if (line.time) {
-        const match = line.time.match(/^(\d{1,2}):(\d{2})$/);
-        if (match) {
-          const hours = parseInt(match[1], 10);
-          const mins = parseInt(match[2], 10);
-          timeOffset = (hours * 3600 + mins * 60) * 1000;
-        }
-      }
-
-      const arcStartTime = baseSimTime + timeOffset;
+      const arcStartTime = effectStartMs;
 
       // How many projectiles for this line
       const launched = line.launched || 1;

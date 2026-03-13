@@ -222,7 +222,11 @@ jobs:
 
       - name: Commit and push
         if: steps.changes.outputs.changed == 'true' && steps.json_check.outputs.valid == 'true' && steps.validate.outputs.valid == 'true'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          # Restore remote URL with GITHUB_TOKEN (claude-code-action may have changed it)
+          git remote set-url origin "https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git"
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git add trackers/

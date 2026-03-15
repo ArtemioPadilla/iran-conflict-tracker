@@ -1694,5 +1694,16 @@
     "tier": 1,
     "date": "2026-03-13",
     "lastUpdated": "2026-03-13T06:00:00.000Z"
+  },
+  {
+    "id": "baghdad_us_embassy_mar14",
+    "lon": 44.4,
+    "lat": 33.33,
+    "cat": "retaliation",
+    "label": "Baghdad — US Embassy Helipad Hit",
+    "sub": "Missile struck US Embassy Baghdad helipad, destroying the facility's air defense system. No US fatalities reported. First direct strike on the US Embassy compound during the conflict.",
+    "tier": 1,
+    "date": "2026-03-14",
+    "lastUpdated": "2026-03-15T06:00:00.000Z"
   }
 ]

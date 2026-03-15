@@ -1,0 +1,163 @@
+[
+  {
+    "id": "iran-war-day-16-sitrep",
+    "year": "Mar 15",
+    "title": "Day 16: US and Iran Both Reject Ceasefire; Iran Targets Gulf States and Baghdad Embassy",
+    "type": "military",
+    "detail": "The conflict enters its 17th day with a diplomatic deadlock hardening. Both the United States and Iran have formally rejected international mediation efforts for a ceasefire. Trump rebuffed attempts by Middle Eastern allies to start talks, with a senior White House official stating he is 'not interested in that right now.' Iran similarly rejected negotiation while attacks continue. Iran fired 9 ballistic missiles and 33 UAVs at the UAE, 7 drones at Riyadh (Saudi Arabia), and 4 ballistic missiles at Qatar — all intercepted. A missile struck the US Embassy helipad in Baghdad, destroying the facility's air defense system. Putin called Trump with diplomatic proposals on Iran; no breakthrough. Pentagon continues to describe the campaign as 'still ramping up.'",
+    "sources": [
+      {
+        "name": "Times of Israel",
+        "tier": 2,
+        "url": "https://www.timesofisrael.com/trump-and-iran-both-reject-international-efforts-to-launch-ceasefire-talks/",
+        "pole": "western"
+      },
+      {
+        "name": "Reuters",
+        "tier": 2,
+        "pole": "western"
+      },
+      {
+        "name": "Al Jazeera",
+        "tier": 2,
+        "pole": "middle_eastern"
+      }
+    ],
+    "confidence": "high",
+    "lastUpdated": "2026-03-15T06:00:00.000Z"
+  },
+  {
+    "id": "us-iran-ceasefire-rejected-mar15",
+    "year": "Mar 15",
+    "title": "Trump and Iran Both Reject International Ceasefire Mediation",
+    "type": "diplomatic",
+    "detail": "Sources close to US–Middle East diplomacy confirmed that President Trump rebuffed efforts by regional allies and European partners to launch ceasefire negotiations with Iran. A senior White House official stated Trump is 'not interested in that right now.' Iran simultaneously refused negotiations while US-Israeli strikes continue. Iran's FM Araghchi reiterated: 'We are not asking for a ceasefire.' Oman attempted to reopen communications but received no US response. Egypt also tried to facilitate dialogue without success. Iran's top security official Ali Larijani and FM Araghchi sought to use Oman as a conduit to VP Vance — no progress reported. President Pezeshkian has stated three conditions for peace: recognition of legitimate rights, reparations, and international guarantees — conditions Trump has not acknowledged.",
+    "sources": [
+      {
+        "name": "Times of Israel",
+        "tier": 2,
+        "url": "https://www.timesofisrael.com/trump-and-iran-both-reject-international-efforts-to-launch-ceasefire-talks/",
+        "pole": "western"
+      },
+      {
+        "name": "Manila Times",
+        "tier": 2,
+        "url": "https://www.manilatimes.net/2026/03/15/world/trump-rejects-efforts-to-launch-iran-ceasefire-talks-sources-say/2300150",
+        "pole": "western"
+      },
+      {
+        "name": "Al Jazeera",
+        "tier": 2,
+        "pole": "middle_eastern"
+      }
+    ],
+    "confidence": "high",
+    "lastUpdated": "2026-03-15T06:00:00.000Z"
+  },
+  {
+    "id": "iran-gulf-barrage-mar14",
+    "year": "Mar 14",
+    "title": "Iran Fires 9 Ballistic Missiles + 33 UAVs at UAE; Saudi, Qatar Also Targeted",
+    "type": "military",
+    "detail": "In the most intense multi-front Gulf attack since the war began, Iran's IRGC Aerospace Force launched coordinated strikes on three Gulf states on March 14. The UAE intercepted 9 ballistic missiles and 33 UAVs — all destroyed before impact. Saudi Arabia intercepted 7 drones over Riyadh per Saudi Civil Defense. Qatar intercepted 4 ballistic missiles targeting the Al Udeid Air Base area per Qatar Ministry of Interior. The strikes demonstrate Iran's continued multi-vector capability despite CENTCOM claims of 86–95% reduction in missile operations. Gulf air defense systems operated by Patriot and THAAD batteries performed well, intercepting all confirmed launches.",
+    "sources": [
+      {
+        "name": "UAE Ministry of Defense",
+        "tier": 1,
+        "pole": "middle_eastern"
+      },
+      {
+        "name": "Saudi Civil Defense",
+        "tier": 1,
+        "pole": "middle_eastern"
+      },
+      {
+        "name": "Qatar Ministry of Interior",
+        "tier": 1,
+        "pole": "middle_eastern"
+      },
+      {
+        "name": "Al Jazeera",
+        "tier": 2,
+        "pole": "middle_eastern"
+      }
+    ],
+    "weaponTypes": ["ballistic", "drone"],
+    "confidence": "high",
+    "lastUpdated": "2026-03-15T06:00:00.000Z"
+  },
+  {
+    "id": "baghdad-embassy-missile-mar14",
+    "year": "Mar 14",
+    "title": "Missile Strikes US Embassy Baghdad — Helipad and Air Defense System Destroyed",
+    "type": "military",
+    "detail": "A missile — attributed to Iranian proxies or direct IRGC launch — struck the US Embassy compound in Baghdad, destroying the helipad and the facility's Centurion air defense system. No US fatalities were reported, though staff were evacuated to hardened shelters. It is the first direct strike on the US Embassy compound during the conflict. The strike compounds growing pressure on the US position in Iraq, where PM al-Sudani has been walking a tightrope between Washington and Tehran. The Islamic Resistance in Iraq claimed responsibility.",
+    "sources": [
+      {
+        "name": "CENTCOM",
+        "tier": 1,
+        "pole": "western"
+      },
+      {
+        "name": "Reuters",
+        "tier": 2,
+        "pole": "western"
+      },
+      {
+        "name": "Al Jazeera",
+        "tier": 2,
+        "pole": "middle_eastern"
+      }
+    ],
+    "weaponTypes": ["ballistic"],
+    "confidence": "high",
+    "lastUpdated": "2026-03-15T06:00:00.000Z"
+  },
+  {
+    "id": "putin-trump-iran-call-mar15",
+    "year": "Mar 15",
+    "title": "Putin Calls Trump with Diplomatic Proposals on Iran — No Breakthrough",
+    "type": "diplomatic",
+    "detail": "Russian President Vladimir Putin held a phone call with President Trump focused on Iran, presenting proposals for a diplomatic resolution to the conflict. Putin had also spoken with Iranian President Pezeshkian and Gulf leaders in prior days. The call represents Russia's most direct diplomatic involvement in the conflict to date. No breakthrough was reported; the White House did not issue a public readout indicating any shift in position. Russia has condemned the US-Israeli strikes as 'unprovoked aggression' while maintaining back-channel relationships with both Tehran and Washington. China has also maintained contacts with Iran but has not proposed formal mediation.",
+    "sources": [
+      {
+        "name": "Reuters",
+        "tier": 2,
+        "pole": "western"
+      },
+      {
+        "name": "TASS",
+        "tier": 2,
+        "pole": "eastern"
+      },
+      {
+        "name": "Al Jazeera",
+        "tier": 2,
+        "pole": "middle_eastern"
+      }
+    ],
+    "confidence": "medium",
+    "lastUpdated": "2026-03-15T06:00:00.000Z"
+  },
+  {
+    "id": "trump-hormuz-warships-mar15",
+    "year": "Mar 15",
+    "title": "Trump Urges Nations to Send Warships to Secure Strait of Hormuz",
+    "type": "military",
+    "detail": "President Trump publicly urged other nations to send warships to help secure the Strait of Hormuz as Iran's de facto blockade enters its 16th day. The Strait has been effectively closed to commercial traffic; ~500 tankers remain stranded in the Persian Gulf. IEA data shows traffic at near-zero. Only Chinese-flagged vessels have been allowed to transit by the IRGC. The US Navy maintains a significant presence but has declined to escort commercial traffic under fire. A multi-national naval coalition similar to CTF-151 is being discussed informally.",
+    "sources": [
+      {
+        "name": "White House",
+        "tier": 1,
+        "pole": "western"
+      },
+      {
+        "name": "Reuters",
+        "tier": 2,
+        "pole": "western"
+      }
+    ],
+    "confidence": "high",
+    "lastUpdated": "2026-03-15T06:00:00.000Z"
+  }
+]

@@ -2,8 +2,8 @@
   {
     "id": "brent_crude",
     "label": "Brent Crude",
-    "value": "~$103/bbl",
-    "change": "+32.5% (crisis)",
+    "value": "~$106/bbl",
+    "change": "+36.4% (crisis)",
     "direction": "up",
     "sparkData": [
       77.74,
@@ -16,11 +16,12 @@
       79.5,
       90.2,
       100.5,
-      103.0
+      103.0,
+      106.0
     ],
     "color": "#e74c3c",
     "source": "Reuters / Al Jazeera / CNBC / Euronews",
-    "lastUpdated": "2026-03-14T06:00:00.000Z"
+    "lastUpdated": "2026-03-15T06:00:00.000Z"
   },
   {
     "id": "wti_crude",

@@ -382,5 +382,41 @@
     "time": "Mar 13",
     "tier": 1,
     "lastUpdated": "2026-03-13T06:00:00.000Z"
+  },
+  {
+    "id": "iran_uae_9ballistic_33uav_mar14",
+    "name": "UAE — 9 Ballistic Missiles + 33 UAVs (All Intercepted)",
+    "detail": "IRGC launched 9 ballistic missiles and 33 UAVs at UAE targets on March 14. UAE air defense intercepted all — Patriot and THAAD batteries performed without a miss. No casualties or infrastructure damage reported per UAE Ministry of Defense.",
+    "icon": "retaliation",
+    "time": "Mar 14",
+    "tier": 1,
+    "lastUpdated": "2026-03-15T06:00:00.000Z"
+  },
+  {
+    "id": "iran_saudi_7drones_riyadh_mar14",
+    "name": "Saudi Arabia — 7 Iranian Drones Intercepted Over Riyadh",
+    "detail": "Iran launched 7 Shahed-type drones toward Riyadh; Saudi Civil Defense intercepted all 7 before reaching the capital. No casualties. Marks continued IRGC pressure on Saudi Arabia despite Pezeshkian's Mar 7 pledge to stop Gulf strikes.",
+    "icon": "retaliation",
+    "time": "Mar 14",
+    "tier": 1,
+    "lastUpdated": "2026-03-15T06:00:00.000Z"
+  },
+  {
+    "id": "iran_qatar_4ballistic_mar14",
+    "name": "Qatar — 4 Ballistic Missiles Intercepted",
+    "detail": "IRGC fired 4 ballistic missiles toward Qatar, targeting the Al Udeid Air Base area — the largest US air base in the Middle East. Qatar air defenses intercepted all 4. No US casualties reported.",
+    "icon": "retaliation",
+    "time": "Mar 14",
+    "tier": 1,
+    "lastUpdated": "2026-03-15T06:00:00.000Z"
+  },
+  {
+    "id": "iran_baghdad_us_embassy_mar14",
+    "name": "Baghdad — US Embassy Helipad + Air Defense System Destroyed",
+    "detail": "Missile (attributed to Islamic Resistance in Iraq / IRGC proxy) struck US Embassy Baghdad compound, destroying the helipad and Centurion CIWS air defense installation. First direct strike on the Embassy compound. No US fatalities. CENTCOM initiated investigation.",
+    "icon": "casualty",
+    "time": "Mar 14",
+    "tier": 1,
+    "lastUpdated": "2026-03-15T06:00:00.000Z"
   }
 ]

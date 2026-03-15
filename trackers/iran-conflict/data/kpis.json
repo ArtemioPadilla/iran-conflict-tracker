@@ -2,13 +2,13 @@
   {
     "id": "days_of_conflict",
     "label": "Days of Conflict",
-    "value": "15",
+    "value": "16",
     "color": "red",
     "source": "Al Jazeera",
     "contested": false,
     "delta": "+1",
     "trend": "up",
-    "lastUpdated": "2026-03-14T06:00:00.000Z"
+    "lastUpdated": "2026-03-15T06:00:00.000Z"
   },
   {
     "id": "iran_killed",
@@ -73,14 +73,14 @@
   {
     "id": "brent_crude",
     "label": "Brent Crude",
-    "value": "~$100",
+    "value": "~$106",
     "color": "red",
     "source": "Reuters / Al Jazeera / CNBC / Euronews",
     "contested": false,
-    "delta": "+$10",
+    "delta": "+$13",
     "trend": "up",
-    "lastUpdated": "2026-03-13T06:00:00.000Z",
-    "deltaNote": "Spiked past $100/bbl overnight Mar 12-13 after Mojtaba Khamenei vowed Hormuz stays closed. IEA releases record 400M barrels (US: 172M from SPR). Iran warns '$200/bbl.' Despite reserve release, prices remain above $100. Largest supply disruption in IEA history."
+    "lastUpdated": "2026-03-15T06:00:00.000Z",
+    "deltaNote": "Climbed to ~$106/bbl after US Kharg Island strike (Mar 14) — Iran's main oil export terminal. IEA releases record 400M barrels (US: 172M from SPR) insufficient to offset Hormuz blockade + Kharg damage. Iran warns '$200/bbl.' Both US and Iran reject ceasefire, signaling prolonged supply disruption."
   },
   {
     "id": "flights_cancelled",
@@ -102,8 +102,8 @@
     "source": "Al Jazeera / Reuters / France 24",
     "contested": false,
     "trend": "stable",
-    "lastUpdated": "2026-03-14T06:00:00.000Z",
+    "lastUpdated": "2026-03-15T06:00:00.000Z",
     "delta": "0",
-    "deltaNote": "Iran, Israel, Lebanon, UAE, Bahrain, Kuwait, Qatar, Saudi Arabia, Oman, Iraq, Jordan, Azerbaijan, Turkey, Cyprus, France. Day 15: US strikes Kharg Island (Iran's main oil terminal). Pentagon vows to 'ramp up'. IDF struck Shiraz missile production, Ahvaz IRGC Ground Forces HQ. 16+ vessels struck in Gulf total."
+    "deltaNote": "Iran, Israel, Lebanon, UAE, Bahrain, Kuwait, Qatar, Saudi Arabia, Oman, Iraq, Jordan, Azerbaijan, Turkey, Cyprus, France. Day 16: Trump and Iran both reject ceasefire mediation. Iran fires 9 ballistic + 33 UAVs at UAE, 7 drones at Saudi Riyadh, 4 ballistic at Qatar (all intercepted). Baghdad US Embassy helipad struck. 16+ vessels struck in Gulf total."
   }
 ]

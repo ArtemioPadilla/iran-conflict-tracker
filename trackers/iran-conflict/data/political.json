@@ -331,5 +331,23 @@
     "initial": "DoD",
     "quote": "We are ramping up the military campaign against Iran. Today's strike on Kharg Island sends a clear message: Iran's ability to fund its aggression will not be spared. Oil facilities that sustain Iran's war machine are legitimate military targets. The campaign continues until Iran's unconditional surrender.",
     "lastUpdated": "2026-03-14T06:00:00.000Z"
+  },
+  {
+    "id": "trump_no_ceasefire_mar15",
+    "name": "Donald Trump",
+    "role": "US President — Day 16 (Rejects Ceasefire)",
+    "avatar": "us",
+    "initial": "DT",
+    "quote": "I am not interested in ceasefire talks right now. Iran knows what they need to do — unconditional surrender. We have other nations sending warships to help secure the Strait of Hormuz. The world is watching and acting.",
+    "lastUpdated": "2026-03-15T06:00:00.000Z"
+  },
+  {
+    "id": "putin_trump_iran_call",
+    "name": "Vladimir Putin",
+    "role": "President of Russia",
+    "avatar": "other",
+    "initial": "VP",
+    "quote": "Russia is ready to act as a mediator to find a political and diplomatic solution to the conflict. We urge all parties to show restraint and begin immediate negotiations. The continuation of military operations threatens global stability.",
+    "lastUpdated": "2026-03-15T06:00:00.000Z"
   }
 ]
